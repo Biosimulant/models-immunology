@@ -1,0 +1,44 @@
+modules:
+  sandip2013_model_1:
+    class: src.sandip2013_modeling_the_dynamics_of_hepatitis_c_biomd0000000892_model:Sandip2013ModelingTheDynamicsOfHepatitisCBiomd0000000892Model
+    args:
+      model_path: data/BIOMD0000000892.xml
+  sandip2013_model_2:
+    class: src.sandip2013_modeling_the_dynamics_of_hepatitis_c_model1912120002_model:Sandip2013ModelingTheDynamicsOfHepatitisCModel1912120002Model
+    args:
+      model_path: data/MODEL1912120002.xml
+  schulz2009_th1_3:
+    class: src.schulz2009_th1_differentiation_biomd0000000215_model:Schulz2009Th1DifferentiationBiomd0000000215Model
+    args:
+      model_path: data/BIOMD0000000215.xml
+  smith2011_three_4:
+    class: src.smith2011_three_stage_innate_immune_response_to_biomd0000000924_model:Smith2011ThreeStageInnateImmuneResponseToBiomd0000000924Model
+    args:
+      model_path: data/BIOMD0000000924.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: sandip2013_model_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: sandip2013_model_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: schulz2009_th1_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: smith2011_three_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

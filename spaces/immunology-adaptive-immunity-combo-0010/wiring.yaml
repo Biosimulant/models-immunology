@@ -1,0 +1,28 @@
+modules:
+  moore2004_chroni_1:
+    class: src.moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model:Moore2004ChronicMyeloidLeukemicCellsAndTLBiomd0000000662Model
+    args:
+      model_path: data/BIOMD0000000662.xml
+  nanda2013_b_2:
+    class: src.nanda2013_b_cell_chronic_lymphocytic_leukemia_a_model2001090002_model:Nanda2013BCellChronicLymphocyticLeukemiaAModel2001090002Model
+    args:
+      model_path: data/MODEL2001090002.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: moore2004_chroni_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: nanda2013_b_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

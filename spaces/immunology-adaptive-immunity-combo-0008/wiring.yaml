@@ -1,0 +1,28 @@
+modules:
+  lewkiewics2019_e_1:
+    class: src.lewkiewics2019_effects_of_aging_on_naive_t_cell_biomd0000000824_model:Lewkiewics2019EffectsOfAgingOnNaiveTCellBiomd0000000824Model
+    args:
+      model_path: data/BIOMD0000000824.xml
+  lmluque2025_abm_2:
+    class: src.lmluque2025_abm_model2503030003_model:Lmluque2025AbmModel2503030003Model
+    args:
+      model_path: data/MODEL2503030003.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: lewkiewics2019_e_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: lmluque2025_abm_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

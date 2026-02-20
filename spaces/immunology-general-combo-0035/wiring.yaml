@@ -1,0 +1,36 @@
+modules:
+  isaeva2008_model_1:
+    class: src.isaeva2008_modelling_of_anti_tumour_immune_respo_biomd0000000910_model:Isaeva2008ModellingOfAntiTumourImmuneRespoBiomd0000000910Model
+    args:
+      model_path: data/BIOMD0000000910.xml
+  isaeva2009_diffe_2:
+    class: src.isaeva2009_different_strategies_for_cancer_treat_model2001140002_model:Isaeva2009DifferentStrategiesForCancerTreatModel2001140002Model
+    args:
+      model_path: data/MODEL2001140002.xml
+  jarrah2014_mathe_3:
+    class: src.jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model:Jarrah2014MathematicalModelOfTheImmuneRespBiomd0000001015Model
+    args:
+      model_path: data/BIOMD0000001015.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: isaeva2008_model_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: isaeva2009_diffe_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: jarrah2014_mathe_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

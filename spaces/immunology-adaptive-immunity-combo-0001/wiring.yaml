@@ -1,0 +1,28 @@
+modules:
+  aavani2019_the_1:
+    class: src.aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model:Aavani2019TheRoleOfCd4TCellsInImmuneSysBiomd0000000876Model
+    args:
+      model_path: data/BIOMD0000000876.xml
+  bidot2008_mathem_2:
+    class: src.bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model:Bidot2008MathematicalModellingOfTCellActivModel1910290003Model
+    args:
+      model_path: data/MODEL1910290003.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: aavani2019_the_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: bidot2008_mathem_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

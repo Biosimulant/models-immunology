@@ -1,0 +1,75 @@
+schema_version: '2.0'
+title: 'Immunology: General (COMBO_0044)'
+description: Immunology general comparative space with 3 models, configured as non-causal
+  co-simulation.
+models:
+- repo: Biosimulant/models-immunology
+  alias: miao2014_dynamic_1
+  manifest_path: models/immunology-sbml-miao2014-dynamics-and-migratory-pathways-of-viru-model1411130000-model/model.yaml
+  parameters:
+    model_path: data/MODEL1411130000.xml
+- repo: Biosimulant/models-immunology
+  alias: model1207300000__2
+  manifest_path: models/immunology-sbml-model1207300000-url-xml-model1207300000-model/model.yaml
+  parameters:
+    model_path: data/MODEL1207300000.xml
+- repo: Biosimulant/models-immunology
+  alias: mol2013_immune_3
+  manifest_path: models/immunology-sbml-mol2013-immune-signal-transduction-in-leishmania-biomd0000000477-model/model.yaml
+  parameters:
+    model_path: data/BIOMD0000000477.xml
+- repo: Biosimulant/models-observability
+  alias: state_compare_mon
+  manifest_path: models/observability-state-comparison-monitor/model.yaml
+  parameters:
+    max_points: 2000
+    min_dt: 1.0
+- repo: Biosimulant/models-observability
+  alias: state_metrics_mon
+  manifest_path: models/observability-state-metrics-monitor/model.yaml
+  parameters:
+    max_points: 2000
+    min_dt: 1.0
+runtime:
+  duration: 80.0
+  tick_dt: 0.01
+  initial_inputs: {}
+wiring:
+- from: miao2014_dynamic_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: model1207300000__2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: mol2013_immune_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+scientific_context:
+  question: How do general mechanisms compare across these models?
+  mode: comparative
+  assumptions:
+  - Model implementations are used as published in their curated manifests without
+    biological reinterpretation.
+  - Time integration uses a shared global tick compatible with model min_dt constraints.
+  - Comparative (non-causal) mode is used because full deterministic IO coverage for
+    causal coupling was not satisfied.
+  expected_observables:
+  - Model output trajectories under shared runtime settings.
+  - Cross-model agreement/divergence in key state or metric signals.
+  - Relative behavior comparison without causal linkage claims.
+  limitations:
+  - No new biology is introduced beyond what upstream models encode.
+  - Cross-model semantic matching is rule-based and may under-connect uncertain routes.
+  provenance:
+  - 'immunology-sbml-miao2014-dynamics-and-migratory-pathways-of-viru-model1411130000-model
+    :: biomodels_ebi:MODEL1411130000 :: https://www.ebi.ac.uk/biomodels/MODEL1411130000'
+  - 'immunology-sbml-model1207300000-url-xml-model1207300000-model :: biomodels_ebi:MODEL1207300000
+    :: https://www.ebi.ac.uk/biomodels/MODEL1207300000'
+  - 'immunology-sbml-mol2013-immune-signal-transduction-in-leishmania-biomd0000000477-model
+    :: biomodels_ebi:BIOMD0000000477 :: https://www.ebi.ac.uk/biomodels/BIOMD0000000477'
+  visualization_rationale: A dedicated monitor model receives all participating model
+    state streams (`state_a..state_d`) so trajectories can be compared in one place
+    without claiming causal coupling when IO semantics are incomplete.

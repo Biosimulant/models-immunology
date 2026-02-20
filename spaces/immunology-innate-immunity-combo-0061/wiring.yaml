@@ -1,0 +1,44 @@
+modules:
+  hu2018_dynamics_1:
+    class: src.hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model:Hu2018DynamicsOfTumorCd4CytokineHostCellsBiomd0000000797Model
+    args:
+      model_path: data/BIOMD0000000797.xml
+  immunological_he_2:
+    class: src.immunological_healthy_state_model_of_sphingolipi_model2301110002_model:ImmunologicalHealthyStateModelOfSphingolipiModel2301110002Model
+    args:
+      model_path: data/MODEL2301110002.xml
+  khandibharad2022_3:
+    class: src.khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model:Khandibharad2022Il12RegulationByIl10InLeModel2012040002Model
+    args:
+      model_path: data/MODEL2012040002.xml
+  kim2014_tumor_4:
+    class: src.kim2014_tumor_model_under_immune_suppression_model1909240002_model:Kim2014TumorModelUnderImmuneSuppressionModel1909240002Model
+    args:
+      model_path: data/MODEL1909240002.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: hu2018_dynamics_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: immunological_he_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: khandibharad2022_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: kim2014_tumor_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

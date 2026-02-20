@@ -1,0 +1,36 @@
+modules:
+  perelson1993_hiv_1:
+    class: src.perelson1993_hivinfection_cd4tcells_modeld_model1006230035_model:Perelson1993HivinfectionCd4tcellsModeldModel1006230035Model
+    args:
+      model_path: data/MODEL1006230035.xml
+  raman2005_mycoli_2:
+    class: src.raman2005_mycolic_acid_pathway_of_m_tuberculosis_biomd0000001046_model:Raman2005MycolicAcidPathwayOfMTuberculosisBiomd0000001046Model
+    args:
+      model_path: data/BIOMD0000001046.xml
+  rangel_reyes2017_3:
+    class: src.rangel_reyes2017_dendritic_immunotherapy_improve_model1909160002_model:RangelReyes2017DendriticImmunotherapyImproveModel1909160002Model
+    args:
+      model_path: data/MODEL1909160002.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: perelson1993_hiv_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: raman2005_mycoli_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: rangel_reyes2017_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

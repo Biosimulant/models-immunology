@@ -1,0 +1,44 @@
+modules:
+  waugh2006_diabet_1:
+    class: src.waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model:Waugh2006DiabeticWoundHealingTreatedAndUntBiomd0000000681Model
+    args:
+      model_path: data/BIOMD0000000681.xml
+  wei2017_tumor_2:
+    class: src.wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model:Wei2017TumorTCellAndCytokineInteractionBiomd0000000778Model
+    args:
+      model_path: data/BIOMD0000000778.xml
+  yamada2003_jak_3:
+    class: src.yamada2003_jak_stat_pathway_biomd0000000093_model:Yamada2003JakStatPathwayBiomd0000000093Model
+    args:
+      model_path: data/BIOMD0000000093.xml
+  yamada2003_jak_4:
+    class: src.yamada2003_jak_stat_socs1_knockout_biomd0000000094_model:Yamada2003JakStatSocs1KnockoutBiomd0000000094Model
+    args:
+      model_path: data/BIOMD0000000094.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: waugh2006_diabet_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: wei2017_tumor_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: yamada2003_jak_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: yamada2003_jak_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

@@ -1,0 +1,36 @@
+modules:
+  gei_ert2020_1:
+    class: src.gei_ert2020_yersinia_enterocolitica_co_infection_model2002070001_model:GeiErt2020YersiniaEnterocoliticaCoInfectionModel2002070001Model
+    args:
+      model_path: data/MODEL2002070001.xml
+  hancioglu2007_hu_2:
+    class: src.hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model:Hancioglu2007HumanImmuneResponseToInfluenzaBiomd0000000711Model
+    args:
+      model_path: data/BIOMD0000000711.xml
+  hardiansyah2019__3:
+    class: src.hardiansyah2019_qsp_model_of_chimeric_antigen_re_model2009230001_model:Hardiansyah2019QspModelOfChimericAntigenReModel2009230001Model
+    args:
+      model_path: data/MODEL2009230001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: gei_ert2020_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: hancioglu2007_hu_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: hardiansyah2019__3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

@@ -1,0 +1,44 @@
+modules:
+  begitt2014_stat1_1:
+    class: src.begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model:Begitt2014Stat1CooperativeDnaBindingSingleBiomd0000000500Model
+    args:
+      model_path: data/BIOMD0000000500.xml
+  boer1985_macroph_2:
+    class: src.boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model:Boer1985MacrophageTCellInteractionInAntiTModel1911130003Model
+    args:
+      model_path: data/MODEL1911130003.xml
+  bordbar2010_m_3:
+    class: src.bordbar2010_m_tuberculosis_macrophage_model1011090002_model:Bordbar2010MTuberculosisMacrophageModel1011090002Model
+    args:
+      model_path: data/MODEL1011090002.xml
+  bordbar2010_macr_4:
+    class: src.bordbar2010_macrophage_metabolism_model1011090001_model:Bordbar2010MacrophageMetabolismModel1011090001Model
+    args:
+      model_path: data/MODEL1011090001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: begitt2014_stat1_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: boer1985_macroph_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: bordbar2010_m_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: bordbar2010_macr_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

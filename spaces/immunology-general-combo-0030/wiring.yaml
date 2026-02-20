@@ -1,0 +1,28 @@
+modules:
+  dubey2008_modeli_1:
+    class: src.dubey2008_modeling_the_interaction_between_avasc_biomd0000000886_model:Dubey2008ModelingTheInteractionBetweenAvascBiomd0000000886Model
+    args:
+      model_path: data/BIOMD0000000886.xml
+  eftimie2018_canc_2:
+    class: src.eftimie2018_cancer_and_immune_biomarkers_biomd0000000741_model:Eftimie2018CancerAndImmuneBiomarkersBiomd0000000741Model
+    args:
+      model_path: data/BIOMD0000000741.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: dubey2008_modeli_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: eftimie2018_canc_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

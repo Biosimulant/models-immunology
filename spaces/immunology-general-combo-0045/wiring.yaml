@@ -1,0 +1,36 @@
+modules:
+  montagud2022_pro_1:
+    class: src.montagud2022_prostate_cancer_boolean_model_model2106070001_model:Montagud2022ProstateCancerBooleanModelModel2106070001Model
+    args:
+      model_path: data/MODEL2106070001.sbml
+  mufudza2012_estr_2:
+    class: src.mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model:Mufudza2012EstrogenEffectOnTheDynamicsOfBBiomd0000000642Model
+    args:
+      model_path: data/BIOMD0000000642.xml
+  mullinax2016_mat_3:
+    class: src.mullinax2016_mathematical_model_of_tumor_immune_model2109110006_model:Mullinax2016MathematicalModelOfTumorImmuneModel2109110006Model
+    args:
+      model_path: data/MODEL2109110006.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: montagud2022_pro_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: mufudza2012_estr_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: mullinax2016_mat_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

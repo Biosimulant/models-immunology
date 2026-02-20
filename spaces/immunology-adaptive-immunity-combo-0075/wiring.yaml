@@ -1,0 +1,44 @@
+modules:
+  cappuccio2006_ca_1:
+    class: src.cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model:Cappuccio2006CancerImmunotherapyByInterleukiBiomd0000000761Model
+    args:
+      model_path: data/BIOMD0000000761.xml
+  dong2014_mathema_2:
+    class: src.dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model:Dong2014MathematicalModelingOnHelperTCellsBiomd0000000783Model
+    args:
+      model_path: data/BIOMD0000000783.xml
+  dwivedi2014_croh_3:
+    class: src.dwivedi2014_crohns_il6_disease_model_anti_il6_an_biomd0000000535_model:Dwivedi2014CrohnsIl6DiseaseModelAntiIl6AnBiomd0000000535Model
+    args:
+      model_path: data/BIOMD0000000535.xml
+  dwivedi2014_croh_4:
+    class: src.dwivedi2014_crohns_il6_disease_model_anti_il6r_a_biomd0000000537_model:Dwivedi2014CrohnsIl6DiseaseModelAntiIl6rABiomd0000000537Model
+    args:
+      model_path: data/BIOMD0000000537.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: cappuccio2006_ca_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: dong2014_mathema_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: dwivedi2014_croh_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: dwivedi2014_croh_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

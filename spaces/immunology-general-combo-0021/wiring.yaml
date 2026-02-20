@@ -1,0 +1,28 @@
+modules:
+  bianca2012_mathe_1:
+    class: src.bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model:Bianca2012MathematicalModelingOfTheImmuneSModel1907260002Model
+    args:
+      model_path: data/MODEL1907260002.xml
+  bianca2013_persi_2:
+    class: src.bianca2013_persistence_analysis_in_a_kolmogorov_biomd0000000900_model:Bianca2013PersistenceAnalysisInAKolmogorovBiomd0000000900Model
+    args:
+      model_path: data/BIOMD0000000900.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: bianca2012_mathe_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: bianca2013_persi_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

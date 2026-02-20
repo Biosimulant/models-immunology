@@ -1,0 +1,36 @@
+modules:
+  fallon2000_inter_1:
+    class: src.fallon2000_interleukin_2_dynamics_biomd0000000665_model:Fallon2000Interleukin2DynamicsBiomd0000000665Model
+    args:
+      model_path: data/BIOMD0000000665.xml
+  feizabadi2011_im_2:
+    class: src.feizabadi2011_1_immunodeficiency_in_cancer_core_biomd0000000760_model:Feizabadi20111ImmunodeficiencyInCancerCoreBiomd0000000760Model
+    args:
+      model_path: data/BIOMD0000000760.xml
+  figueredo2013_im_3:
+    class: src.figueredo2013_1_immunointeraction_base_model_biomd0000000753_model:Figueredo20131ImmunointeractionBaseModelBiomd0000000753Model
+    args:
+      model_path: data/BIOMD0000000753.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: fallon2000_inter_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: feizabadi2011_im_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: figueredo2013_im_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

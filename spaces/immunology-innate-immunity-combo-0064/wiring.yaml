@@ -1,0 +1,44 @@
+modules:
+  mol2013_leishman_1:
+    class: src.mol2013_leishmania_macrophage_signaling_network_model1203220000_model:Mol2013LeishmaniaMacrophageSignalingNetworkModel1203220000Model
+    args:
+      model_path: data/MODEL1203220000.xml
+  owen1998_tumour_2:
+    class: src.owen1998_tumour_treatment_model_biomd0000000650_model:Owen1998TumourTreatmentModelBiomd0000000650Model
+    args:
+      model_path: data/BIOMD0000000650.xml
+  palmer2008_negat_3:
+    class: src.palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model:Palmer2008NegativeFeedbackInIl7MediatedJaBiomd0000000968Model
+    args:
+      model_path: data/BIOMD0000000968.xml
+  parra_guillen201_4:
+    class: src.parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model:ParraGuillen2013MathematicalModelApproachToBiomd0000000914Model
+    args:
+      model_path: data/BIOMD0000000914.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: mol2013_leishman_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: owen1998_tumour_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: palmer2008_negat_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: parra_guillen201_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

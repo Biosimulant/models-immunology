@@ -1,0 +1,36 @@
+modules:
+  miao2014_dynamic_1:
+    class: src.miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model:Miao2014DynamicsAndMigratoryPathwaysOfViruModel1411130000Model
+    args:
+      model_path: data/MODEL1411130000.xml
+  model1207300000__2:
+    class: src.model1207300000_url_xml_model1207300000_model:Model1207300000UrlXmlModel1207300000Model
+    args:
+      model_path: data/MODEL1207300000.xml
+  mol2013_immune_3:
+    class: src.mol2013_immune_signal_transduction_in_leishmania_biomd0000000477_model:Mol2013ImmuneSignalTransductionInLeishmaniaBiomd0000000477Model
+    args:
+      model_path: data/BIOMD0000000477.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: miao2014_dynamic_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: model1207300000__2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: mol2013_immune_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

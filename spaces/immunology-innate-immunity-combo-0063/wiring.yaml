@@ -1,0 +1,44 @@
+modules:
+  manda2019_acute_1:
+    class: src.manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model:Manda2019AcuteHepatitisBVirusInfectionModeModel1911280002Model
+    args:
+      model_path: data/MODEL1911280002.xml
+  maree2006_duca_2:
+    class: src.maree2006_duca_type1diabetesmodel_biomd0000000381_model:Maree2006DucaType1diabetesmodelBiomd0000000381Model
+    args:
+      model_path: data/BIOMD0000000381.xml
+  miao2010_innate_3:
+    class: src.miao2010_innate_and_adaptive_immune_responses_to_biomd0000000546_model:Miao2010InnateAndAdaptiveImmuneResponsesToBiomd0000000546Model
+    args:
+      model_path: data/BIOMD0000000546.xml
+  modeling_the_4:
+    class: src.modeling_the_relevance_of_immune_and_metabolic_c_model2209160001_model:ModelingTheRelevanceOfImmuneAndMetabolicCModel2209160001Model
+    args:
+      model_path: data/MODEL2209160001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: manda2019_acute_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: maree2006_duca_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: miao2010_innate_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: modeling_the_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

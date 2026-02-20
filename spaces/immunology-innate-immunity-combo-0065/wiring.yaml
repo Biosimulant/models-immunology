@@ -1,0 +1,44 @@
+modules:
+  phan2017_innate_1:
+    class: src.phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model:Phan2017InnateImmuneInOncolyticVirotherapyBiomd0000000748Model
+    args:
+      model_path: data/BIOMD0000000748.xml
+  philipson2015_in_2:
+    class: src.philipson2015_innate_immune_response_modulated_b_biomd0000000596_model:Philipson2015InnateImmuneResponseModulatedBBiomd0000000596Model
+    args:
+      model_path: data/BIOMD0000000596.xml
+  puniya2021_cd4_3:
+    class: src.puniya2021_cd4_th1_cell_metabolic_model_model1909260004_model:Puniya2021Cd4Th1CellMetabolicModelModel1909260004Model
+    args:
+      model_path: data/MODEL1909260004.xml
+  puniya2021_cd4_4:
+    class: src.puniya2021_cd4_th17_cell_metabolism_model_model1909260006_model:Puniya2021Cd4Th17CellMetabolismModelModel1909260006Model
+    args:
+      model_path: data/MODEL1909260006.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: phan2017_innate_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: philipson2015_in_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: puniya2021_cd4_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: puniya2021_cd4_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

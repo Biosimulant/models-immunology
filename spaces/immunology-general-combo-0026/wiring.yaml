@@ -1,0 +1,28 @@
+modules:
+  creemers2021_tum_1:
+    class: src.creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model:Creemers2021TumorImmuneDynamicsAndImplicatiBiomd0000001022Model
+    args:
+      model_path: data/BIOMD0000001022.xml
+  depillis2005_a_2:
+    class: src.depillis2005_a_validated_mathematical_model_of_c_model1907260001_model:Depillis2005AValidatedMathematicalModelOfCModel1907260001Model
+    args:
+      model_path: data/MODEL1907260001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: creemers2021_tum_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: depillis2005_a_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

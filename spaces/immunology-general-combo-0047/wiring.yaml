@@ -1,0 +1,36 @@
+modules:
+  overgaard2007_pd_1:
+    class: src.overgaard2007_pdmodel_il21_biomd0000000238_model:Overgaard2007PdmodelIl21Biomd0000000238Model
+    args:
+      model_path: data/BIOMD0000000238.xml
+  palsson2013_full_2:
+    class: src.palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model:Palsson2013FullyIntegratedImmuneResponseModBiomd0000000608Model
+    args:
+      model_path: data/BIOMD0000000608.xml
+  patterson2022_tu_3:
+    class: src.patterson2022_tumour_mutation_data_driven_random_biomd0000001073_model:Patterson2022TumourMutationDataDrivenRandomBiomd0000001073Model
+    args:
+      model_path: data/BIOMD0000001073.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: overgaard2007_pd_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: palsson2013_full_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: patterson2022_tu_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

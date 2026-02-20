@@ -1,0 +1,44 @@
+modules:
+  puniya2021_cd4_1:
+    class: src.puniya2021_cd4_th2_cell_metabolism_model_model1909260005_model:Puniya2021Cd4Th2CellMetabolismModelModel1909260005Model
+    args:
+      model_path: data/MODEL1909260005.xml
+  puniya2021_naive_2:
+    class: src.puniya2021_naive_cd4_t_cell_metabolic_model_model1909260003_model:Puniya2021NaiveCd4TCellMetabolicModelModel1909260003Model
+    args:
+      model_path: data/MODEL1909260003.xml
+  rateitschak2012__3:
+    class: src.rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model:Rateitschak2012InterferonGammaIfnInducedStaBiomd0000000585Model
+    args:
+      model_path: data/BIOMD0000000585.xml
+  roy2019_a_4:
+    class: src.roy2019_a_vivid_cytokines_interaction_model_on_p_model1911070001_model:Roy2019AVividCytokinesInteractionModelOnPModel1911070001Model
+    args:
+      model_path: data/MODEL1911070001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: puniya2021_cd4_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: puniya2021_naive_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: rateitschak2012__3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: roy2019_a_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

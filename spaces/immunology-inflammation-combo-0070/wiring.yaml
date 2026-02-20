@@ -1,0 +1,44 @@
+modules:
+  jarrett2015_mode_1:
+    class: src.jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model:Jarrett2015ModellingTheInteractionBetweenImBiomd0000000920Model
+    args:
+      model_path: data/BIOMD0000000920.xml
+  sanchez2017_infl_2:
+    class: src.sanchez2017_inflammatory_responses_during_acute_model1606020000_model:Sanchez2017InflammatoryResponsesDuringAcuteModel1606020000Model
+    args:
+      model_path: data/MODEL1606020000.xml
+  sherekar2023_mod_3:
+    class: src.sherekar2023_modeling_heterogeneity_in_tnfr1_sig_model2504180001_model:Sherekar2023ModelingHeterogeneityInTnfr1SigModel2504180001Model
+    args:
+      model_path: data/MODEL2504180001.xml
+  soni2018_il6_4:
+    class: src.soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model:Soni2018Il6InducedM2PhenotypeInLeishmaniaBiomd0000000873Model
+    args:
+      model_path: data/BIOMD0000000873.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: jarrett2015_mode_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: sanchez2017_infl_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: sherekar2023_mod_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: soni2018_il6_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

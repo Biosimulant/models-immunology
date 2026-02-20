@@ -1,0 +1,28 @@
+modules:
+  verma2016_hiv_1:
+    class: src.verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model:Verma2016HivAndHpvCoInfectionTCellResponBiomd0000000872Model
+    args:
+      model_path: data/BIOMD0000000872.xml
+  webb2002_fas_2:
+    class: src.webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model:Webb2002FasFaslMediatedTumorTCellInteractBiomd0000000661Model
+    args:
+      model_path: data/BIOMD0000000661.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: verma2016_hiv_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: webb2002_fas_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

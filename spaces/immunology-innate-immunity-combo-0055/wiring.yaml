@@ -1,0 +1,36 @@
+modules:
+  almuallem2020_vi_1:
+    class: src.almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model:Almuallem2020VirusMacrophageTumourInteractioBiomd0000001033Model
+    args:
+      model_path: data/BIOMD0000001033.xml
+  anderson2015_qua_2:
+    class: src.anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model:Anderson2015QualitativeBehaviorOfSystemsOfBiomd0000000813Model
+    args:
+      model_path: data/BIOMD0000000813.xml
+  arciero2004_a_3:
+    class: src.arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model:Arciero2004AMathematicalModelOfTumorImmuneModel1907310002Model
+    args:
+      model_path: data/MODEL1907310002.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: almuallem2020_vi_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: anderson2015_qua_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: arciero2004_a_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

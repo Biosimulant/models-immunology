@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: 'Immunology: Adaptive Immunity (COMBO_0077)'
+description: Immunology adaptive immunity comparative space with 4 models, configured
+  as non-causal co-simulation.
+models:
+- repo: Biosimulant/models-immunology
+  alias: dwivedi2014_croh_1
+  manifest_path: models/immunology-sbml-dwivedi2014-crohns-il6-disease-model-anti-il6-an-biomd0000000535-model/model.yaml
+  parameters:
+    model_path: data/BIOMD0000000535.xml
+- repo: Biosimulant/models-immunology
+  alias: dwivedi2014_croh_2
+  manifest_path: models/immunology-sbml-dwivedi2014-crohns-il6-disease-model-anti-il6r-a-biomd0000000537-model/model.yaml
+  parameters:
+    model_path: data/BIOMD0000000537.xml
+- repo: Biosimulant/models-immunology
+  alias: dwivedi2014_croh_3
+  manifest_path: models/immunology-sbml-dwivedi2014-crohns-il6-disease-model-sgp130-acti-biomd0000000536-model/model.yaml
+  parameters:
+    model_path: data/BIOMD0000000536.xml
+- repo: Biosimulant/models-immunology
+  alias: dwivedi2014_heal_4
+  manifest_path: models/immunology-sbml-dwivedi2014-healthy-volunteer-il6-model-biomd0000000534-model/model.yaml
+  parameters:
+    model_path: data/BIOMD0000000534.xml
+- repo: Biosimulant/models-observability
+  alias: state_compare_mon
+  manifest_path: models/observability-state-comparison-monitor/model.yaml
+  parameters:
+    max_points: 2000
+    min_dt: 1.0
+- repo: Biosimulant/models-observability
+  alias: state_metrics_mon
+  manifest_path: models/observability-state-metrics-monitor/model.yaml
+  parameters:
+    max_points: 2000
+    min_dt: 1.0
+runtime:
+  duration: 80.0
+  tick_dt: 0.01
+  initial_inputs: {}
+wiring:
+- from: dwivedi2014_croh_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: dwivedi2014_croh_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: dwivedi2014_croh_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: dwivedi2014_heal_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d
+scientific_context:
+  question: How do adaptive immunity mechanisms compare across these models?
+  mode: comparative
+  assumptions:
+  - Model implementations are used as published in their curated manifests without
+    biological reinterpretation.
+  - Time integration uses a shared global tick compatible with model min_dt constraints.
+  - Comparative (non-causal) mode is used because full deterministic IO coverage for
+    causal coupling was not satisfied.
+  expected_observables:
+  - Model output trajectories under shared runtime settings.
+  - Cross-model agreement/divergence in key state or metric signals.
+  - Relative behavior comparison without causal linkage claims.
+  limitations:
+  - No new biology is introduced beyond what upstream models encode.
+  - Cross-model semantic matching is rule-based and may under-connect uncertain routes.
+  provenance:
+  - 'immunology-sbml-dwivedi2014-crohns-il6-disease-model-anti-il6-an-biomd0000000535-model
+    :: biomodels_ebi:BIOMD0000000535 :: https://www.ebi.ac.uk/biomodels/BIOMD0000000535'
+  - 'immunology-sbml-dwivedi2014-crohns-il6-disease-model-anti-il6r-a-biomd0000000537-model
+    :: biomodels_ebi:BIOMD0000000537 :: https://www.ebi.ac.uk/biomodels/BIOMD0000000537'
+  - 'immunology-sbml-dwivedi2014-crohns-il6-disease-model-sgp130-acti-biomd0000000536-model
+    :: biomodels_ebi:BIOMD0000000536 :: https://www.ebi.ac.uk/biomodels/BIOMD0000000536'
+  - 'immunology-sbml-dwivedi2014-healthy-volunteer-il6-model-biomd0000000534-model
+    :: biomodels_ebi:BIOMD0000000534 :: https://www.ebi.ac.uk/biomodels/BIOMD0000000534'
+  visualization_rationale: A dedicated monitor model receives all participating model
+    state streams (`state_a..state_d`) so trajectories can be compared in one place
+    without claiming causal coupling when IO semantics are incomplete.

@@ -1,0 +1,36 @@
+modules:
+  adrianne2018_mod_1:
+    class: src.adrianne2018_modelling_combined_virotherapy_and_model1912120003_model:Adrianne2018ModellingCombinedVirotherapyAndModel1912120003Model
+    args:
+      model_path: data/MODEL1912120003.xml
+  jarrett2015_mode_2:
+    class: src.jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model:Jarrett2015ModellingTheInteractionBetweenImBiomd0000000920Model
+    args:
+      model_path: data/BIOMD0000000920.xml
+  sanchez2017_infl_3:
+    class: src.sanchez2017_inflammatory_responses_during_acute_model1606020000_model:Sanchez2017InflammatoryResponsesDuringAcuteModel1606020000Model
+    args:
+      model_path: data/MODEL1606020000.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: adrianne2018_mod_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: jarrett2015_mode_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: sanchez2017_infl_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

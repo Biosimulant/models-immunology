@@ -1,0 +1,44 @@
+modules:
+  dwivedi2014_croh_1:
+    class: src.dwivedi2014_crohns_il6_disease_model_anti_il6_an_biomd0000000535_model:Dwivedi2014CrohnsIl6DiseaseModelAntiIl6AnBiomd0000000535Model
+    args:
+      model_path: data/BIOMD0000000535.xml
+  dwivedi2014_croh_2:
+    class: src.dwivedi2014_crohns_il6_disease_model_anti_il6r_a_biomd0000000537_model:Dwivedi2014CrohnsIl6DiseaseModelAntiIl6rABiomd0000000537Model
+    args:
+      model_path: data/BIOMD0000000537.xml
+  dwivedi2014_croh_3:
+    class: src.dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model:Dwivedi2014CrohnsIl6DiseaseModelSgp130ActiBiomd0000000536Model
+    args:
+      model_path: data/BIOMD0000000536.xml
+  dwivedi2014_heal_4:
+    class: src.dwivedi2014_healthy_volunteer_il6_model_biomd0000000534_model:Dwivedi2014HealthyVolunteerIl6ModelBiomd0000000534Model
+    args:
+      model_path: data/BIOMD0000000534.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: dwivedi2014_croh_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: dwivedi2014_croh_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: dwivedi2014_croh_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: dwivedi2014_heal_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

@@ -1,0 +1,44 @@
+modules:
+  bachmann2011_div_1:
+    class: src.bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model:Bachmann2011DivisionOfLaborByDualFeedbackBiomd0000000861Model
+    args:
+      model_path: data/BIOMD0000000861.xml
+  baker2013_cytoki_2:
+    class: src.baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000549_model:Baker2013CytokineMediatedInflammationInRheuBiomd0000000549Model
+    args:
+      model_path: data/BIOMD0000000549.xml
+  baker2013_cytoki_3:
+    class: src.baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model:Baker2013CytokineMediatedInflammationInRheuBiomd0000000550Model
+    args:
+      model_path: data/BIOMD0000000550.xml
+  begitt2014_stat1_4:
+    class: src.begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model:Begitt2014Stat1CooperativeDnaBindingDoubleBiomd0000000501Model
+    args:
+      model_path: data/BIOMD0000000501.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: bachmann2011_div_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: baker2013_cytoki_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: baker2013_cytoki_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: begitt2014_stat1_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

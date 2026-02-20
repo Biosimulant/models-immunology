@@ -1,0 +1,36 @@
+modules:
+  makhlouf2020_no_1:
+    class: src.makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model:Makhlouf2020NoTreatmentModelOfTheRoleOfCBiomd0000001042Model
+    args:
+      model_path: data/BIOMD0000001042.xml
+  malinzi2018_tumo_2:
+    class: src.malinzi2018_tumour_immune_interaction_model_biomd0000000809_model:Malinzi2018TumourImmuneInteractionModelBiomd0000000809Model
+    args:
+      model_path: data/BIOMD0000000809.xml
+  manchanda2014_ef_3:
+    class: src.manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model:Manchanda2014EffectOnImmuneSystemBy4DiffeBiomd0000000712Model
+    args:
+      model_path: data/BIOMD0000000712.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: makhlouf2020_no_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: malinzi2018_tumo_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: manchanda2014_ef_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

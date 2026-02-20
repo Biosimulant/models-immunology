@@ -1,0 +1,36 @@
+modules:
+  leung2016_sirws_1:
+    class: src.leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model:Leung2016SirwsModelWithImmuneBoostingAndCModel1808280006Model
+    args:
+      model_path: data/MODEL1808280006.xml
+  liu2017_chemothe_2:
+    class: src.liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model:Liu2017ChemotherapyTargetedModelOfTumorImmBiomd0000000930Model
+    args:
+      model_path: data/BIOMD0000000930.xml
+  liu2019_logistic_3:
+    class: src.liu2019_logistic_regression_models_to_predict_in_model2310150001_model:Liu2019LogisticRegressionModelsToPredictInModel2310150001Model
+    args:
+      model_path: data/MODEL2310150001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: leung2016_sirws_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: liu2017_chemothe_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: liu2019_logistic_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

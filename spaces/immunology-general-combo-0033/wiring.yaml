@@ -1,0 +1,36 @@
+modules:
+  gallaher2018_tum_1:
+    class: src.gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model:Gallaher2018TumorImmuneDynamicsInMultipleMBiomd0000000743Model
+    args:
+      model_path: data/BIOMD0000000743.xml
+  ganguli2018_immu_2:
+    class: src.ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model:Ganguli2018ImmunoRegulatoryMechanismsInTumoBiomd0000000810Model
+    args:
+      model_path: data/BIOMD0000000810.xml
+  garcia2018basic__3:
+    class: src.garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model:Garcia2018basicCancerAndImmuneCellCountBasBiomd0000000742Model
+    args:
+      model_path: data/BIOMD0000000742.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: gallaher2018_tum_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: ganguli2018_immu_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: garcia2018basic__3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

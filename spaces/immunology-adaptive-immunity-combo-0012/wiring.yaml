@@ -1,0 +1,28 @@
+modules:
+  sen2021_htimmr_1:
+    class: src.sen2021_htimmr_a_generic_human_cd4_t_cell_model_model2101270002_model:Sen2021HtimmrAGenericHumanCd4TCellModelModel2101270002Model
+    args:
+      model_path: data/MODEL2101270002.xml
+  sigal2019_mathem_2:
+    class: src.sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model:Sigal2019MathematicalModellingOfCancerStemModel1911270001Model
+    args:
+      model_path: data/MODEL1911270001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: sen2021_htimmr_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: sigal2019_mathem_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

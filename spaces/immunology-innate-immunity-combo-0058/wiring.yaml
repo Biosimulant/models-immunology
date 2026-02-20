@@ -1,0 +1,44 @@
+modules:
+  carbo2013_cytoki_1:
+    class: src.carbo2013_cytokine_driven_cd4_t_cell_differentia_biomd0000000451_model:Carbo2013CytokineDrivenCd4TCellDifferentiaBiomd0000000451Model
+    args:
+      model_path: data/BIOMD0000000451.xml
+  day2015_early_2:
+    class: src.day2015_early_cellular_innate_and_adaptive_immun_model1911190001_model:Day2015EarlyCellularInnateAndAdaptiveImmunModel1911190001Model
+    args:
+      model_path: data/MODEL1911190001.xml
+  den_breems2015_3:
+    class: src.den_breems2015_macrophage_in_cancer_biomd0000000759_model:DenBreems2015MacrophageInCancerBiomd0000000759Model
+    args:
+      model_path: data/BIOMD0000000759.xml
+  eftimie2017_inte_4:
+    class: src.eftimie2017_1_interaction_of_th_and_macrophage_biomd0000000770_model:Eftimie20171InteractionOfThAndMacrophageBiomd0000000770Model
+    args:
+      model_path: data/BIOMD0000000770.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: carbo2013_cytoki_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: day2015_early_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: den_breems2015_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: eftimie2017_inte_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

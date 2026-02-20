@@ -1,0 +1,44 @@
+modules:
+  trisilowati2018__1:
+    class: src.trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model:Trisilowati2018OptimalControlOfTumorImmuneBiomd0000000880Model
+    args:
+      model_path: data/BIOMD0000000880.xml
+  tsirvouli2021_cy_2:
+    class: src.tsirvouli2021_cytokine_and_eicosanoid_signaling_model2109300001_model:Tsirvouli2021CytokineAndEicosanoidSignalingModel2109300001Model
+    args:
+      model_path: data/MODEL2109300001.xml
+  waugh2006_diabet_3:
+    class: src.waugh2006_diabetic_wound_healing_macrophage_dyna_biomd0000000679_model:Waugh2006DiabeticWoundHealingMacrophageDynaBiomd0000000679Model
+    args:
+      model_path: data/BIOMD0000000679.xml
+  waugh2006_diabet_4:
+    class: src.waugh2006_diabetic_wound_healing_tgf_b_dynamics_biomd0000000680_model:Waugh2006DiabeticWoundHealingTgfBDynamicsBiomd0000000680Model
+    args:
+      model_path: data/BIOMD0000000680.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: trisilowati2018__1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: tsirvouli2021_cy_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: waugh2006_diabet_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: waugh2006_diabet_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

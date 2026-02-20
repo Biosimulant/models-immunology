@@ -1,0 +1,28 @@
+modules:
+  diego2021_improv_1:
+    class: src.diego2021_improved_prediction_of_icb_efficacy_ac_model2407210002_model:Diego2021ImprovedPredictionOfIcbEfficacyAcModel2407210002Model
+    args:
+      model_path: data/MODEL2407210002.xml
+  draghi2019_param_2:
+    class: src.draghi2019_parameter_identification_of_a_model_f_model1911100005_model:Draghi2019ParameterIdentificationOfAModelFModel1911100005Model
+    args:
+      model_path: data/MODEL1911100005.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: diego2021_improv_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: draghi2019_param_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

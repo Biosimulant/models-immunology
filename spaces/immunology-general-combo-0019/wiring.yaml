@@ -1,0 +1,28 @@
+modules:
+  alvarez2019_a_1:
+    class: src.alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model:Alvarez2019ANonlinearMathematicalModelOfCeBiomd0000000790Model
+    args:
+      model_path: data/BIOMD0000000790.xml
+  baker_immunometa_2:
+    class: src.baker_2022_immunometabolic_model_model2211070001_model:Baker2022ImmunometabolicModelModel2211070001Model
+    args:
+      model_path: data/MODEL2211070001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: alvarez2019_a_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: baker_immunometa_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

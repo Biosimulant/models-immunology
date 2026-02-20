@@ -1,0 +1,28 @@
+modules:
+  alharbi2020_an_1:
+    class: src.alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model:Alharbi2020AnOdeBasedModelOfTheDynamicsOBiomd0000001023Model
+    args:
+      model_path: data/BIOMD0000001023.xml
+  alharbi2020_tumo_2:
+    class: src.alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model:Alharbi2020TumorAndImmuneSystemCompetitionBiomd0000001052Model
+    args:
+      model_path: data/BIOMD0000001052.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: alharbi2020_an_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: alharbi2020_tumo_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

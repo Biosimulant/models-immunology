@@ -1,0 +1,36 @@
+modules:
+  lee2009_adaptive_1:
+    class: src.lee2009_adaptive_immune_response_to_influenza_a_model1406230000_model:Lee2009AdaptiveImmuneResponseToInfluenzaAModel1406230000Model
+    args:
+      model_path: data/MODEL1406230000.xml
+  leon_triana2021_2:
+    class: src.leon_triana2021_competition_between_tumour_cells_biomd0000001013_model:LeonTriana2021CompetitionBetweenTumourCellsBiomd0000001013Model
+    args:
+      model_path: data/BIOMD0000001013.xml
+  leon_triana2021_3:
+    class: src.leon_triana2021_competition_between_tumour_cells_biomd0000001014_model:LeonTriana2021CompetitionBetweenTumourCellsBiomd0000001014Model
+    args:
+      model_path: data/BIOMD0000001014.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: lee2009_adaptive_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: leon_triana2021_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: leon_triana2021_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

@@ -1,0 +1,36 @@
+modules:
+  jarrett2018_tras_1:
+    class: src.jarrett2018_trastuzumab_induced_immune_response_biomd0000000745_model:Jarrett2018TrastuzumabInducedImmuneResponseBiomd0000000745Model
+    args:
+      model_path: data/BIOMD0000000745.xml
+  kareva2010_myelo_2:
+    class: src.kareva2010_myeloid_cells_in_tumour_immune_intera_model2001310001_model:Kareva2010MyeloidCellsInTumourImmuneInteraModel2001310001Model
+    args:
+      model_path: data/MODEL2001310001.xml
+  khajanchi2017_un_3:
+    class: src.khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model:Khajanchi2017UniformPersistenceAndGlobalStaBiomd0000000921Model
+    args:
+      model_path: data/BIOMD0000000921.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: jarrett2018_tras_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: kareva2010_myelo_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: khajanchi2017_un_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

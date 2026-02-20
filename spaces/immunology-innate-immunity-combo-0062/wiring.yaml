@@ -1,0 +1,44 @@
+modules:
+  lavigne2021_non_1:
+    class: src.lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model:Lavigne2021NonSpatialModelOfViralInfectionBiomd0000001021Model
+    args:
+      model_path: data/BIOMD0000001021.xml
+  leber2016_regula_2:
+    class: src.leber2016_regulatory_macrophage_differentiation_model1611160001_model:Leber2016RegulatoryMacrophageDifferentiationModel1611160001Model
+    args:
+      model_path: data/MODEL1611160001.xml
+  lix2019_macropha_3:
+    class: src.lix2019_macrophage_polarization_and_tumor_cell_p_model1909230002_model:Lix2019MacrophagePolarizationAndTumorCellPModel1909230002Model
+    args:
+      model_path: data/MODEL1909230002.xml
+  maier2022_stocha_4:
+    class: src.maier2022_stochastic_dynamics_of_type_i_interfer_model2210070001_model:Maier2022StochasticDynamicsOfTypeIInterferModel2210070001Model
+    args:
+      model_path: data/MODEL2210070001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: lavigne2021_non_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: leber2016_regula_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: lix2019_macropha_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: maier2022_stocha_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

@@ -1,0 +1,36 @@
+modules:
+  liu2023_predicti_1:
+    class: src.liu2023_predicting_the_efficacy_of_immune_checkp_biomd0000001074_model:Liu2023PredictingTheEfficacyOfImmuneCheckpBiomd0000001074Model
+    args:
+      model_path: data/BIOMD0000001074.xml
+  lopez2014_a_2:
+    class: src.lopez2014_a_validated_mathematical_model_of_tumo_biomd0000000784_model:Lopez2014AValidatedMathematicalModelOfTumoBiomd0000000784Model
+    args:
+      model_path: data/BIOMD0000000784.xml
+  louzoun2014_a_3:
+    class: src.louzoun2014_a_mathematical_model_for_pancreatic_model1909100002_model:Louzoun2014AMathematicalModelForPancreaticModel1909100002Model
+    args:
+      model_path: data/MODEL1909100002.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: liu2023_predicti_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: lopez2014_a_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: louzoun2014_a_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

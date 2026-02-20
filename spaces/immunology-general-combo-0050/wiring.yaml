@@ -1,0 +1,36 @@
+modules:
+  restif2007_vacci_1:
+    class: src.restif2007_vaccination_invasion_biomd0000000294_model:Restif2007VaccinationInvasionBiomd0000000294Model
+    args:
+      model_path: data/BIOMD0000000294.xml
+  rhodes2019_immun_2:
+    class: src.rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model:Rhodes2019ImmuneMediatedTheoryOfMetastasisBiomd0000000926Model
+    args:
+      model_path: data/BIOMD0000000926.xml
+  robertson_tessi_3:
+    class: src.robertson_tessi_m_2012_a_model_of_tumor_immune_i_biomd0000000731_model:RobertsonTessiM2012AModelOfTumorImmuneIBiomd0000000731Model
+    args:
+      model_path: data/BIOMD0000000731.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: restif2007_vacci_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: rhodes2019_immun_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: robertson_tessi_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

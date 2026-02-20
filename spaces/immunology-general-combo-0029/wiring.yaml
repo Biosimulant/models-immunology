@@ -1,0 +1,28 @@
+modules:
+  dubey2007_a_1:
+    class: src.dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model:Dubey2007AMathematicalModelForTheEffectOfBiomd0000000905Model
+    args:
+      model_path: data/BIOMD0000000905.xml
+  dubey2007_a_2:
+    class: src.dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000906_model:Dubey2007AMathematicalModelForTheEffectOfBiomd0000000906Model
+    args:
+      model_path: data/BIOMD0000000906.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: dubey2007_a_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: dubey2007_a_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

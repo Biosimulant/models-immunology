@@ -1,0 +1,28 @@
+modules:
+  carbo2013_mucosa_1:
+    class: src.carbo2013_mucosal_immune_response_during_h_pylor_biomd0000000480_model:Carbo2013MucosalImmuneResponseDuringHPylorBiomd0000000480Model
+    args:
+      model_path: data/BIOMD0000000480.xml
+  chowell2022_rand_2:
+    class: src.chowell2022_random_forest_model_to_predict_effic_biomd0000001066_model:Chowell2022RandomForestModelToPredictEfficBiomd0000001066Model
+    args:
+      model_path: data/BIOMD0000001066.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: carbo2013_mucosa_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: chowell2022_rand_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

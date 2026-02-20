@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: 'Immunology: Innate Immunity (COMBO_0066)'
+description: Immunology innate immunity comparative space with 4 models, configured
+  as non-causal co-simulation.
+models:
+- repo: Biosimulant/models-immunology
+  alias: puniya2021_cd4_1
+  manifest_path: models/immunology-sbml-puniya2021-cd4-th2-cell-metabolism-model-model1909260005-model/model.yaml
+  parameters:
+    model_path: data/MODEL1909260005.xml
+- repo: Biosimulant/models-immunology
+  alias: puniya2021_naive_2
+  manifest_path: models/immunology-sbml-puniya2021-naive-cd4-t-cell-metabolic-model-model1909260003-model/model.yaml
+  parameters:
+    model_path: data/MODEL1909260003.xml
+- repo: Biosimulant/models-immunology
+  alias: rateitschak2012__3
+  manifest_path: models/immunology-sbml-rateitschak2012-interferon-gamma-ifn-induced-sta-biomd0000000585-model/model.yaml
+  parameters:
+    model_path: data/BIOMD0000000585.xml
+- repo: Biosimulant/models-immunology
+  alias: roy2019_a_4
+  manifest_path: models/immunology-sbml-roy2019-a-vivid-cytokines-interaction-model-on-p-model1911070001-model/model.yaml
+  parameters:
+    model_path: data/MODEL1911070001.xml
+- repo: Biosimulant/models-observability
+  alias: state_compare_mon
+  manifest_path: models/observability-state-comparison-monitor/model.yaml
+  parameters:
+    max_points: 2000
+    min_dt: 1.0
+- repo: Biosimulant/models-observability
+  alias: state_metrics_mon
+  manifest_path: models/observability-state-metrics-monitor/model.yaml
+  parameters:
+    max_points: 2000
+    min_dt: 1.0
+runtime:
+  duration: 80.0
+  tick_dt: 0.01
+  initial_inputs: {}
+wiring:
+- from: puniya2021_cd4_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: puniya2021_naive_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: rateitschak2012__3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: roy2019_a_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d
+scientific_context:
+  question: How do innate immunity mechanisms compare across these models?
+  mode: comparative
+  assumptions:
+  - Model implementations are used as published in their curated manifests without
+    biological reinterpretation.
+  - Time integration uses a shared global tick compatible with model min_dt constraints.
+  - Comparative (non-causal) mode is used because full deterministic IO coverage for
+    causal coupling was not satisfied.
+  expected_observables:
+  - Model output trajectories under shared runtime settings.
+  - Cross-model agreement/divergence in key state or metric signals.
+  - Relative behavior comparison without causal linkage claims.
+  limitations:
+  - No new biology is introduced beyond what upstream models encode.
+  - Cross-model semantic matching is rule-based and may under-connect uncertain routes.
+  provenance:
+  - 'immunology-sbml-puniya2021-cd4-th2-cell-metabolism-model-model1909260005-model
+    :: biomodels_ebi:MODEL1909260005 :: https://www.ebi.ac.uk/biomodels/MODEL1909260005'
+  - 'immunology-sbml-puniya2021-naive-cd4-t-cell-metabolic-model-model1909260003-model
+    :: biomodels_ebi:MODEL1909260003 :: https://www.ebi.ac.uk/biomodels/MODEL1909260003'
+  - 'immunology-sbml-rateitschak2012-interferon-gamma-ifn-induced-sta-biomd0000000585-model
+    :: biomodels_ebi:BIOMD0000000585 :: https://www.ebi.ac.uk/biomodels/BIOMD0000000585'
+  - 'immunology-sbml-roy2019-a-vivid-cytokines-interaction-model-on-p-model1911070001-model
+    :: biomodels_ebi:MODEL1911070001 :: https://www.ebi.ac.uk/biomodels/MODEL1911070001'
+  visualization_rationale: A dedicated monitor model receives all participating model
+    state streams (`state_a..state_d`) so trajectories can be compared in one place
+    without claiming causal coupling when IO semantics are incomplete.

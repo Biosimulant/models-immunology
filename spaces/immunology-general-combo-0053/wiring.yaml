@@ -1,0 +1,36 @@
+modules:
+  scharf2023_holis_1:
+    class: src.scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model:Scharf2023HolisticViewOnTheStructureOfImmModel2304260001Model
+    args:
+      model_path: data/MODEL2304260001.xml
+  schokker2013_a_2:
+    class: src.schokker2013_a_mathematical_model_representing_c_biomd0000000895_model:Schokker2013AMathematicalModelRepresentingCBiomd0000000895Model
+    args:
+      model_path: data/BIOMD0000000895.xml
+  shin2019_regulat_3:
+    class: src.shin2019_regulation_of_nuclear_factor_of_activat_model2003200002_model:Shin2019RegulationOfNuclearFactorOfActivatModel2003200002Model
+    args:
+      model_path: data/MODEL2003200002.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: scharf2023_holis_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: schokker2013_a_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: shin2019_regulat_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

@@ -1,0 +1,44 @@
+modules:
+  eftimie2017_inte_1:
+    class: src.eftimie2017_2_interaction_of_th_and_macrophage_i_biomd0000000769_model:Eftimie20172InteractionOfThAndMacrophageIBiomd0000000769Model
+    args:
+      model_path: data/BIOMD0000000769.xml
+  ewald2021_innate_2:
+    class: src.ewald2021_innate_immune_response_during_invasive_model2105110001_model:Ewald2021InnateImmuneResponseDuringInvasiveModel2105110001Model
+    args:
+      model_path: data/MODEL2105110001.xml
+  fatehichenar2018_3:
+    class: src.fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model:Fatehichenar2018MathematicalModelOfImmuneReBiomd0000000848Model
+    args:
+      model_path: data/BIOMD0000000848.xml
+  frank2021_macrop_4:
+    class: src.frank2021_macrophage_polarization_biomd0000001060_model:Frank2021MacrophagePolarizationBiomd0000001060Model
+    args:
+      model_path: data/BIOMD0000001060.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: eftimie2017_inte_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: ewald2021_innate_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: fatehichenar2018_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: frank2021_macrop_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

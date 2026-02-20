@@ -1,0 +1,28 @@
+modules:
+  aguilera_hiv_1:
+    class: src.aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model:Aguilera2014HivLatencyInteractionBetweenHiBiomd0000000573Model
+    args:
+      model_path: data/BIOMD0000000573.xml
+  al_tuwairqi2020_2:
+    class: src.al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model:AlTuwairqi2020DynamicsOfCancerVirotherapyWBiomd0000001035Model
+    args:
+      model_path: data/BIOMD0000001035.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: aguilera_hiv_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: al_tuwairqi2020_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

@@ -1,0 +1,44 @@
+modules:
+  fribourg2014_dyn_1:
+    class: src.fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000528_model:Fribourg2014DynamicsOfViralAntagonismAndInBiomd0000000528Model
+    args:
+      model_path: data/BIOMD0000000528.xml
+  fribourg2014_dyn_2:
+    class: src.fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model:Fribourg2014DynamicsOfViralAntagonismAndInBiomd0000000529Model
+    args:
+      model_path: data/BIOMD0000000529.xml
+  he2017_a_3:
+    class: src.he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model:He2017AMathematicalModelOfPancreaticCancerBiomd0000000811Model
+    args:
+      model_path: data/BIOMD0000000811.xml
+  hernandez_vargas_4:
+    class: src.hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model:HernandezVargas2012InnateImmuneSystemDynamiBiomd0000000710Model
+    args:
+      model_path: data/BIOMD0000000710.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: fribourg2014_dyn_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: fribourg2014_dyn_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: he2017_a_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: hernandez_vargas_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

@@ -1,0 +1,28 @@
+modules:
+  frascoli2014_a_1:
+    class: src.frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model:Frascoli2014ADynamicalModelOfTumourImmunotBiomd0000000787Model
+    args:
+      model_path: data/BIOMD0000000787.xml
+  hanson2016_toxic_2:
+    class: src.hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model:Hanson2016ToxicityManagementInCarTCellTheBiomd0000000837Model
+    args:
+      model_path: data/BIOMD0000000837.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: frascoli2014_a_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: hanson2016_toxic_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

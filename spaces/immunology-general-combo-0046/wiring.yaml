@@ -1,0 +1,36 @@
+modules:
+  nikolopoulou2018_1:
+    class: src.nikolopoulou2018_tumour_immune_dynamics_with_an_model1908270001_model:Nikolopoulou2018TumourImmuneDynamicsWithAnModel1908270001Model
+    args:
+      model_path: data/MODEL1908270001.xml
+  nowak1996_hostre_2:
+    class: src.nowak1996_hostresponse_infectiousagents_model1006230050_model:Nowak1996HostresponseInfectiousagentsModel1006230050Model
+    args:
+      model_path: data/MODEL1006230050.xml
+  nwabugwu2013_a_3:
+    class: src.nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model:Nwabugwu2013ATumorImmuneMathematicalModelOModel2007090001Model
+    args:
+      model_path: data/MODEL2007090001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: nikolopoulou2018_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: nowak1996_hostre_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: nwabugwu2013_a_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

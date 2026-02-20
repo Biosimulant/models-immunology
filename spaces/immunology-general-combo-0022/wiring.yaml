@@ -1,0 +1,28 @@
+modules:
+  bose2011_noise_1:
+    class: src.bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model:Bose2011NoiseAssistedInteractionsOfTumorAnBiomd0000000894Model
+    args:
+      model_path: data/BIOMD0000000894.xml
+  bunimovich_mendr_2:
+    class: src.bunimovich_mendrazitsky2007_mathematical_model_o_biomd0000001034_model:BunimovichMendrazitsky2007MathematicalModelOBiomd0000001034Model
+    args:
+      model_path: data/BIOMD0000001034.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: bose2011_noise_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: bunimovich_mendr_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

@@ -1,0 +1,28 @@
+modules:
+  martinez_sanchez_1:
+    class: src.martinez_sanchez2015_t_cd4_lymphocyte_transcript_biomd0000000592_model:MartinezSanchez2015TCd4LymphocyteTranscriptBiomd0000000592Model
+    args:
+      model_path: data/BIOMD0000000592.xml
+  martinez_sanchez_2:
+    class: src.martinez_sanchez2015_t_cd4_lymphocyte_transcript_biomd0000000593_model:MartinezSanchez2015TCd4LymphocyteTranscriptBiomd0000000593Model
+    args:
+      model_path: data/BIOMD0000000593.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: martinez_sanchez_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: martinez_sanchez_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

@@ -1,0 +1,28 @@
+modules:
+  chrobak2011_a_1:
+    class: src.chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model:Chrobak2011AMathematicalModelOfInducedCancBiomd0000000815Model
+    args:
+      model_path: data/BIOMD0000000815.xml
+  coulibaly2019_in_2:
+    class: src.coulibaly2019_interleukin_15_signaling_in_hif_1a_biomd0000000867_model:Coulibaly2019Interleukin15SignalingInHif1aBiomd0000000867Model
+    args:
+      model_path: data/BIOMD0000000867.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: chrobak2011_a_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: coulibaly2019_in_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
