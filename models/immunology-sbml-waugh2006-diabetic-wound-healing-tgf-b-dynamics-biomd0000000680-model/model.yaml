@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000680
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000680?filename=BIOMD0000000680_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.waugh2006_diabetic_wound_healing_tgf_b_dynamics_biomd0000000680_model:Waugh2006DiabeticWoundHealingTgfBDynamicsBiomd0000000680Model
   init_kwargs:
     model_path: data/BIOMD0000000680.xml

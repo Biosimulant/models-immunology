@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001023
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001023?filename=Alharbi2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model:Alharbi2020AnOdeBasedModelOfTheDynamicsOBiomd0000001023Model
   init_kwargs:
     model_path: data/BIOMD0000001023.xml

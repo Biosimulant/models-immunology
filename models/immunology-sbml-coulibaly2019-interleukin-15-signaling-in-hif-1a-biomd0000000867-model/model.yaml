@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000867
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000867?filename=Coulibaly2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.coulibaly2019_interleukin_15_signaling_in_hif_1a_biomd0000000867_model:Coulibaly2019Interleukin15SignalingInHif1aBiomd0000000867Model
   init_kwargs:
     model_path: data/BIOMD0000000867.xml

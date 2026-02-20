@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2007090001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2007090001?filename=24110741_Nwabugwu.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model:Nwabugwu2013ATumorImmuneMathematicalModelOModel2007090001Model
   init_kwargs:
     model_path: data/MODEL2007090001.xml

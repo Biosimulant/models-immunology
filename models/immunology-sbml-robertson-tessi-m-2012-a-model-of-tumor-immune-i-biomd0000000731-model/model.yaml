@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000731
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000731?filename=22051568_Tessi.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.robertson_tessi_m_2012_a_model_of_tumor_immune_i_biomd0000000731_model:RobertsonTessiM2012AModelOfTumorImmuneIBiomd0000000731Model
   init_kwargs:
     model_path: data/BIOMD0000000731.xml

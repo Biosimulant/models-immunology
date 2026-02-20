@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2001090002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2001090002?filename=Nanda2013.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.nanda2013_b_cell_chronic_lymphocytic_leukemia_a_model2001090002_model:Nanda2013BCellChronicLymphocyticLeukemiaAModel2001090002Model
   init_kwargs:
     model_path: data/MODEL2001090002.xml

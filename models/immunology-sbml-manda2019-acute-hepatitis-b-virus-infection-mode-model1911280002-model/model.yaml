@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1911280002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911280002?filename=Manda2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model:Manda2019AcuteHepatitisBVirusInfectionModeModel1911280002Model
   init_kwargs:
     model_path: data/MODEL1911280002.xml

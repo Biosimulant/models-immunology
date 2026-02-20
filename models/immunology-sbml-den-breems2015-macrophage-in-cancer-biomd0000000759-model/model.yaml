@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000759
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000759?filename=denBreems2015.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.den_breems2015_macrophage_in_cancer_biomd0000000759_model:DenBreems2015MacrophageInCancerBiomd0000000759Model
   init_kwargs:
     model_path: data/BIOMD0000000759.xml

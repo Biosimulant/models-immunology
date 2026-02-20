@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001030
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001030?filename=Sontag2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model:Sontag2017DynamicModelOfImmuneResponsesToBiomd0000001030Model
   init_kwargs:
     model_path: data/BIOMD0000001030.xml

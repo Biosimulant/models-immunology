@@ -24,7 +24,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001014?filename=Leon-Triana2021
     (eqs 3-6).xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.leon_triana2021_competition_between_tumour_cells_biomd0000001014_model:LeonTriana2021CompetitionBetweenTumourCellsBiomd0000001014Model
   init_kwargs:
     model_path: data/BIOMD0000001014.xml

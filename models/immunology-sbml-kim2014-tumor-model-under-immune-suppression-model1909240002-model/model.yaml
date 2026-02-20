@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1909240002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1909240002?filename=Kim2014.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.kim2014_tumor_model_under_immune_suppression_model1909240002_model:Kim2014TumorModelUnderImmuneSuppressionModel1909240002Model
   init_kwargs:
     model_path: data/MODEL1909240002.xml

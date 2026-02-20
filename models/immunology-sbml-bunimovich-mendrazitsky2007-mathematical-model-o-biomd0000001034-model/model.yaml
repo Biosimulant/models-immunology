@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001034
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001034?filename=Bunimovich-Mendrazitsky2007.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bunimovich_mendrazitsky2007_mathematical_model_o_biomd0000001034_model:BunimovichMendrazitsky2007MathematicalModelOBiomd0000001034Model
   init_kwargs:
     model_path: data/BIOMD0000001034.xml

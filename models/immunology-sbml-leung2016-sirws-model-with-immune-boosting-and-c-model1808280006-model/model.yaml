@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1808280006
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1808280006?filename=V4  Reactions.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model:Leung2016SirwsModelWithImmuneBoostingAndCModel1808280006Model
   init_kwargs:
     model_path: data/MODEL1808280006.xml

@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2001130001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2001130001?filename=Banerjee2008.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.banerjee2008_immunotherapy_with_interleukin_2_a_model2001130001_model:Banerjee2008ImmunotherapyWithInterleukin2AModel2001130001Model
   init_kwargs:
     model_path: data/MODEL2001130001.xml

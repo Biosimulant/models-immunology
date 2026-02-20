@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000732
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000732?filename=Kirschner_1998.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.kirschner1998_immunotherapy_tumour_biomd0000000732_model:Kirschner1998ImmunotherapyTumourBiomd0000000732Model
   init_kwargs:
     model_path: data/BIOMD0000000732.xml

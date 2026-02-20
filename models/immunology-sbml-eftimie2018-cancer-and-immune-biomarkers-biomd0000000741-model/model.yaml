@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000741
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000741?filename=Eftimie2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.eftimie2018_cancer_and_immune_biomarkers_biomd0000000741_model:Eftimie2018CancerAndImmuneBiomarkersBiomd0000000741Model
   init_kwargs:
     model_path: data/BIOMD0000000741.xml

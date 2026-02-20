@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000577
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000577?filename=BIOMD0000000577_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.zhou2015_circadian_clock_with_immune_regulator_n_biomd0000000577_model:Zhou2015CircadianClockWithImmuneRegulatorNBiomd0000000577Model
   init_kwargs:
     model_path: data/BIOMD0000000577.xml

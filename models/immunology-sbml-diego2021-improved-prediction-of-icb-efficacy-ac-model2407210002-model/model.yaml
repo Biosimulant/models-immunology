@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2407210002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2407210002?filename=main_models.zip
   license: CC0
-bsim:
+biosim:
   entrypoint: src.diego2021_improved_prediction_of_icb_efficacy_ac_model2407210002_model:Diego2021ImprovedPredictionOfIcbEfficacyAcModel2407210002Model
   init_kwargs:
     model_path: data/MODEL2407210002.xml

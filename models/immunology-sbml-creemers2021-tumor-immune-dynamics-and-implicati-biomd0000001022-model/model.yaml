@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001022
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001022?filename=Creemers2021.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model:Creemers2021TumorImmuneDynamicsAndImplicatiBiomd0000001022Model
   init_kwargs:
     model_path: data/BIOMD0000001022.xml

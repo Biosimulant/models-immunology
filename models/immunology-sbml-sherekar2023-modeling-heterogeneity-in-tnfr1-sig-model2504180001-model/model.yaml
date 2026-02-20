@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2504180001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2504180001?filename=BMProSPR-main_zip.zip
   license: CC0
-bsim:
+biosim:
   entrypoint: src.sherekar2023_modeling_heterogeneity_in_tnfr1_sig_model2504180001_model:Sherekar2023ModelingHeterogeneityInTnfr1SigModel2504180001Model
   init_kwargs:
     model_path: data/MODEL2504180001.xml

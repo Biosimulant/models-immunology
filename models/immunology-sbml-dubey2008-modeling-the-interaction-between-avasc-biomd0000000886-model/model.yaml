@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000886
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000886?filename=Dubey2008.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.dubey2008_modeling_the_interaction_between_avasc_biomd0000000886_model:Dubey2008ModelingTheInteractionBetweenAvascBiomd0000000886Model
   init_kwargs:
     model_path: data/BIOMD0000000886.xml

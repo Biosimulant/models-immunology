@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000679
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000679?filename=Waugh2006_1.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.waugh2006_diabetic_wound_healing_macrophage_dyna_biomd0000000679_model:Waugh2006DiabeticWoundHealingMacrophageDynaBiomd0000000679Model
   init_kwargs:
     model_path: data/BIOMD0000000679.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1909160002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1909160002?filename=Rangel-Reyes2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.rangel_reyes2017_dendritic_immunotherapy_improve_model1909160002_model:RangelReyes2017DendriticImmunotherapyImproveModel1909160002Model
   init_kwargs:
     model_path: data/MODEL1909160002.xml

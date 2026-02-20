@@ -23,7 +23,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000761?filename=Cappuccio2006
     v2.0.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model:Cappuccio2006CancerImmunotherapyByInterleukiBiomd0000000761Model
   init_kwargs:
     model_path: data/BIOMD0000000761.xml

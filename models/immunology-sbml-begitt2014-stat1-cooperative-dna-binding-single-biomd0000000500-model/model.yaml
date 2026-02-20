@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000500
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000500?filename=BIOMD0000000500_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model:Begitt2014Stat1CooperativeDnaBindingSingleBiomd0000000500Model
   init_kwargs:
     model_path: data/BIOMD0000000500.xml

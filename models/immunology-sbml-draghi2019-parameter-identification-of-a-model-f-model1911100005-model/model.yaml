@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1911100005
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911100005?filename=Draghi2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.draghi2019_parameter_identification_of_a_model_f_model1911100005_model:Draghi2019ParameterIdentificationOfAModelFModel1911100005Model
   init_kwargs:
     model_path: data/MODEL1911100005.xml

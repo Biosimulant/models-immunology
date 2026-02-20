@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003200002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003200002?filename=Shin2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.shin2019_regulation_of_nuclear_factor_of_activat_model2003200002_model:Shin2019RegulationOfNuclearFactorOfActivatModel2003200002Model
   init_kwargs:
     model_path: data/MODEL2003200002.xml

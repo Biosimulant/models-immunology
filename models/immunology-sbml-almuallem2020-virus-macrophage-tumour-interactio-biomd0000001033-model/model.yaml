@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001033
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001033?filename=Almuallem2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model:Almuallem2020VirusMacrophageTumourInteractioBiomd0000001033Model
   init_kwargs:
     model_path: data/BIOMD0000001033.xml

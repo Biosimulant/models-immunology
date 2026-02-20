@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000861
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000861?filename=Bachmann2011.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model:Bachmann2011DivisionOfLaborByDualFeedbackBiomd0000000861Model
   init_kwargs:
     model_path: data/BIOMD0000000861.xml

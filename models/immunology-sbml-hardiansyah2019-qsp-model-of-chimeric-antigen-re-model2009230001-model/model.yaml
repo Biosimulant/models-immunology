@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2009230001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2009230001?filename=Haridansyah2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hardiansyah2019_qsp_model_of_chimeric_antigen_re_model2009230001_model:Hardiansyah2019QspModelOfChimericAntigenReModel2009230001Model
   init_kwargs:
     model_path: data/MODEL2009230001.xml

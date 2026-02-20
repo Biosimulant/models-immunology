@@ -12,13 +12,13 @@ from pathlib import Path
 from typing import Any, Dict, Optional, Set, TYPE_CHECKING
 
 if TYPE_CHECKING:  # pragma: no cover - typing only
-    from bsim import BioWorld
+    from biosim import BioWorld
 
-import bsim
-from bsim.signals import BioSignal, SignalMetadata
+import biosim
+from biosim.signals import BioSignal, SignalMetadata
 
 
-class SbmlPatterson2022TumourMutationDataDrivenRandomForest(bsim.BioModule):
+class SbmlPatterson2022TumourMutationDataDrivenRandomForest(biosim.BioModule):
     """BioModule wrapper for SBML model: Patterson2022 - Tumour mutation data driven Random Forest model to predict immune checkpoint inhibitor therapy benefit in metastatic melanoma."""
 
     def __init__(self, model_path: str = "data/BIOMD0000001073.xml", min_dt: float = 0.01) -> None:

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000924
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000924?filename=Smith2011_V1.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.smith2011_three_stage_innate_immune_response_to_biomd0000000924_model:Smith2011ThreeStageInnateImmuneResponseToBiomd0000000924Model
   init_kwargs:
     model_path: data/BIOMD0000000924.xml

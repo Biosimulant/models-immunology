@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003170002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003170002?filename=Vibert2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.vibert2017_tcell_proliferation_model_model2003170002_model:Vibert2017TcellProliferationModelModel2003170002Model
   init_kwargs:
     model_path: data/MODEL2003170002.xml

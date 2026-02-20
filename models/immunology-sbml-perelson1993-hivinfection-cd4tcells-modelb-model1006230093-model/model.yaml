@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1006230093
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1006230093?filename=MODEL1006230093_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.perelson1993_hivinfection_cd4tcells_modelb_model1006230093_model:Perelson1993HivinfectionCd4tcellsModelbModel1006230093Model
   init_kwargs:
     model_path: data/MODEL1006230093.xml

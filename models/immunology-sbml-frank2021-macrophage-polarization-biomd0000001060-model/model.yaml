@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001060
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001060?filename=Frank2021.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.frank2021_macrophage_polarization_biomd0000001060_model:Frank2021MacrophagePolarizationBiomd0000001060Model
   init_kwargs:
     model_path: data/BIOMD0000001060.xml

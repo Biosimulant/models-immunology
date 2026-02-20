@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1011090002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1011090002?filename=MODEL1011090002_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bordbar2010_m_tuberculosis_macrophage_model1011090002_model:Bordbar2010MTuberculosisMacrophageModel1011090002Model
   init_kwargs:
     model_path: data/MODEL1011090002.xml

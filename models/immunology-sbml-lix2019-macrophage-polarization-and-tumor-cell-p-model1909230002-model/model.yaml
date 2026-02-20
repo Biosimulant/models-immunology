@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1909230002?filename=LiX2019
     - macrophage polarization and tumor cell plasticity.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.lix2019_macrophage_polarization_and_tumor_cell_p_model1909230002_model:Lix2019MacrophagePolarizationAndTumorCellPModel1909230002Model
   init_kwargs:
     model_path: data/MODEL1909230002.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000753
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000753?filename=Figueredo2013_1.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.figueredo2013_1_immunointeraction_base_model_biomd0000000753_model:Figueredo20131ImmunointeractionBaseModelBiomd0000000753Model
   init_kwargs:
     model_path: data/BIOMD0000000753.xml

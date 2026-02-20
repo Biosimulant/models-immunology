@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000536
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000536?filename=BIOMD0000000536_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model:Dwivedi2014CrohnsIl6DiseaseModelSgp130ActiBiomd0000000536Model
   init_kwargs:
     model_path: data/BIOMD0000000536.xml

@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000573
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000573?filename=BIOMD0000000573_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model:Aguilera2014HivLatencyInteractionBetweenHiBiomd0000000573Model
   init_kwargs:
     model_path: data/BIOMD0000000573.xml

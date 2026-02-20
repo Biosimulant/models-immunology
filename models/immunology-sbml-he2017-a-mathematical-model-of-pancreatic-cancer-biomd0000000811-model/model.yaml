@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000811
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000811?filename=He2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model:He2017AMathematicalModelOfPancreaticCancerBiomd0000000811Model
   init_kwargs:
     model_path: data/BIOMD0000000811.xml

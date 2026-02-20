@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1006230050
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1006230050?filename=MODEL1006230050_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.nowak1996_hostresponse_infectiousagents_model1006230050_model:Nowak1996HostresponseInfectiousagentsModel1006230050Model
   init_kwargs:
     model_path: data/MODEL1006230050.xml

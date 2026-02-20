@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1909260003
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1909260003?filename=Puniya2021_TNM1055.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.puniya2021_naive_cd4_t_cell_metabolic_model_model1909260003_model:Puniya2021NaiveCd4TCellMetabolicModelModel1909260003Model
   init_kwargs:
     model_path: data/MODEL1909260003.xml

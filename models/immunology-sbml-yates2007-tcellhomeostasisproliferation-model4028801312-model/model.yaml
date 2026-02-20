@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL4028801312
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL4028801312?filename=MODEL4028801312_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.yates2007_tcellhomeostasisproliferation_model4028801312_model:Yates2007TcellhomeostasisproliferationModel4028801312Model
   init_kwargs:
     model_path: data/MODEL4028801312.xml

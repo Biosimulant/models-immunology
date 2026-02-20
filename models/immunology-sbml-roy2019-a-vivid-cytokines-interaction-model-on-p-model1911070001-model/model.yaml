@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1911070001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911070001?filename=Roy2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.roy2019_a_vivid_cytokines_interaction_model_on_p_model1911070001_model:Roy2019AVividCytokinesInteractionModelOnPModel1911070001Model
   init_kwargs:
     model_path: data/MODEL1911070001.xml

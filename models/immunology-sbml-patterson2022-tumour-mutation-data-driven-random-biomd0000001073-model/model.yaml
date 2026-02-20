@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001073
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001073?filename=rforest_ROLP.onnx
   license: CC0
-bsim:
+biosim:
   entrypoint: src.patterson2022_tumour_mutation_data_driven_random_biomd0000001073_model:Patterson2022TumourMutationDataDrivenRandomBiomd0000001073Model
   init_kwargs:
     model_path: data/BIOMD0000001073.xml

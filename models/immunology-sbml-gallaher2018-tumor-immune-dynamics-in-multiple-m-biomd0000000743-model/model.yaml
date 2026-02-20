@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000743
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000743?filename=Gallaher2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model:Gallaher2018TumorImmuneDynamicsInMultipleMBiomd0000000743Model
   init_kwargs:
     model_path: data/BIOMD0000000743.xml

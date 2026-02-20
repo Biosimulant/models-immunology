@@ -24,7 +24,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001021?filename=Lavigne2021
     - ODE model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model:Lavigne2021NonSpatialModelOfViralInfectionBiomd0000001021Model
   init_kwargs:
     model_path: data/BIOMD0000001021.xml

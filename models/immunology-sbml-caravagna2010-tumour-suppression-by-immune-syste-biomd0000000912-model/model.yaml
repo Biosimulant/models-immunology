@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000912
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000912?filename=Caravagna2010.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.caravagna2010_tumour_suppression_by_immune_syste_biomd0000000912_model:Caravagna2010TumourSuppressionByImmuneSysteBiomd0000000912Model
   init_kwargs:
     model_path: data/BIOMD0000000912.xml

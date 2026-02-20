@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2101270002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2101270002?filename=HTimmR.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.sen2021_htimmr_a_generic_human_cd4_t_cell_model_model2101270002_model:Sen2021HtimmrAGenericHumanCd4TCellModelModel2101270002Model
   init_kwargs:
     model_path: data/MODEL2101270002.xml

@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000787
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000787?filename=Frascoli2014.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model:Frascoli2014ADynamicalModelOfTumourImmunotBiomd0000000787Model
   init_kwargs:
     model_path: data/BIOMD0000000787.xml

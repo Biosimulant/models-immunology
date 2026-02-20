@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2301110002?filename=Healthy
     with Sensitivity.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.immunological_healthy_state_model_of_sphingolipi_model2301110002_model:ImmunologicalHealthyStateModelOfSphingolipiModel2301110002Model
   init_kwargs:
     model_path: data/MODEL2301110002.xml

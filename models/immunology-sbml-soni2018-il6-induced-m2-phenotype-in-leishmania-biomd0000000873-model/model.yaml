@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000873
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000873?filename=Soni2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model:Soni2018Il6InducedM2PhenotypeInLeishmaniaBiomd0000000873Model
   init_kwargs:
     model_path: data/BIOMD0000000873.xml

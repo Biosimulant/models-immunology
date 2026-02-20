@@ -18,7 +18,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1604260000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1604260000?filename=vacSim-ori.m
   license: CC0
-bsim:
+biosim:
   entrypoint: src.santos2016_gene_signatures_of_immune_sensitivity_model1604260000_model:Santos2016GeneSignaturesOfImmuneSensitivityModel1604260000Model
   init_kwargs:
     model_path: data/MODEL1604260000.xml

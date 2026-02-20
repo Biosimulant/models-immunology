@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2310150001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2310150001?filename=Ipilimumab_treated.onnx
   license: CC0
-bsim:
+biosim:
   entrypoint: src.liu2019_logistic_regression_models_to_predict_in_model2310150001_model:Liu2019LogisticRegressionModelsToPredictInModel2310150001Model
   init_kwargs:
     model_path: data/MODEL2310150001.xml

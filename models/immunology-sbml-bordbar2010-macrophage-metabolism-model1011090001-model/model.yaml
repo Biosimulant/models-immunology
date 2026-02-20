@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1011090001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1011090001?filename=MODEL1011090001_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bordbar2010_macrophage_metabolism_model1011090001_model:Bordbar2010MacrophageMetabolismModel1011090001Model
   init_kwargs:
     model_path: data/MODEL1011090001.xml

@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1203220000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1203220000?filename=MODEL1203220000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.mol2013_leishmania_macrophage_signaling_network_model1203220000_model:Mol2013LeishmaniaMacrophageSignalingNetworkModel1203220000Model
   init_kwargs:
     model_path: data/MODEL1203220000.xml

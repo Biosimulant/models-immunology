@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2001160001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2001160001?filename=dePillis2007.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.depillis2007_chemotherapy_for_tumors_an_analysis_model2001160001_model:Depillis2007ChemotherapyForTumorsAnAnalysisModel2001160001Model
   init_kwargs:
     model_path: data/MODEL2001160001.xml

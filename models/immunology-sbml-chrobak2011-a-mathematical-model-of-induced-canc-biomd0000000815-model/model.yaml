@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000815
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000815?filename=Chrobak2011.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model:Chrobak2011AMathematicalModelOfInducedCancBiomd0000000815Model
   init_kwargs:
     model_path: data/BIOMD0000000815.xml

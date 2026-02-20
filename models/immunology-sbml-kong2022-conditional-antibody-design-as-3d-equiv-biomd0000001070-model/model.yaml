@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001070
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001070?filename=mean.Dockerfile
   license: CC0
-bsim:
+biosim:
   entrypoint: src.kong2022_conditional_antibody_design_as_3d_equiv_biomd0000001070_model:Kong2022ConditionalAntibodyDesignAs3dEquivBiomd0000001070Model
   init_kwargs:
     model_path: data/BIOMD0000001070.xml

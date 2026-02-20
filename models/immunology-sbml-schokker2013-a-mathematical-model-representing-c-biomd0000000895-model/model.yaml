@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000895
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000895?filename=Schokker2013.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.schokker2013_a_mathematical_model_representing_c_biomd0000000895_model:Schokker2013AMathematicalModelRepresentingCBiomd0000000895Model
   init_kwargs:
     model_path: data/BIOMD0000000895.xml

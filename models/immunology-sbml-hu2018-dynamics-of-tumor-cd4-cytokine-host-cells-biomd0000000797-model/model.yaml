@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000797
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000797?filename=Hu2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model:Hu2018DynamicsOfTumorCd4CytokineHostCellsBiomd0000000797Model
   init_kwargs:
     model_path: data/BIOMD0000000797.xml

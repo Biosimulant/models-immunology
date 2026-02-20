@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1909260004
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1909260004?filename=T1M1133.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.puniya2021_cd4_th1_cell_metabolic_model_model1909260004_model:Puniya2021Cd4Th1CellMetabolicModelModel1909260004Model
   init_kwargs:
     model_path: data/MODEL1909260004.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1504160000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1504160000?filename=MODEL1504160000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.wu2011_influenza_specific_cd8_t_cells_model1504160000_model:Wu2011InfluenzaSpecificCd8TCellsModel1504160000Model
   init_kwargs:
     model_path: data/MODEL1504160000.xml

@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001011?filename=Leon-Triana2020
     (eqs 4).xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001011_model:LeonTriana2020CarTCellTherapyInBCellAcuBiomd0000001011Model
   init_kwargs:
     model_path: data/BIOMD0000001011.xml

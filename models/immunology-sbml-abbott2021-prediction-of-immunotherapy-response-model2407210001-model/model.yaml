@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2407210001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2407210001?filename=Abbott_Boyle_manuscript_code_ocean.R
   license: CC0
-bsim:
+biosim:
   entrypoint: src.abbott2021_prediction_of_immunotherapy_response_model2407210001_model:Abbott2021PredictionOfImmunotherapyResponseModel2407210001Model
   init_kwargs:
     model_path: data/MODEL2407210001.xml

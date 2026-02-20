@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2106070001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2106070001?filename=Montagud2021_Prostate_Cancer.sbml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.montagud2022_prostate_cancer_boolean_model_model2106070001_model:Montagud2022ProstateCancerBooleanModelModel2106070001Model
   init_kwargs:
     model_path: data/MODEL2106070001.sbml

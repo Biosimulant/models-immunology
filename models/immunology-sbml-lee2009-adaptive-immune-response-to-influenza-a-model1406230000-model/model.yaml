@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1406230000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1406230000?filename=MODEL1406230000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.lee2009_adaptive_immune_response_to_influenza_a_model1406230000_model:Lee2009AdaptiveImmuneResponseToInfluenzaAModel1406230000Model
   init_kwargs:
     model_path: data/MODEL1406230000.xml

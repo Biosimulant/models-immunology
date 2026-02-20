@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000238
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000238?filename=BIOMD0000000238_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.overgaard2007_pdmodel_il21_biomd0000000238_model:Overgaard2007PdmodelIl21Biomd0000000238Model
   init_kwargs:
     model_path: data/BIOMD0000000238.xml

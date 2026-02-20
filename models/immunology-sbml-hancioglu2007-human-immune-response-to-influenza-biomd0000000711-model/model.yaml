@@ -23,7 +23,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000711?filename=Hancioglu2007
     - Human Immune Response to Influenza A virus.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model:Hancioglu2007HumanImmuneResponseToInfluenzaBiomd0000000711Model
   init_kwargs:
     model_path: data/BIOMD0000000711.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1909100002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1909100002?filename=Louzoun2014.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.louzoun2014_a_mathematical_model_for_pancreatic_model1909100002_model:Louzoun2014AMathematicalModelForPancreaticModel1909100002Model
   init_kwargs:
     model_path: data/MODEL1909100002.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003190001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003190001?filename=Rodrigues2014.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.rodrigues2014_vaccination_models_and_optimal_con_model2003190001_model:Rodrigues2014VaccinationModelsAndOptimalConModel2003190001Model
   init_kwargs:
     model_path: data/MODEL2003190001.xml

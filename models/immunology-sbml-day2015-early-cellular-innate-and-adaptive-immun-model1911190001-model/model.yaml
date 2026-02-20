@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1911190001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911190001?filename=Day2015.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.day2015_early_cellular_innate_and_adaptive_immun_model1911190001_model:Day2015EarlyCellularInnateAndAdaptiveImmunModel1911190001Model
   init_kwargs:
     model_path: data/MODEL1911190001.xml

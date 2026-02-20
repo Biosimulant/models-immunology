@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000215
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000215?filename=BIOMD0000000215_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.schulz2009_th1_differentiation_biomd0000000215_model:Schulz2009Th1DifferentiationBiomd0000000215Model
   init_kwargs:
     model_path: data/BIOMD0000000215.xml

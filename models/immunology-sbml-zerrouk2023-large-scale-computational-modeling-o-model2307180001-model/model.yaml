@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2307180001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2307180001?filename=RA_M1_macrophage.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.zerrouk2023_large_scale_computational_modeling_o_model2307180001_model:Zerrouk2023LargeScaleComputationalModelingOModel2307180001Model
   init_kwargs:
     model_path: data/MODEL2307180001.xml

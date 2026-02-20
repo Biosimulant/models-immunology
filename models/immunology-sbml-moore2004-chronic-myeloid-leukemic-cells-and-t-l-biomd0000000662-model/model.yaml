@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000662
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000662?filename=BIOMD0000000662_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model:Moore2004ChronicMyeloidLeukemicCellsAndTLBiomd0000000662Model
   init_kwargs:
     model_path: data/BIOMD0000000662.xml

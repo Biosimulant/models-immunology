@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000770
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000770?filename=Eftimie2017_1.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.eftimie2017_1_interaction_of_th_and_macrophage_biomd0000000770_model:Eftimie20171InteractionOfThAndMacrophageBiomd0000000770Model
   init_kwargs:
     model_path: data/BIOMD0000000770.xml

@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1411130000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1411130000?filename=MODEL1411130000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model:Miao2014DynamicsAndMigratoryPathwaysOfViruModel1411130000Model
   init_kwargs:
     model_path: data/MODEL1411130000.xml

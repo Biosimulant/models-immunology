@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1911270002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911270002?filename=Yu2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model:Yu2019AMathematicalModelOfTumorImmuneInteModel1911270002Model
   init_kwargs:
     model_path: data/MODEL1911270002.xml

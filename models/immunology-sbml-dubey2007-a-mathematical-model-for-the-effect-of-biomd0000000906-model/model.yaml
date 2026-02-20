@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000906
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000906?filename=Dubey2007_model1.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000906_model:Dubey2007AMathematicalModelForTheEffectOfBiomd0000000906Model
   init_kwargs:
     model_path: data/BIOMD0000000906.xml

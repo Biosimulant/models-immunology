@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000094
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000094?filename=BIOMD0000000094_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.yamada2003_jak_stat_socs1_knockout_biomd0000000094_model:Yamada2003JakStatSocs1KnockoutBiomd0000000094Model
   init_kwargs:
     model_path: data/BIOMD0000000094.xml

@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000904
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000904?filename=Admon2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.admon2017_modelling_tumor_growth_with_immune_res_biomd0000000904_model:Admon2017ModellingTumorGrowthWithImmuneResBiomd0000000904Model
   init_kwargs:
     model_path: data/BIOMD0000000904.xml

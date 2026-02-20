@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000891
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000891?filename=Khajanchi2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model:Khajanchi2019StabilityAnalysisOfAMathematicBiomd0000000891Model
   init_kwargs:
     model_path: data/BIOMD0000000891.xml

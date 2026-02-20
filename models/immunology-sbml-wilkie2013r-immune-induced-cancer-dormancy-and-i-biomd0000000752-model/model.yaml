@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000752
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000752?filename=Wilkie2013r.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model:Wilkie2013rImmuneInducedCancerDormancyAndIBiomd0000000752Model
   init_kwargs:
     model_path: data/BIOMD0000000752.xml

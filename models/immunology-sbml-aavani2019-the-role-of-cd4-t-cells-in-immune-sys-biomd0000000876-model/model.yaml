@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000876
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000876?filename=Aavani2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model:Aavani2019TheRoleOfCd4TCellsInImmuneSysBiomd0000000876Model
   init_kwargs:
     model_path: data/BIOMD0000000876.xml

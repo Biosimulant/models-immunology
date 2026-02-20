@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000585
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000585?filename=BIOMD0000000585_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model:Rateitschak2012InterferonGammaIfnInducedStaBiomd0000000585Model
   init_kwargs:
     model_path: data/BIOMD0000000585.xml

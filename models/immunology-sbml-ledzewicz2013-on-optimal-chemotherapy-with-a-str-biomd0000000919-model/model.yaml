@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000919
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000919?filename=Ledzewicz2013.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model:Ledzewicz2013OnOptimalChemotherapyWithAStrBiomd0000000919Model
   init_kwargs:
     model_path: data/BIOMD0000000919.xml

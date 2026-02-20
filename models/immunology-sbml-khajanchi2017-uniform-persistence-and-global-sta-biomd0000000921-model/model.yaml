@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000921
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000921?filename=khajanchi2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model:Khajanchi2017UniformPersistenceAndGlobalStaBiomd0000000921Model
   init_kwargs:
     model_path: data/BIOMD0000000921.xml

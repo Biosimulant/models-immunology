@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1302180001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1302180001?filename=MODEL1302180001_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.sanjuan2013_evolution_of_hiv_t_cell_epitope_immu_model1302180001_model:Sanjuan2013EvolutionOfHivTCellEpitopeImmuModel1302180001Model
   init_kwargs:
     model_path: data/MODEL1302180001.xml

@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003040001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003040001?filename=Mahasa2016.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.mahasa2016_tumor_immune_surveillance_model2003040001_model:Mahasa2016TumorImmuneSurveillanceModel2003040001Model
   init_kwargs:
     model_path: data/MODEL2003040001.xml

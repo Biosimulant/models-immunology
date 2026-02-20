@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000848
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000848?filename=FatehiChenar2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model:Fatehichenar2018MathematicalModelOfImmuneReBiomd0000000848Model
   init_kwargs:
     model_path: data/BIOMD0000000848.xml

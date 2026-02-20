@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000381
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000381?filename=BIOMD0000000381_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.maree2006_duca_type1diabetesmodel_biomd0000000381_model:Maree2006DucaType1diabetesmodelBiomd0000000381Model
   init_kwargs:
     model_path: data/BIOMD0000000381.xml

@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2211070001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2211070001?filename=Baker2022.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.baker_2022_immunometabolic_model_model2211070001_model:Baker2022ImmunometabolicModelModel2211070001Model
   init_kwargs:
     model_path: data/MODEL2211070001.xml

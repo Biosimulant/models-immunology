@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2304260001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2304260001?filename=230426_LN.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model:Scharf2023HolisticViewOnTheStructureOfImmModel2304260001Model
   init_kwargs:
     model_path: data/MODEL2304260001.xml

@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1611160002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1611160002?filename=MODEL1611160002_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.leber2016_host_immune_response_h_pylori_infectio_model1611160002_model:Leber2016HostImmuneResponseHPyloriInfectioModel1611160002Model
   init_kwargs:
     model_path: data/MODEL1611160002.xml

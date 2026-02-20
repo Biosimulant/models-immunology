@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000592
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000592?filename=BIOMD0000000592_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.martinez_sanchez2015_t_cd4_lymphocyte_transcript_biomd0000000592_model:MartinezSanchez2015TCd4LymphocyteTranscriptBiomd0000000592Model
   init_kwargs:
     model_path: data/BIOMD0000000592.xml

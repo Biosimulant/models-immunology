@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1907310002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1907310002?filename=Arciero2004.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model:Arciero2004AMathematicalModelOfTumorImmuneModel1907310002Model
   init_kwargs:
     model_path: data/MODEL1907310002.xml

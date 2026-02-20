@@ -12,13 +12,13 @@ from pathlib import Path
 from typing import Any, Dict, Optional, Set, TYPE_CHECKING
 
 if TYPE_CHECKING:  # pragma: no cover - typing only
-    from bsim import BioWorld
+    from biosim import BioWorld
 
-import bsim
-from bsim.signals import BioSignal, SignalMetadata
+import biosim
+from biosim.signals import BioSignal, SignalMetadata
 
 
-class SbmlLiu2019LogisticRegressionModelsToPredictIntrinsic(bsim.BioModule):
+class SbmlLiu2019LogisticRegressionModelsToPredictIntrinsic(biosim.BioModule):
     """BioModule wrapper for SBML model: Liu2019 - Logistic Regression models to predict intrinsic resistance to anti-PD1 ICB in Ipilimumab treated and Ipilimumab naive patients with metastatic melanoma.."""
 
     def __init__(self, model_path: str = "data/MODEL2310150001.xml", min_dt: float = 0.01) -> None:

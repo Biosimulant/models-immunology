@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2209160001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2209160001?filename=bifurc-analy-macroph.nb
   license: CC0
-bsim:
+biosim:
   entrypoint: src.modeling_the_relevance_of_immune_and_metabolic_c_model2209160001_model:ModelingTheRelevanceOfImmuneAndMetabolicCModel2209160001Model
   init_kwargs:
     model_path: data/MODEL2209160001.xml

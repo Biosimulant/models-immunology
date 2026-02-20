@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000537
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000537?filename=BIOMD0000000537_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.dwivedi2014_crohns_il6_disease_model_anti_il6r_a_biomd0000000537_model:Dwivedi2014CrohnsIl6DiseaseModelAntiIl6rABiomd0000000537Model
   init_kwargs:
     model_path: data/BIOMD0000000537.xml

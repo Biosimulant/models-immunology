@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001052
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001052?filename=Tumor_cells_immune_system_competition.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model:Alharbi2020TumorAndImmuneSystemCompetitionBiomd0000001052Model
   init_kwargs:
     model_path: data/BIOMD0000001052.xml

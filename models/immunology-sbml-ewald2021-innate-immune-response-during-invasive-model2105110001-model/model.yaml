@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2105110001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2105110001?filename=dynopt_aspergillosis.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ewald2021_innate_immune_response_during_invasive_model2105110001_model:Ewald2021InnateImmuneResponseDuringInvasiveModel2105110001Model
   init_kwargs:
     model_path: data/MODEL2105110001.xml

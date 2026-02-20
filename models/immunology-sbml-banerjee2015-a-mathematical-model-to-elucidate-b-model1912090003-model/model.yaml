@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1912090003
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1912090003?filename=Banerjee2015.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model:Banerjee2015AMathematicalModelToElucidateBModel1912090003Model
   init_kwargs:
     model_path: data/MODEL1912090003.xml

@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000712
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000712?filename=Jena5258.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model:Manchanda2014EffectOnImmuneSystemBy4DiffeBiomd0000000712Model
   init_kwargs:
     model_path: data/BIOMD0000000712.xml

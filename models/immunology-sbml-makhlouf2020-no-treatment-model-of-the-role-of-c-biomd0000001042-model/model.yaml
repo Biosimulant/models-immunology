@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001042
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001042?filename=Makhlouf2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model:Makhlouf2020NoTreatmentModelOfTheRoleOfCBiomd0000001042Model
   init_kwargs:
     model_path: data/BIOMD0000001042.xml

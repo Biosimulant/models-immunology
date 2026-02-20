@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1910290003
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1910290003?filename=Bidot2008.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model:Bidot2008MathematicalModellingOfTCellActivModel1910290003Model
   init_kwargs:
     model_path: data/MODEL1910290003.xml

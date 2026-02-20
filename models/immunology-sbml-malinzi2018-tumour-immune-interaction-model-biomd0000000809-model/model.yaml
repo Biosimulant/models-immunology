@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000809?filename=Malinzi2018
     - tumour-immune interaction model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.malinzi2018_tumour_immune_interaction_model_biomd0000000809_model:Malinzi2018TumourImmuneInteractionModelBiomd0000000809Model
   init_kwargs:
     model_path: data/BIOMD0000000809.xml

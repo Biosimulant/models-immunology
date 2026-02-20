@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000802
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000802?filename=Hoffman2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hoffman2018_adcc_against_cancer_biomd0000000802_model:Hoffman2018AdccAgainstCancerBiomd0000000802Model
   init_kwargs:
     model_path: data/BIOMD0000000802.xml

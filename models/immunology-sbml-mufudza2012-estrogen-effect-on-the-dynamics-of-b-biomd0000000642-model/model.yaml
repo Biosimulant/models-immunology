@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000642
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000642?filename=BIOMD0000000642_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model:Mufudza2012EstrogenEffectOnTheDynamicsOfBBiomd0000000642Model
   init_kwargs:
     model_path: data/BIOMD0000000642.xml

@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000290
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000290?filename=BIOMD0000000290_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.alexander2010_tcell_regulation_sys2_biomd0000000290_model:Alexander2010TcellRegulationSys2Biomd0000000290Model
   init_kwargs:
     model_path: data/BIOMD0000000290.xml

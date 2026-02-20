@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000550
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000550?filename=BIOMD0000000550_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model:Baker2013CytokineMediatedInflammationInRheuBiomd0000000550Model
   init_kwargs:
     model_path: data/BIOMD0000000550.xml

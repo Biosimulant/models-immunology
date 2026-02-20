@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2012040002?filename=M2
     diseased model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model:Khandibharad2022Il12RegulationByIl10InLeModel2012040002Model
   init_kwargs:
     model_path: data/MODEL2012040002.xml

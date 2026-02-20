@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000745
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000745?filename=Jarrett2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.jarrett2018_trastuzumab_induced_immune_response_biomd0000000745_model:Jarrett2018TrastuzumabInducedImmuneResponseBiomd0000000745Model
   init_kwargs:
     model_path: data/BIOMD0000000745.xml

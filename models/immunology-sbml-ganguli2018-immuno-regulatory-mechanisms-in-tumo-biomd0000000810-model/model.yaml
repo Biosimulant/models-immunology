@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000810?filename=Ganguli2018-immuno
     regulatory mechanisms in tumor microenvironment.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model:Ganguli2018ImmunoRegulatoryMechanismsInTumoBiomd0000000810Model
   init_kwargs:
     model_path: data/BIOMD0000000810.xml

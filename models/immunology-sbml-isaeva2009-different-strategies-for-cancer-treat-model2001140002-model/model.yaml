@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2001140002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2001140002?filename=Isaeva2009.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.isaeva2009_different_strategies_for_cancer_treat_model2001140002_model:Isaeva2009DifferentStrategiesForCancerTreatModel2001140002Model
   init_kwargs:
     model_path: data/MODEL2001140002.xml

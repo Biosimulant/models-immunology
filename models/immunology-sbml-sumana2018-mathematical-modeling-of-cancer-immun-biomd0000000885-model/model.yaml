@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000885
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000885?filename=Sumana2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model:Sumana2018MathematicalModelingOfCancerImmunBiomd0000000885Model
   init_kwargs:
     model_path: data/BIOMD0000000885.xml

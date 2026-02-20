@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1908270001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1908270001?filename=Nikolopoulou2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.nikolopoulou2018_tumour_immune_dynamics_with_an_model1908270001_model:Nikolopoulou2018TumourImmuneDynamicsWithAnModel1908270001Model
   init_kwargs:
     model_path: data/MODEL1908270001.xml

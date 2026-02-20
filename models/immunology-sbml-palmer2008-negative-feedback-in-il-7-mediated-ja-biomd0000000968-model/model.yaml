@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000968
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000968?filename=Palmer2008.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model:Palmer2008NegativeFeedbackInIl7MediatedJaBiomd0000000968Model
   init_kwargs:
     model_path: data/BIOMD0000000968.xml

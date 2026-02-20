@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1606020000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1606020000?filename=MODEL1606020000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.sanchez2017_inflammatory_responses_during_acute_model1606020000_model:Sanchez2017InflammatoryResponsesDuringAcuteModel1606020000Model
   init_kwargs:
     model_path: data/MODEL1606020000.xml

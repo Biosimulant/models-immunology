@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2002070001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2002070001?filename=yersinia_population_model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.gei_ert2020_yersinia_enterocolitica_co_infection_model2002070001_model:GeiErt2020YersiniaEnterocoliticaCoInfectionModel2002070001Model
   init_kwargs:
     model_path: data/MODEL2002070001.xml

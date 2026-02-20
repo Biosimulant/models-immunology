@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1912170005
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1912170005?filename=Yakimchuk2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model:Yakimchuk2019MathematicalModelingOfImmuneMoModel1912170005Model
   init_kwargs:
     model_path: data/MODEL1912170005.xml

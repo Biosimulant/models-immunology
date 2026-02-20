@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000746
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000746?filename=Saad2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.saad2017_immune_checkpoint_and_bcg_in_superficia_biomd0000000746_model:Saad2017ImmuneCheckpointAndBcgInSuperficiaBiomd0000000746Model
   init_kwargs:
     model_path: data/BIOMD0000000746.xml

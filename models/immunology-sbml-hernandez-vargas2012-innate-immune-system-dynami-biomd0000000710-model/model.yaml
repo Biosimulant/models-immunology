@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000710?filename=Hernandez-Vargas2012
     - Innate immune system dynamics to Influenza virus.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model:HernandezVargas2012InnateImmuneSystemDynamiBiomd0000000710Model
   init_kwargs:
     model_path: data/BIOMD0000000710.xml

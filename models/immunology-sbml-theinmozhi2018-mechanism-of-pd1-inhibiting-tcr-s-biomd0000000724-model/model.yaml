@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000724
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000724?filename=Theinmozhi_2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model:Theinmozhi2018MechanismOfPd1InhibitingTcrSBiomd0000000724Model
   init_kwargs:
     model_path: data/BIOMD0000000724.xml

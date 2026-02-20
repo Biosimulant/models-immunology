@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2210070001?filename=SBML
     L2V4 representation of the JAK-STAT signaling pathway.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.maier2022_stochastic_dynamics_of_type_i_interfer_model2210070001_model:Maier2022StochasticDynamicsOfTypeIInterferModel2210070001Model
   init_kwargs:
     model_path: data/MODEL2210070001.xml

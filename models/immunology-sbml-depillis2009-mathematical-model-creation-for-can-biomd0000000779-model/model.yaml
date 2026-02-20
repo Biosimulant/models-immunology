@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000779
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000779?filename=dePillis2009.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.depillis2009_mathematical_model_creation_for_can_biomd0000000779_model:Depillis2009MathematicalModelCreationForCanBiomd0000000779Model
   init_kwargs:
     model_path: data/BIOMD0000000779.xml

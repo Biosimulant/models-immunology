@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000914
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000914?filename=Parra_Guillen2013.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model:ParraGuillen2013MathematicalModelApproachToBiomd0000000914Model
   init_kwargs:
     model_path: data/BIOMD0000000914.xml

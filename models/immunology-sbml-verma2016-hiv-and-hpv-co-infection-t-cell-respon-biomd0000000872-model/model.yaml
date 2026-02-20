@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000872
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000872?filename=verma2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model:Verma2016HivAndHpvCoInfectionTCellResponBiomd0000000872Model
   init_kwargs:
     model_path: data/BIOMD0000000872.xml

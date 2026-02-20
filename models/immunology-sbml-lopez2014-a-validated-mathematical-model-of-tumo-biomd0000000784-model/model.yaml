@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000784
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000784?filename=Lopez2014.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.lopez2014_a_validated_mathematical_model_of_tumo_biomd0000000784_model:Lopez2014AValidatedMathematicalModelOfTumoBiomd0000000784Model
   init_kwargs:
     model_path: data/BIOMD0000000784.xml

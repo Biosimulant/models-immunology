@@ -23,7 +23,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000824?filename=Lewkiewics2019
     - effects of aging on naive T cell populations and diversity.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.lewkiewics2019_effects_of_aging_on_naive_t_cell_biomd0000000824_model:Lewkiewics2019EffectsOfAgingOnNaiveTCellBiomd0000000824Model
   init_kwargs:
     model_path: data/BIOMD0000000824.xml

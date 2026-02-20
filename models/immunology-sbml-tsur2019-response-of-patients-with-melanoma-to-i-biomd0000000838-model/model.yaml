@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000838
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000838?filename=Tsur2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model:Tsur2019ResponseOfPatientsWithMelanomaToIBiomd0000000838Model
   init_kwargs:
     model_path: data/BIOMD0000000838.xml

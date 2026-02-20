@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000477
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000477?filename=BIOMD0000000477_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.mol2013_immune_signal_transduction_in_leishmania_biomd0000000477_model:Mol2013ImmuneSignalTransductionInLeishmaniaBiomd0000000477Model
   init_kwargs:
     model_path: data/BIOMD0000000477.xml

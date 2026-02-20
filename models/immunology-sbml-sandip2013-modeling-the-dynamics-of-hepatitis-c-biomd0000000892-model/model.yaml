@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000892
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000892?filename=Sandip2013.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.sandip2013_modeling_the_dynamics_of_hepatitis_c_biomd0000000892_model:Sandip2013ModelingTheDynamicsOfHepatitisCBiomd0000000892Model
   init_kwargs:
     model_path: data/BIOMD0000000892.xml

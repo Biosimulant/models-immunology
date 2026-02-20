@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001036
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001036?filename=Cappuccio2007.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model:Cappuccio2007TumorImmuneSystemInteractionsABiomd0000001036Model
   init_kwargs:
     model_path: data/BIOMD0000001036.xml

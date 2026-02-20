@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1911150001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911150001?filename=Tsur2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.tsur2019_predicting_response_to_pembrolizumab_in_model1911150001_model:Tsur2019PredictingResponseToPembrolizumabInModel1911150001Model
   init_kwargs:
     model_path: data/MODEL1911150001.xml

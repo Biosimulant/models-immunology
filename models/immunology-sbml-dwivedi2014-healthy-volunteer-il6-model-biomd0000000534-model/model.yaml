@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000534
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000534?filename=BIOMD0000000534_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.dwivedi2014_healthy_volunteer_il6_model_biomd0000000534_model:Dwivedi2014HealthyVolunteerIl6ModelBiomd0000000534Model
   init_kwargs:
     model_path: data/BIOMD0000000534.xml

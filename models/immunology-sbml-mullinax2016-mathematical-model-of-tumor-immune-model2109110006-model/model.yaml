@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2109110006
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2109110006?filename=Mullinax2016.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.mullinax2016_mathematical_model_of_tumor_immune_model2109110006_model:Mullinax2016MathematicalModelOfTumorImmuneModel2109110006Model
   init_kwargs:
     model_path: data/MODEL2109110006.xml

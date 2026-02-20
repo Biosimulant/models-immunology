@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000910
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000910?filename=Isaeva2008.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.isaeva2008_modelling_of_anti_tumour_immune_respo_biomd0000000910_model:Isaeva2008ModellingOfAntiTumourImmuneRespoBiomd0000000910Model
   init_kwargs:
     model_path: data/BIOMD0000000910.xml

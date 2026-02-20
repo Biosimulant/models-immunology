@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000661
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000661?filename=BIOMD0000000661_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model:Webb2002FasFaslMediatedTumorTCellInteractBiomd0000000661Model
   init_kwargs:
     model_path: data/BIOMD0000000661.xml

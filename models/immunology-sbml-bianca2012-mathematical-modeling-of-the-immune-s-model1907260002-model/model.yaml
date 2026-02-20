@@ -24,7 +24,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1907260002?filename=Bianca2012
     v7.0.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model:Bianca2012MathematicalModelingOfTheImmuneSModel1907260002Model
   init_kwargs:
     model_path: data/MODEL1907260002.xml

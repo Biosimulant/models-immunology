@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000926?filename=Rhodes2019-Immune-Mediated
     theory of Metastasis_V1.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model:Rhodes2019ImmuneMediatedTheoryOfMetastasisBiomd0000000926Model
   init_kwargs:
     model_path: data/BIOMD0000000926.xml

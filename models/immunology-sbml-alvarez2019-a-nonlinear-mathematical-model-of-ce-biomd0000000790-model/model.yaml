@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000790
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000790?filename=Alvarez2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model:Alvarez2019ANonlinearMathematicalModelOfCeBiomd0000000790Model
   init_kwargs:
     model_path: data/BIOMD0000000790.xml

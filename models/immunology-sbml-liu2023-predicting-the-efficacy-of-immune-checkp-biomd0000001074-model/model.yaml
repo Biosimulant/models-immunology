@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001074
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001074?filename=rf_ici.onnx
   license: CC0
-bsim:
+biosim:
   entrypoint: src.liu2023_predicting_the_efficacy_of_immune_checkp_biomd0000001074_model:Liu2023PredictingTheEfficacyOfImmuneCheckpBiomd0000001074Model
   init_kwargs:
     model_path: data/BIOMD0000001074.xml

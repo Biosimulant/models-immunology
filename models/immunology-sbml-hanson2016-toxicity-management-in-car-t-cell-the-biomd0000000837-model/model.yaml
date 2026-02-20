@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000837
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000837?filename=Hanson2016.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model:Hanson2016ToxicityManagementInCarTCellTheBiomd0000000837Model
   init_kwargs:
     model_path: data/BIOMD0000000837.xml

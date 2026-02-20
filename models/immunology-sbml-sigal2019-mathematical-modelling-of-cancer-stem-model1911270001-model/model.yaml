@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1911270001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911270001?filename=Sigal2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model:Sigal2019MathematicalModellingOfCancerStemModel1911270001Model
   init_kwargs:
     model_path: data/MODEL1911270001.xml

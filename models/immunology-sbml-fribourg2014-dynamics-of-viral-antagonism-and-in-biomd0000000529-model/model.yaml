@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000529
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000529?filename=BIOMD0000000529_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model:Fribourg2014DynamicsOfViralAntagonismAndInBiomd0000000529Model
   init_kwargs:
     model_path: data/BIOMD0000000529.xml

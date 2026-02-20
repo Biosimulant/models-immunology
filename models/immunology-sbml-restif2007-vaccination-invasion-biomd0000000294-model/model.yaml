@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000294
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000294?filename=BIOMD0000000294_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.restif2007_vaccination_invasion_biomd0000000294_model:Restif2007VaccinationInvasionBiomd0000000294Model
   init_kwargs:
     model_path: data/BIOMD0000000294.xml
