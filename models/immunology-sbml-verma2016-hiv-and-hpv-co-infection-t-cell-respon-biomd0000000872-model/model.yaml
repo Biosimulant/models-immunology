@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Verma2016HivAndHpvCoInfectionTCellResponBiomd0000000872Model'
-description: 'This is a COPASI version of the HIV/HPV coinfection model submitted
-  to PLoS One.Title: Modeling the mechanisms by which HIV-associated immunosuppression
-  influences HPV persistence at the oral mucosaAu'
+description: "This is a COPASI version of the HIV/HPV coinfection model submitted to PLoS One.Title: Modeling the mechanisms by which HIV-associated immunosuppression influences HPV persistence at the oral mucosaAu. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

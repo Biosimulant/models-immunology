@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Hancioglu2007HumanImmuneResponseToInfluenzaBiomd0000000711Model'
-description: Baris Hancioglu, David Swigon & Gilles Clermont. A dynamical model of
-  human immune response to influenza A virus infection. Journal of Theoretical Biology
-  246, 1 (2007). We present a simplified dynami
+description: "Baris Hancioglu, David Swigon & Gilles Clermont. A dynamical model of human immune response to influenza A virus infection."
 standard: other
 tags:
 - immunology

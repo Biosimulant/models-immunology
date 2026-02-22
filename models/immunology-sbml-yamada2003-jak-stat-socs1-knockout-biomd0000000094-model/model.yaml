@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Yamada2003JakStatSocs1KnockoutBiomd0000000094Model'
-description: 'NCBS Curation Comments: This model shows the control mechanism of Jak-Stat
-  pathway, here SOCS1 (Suppressor of cytokine signaling-I) was identified as the negative
-  regulator of Jak and STAT signal tran'
+description: "NCBS Curation Comments: This model shows the control mechanism of Jak-Stat pathway, here SOCS1 (Suppressor of cytokine signaling-I) was identified as the negative regulator of Jak and STAT signal tran. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Alexander2010TcellRegulationSys1Biomd0000000289Model'
-description: 'This is system 1, the model with linear antigen uptake by pAPCs, described
-  in the article: Self-tolerance and Autoimmunity in a Regulatory T Cell Model. Alexander
-  HK, Wahl LM. Bull Math Biol. 2010 Mar'
+description: "This is system 1, the model with linear antigen uptake by pAPCs, described in the article: Self-tolerance and Autoimmunity in a Regulatory T Cell Model. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Bordbar2010MTuberculosisMacrophageModel1011090002Model'
-description: "This is the joined genome scale reconstruction of both Mycobacterium\
-  \ tuberculosis and the human alveloar macrophage metabolism, iAB-AM\xD8-1410-Mt-661,\
-  \ described in the article: Insight into human alveol"
+description: "This is the joined genome scale reconstruction of both Mycobacterium tuberculosis and the human alveloar macrophage metabolism, iAB-AM\u00d8-1410-Mt-661, described in the article: Insight into human alveol. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

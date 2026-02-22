@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: LeonTriana2021CompetitionBetweenTumourCellsBiomd0000001014Model'
-description: 'This model of the use of chimeric antigen receptor (CAR)-T cell therapy
-  in the treatment of solid tumours is described in the article:''Dual-Target CAR-Ts
-  with On- and Off-Tumour Activity May Override '
+description: "This model of the use of chimeric antigen receptor (CAR)-T cell therapy in the treatment of solid tumours is described in the article:'Dual-Target CAR-Ts with On- and Off-Tumour Activity May Override. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Schulz2009Th1DifferentiationBiomd0000000215Model'
-description: "This a model from the article: Sequential polarization and imprinting\
-  \ of type 1 T helper lymphocytes by interferon-gamma and interleukin-12. Schulz\
-  \ EG, Mariani L, Radbruch A, H\xF6fer T. Immunity. 2009;3"
+description: "This a model from the article: Sequential polarization and imprinting of type 1 T helper lymphocytes by interferon-gamma and interleukin-12. Schulz EG, Mariani L, Radbruch A, H\u00f6fer T."
 standard: other
 tags:
 - immunology

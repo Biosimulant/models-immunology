@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Yakimchuk2019MathematicalModelingOfImmuneMoModel1912170005Model'
-description: Mathematical modeling of immune modulation by glucocorticoidsKonstantin
-  Yakimchukhttps://doi.org/10.1016/j.biosystems.2019.104066AbstractThe cellular and
-  molecular mechanisms of immunomodulatory actio
+description: "Mathematical modeling of immune modulation by glucocorticoidsKonstantin Yakimchukhttps://doi.org/10.1016/j.biosystems.2019.104066AbstractThe cellular and molecular mechanisms of immunomodulatory actio. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

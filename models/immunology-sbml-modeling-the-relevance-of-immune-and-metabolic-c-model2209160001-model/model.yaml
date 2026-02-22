@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: ModelingTheRelevanceOfImmuneAndMetabolicCModel2209160001Model'
-description: In this model, we integrate in vitro observations of macrophage/fibroblasts
-  in coculture with hypoxia and inflammatory signals. We obtain conditions under which
-  the wound healing process progresses no
+description: "In this model, we integrate in vitro observations of macrophage/fibroblasts in coculture with hypoxia and inflammatory signals. We obtain conditions under which the wound healing process progresses no."
 standard: other
 tags:
 - immunology

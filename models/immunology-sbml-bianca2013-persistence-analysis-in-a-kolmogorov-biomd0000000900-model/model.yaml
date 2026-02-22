@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Bianca2013PersistenceAnalysisInAKolmogorovBiomd0000000900Model'
-description: Persistence analysis in a Kolmogorov-type model for cancer-immune system
-  competitionAIP Conference Proceedings 1558, 1797 (2013); https://doi.org/10.1063/1.4825874C.
-  BiancaDipartimento di Scienze Mate
+description: "Persistence analysis in a Kolmogorov-type model for cancer-immune system competitionAIP Conference Proceedings 1558, 1797 (2013); https://doi.org/10.1063/1.4825874C. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

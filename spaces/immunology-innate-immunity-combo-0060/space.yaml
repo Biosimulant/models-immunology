@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Innate Immunity (COMBO_0060)'
-description: Immunology innate immunity comparative space with 4 models, configured
-  as non-causal co-simulation.
+description: "Immunology Innate Immunity (COMBO_0060) organizes fribourg2014_dyn_1, fribourg2014_dyn_2, he2017_a_3 into a comparative simulation setup to examine how innate immunity mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-immunology
   alias: fribourg2014_dyn_1

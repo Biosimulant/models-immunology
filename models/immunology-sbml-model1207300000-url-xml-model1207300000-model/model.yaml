@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Model1207300000UrlXmlModel1207300000Model'
-description: 'This model is from the article: A model of flux regulation in the cholesterol
-  biosynthesis pathway: Immune mediated graduated flux reduction versus statin-like
-  led stepped flux reduction. Watterson S,'
+description: "This model is from the article: A model of flux regulation in the cholesterol biosynthesis pathway: Immune mediated graduated flux reduction versus statin-like led stepped flux reduction. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

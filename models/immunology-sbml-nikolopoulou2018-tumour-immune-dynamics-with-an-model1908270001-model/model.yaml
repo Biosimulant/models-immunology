@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Nikolopoulou2018TumourImmuneDynamicsWithAnModel1908270001Model'
-description: This is a mathematical model investigating the effects of continuous
-  and intermittent PD-L1 and anti-PD-L1 therapy upon tumor-immune dynamics.
+description: "This is a mathematical model investigating the effects of continuous and intermittent PD-L1 and anti-PD-L1 therapy upon tumor-immune dynamics. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

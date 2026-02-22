@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Abbott2021PredictionOfImmunotherapyResponseModel2407210001Model'
-description: In this manuscript, the authors had hypothesized a multi-dimensional
-  approach modeling of both tumor and immune-related molecular mechanisms would better
-  predict immune checkpoint blockade (ICB) respo
+description: "In this manuscript, the authors had hypothesized a multi-dimensional approach modeling of both tumor and immune-related molecular mechanisms would better predict immune checkpoint blockade (ICB) respo. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

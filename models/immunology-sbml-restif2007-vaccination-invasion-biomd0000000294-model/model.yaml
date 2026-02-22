@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Restif2007VaccinationInvasionBiomd0000000294Model'
-description: 'Restif2007 - Vaccination invasion This model is described in the article:
-  Vaccination and the dynamics of immune evasion. Restif O, Grenfell BT. J R Soc Interface
-  2007 Feb; 4(12): 143-153 Abstract: Va'
+description: "Restif2007 - Vaccination invasion This model is described in the article: Vaccination and the dynamics of immune evasion. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

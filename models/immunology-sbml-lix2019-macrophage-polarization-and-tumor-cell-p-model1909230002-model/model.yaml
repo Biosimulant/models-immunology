@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Lix2019MacrophagePolarizationAndTumorCellPModel1909230002Model'
-description: This model is based on:Computational Modeling of the Crosstalk Between
-  Macrophage Polarization and Tumor Cell Plasticity in the Tumor Microenvironment.Abstract:Tumor
-  microenvironments contain multiple
+description: "This model is based on:Computational Modeling of the Crosstalk Between Macrophage Polarization and Tumor Cell Plasticity in the Tumor Microenvironment.Abstract:Tumor microenvironments contain multiple. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

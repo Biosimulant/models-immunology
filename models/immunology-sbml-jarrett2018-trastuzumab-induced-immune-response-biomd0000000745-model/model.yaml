@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Jarrett2018TrastuzumabInducedImmuneResponseBiomd0000000745Model'
-description: 'The paper describes a model on the trastuzumab-induced immune response
-  in murine(mouse) HER2+ breast cancer.Created by COPASI 4.25 (Build 207) This model
-  is described in the article: Mathematical mode'
+description: "The paper describes a model on the trastuzumab-induced immune response in murine(mouse) HER2+ breast cancer.Created by COPASI 4.25 (Build 207) This model is described in the article: Mathematical mode. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

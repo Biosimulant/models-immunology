@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Chowell2022RandomForestModelToPredictEfficBiomd0000001066Model'
-description: This is a Random Forest algorithm-based machine learning model called
-  RF16, which incorporates a total of 16 genomic, molecular, demographic, and clinical
-  features to predict the immunotherapy respons
+description: "This is a Random Forest algorithm-based machine learning model called RF16, which incorporates a total of 16 genomic, molecular, demographic, and clinical features to predict the immunotherapy respons. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Tsur2019PredictingResponseToPembrolizumabInModel1911150001Model'
-description: This is a simple mathematical model describing the interactions of an
-  advanced melanoma tumor with both the immune system and the immunotherapy drug,
-  pembrolizumab.
+description: "This is a simple mathematical model describing the interactions of an advanced melanoma tumor with both the immune system and the immunotherapy drug, pembrolizumab. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

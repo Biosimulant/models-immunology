@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: RodrGuezJorge2019BooleanModelOfTlr5SignalModel1903260002Model'
-description: CD4+ T cells recognize antigens through their T cell receptors (TCRs);
-  however, additional signals involving costimulatory receptors, for example, CD28,
-  are required for proper T cell activation. Alte
+description: "CD4+ T cells recognize antigens through their T cell receptors (TCRs); however, additional signals involving costimulatory receptors, for example, CD28, are required for proper T cell activation. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

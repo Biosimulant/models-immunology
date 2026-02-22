@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Isaeva2009DifferentStrategiesForCancerTreatModel2001140002Model'
-description: We formulate and analyse a mathematical model describing immune response
-  to avasculartumour under the influence of immunotherapy and chemotherapy and their
-  combinations aswell as vaccine treatments. T
+description: "We formulate and analyse a mathematical model describing immune response to avasculartumour under the influence of immunotherapy and chemotherapy and their combinations aswell as vaccine treatments. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

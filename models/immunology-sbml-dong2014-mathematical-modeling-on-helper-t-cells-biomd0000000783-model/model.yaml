@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Dong2014MathematicalModelingOnHelperTCellsBiomd0000000783Model'
-description: This model gives a mathematical description of the interactions between
-  tumor cells, cytotoxic T lymphocytes and helper T cells (HTCs) within the tumor
-  microenvironment, with emphasis on the role play
+description: "This model gives a mathematical description of the interactions between tumor cells, cytotoxic T lymphocytes and helper T cells (HTCs) within the tumor microenvironment, with emphasis on the role play. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

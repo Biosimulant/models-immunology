@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Sumana2018MathematicalModelingOfCancerImmunBiomd0000000885Model'
-description: 'Mathematical modeling of cancer-immune system, considering the role
-  of antibodies.Ghosh S1, Banerjee S2.Author information1 Department of Mathematics,
-  Indian Institute of Technology Roorkee, Roorkee, '
+description: "Mathematical modeling of cancer-immune system, considering the role of antibodies.Ghosh S1, Banerjee S2.Author information1 Department of Mathematics, Indian Institute of Technology Roorkee, Roorkee,. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

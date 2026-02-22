@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Alharbi2020AnOdeBasedModelOfTheDynamicsOBiomd0000001023Model'
-description: This ordinary differential equation model of tumor cell growth, called
-  the normal-tumor-immune-unhealthy diet model (NTIUNHDM), is described by the publication:Alharbi,
-  S.A.; Rambely, A.S.'A New ODE-B
+description: "This ordinary differential equation model of tumor cell growth, called the normal-tumor-immune-unhealthy diet model (NTIUNHDM), is described by the publication:Alharbi, S.A.; Rambely, A.S.'A New ODE-B. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

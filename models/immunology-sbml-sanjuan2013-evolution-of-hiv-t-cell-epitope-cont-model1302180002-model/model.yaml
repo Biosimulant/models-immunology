@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Sanjuan2013EvolutionOfHivTCellEpitopeContModel1302180002Model'
-description: Sanjuan2013 - Evolution of HIV T-cell epitope, control model Control
-  model in which the virus targets a nonimmune cell type C (e.g., hepatocytes, epithelial
-  cells, etc.), instead of T H cells. This mo
+description: "Sanjuan2013 - Evolution of HIV T-cell epitope, control model Control model in which the virus targets a nonimmune cell type C (e.g., hepatocytes, epithelial cells, etc.), instead of T H cells. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

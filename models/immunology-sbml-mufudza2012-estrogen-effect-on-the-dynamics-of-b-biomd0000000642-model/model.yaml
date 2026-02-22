@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Mufudza2012EstrogenEffectOnTheDynamicsOfBBiomd0000000642Model'
-description: Mufudza2012 - Estrogen effect on the dynamicsof breast cancer This deterministic
-  model shows thedynamics of breast cancer with immune response. The effects ofestrogen
-  are incorporated to study its eff
+description: "Mufudza2012 - Estrogen effect on the dynamicsof breast cancer This deterministic model shows thedynamics of breast cancer with immune response. The effects ofestrogen are incorporated to study its eff."
 standard: other
 tags:
 - immunology

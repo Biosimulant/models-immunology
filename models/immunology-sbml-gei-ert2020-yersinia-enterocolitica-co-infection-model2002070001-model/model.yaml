@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: GeiErt2020YersiniaEnterocoliticaCoInfectionModel2002070001Model'
-description: 'This model simulates the colonization of the mouse gut with different
-  strains of Yersinia enterocolitica. Thereby it takes the host-immune repsone into
-  account. The parameters are calibrated based on '
+description: "This model simulates the colonization of the mouse gut with different strains of Yersinia enterocolitica. Thereby it takes the host-immune repsone into account."
 standard: other
 tags:
 - immunology

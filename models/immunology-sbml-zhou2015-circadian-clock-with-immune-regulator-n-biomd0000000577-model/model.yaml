@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Zhou2015CircadianClockWithImmuneRegulatorNBiomd0000000577Model'
-description: 'Zhou2015 - Circadian clock with immuneregulator NPR1 Arabidopsis clock
-  model modified fromP2012 (Pokhilko et al., 2013 - BIOMD0000000445 )model to include
-  the master immune regulator NPR1 coupling to '
+description: "Zhou2015 - Circadian clock with immuneregulator NPR1 Arabidopsis clock model modified fromP2012 (Pokhilko et al., 2013 - BIOMD0000000445 )model to include the master immune regulator NPR1 coupling to. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

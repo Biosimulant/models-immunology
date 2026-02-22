@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Yu2019AMathematicalModelOfTumorImmuneInteModel1911270002Model'
-description: This is a mathematical model investigating interactions among malignant
-  tumor cells, CD4+ T cells, anti-tumor cytokines (specifically IFN-gamma), and the
-  immune checkpoint inhibitor CTLA-4 to assess t
+description: "This is a mathematical model investigating interactions among malignant tumor cells, CD4+ T cells, anti-tumor cytokines (specifically IFN-gamma), and the immune checkpoint inhibitor CTLA-4 to assess t. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

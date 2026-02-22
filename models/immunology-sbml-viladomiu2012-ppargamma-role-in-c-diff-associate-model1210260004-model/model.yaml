@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Viladomiu2012PpargammaRoleInCDiffAssociateModel1210260004Model'
-description: "'Modeling the Role of Peroxisome Proliferator-Activated Receptor \u03B3\
-  \ and MicroRNA-146 in Mucosal Immune Responses to Clostridium difficile'Monica Viladomiu1,2,\
-  \ Raquel Hontecillas1,2, Mireia Pedragosa1,2"
+description: "'Modeling the Role of Peroxisome Proliferator-Activated Receptor \u03b3 and MicroRNA-146 in Mucosal Immune Responses to Clostridium difficile'Monica Viladomiu1,2, Raquel Hontecillas1,2, Mireia Pedragosa1,2. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

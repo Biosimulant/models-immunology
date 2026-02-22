@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Maier2022StochasticDynamicsOfTypeIInterferModel2210070001Model'
-description: Maier2022 - Stochastic Dynamics of Type I Interferon ResponsesOur study
-  aims to determine whether and how biochemical noise affects the information transduced
-  in the JAK-STAT signaling pathway and inv
+description: "Maier2022 - Stochastic Dynamics of Type I Interferon ResponsesOur study aims to determine whether and how biochemical noise affects the information transduced in the JAK-STAT signaling pathway and inv. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

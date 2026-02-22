@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Depillis2007ChemotherapyForTumorsAnAnalysisModel2001160001Model'
-description: "AbstractWe investigate a mathematical model of tumor\u2013immune interactions\
-  \ with chemotherapy, and strategiesfor optimally administering treatment. In this\
-  \ paper we analyze the dynamics of this model, ch"
+description: "AbstractWe investigate a mathematical model of tumor\u2013immune interactions with chemotherapy, and strategiesfor optimally administering treatment. In this paper we analyze the dynamics of this model, ch."
 standard: other
 tags:
 - immunology

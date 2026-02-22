@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Philipson2015InnateImmuneResponseModulatedBBiomd0000000596Model'
-description: Casandra W. Philipson, Josep Bassaganya-Riera, Monica Viladomiu, Barbara
-  Kronsteiner, Vida Abedi, Stefan Hoops, Pawel Michalak, Lin Kang, Stephen E. Girardin
-  & Raquel Hontecillas. Modeling the Regulat
+description: "Casandra W. Philipson, Josep Bassaganya-Riera, Monica Viladomiu, Barbara Kronsteiner, Vida Abedi, Stefan Hoops, Pawel Michalak, Lin Kang, Stephen E."
 standard: other
 tags:
 - immunology

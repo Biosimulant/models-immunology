@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Bordbar2010MacrophageMetabolismModel1011090001Model'
-description: "This is the genome scale metabolic reconstruction of the human alveloar\
-  \ macrophage, iAB-AM\xD8-1410, described in the article: Insight into human alveolar\
-  \ macrophage and M. tuberculosis interactions via "
+description: "This is the genome scale metabolic reconstruction of the human alveloar macrophage, iAB-AM\u00d8-1410, described in the article: Insight into human alveolar macrophage and M. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

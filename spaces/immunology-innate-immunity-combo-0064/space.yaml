@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Innate Immunity (COMBO_0064)'
-description: Immunology innate immunity comparative space with 4 models, configured
-  as non-causal co-simulation.
+description: "Immunology Innate Immunity (COMBO_0064) organizes mol2013_leishman_1, owen1998_tumour_2, palmer2008_negat_3 into a comparative simulation setup to examine how innate immunity mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-immunology
   alias: mol2013_leishman_1

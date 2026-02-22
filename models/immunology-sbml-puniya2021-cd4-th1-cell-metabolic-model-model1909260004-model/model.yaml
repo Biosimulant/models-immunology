@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Puniya2021Cd4Th1CellMetabolicModelModel1909260004Model'
-description: CD4+ T cells are critical components in the human immune system. They
-  produce cytokines to fight against pathogens and abnormal cells and stimulate other
-  cells, such as B cells, macrophages, and neutr
+description: "CD4+ T cells are critical components in the human immune system. They produce cytokines to fight against pathogens and abnormal cells and stimulate other cells, such as B cells, macrophages, and neutr."
 standard: other
 tags:
 - immunology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Depillis2005AValidatedMathematicalModelOfCModel1907260001Model'
-description: This model describes interactions between a tumour and the immune system,
-  with specific emphasis on the role of natural killer and CD8-positive T cells in
-  tumor surveillance. The model features descri
+description: "This model describes interactions between a tumour and the immune system, with specific emphasis on the role of natural killer and CD8-positive T cells in tumor surveillance. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

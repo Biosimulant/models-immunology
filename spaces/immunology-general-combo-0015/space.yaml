@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: General (COMBO_0015)'
-description: Immunology general comparative space with 2 models, configured as non-causal
-  co-simulation.
+description: "Immunology General (COMBO_0015) organizes abbott2021_predi_1, admon2017_modell_2, state_compare_mon into a comparative simulation setup to examine how general mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-immunology
   alias: abbott2021_predi_1

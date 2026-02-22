@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: He2017AMathematicalModelOfPancreaticCancerBiomd0000000811Model'
-description: This is a mathematical model of pancreatic cancer which includes descriptions
-  of regulatory T cell activity and inhibition therapy. Descriptions of cytokine induced
-  killer immunotherapy are also inclu
+description: "This is a mathematical model of pancreatic cancer which includes descriptions of regulatory T cell activity and inhibition therapy. Descriptions of cytokine induced killer immunotherapy are also inclu."
 standard: other
 tags:
 - immunology

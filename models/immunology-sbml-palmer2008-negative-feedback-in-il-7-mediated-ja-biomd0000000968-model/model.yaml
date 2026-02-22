@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Palmer2008NegativeFeedbackInIl7MediatedJaBiomd0000000968Model'
-description: Interleukin-7 (IL-7) is an essential cytokine for the development and
-  homeostatic maintenance of T and B lymphocytes. Binding of IL-7 to its cognate receptor,
-  the IL-7 receptor (IL-7R), activates mult
+description: "Interleukin-7 (IL-7) is an essential cytokine for the development and homeostatic maintenance of T and B lymphocytes. Binding of IL-7 to its cognate receptor, the IL-7 receptor (IL-7R), activates mult."
 standard: other
 tags:
 - immunology

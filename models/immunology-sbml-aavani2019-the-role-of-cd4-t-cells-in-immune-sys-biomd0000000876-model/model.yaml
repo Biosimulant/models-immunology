@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Aavani2019TheRoleOfCd4TCellsInImmuneSysBiomd0000000876Model'
-description: This is a mathematical model comprised of a simple system of four ordinary
-  differential equations that account for the two opposing roles of infected and healthy
-  cytotoxic T lymphocytes within the con
+description: "This is a mathematical model comprised of a simple system of four ordinary differential equations that account for the two opposing roles of infected and healthy cytotoxic T lymphocytes within the con. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Patterson2022TumourMutationDataDrivenRandomBiomd0000001073Model'
-description: A Random Forest model is developed to incorporate tumor mutation data
-  within the context of the biological process known as leukocyte proliferation regulation.
-  This model aims to predict a patient's r
+description: "A Random Forest model is developed to incorporate tumor mutation data within the context of the biological process known as leukocyte proliferation regulation. This model aims to predict a patient's r."
 standard: other
 tags:
 - immunology

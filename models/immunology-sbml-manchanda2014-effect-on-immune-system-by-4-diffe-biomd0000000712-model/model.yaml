@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Manchanda2014EffectOnImmuneSystemBy4DiffeBiomd0000000712Model'
-description: 'Himanshu Manchanda, Nora Seidel, Andi Krumbholz, Andreas Sauerbrei,
-  Michaela Schmidtke & Reinhard Guthke. Within-host influenza dynamics: a small-scale
-  mathematical modeling approach. Biosystems 118 ('
+description: "Himanshu Manchanda, Nora Seidel, Andi Krumbholz, Andreas Sauerbrei, Michaela Schmidtke & Reinhard Guthke. Within-host influenza dynamics: a small-scale mathematical modeling approach."
 standard: other
 tags:
 - immunology

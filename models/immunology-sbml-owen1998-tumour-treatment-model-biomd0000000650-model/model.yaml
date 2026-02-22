@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Owen1998TumourTreatmentModelBiomd0000000650Model'
-description: 'Owen1998 - tumour treatment model This model is described in the article:
-  Modelling the macrophage invasion of tumours: effects on growth and composition.
-  Owen MR, Sherratt JA. IMA J Math Appl Med Bio'
+description: "Owen1998 - tumour treatment model This model is described in the article: Modelling the macrophage invasion of tumours: effects on growth and composition. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

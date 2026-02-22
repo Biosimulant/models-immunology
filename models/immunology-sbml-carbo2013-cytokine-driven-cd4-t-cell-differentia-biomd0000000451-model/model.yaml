@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Carbo2013CytokineDrivenCd4TCellDifferentiaBiomd0000000451Model'
-description: Carbo2013 - Cytokine driven CD4+ T Cell differentiation and phenotype
-  plasticity CD4+ T cells can differentiate into different phenotypes depending on
-  the cytokine milieu. Here a computational and mat
+description: "Carbo2013 - Cytokine driven CD4+ T Cell differentiation and phenotype plasticity CD4+ T cells can differentiate into different phenotypes depending on the cytokine milieu. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

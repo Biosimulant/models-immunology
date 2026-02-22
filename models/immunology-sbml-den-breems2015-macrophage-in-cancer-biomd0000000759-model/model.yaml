@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: DenBreems2015MacrophageInCancerBiomd0000000759Model'
-description: 'The paper describes a model of re-polarisation of M2 and M1 macrophages
-  and its role on cancer outcomes. Created by COPASI 4.25 (Build 207) This model is
-  described in the article: The re-polarisation '
+description: "The paper describes a model of re-polarisation of M2 and M1 macrophages and its role on cancer outcomes. Created by COPASI 4.25 (Build 207) This model is described in the article: The re-polarisation."
 standard: other
 tags:
 - immunology

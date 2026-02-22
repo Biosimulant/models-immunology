@@ -1,6 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Zerrouk2023LargeScaleComputationalModelingOModel2307180002Model'
-description: Faithful wrapper of upstream SBML model.
+description: "Immunology Zerrouk2023Large Scale Computational Modeling OModel2307180002Model represents core biological mechanisms from biomodels_ebi reference biomodels_ebi:MODEL2307180002. When you run it, you can inspect state and compare temporal behavior between baseline and adjusted inputs."
 standard: other
 tags:
 - immunology

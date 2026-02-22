@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Gallaher2018TumorImmuneDynamicsInMultipleMBiomd0000000743Model'
-description: "The paper describes a model on the key components for tumor\u2013immune\
-  \ dynamics in multiple myeloma.Created by COPASI 4.25 (Build 207)This model is described\
-  \ in the article:Methods for determining key com"
+description: "The paper describes a model on the key components for tumor\u2013immune dynamics in multiple myeloma.Created by COPASI 4.25 (Build 207)This model is described in the article:Methods for determining key com. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

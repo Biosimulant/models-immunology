@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Tsur2019ResponseOfPatientsWithMelanomaToIBiomd0000000838Model'
-description: This is a simple mathematical population model for pembrolizumab-treated
-  advanced melanoma patients, used to predict the response of melanoma patients to
-  immune checkpoint inhibitors.
+description: "This is a simple mathematical population model for pembrolizumab-treated advanced melanoma patients, used to predict the response of melanoma patients to immune checkpoint inhibitors. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Hu2018DynamicsOfTumorCd4CytokineHostCellsBiomd0000000797Model'
-description: This is a proposed mathematical model describing interactions between
-  tumor cells, CD4+ T cells, cytokines, and host cells within the context of CD4+
-  T cells inducing tumor regression. A platform is p
+description: "This is a proposed mathematical model describing interactions between tumor cells, CD4+ T cells, cytokines, and host cells within the context of CD4+ T cells inducing tumor regression. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

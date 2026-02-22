@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Dubey2007AMathematicalModelForTheEffectOfBiomd0000000906Model'
-description: In this paper, a nonlinear mathematical model is proposed and analyzed
-  to study theeffect of environmental toxicant on the immune response of the body.
-  Criteria for localstability, instability and glo
+description: "In this paper, a nonlinear mathematical model is proposed and analyzed to study theeffect of environmental toxicant on the immune response of the body. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

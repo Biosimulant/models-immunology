@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Figueredo20132ImmunointeractionModelWithIl2Biomd0000000754Model'
-description: 'The paper describes a model of immune-itumor interaction with IL2.Created
-  by COPASI 4.25 (Build 207) This model is described in the article: Investigating
-  mathematical models of immuno-interactions wi'
+description: "The paper describes a model of immune-itumor interaction with IL2.Created by COPASI 4.25 (Build 207) This model is described in the article: Investigating mathematical models of immuno-interactions wi. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: General (COMBO_0029)'
-description: Immunology general comparative space with 2 models, configured as non-causal
-  co-simulation.
+description: "Immunology General (COMBO_0029) assembles dubey2007_a_1, dubey2007_a_2, state_compare_mon as a comparative composed simulation to examine how general mechanisms compare across these models. When you run it, you can compare synchronized outputs through the declared wiring paths and monitor views."
 models:
 - repo: Biosimulant/models-immunology
   alias: dubey2007_a_1

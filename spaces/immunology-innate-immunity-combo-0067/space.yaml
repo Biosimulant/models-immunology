@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Innate Immunity (COMBO_0067)'
-description: Immunology innate immunity comparative space with 4 models, configured
-  as non-causal co-simulation.
+description: "Immunology Innate Immunity (COMBO_0067) assembles sandip2013_model_1, sandip2013_model_2, schulz2009_th1_3 as a comparative composed simulation to examine how innate immunity mechanisms compare across these models. When you run it, you can compare synchronized outputs through the declared wiring paths and monitor views."
 models:
 - repo: Biosimulant/models-immunology
   alias: sandip2013_model_1

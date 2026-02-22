@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Cappuccio2007TumorImmuneSystemInteractionsABiomd0000001036Model'
-description: This ordinary differential equation model is the Panetta-Kirschner model
-  of tumor-immune interactions is described in the publication:Cappuccio A, Castiglione
-  F, Piccoli B.' Determination of the optim
+description: "This ordinary differential equation model is the Panetta-Kirschner model of tumor-immune interactions is described in the publication:Cappuccio A, Castiglione F, Piccoli B.' Determination of the optim. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: General (COMBO_0035)'
-description: Immunology general comparative space with 3 models, configured as non-causal
-  co-simulation.
+description: "Immunology General (COMBO_0035) organizes isaeva2008_model_1, isaeva2009_diffe_2, jarrah2014_mathe_3 into a comparative simulation setup to examine how general mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-immunology
   alias: isaeva2008_model_1

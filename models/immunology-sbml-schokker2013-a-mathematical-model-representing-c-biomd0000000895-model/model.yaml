@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Schokker2013AMathematicalModelRepresentingCBiomd0000000895Model'
-description: 'This is a dynamic mathematical model describing the development of the
-  cellular branch of the intestinal immune system of poultry during the first 42 days
-  of life, and of its response towards an oral '
+description: "This is a dynamic mathematical model describing the development of the cellular branch of the intestinal immune system of poultry during the first 42 days of life, and of its response towards an oral. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

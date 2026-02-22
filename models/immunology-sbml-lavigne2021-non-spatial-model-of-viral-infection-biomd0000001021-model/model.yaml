@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Lavigne2021NonSpatialModelOfViralInfectionBiomd0000001021Model'
-description: "This ordinary differential equation model is described in the following\
-  \ article:'Autocrine and paracrine interferon signalling as \u2018ring vaccination\u2019\
-  \ and \u2018contact tracing\u2019 strategies to suppress virus "
+description: "This ordinary differential equation model is described in the following article:'Autocrine and paracrine interferon signalling as \u2018ring vaccination\u2019 and \u2018contact tracing\u2019 strategies to suppress virus. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

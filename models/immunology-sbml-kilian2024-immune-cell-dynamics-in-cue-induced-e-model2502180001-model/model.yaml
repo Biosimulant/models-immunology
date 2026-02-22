@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Kilian2024ImmuneCellDynamicsInCueInducedEModel2502180001Model'
-description: Kilian2024 - Immune cell dynamics in Cue-Induced Extended Human Colitis
-  ModelSingle-cell technologies such as scRNA-seq and flow cytometry provide critical
-  insights into immune cell behavior in inflam
+description: "Kilian2024 - Immune cell dynamics in Cue-Induced Extended Human Colitis ModelSingle-cell technologies such as scRNA-seq and flow cytometry provide critical insights into immune cell behavior in inflam. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

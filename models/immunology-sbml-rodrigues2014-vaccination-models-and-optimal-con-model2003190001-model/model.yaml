@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Rodrigues2014VaccinationModelsAndOptimalConModel2003190001Model'
-description: As the development of a dengue vaccine is ongoing, we simulate an hypothetical
-  vaccine as an extra protection to the population. In a first phase, the vaccination
-  process is studied as a new compartme
+description: "As the development of a dengue vaccine is ongoing, we simulate an hypothetical vaccine as an extra protection to the population. In a first phase, the vaccination process is studied as a new compartme."
 standard: other
 tags:
 - immunology

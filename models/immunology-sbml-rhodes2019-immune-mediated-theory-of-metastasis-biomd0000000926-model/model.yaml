@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Rhodes2019ImmuneMediatedTheoryOfMetastasisBiomd0000000926Model'
-description: '&lt;notes xmlns=&quot;http://www.sbml.org/sbml/level2/version4&quot;&gt;
-  &lt;body xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt; &lt;p&gt;Abstract:Accumulating
-  experimental and clinical evidence s'
+description: "&lt;notes xmlns=&quot;http://www.sbml.org/sbml/level2/version4&quot;&gt; &lt;body xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt; &lt;p&gt;Abstract:Accumulating experimental and clinical evidence s. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

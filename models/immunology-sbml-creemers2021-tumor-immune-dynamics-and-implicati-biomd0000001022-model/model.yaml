@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Creemers2021TumorImmuneDynamicsAndImplicatiBiomd0000001022Model'
-description: 'This ordinary differential equation model simulating the mechanisms
-  that govern cancer-immune dynamics and their role in tumor responses to immunotherapy
-  is described by the publication:Creemers JHA, '
+description: "This ordinary differential equation model simulating the mechanisms that govern cancer-immune dynamics and their role in tumor responses to immunotherapy is described by the publication:Creemers JHA,. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

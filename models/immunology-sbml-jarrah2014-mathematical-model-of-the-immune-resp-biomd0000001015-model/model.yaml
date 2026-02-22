@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Jarrah2014MathematicalModelOfTheImmuneRespBiomd0000001015Model'
-description: Duchenne muscular dystrophy (DMD) is a genetic disease that results in
-  the death of affected boys by early adulthood.The genetic defect responsible for
-  DMD has been known for over 25 years, yet at pre
+description: "Duchenne muscular dystrophy (DMD) is a genetic disease that results in the death of affected boys by early adulthood.The genetic defect responsible for DMD has been known for over 25 years, yet at pre. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

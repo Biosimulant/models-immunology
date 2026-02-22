@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Innate Immunity (COMBO_0069)'
-description: Immunology innate immunity comparative space with 4 models, configured
-  as non-causal co-simulation.
+description: "Immunology Innate Immunity (COMBO_0069) assembles waugh2006_diabet_1, wei2017_tumor_2, yamada2003_jak_3 as a comparative composed simulation to examine how innate immunity mechanisms compare across these models. When you run it, you can compare synchronized outputs through the declared wiring paths and monitor views."
 models:
 - repo: Biosimulant/models-immunology
   alias: waugh2006_diabet_1

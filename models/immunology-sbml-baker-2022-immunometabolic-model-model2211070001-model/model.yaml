@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Baker2022ImmunometabolicModelModel2211070001Model'
-description: Novel computational modeling of bioenergetic mechanisms that modulate
-  CD4+ Tcell effector and regulatory functionsABSTRACTWe built a novel computational
-  model of complex mechanisms at the intersection
+description: "Novel computational modeling of bioenergetic mechanisms that modulate CD4+ Tcell effector and regulatory functionsABSTRACTWe built a novel computational model of complex mechanisms at the intersection. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

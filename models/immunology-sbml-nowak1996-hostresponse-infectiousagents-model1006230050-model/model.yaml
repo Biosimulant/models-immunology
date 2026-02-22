@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Nowak1996HostresponseInfectiousagentsModel1006230050Model'
-description: 'This a model from the article: Population dynamics of immune responses
-  to persistent viruses. Nowak MA, Bangham CR. Science 1996 Apr 5;272(5258):74-9 8600540
-  , Abstract: Mathematical models, which are'
+description: "This a model from the article: Population dynamics of immune responses to persistent viruses. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

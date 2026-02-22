@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Innate Immunity (COMBO_0055)'
-description: Immunology innate immunity comparative space with 3 models, configured
-  as non-causal co-simulation.
+description: "Immunology Innate Immunity (COMBO_0055) brings together almuallem2020_vi_1, anderson2015_qua_2, arciero2004_a_3 in a comparative space to examine how innate immunity mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-immunology
   alias: almuallem2020_vi_1

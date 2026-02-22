@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Waugh2006DiabeticWoundHealingMacrophageDynaBiomd0000000679Model'
-description: 'This a model from the article: Macrophage dynamics in diabetic wound
-  dealing. Waugh HV, Sherratt JA. Bull Math Biol 2006 Jan;68(1):197-207 16794927 ,
-  Abstract: Wound healing in diabetes is a complex p'
+description: "This a model from the article: Macrophage dynamics in diabetic wound dealing. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

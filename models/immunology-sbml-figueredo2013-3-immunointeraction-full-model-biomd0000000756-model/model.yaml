@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Figueredo20133ImmunointeractionFullModelBiomd0000000756Model'
-description: 'The paper describes a full model of immune-itumor interaction.Created
-  by COPASI 4.25 (Build 207) This model is described in the article: Investigating
-  mathematical models of immuno-interactions with e'
+description: "The paper describes a full model of immune-itumor interaction.Created by COPASI 4.25 (Build 207) This model is described in the article: Investigating mathematical models of immuno-interactions with e. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

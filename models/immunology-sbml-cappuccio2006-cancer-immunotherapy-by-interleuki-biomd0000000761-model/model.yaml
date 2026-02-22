@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Cappuccio2006CancerImmunotherapyByInterleukiBiomd0000000761Model'
-description: This model describes the effects of Il-21 on tumor eradication via natural
-  killer cell-mediated and CD8+ T-cell-mediated lysis of tumor cells. The model demonstrates
-  changes in growth dynamics in noni
+description: "This model describes the effects of Il-21 on tumor eradication via natural killer cell-mediated and CD8+ T-cell-mediated lysis of tumor cells. The model demonstrates changes in growth dynamics in noni."
 standard: other
 tags:
 - immunology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Wu2017MurineBevacizumabPkModelModel2003030003Model'
-description: 'This is the first report evaluating the use of fluorescent imaging to
-  determine the pharmacokinetics, lymphatic uptake, and bioavailability of a near-infrared
-  dye-labeled antibody conjugate. Model is '
+description: "This is the first report evaluating the use of fluorescent imaging to determine the pharmacokinetics, lymphatic uptake, and bioavailability of a near-infrared dye-labeled antibody conjugate. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

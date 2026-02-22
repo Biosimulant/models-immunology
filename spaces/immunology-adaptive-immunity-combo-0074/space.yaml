@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Adaptive Immunity (COMBO_0074)'
-description: Immunology adaptive immunity comparative space with 4 models, configured
-  as non-causal co-simulation.
+description: "Immunology Adaptive Immunity (COMBO_0074) organizes bidot2008_mathem_1, cappuccio2006_ca_2, dong2014_mathema_3 into a comparative simulation setup to examine how adaptive immunity mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-immunology
   alias: bidot2008_mathem_1

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Alvarez2019ANonlinearMathematicalModelOfCeBiomd0000000790Model'
-description: This is a non-linear mathematical model of cancer immunosurveillance
-  that takes into account intratumoral phenotypic heterogeneity, such as differential
-  expression of cell surface receptors and growth
+description: "This is a non-linear mathematical model of cancer immunosurveillance that takes into account intratumoral phenotypic heterogeneity, such as differential expression of cell surface receptors and growth. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

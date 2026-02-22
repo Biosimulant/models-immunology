@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Hoffman2018AdccAgainstCancerBiomd0000000802Model'
-description: 'The paper describes a model of ADCC. Created by COPASI 4.26 (Build 213)
-  This model is described in the article: A mathematical model of antibody-dependent
-  cellular cytotoxicity (ADCC) F. Hoffman, D. G'
+description: "The paper describes a model of ADCC. Created by COPASI 4.26 (Build 213) This model is described in the article: A mathematical model of antibody-dependent cellular cytotoxicity (ADCC) F."
 standard: other
 tags:
 - immunology

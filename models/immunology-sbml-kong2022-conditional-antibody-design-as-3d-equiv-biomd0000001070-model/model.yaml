@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Kong2022ConditionalAntibodyDesignAs3dEquivBiomd0000001070Model'
-description: Multi-channel Equivariant Attention Network (MEAN) to co-design 1D sequences
-  and 3D structures of CDRs. To be specific, MEAN formulates antibody design as a
-  conditional graph translation problem by im
+description: "Multi-channel Equivariant Attention Network (MEAN) to co-design 1D sequences and 3D structures of CDRs. To be specific, MEAN formulates antibody design as a conditional graph translation problem by im."
 standard: other
 tags:
 - immunology

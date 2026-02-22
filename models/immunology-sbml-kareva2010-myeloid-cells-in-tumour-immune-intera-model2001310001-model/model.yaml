@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Kareva2010MyeloidCellsInTumourImmuneInteraModel2001310001Model'
-description: Myeloid cells in tumour-immune interactions.Kareva I1, Berezovskaya F,
-  Castillo-Chavez C.Author informationAbstractDespite highly developed specific immune
-  responses, tumour cells often manage to esca
+description: "Myeloid cells in tumour-immune interactions.Kareva I1, Berezovskaya F, Castillo-Chavez C.Author informationAbstractDespite highly developed specific immune responses, tumour cells often manage to esca. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

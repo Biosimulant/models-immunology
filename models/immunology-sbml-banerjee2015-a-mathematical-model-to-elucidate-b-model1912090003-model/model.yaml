@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Banerjee2015AMathematicalModelToElucidateBModel1912090003Model'
-description: T11 Target structure (T11TS), a membrane glycoprotein isolated from sheep
-  erythrocytes, reverses the immune suppressed state of brain tumor induced animals
-  by boosting the functional status of the imm
+description: "T11 Target structure (T11TS), a membrane glycoprotein isolated from sheep erythrocytes, reverses the immune suppressed state of brain tumor induced animals by boosting the functional status of the imm. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

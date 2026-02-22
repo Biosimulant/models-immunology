@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Shin2019RegulationOfNuclearFactorOfActivatModel2003200002Model'
-description: A properly functioning immune system is vital for an organism's wellbeing.
-  Immune tolerance is a critical feature of the immune system that allows immune cells
-  to mount effective responses against exo
+description: "A properly functioning immune system is vital for an organism's wellbeing. Immune tolerance is a critical feature of the immune system that allows immune cells to mount effective responses against exo."
 standard: other
 tags:
 - immunology

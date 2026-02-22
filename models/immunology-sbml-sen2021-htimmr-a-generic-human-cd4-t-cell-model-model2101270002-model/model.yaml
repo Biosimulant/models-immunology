@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Sen2021HtimmrAGenericHumanCd4TCellModelModel2101270002Model'
-description: A generic genome-scale metabolic model (GEMs) of human CD4+ T-cells.
-  Several cell-specific GEMs for CD4+ T-cell subsets such as Th1, Th2, Th17 and iTreg
-  cells derived from 'HTimmR' are included as add
+description: "A generic genome-scale metabolic model (GEMs) of human CD4+ T-cells. Several cell-specific GEMs for CD4+ T-cell subsets such as Th1, Th2, Th17 and iTreg cells derived from 'HTimmR' are included as add."
 standard: other
 tags:
 - immunology

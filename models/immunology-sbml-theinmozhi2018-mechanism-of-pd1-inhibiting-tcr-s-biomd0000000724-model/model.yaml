@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Theinmozhi2018MechanismOfPd1InhibitingTcrSBiomd0000000724Model'
-description: Its a Deterministic ODE model showcasing mechanism of PDL1 induced TCR
-  and CD38 signalling inhibition. The model also contains the LCK activation and inactivation
-  phenomenon dependent on the particula
+description: "Its a Deterministic ODE model showcasing mechanism of PDL1 induced TCR and CD38 signalling inhibition. The model also contains the LCK activation and inactivation phenomenon dependent on the particula."
 standard: other
 tags:
 - immunology

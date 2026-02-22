@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Begitt2014Stat1CooperativeDnaBindingDoubleBiomd0000000501Model'
-description: Begitt2014 - STAT1 cooperative DNA binding - double GAS polymer model
-  The importance of STAT1-cooperative DNA binding in type 1 and type 2 interferon
-  signalling has been studies using experimental and
+description: "Begitt2014 - STAT1 cooperative DNA binding - double GAS polymer model The importance of STAT1-cooperative DNA binding in type 1 and type 2 interferon signalling has been studies using experimental and. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

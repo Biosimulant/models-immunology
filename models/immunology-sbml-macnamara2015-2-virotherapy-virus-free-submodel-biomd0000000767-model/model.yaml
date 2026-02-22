@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Macnamara20152VirotherapyVirusFreeSubmodelBiomd0000000767Model'
-description: 'The paper describes a submodel of oncolytic virotherapy. Created by
-  COPASI 4.25 (Build 207) This model is described in the article: Memory versus effector
-  immune responses in oncolytic virotherapiesCi'
+description: "The paper describes a submodel of oncolytic virotherapy. Created by COPASI 4.25 (Build 207) This model is described in the article: Memory versus effector immune responses in oncolytic virotherapiesCi."
 standard: other
 tags:
 - immunology

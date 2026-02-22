@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Leber2016HostImmuneResponseHPyloriInfectioModel1611160002Model'
-description: The model is first model of tissue level cellular immune responses to
-  H. pylori in the publication, 'Modeling the role of lanthionine synthetase C-like
-  2 (LANCL2) in the modulation of immune responses
+description: "The model is first model of tissue level cellular immune responses to H. pylori in the publication, 'Modeling the role of lanthionine synthetase C-like 2 (LANCL2) in the modulation of immune responses."
 standard: other
 tags:
 - immunology

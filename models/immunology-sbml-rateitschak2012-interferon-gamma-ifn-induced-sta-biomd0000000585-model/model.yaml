@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Rateitschak2012InterferonGammaIfnInducedStaBiomd0000000585Model'
-description: "Rateitschak2012 - Interferon-gamma (IFN\u03B3) induced STAT1 signalling\
-  \ (PC_IFNg100) This model is described in the article: Parameter identifiability\
-  \ and sensitivity analysis predict targets for enhanceme"
+description: "Rateitschak2012 - Interferon-gamma (IFN\u03b3) induced STAT1 signalling (PC_IFNg100) This model is described in the article: Parameter identifiability and sensitivity analysis predict targets for enhanceme. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

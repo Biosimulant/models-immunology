@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Makhlouf2020NoTreatmentModelOfTheRoleOfCBiomd0000001042Model'
-description: This ordinary differential equation model simulating the interactions
-  between tumor and immune cells is detailed in the publication:Ahmed M. Makhlouf,
-  Lamiaa El-Shennawy, Hesham A. Elkaranshawy, 'Math
+description: "This ordinary differential equation model simulating the interactions between tumor and immune cells is detailed in the publication:Ahmed M. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

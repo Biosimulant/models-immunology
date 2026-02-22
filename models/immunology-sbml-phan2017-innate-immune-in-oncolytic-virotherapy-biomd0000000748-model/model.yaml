@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Phan2017InnateImmuneInOncolyticVirotherapyBiomd0000000748Model'
-description: "The paper describes a model on the key components for tumor\u2013immune\
-  \ dynamics in multiple myeloma. Created by COPASI 4.25 (Build 207) This model is\
-  \ described in the article: The Role of the Innate Immun"
+description: "The paper describes a model on the key components for tumor\u2013immune dynamics in multiple myeloma. Created by COPASI 4.25 (Build 207) This model is described in the article: The Role of the Innate Immun."
 standard: other
 tags:
 - immunology

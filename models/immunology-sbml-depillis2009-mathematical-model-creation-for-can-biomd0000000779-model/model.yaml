@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Depillis2009MathematicalModelCreationForCanBiomd0000000779Model'
-description: This is an updated version of a previous model that described the dynamics
-  of cancer treatment, with descriptions of tumour cell numbers, specific and non-specific
-  immune cells (NK, CD8+ T cells and o
+description: "This is an updated version of a previous model that described the dynamics of cancer treatment, with descriptions of tumour cell numbers, specific and non-specific immune cells (NK, CD8+ T cells and o. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

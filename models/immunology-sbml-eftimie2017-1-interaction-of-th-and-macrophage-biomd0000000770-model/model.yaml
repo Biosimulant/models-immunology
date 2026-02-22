@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Eftimie20171InteractionOfThAndMacrophageBiomd0000000770Model'
-description: 'The paper describes a model of interaction of Th cells and macrophage
-  in melanoma. Created by COPASI 4.25 (Build 207) This model is described in the article:
-  Modelling and investigation of the CD4 T c'
+description: "The paper describes a model of interaction of Th cells and macrophage in melanoma. Created by COPASI 4.25 (Build 207) This model is described in the article: Modelling and investigation of the CD4 T c."
 standard: other
 tags:
 - immunology

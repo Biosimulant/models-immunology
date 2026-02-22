@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Caravagna2010TumourSuppressionByImmuneSysteBiomd0000000912Model'
-description: "Tumour suppression by immune system through stochastic oscillationsGiulioCaravagnaa\
-  \ Albertod\u2019Onofriob PaoloMilazzoaRobertoBarbutiahttps://doi.org/10.1016/j.jtbi.2010.05.013AbstractThe\
-  \ well-known Kirsc"
+description: "Tumour suppression by immune system through stochastic oscillationsGiulioCaravagnaa Albertod\u2019Onofriob PaoloMilazzoaRobertoBarbutiahttps://doi.org/10.1016/j.jtbi.2010.05.013AbstractThe well-known Kirsc. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Adaptive Immunity (COMBO_0005)'
-description: Immunology adaptive immunity comparative space with 2 models, configured
-  as non-causal co-simulation.
+description: "Immunology Adaptive Immunity (COMBO_0005) brings together frascoli2014_a_1, hanson2016_toxic_2, state_compare_mon in a comparative space to examine how adaptive immunity mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-immunology
   alias: frascoli2014_a_1

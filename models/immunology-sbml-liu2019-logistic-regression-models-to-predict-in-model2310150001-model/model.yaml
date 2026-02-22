@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Liu2019LogisticRegressionModelsToPredictInModel2310150001Model'
-description: 'In this comprehensive study, the authors have developed concise models
-  integrating clinical, genomic and transcriptomic features to predict intrinsic resistance
-  to anti-PD1 Immune Checkpoint Blockade '
+description: "In this comprehensive study, the authors have developed concise models integrating clinical, genomic and transcriptomic features to predict intrinsic resistance to anti-PD1 Immune Checkpoint Blockade. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Fallon2000Interleukin2DynamicsBiomd0000000665Model'
-description: 'This a model from the article: Computational model for effects of ligand/receptor
-  binding properties oninterleukin-2 trafficking dynamics and T cell proliferation
-  response. Fallon EM, Lauffenburger DA'
+description: "This a model from the article: Computational model for effects of ligand/receptor binding properties oninterleukin-2 trafficking dynamics and T cell proliferation response. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

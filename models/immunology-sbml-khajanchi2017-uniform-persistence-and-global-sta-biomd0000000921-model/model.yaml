@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Khajanchi2017UniformPersistenceAndGlobalStaBiomd0000000921Model'
-description: "This paper describes the synergistic interaction between the growth\
-  \ of malignant gliomas and the immune system interactions using a system of coupled\
-  \ ordinary di\xAEerential equations (ODEs). The propose"
+description: "This paper describes the synergistic interaction between the growth of malignant gliomas and the immune system interactions using a system of coupled ordinary di\u00aeerential equations (ODEs). It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Kronik2008ImprovingAlloreactiveCtlImmunotherBiomd0000000808Model'
-description: This mathematical model describes interactions between glioma tumors
-  and the immune system that may occur following direct intra-tumoral administration
-  of ex-vivo activated alloreactive cytotoxic-T-ly
+description: "This mathematical model describes interactions between glioma tumors and the immune system that may occur following direct intra-tumoral administration of ex-vivo activated alloreactive cytotoxic-T-ly. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

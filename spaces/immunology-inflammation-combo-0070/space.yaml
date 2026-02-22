@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Inflammation (COMBO_0070)'
-description: Immunology inflammation comparative space with 4 models, configured as
-  non-causal co-simulation.
+description: "Immunology Inflammation (COMBO_0070) brings together jarrett2015_mode_1, sanchez2017_infl_2, sherekar2023_mod_3 in a comparative space to examine how inflammation mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-immunology
   alias: jarrett2015_mode_1

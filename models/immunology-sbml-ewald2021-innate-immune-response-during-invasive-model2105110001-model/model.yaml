@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Ewald2021InnateImmuneResponseDuringInvasiveModel2105110001Model'
-description: Aspergillus fumigatus is an important human fungal pathogen and its conidia
-  are constantly inhaled by humans. In immunocompromised individuals, conidia can
-  grow out as hyphae that damage lung epitheli
+description: "Aspergillus fumigatus is an important human fungal pathogen and its conidia are constantly inhaled by humans. In immunocompromised individuals, conidia can grow out as hyphae that damage lung epitheli."
 standard: other
 tags:
 - immunology

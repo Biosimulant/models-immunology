@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Leber2016RegulatoryMacrophageDifferentiationModel1611160001Model'
-description: The model is the second model of the publication 'Modeling the role of
-  lanthionine synthetase C-like 2 (LANCL2) in the modulation of immune responses to
-  Helicobacter pylori infection' published in Plo
+description: "The model is the second model of the publication 'Modeling the role of lanthionine synthetase C-like 2 (LANCL2) in the modulation of immune responses to Helicobacter pylori infection' published in Plo. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

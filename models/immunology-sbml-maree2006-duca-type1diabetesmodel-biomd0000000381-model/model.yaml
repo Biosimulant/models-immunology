@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Maree2006DucaType1diabetesmodelBiomd0000000381Model'
-description: 'This a model from the article: Modelling the onset of Type 1 diabetes:
-  can impaired macrophage phagocytosis make the difference between health and disease?
-  Maree AF, Kublik R, Finegood DT, Edelstein-K'
+description: "This a model from the article: Modelling the onset of Type 1 diabetes: can impaired macrophage phagocytosis make the difference between health and disease? It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

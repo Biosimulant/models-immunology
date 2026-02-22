@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: General (COMBO_0041)'
-description: Immunology general comparative space with 3 models, configured as non-causal
-  co-simulation.
+description: "Immunology General (COMBO_0041) organizes liu2023_predicti_1, lopez2014_a_2, louzoun2014_a_3 into a comparative simulation setup to examine how general mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-immunology
   alias: liu2023_predicti_1

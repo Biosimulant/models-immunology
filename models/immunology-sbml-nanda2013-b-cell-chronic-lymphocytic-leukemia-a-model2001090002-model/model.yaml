@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Nanda2013BCellChronicLymphocyticLeukemiaAModel2001090002Model'
-description: '&lt;notes xmlns=&quot;http://www.sbml.org/sbml/level2/version4&quot;&gt;
-  &lt;body xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt; &lt;pre&gt;B cell chronic
-  lymphocytic leukemia - A model with immun'
+description: "&lt;notes xmlns=&quot;http://www.sbml.org/sbml/level2/version4&quot;&gt; &lt;body xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt; &lt;pre&gt;B cell chronic lymphocytic leukemia - A model with immun. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

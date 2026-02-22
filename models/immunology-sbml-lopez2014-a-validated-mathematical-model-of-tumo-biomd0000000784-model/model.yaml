@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Lopez2014AValidatedMathematicalModelOfTumoBiomd0000000784Model'
-description: This is a dynamical model of cancer growth that includes three interacting
-  cell populations of tumor cells, healthy host cells and immune effector cells. The
-  tumor-immune and the tumor-host interactio
+description: "This is a dynamical model of cancer growth that includes three interacting cell populations of tumor cells, healthy host cells and immune effector cells. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

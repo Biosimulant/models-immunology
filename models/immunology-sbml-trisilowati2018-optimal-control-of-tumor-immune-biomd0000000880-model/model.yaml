@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Trisilowati2018OptimalControlOfTumorImmuneBiomd0000000880Model'
-description: 'This is a mathematical model of a growing tumor and its interaction
-  with the immune system. The model consists of four populations: tumor cells, dendritic
-  cells (representing the innate immune system)'
+description: "This is a mathematical model of a growing tumor and its interaction with the immune system. The model consists of four populations: tumor cells, dendritic cells (representing the innate immune system)."
 standard: other
 tags:
 - immunology

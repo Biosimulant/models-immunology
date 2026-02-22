@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Webb2002FasFaslMediatedTumorTCellInteractBiomd0000000661Model'
-description: "Webb2002 - Fas/FasL mediated tumor T-cell interaction This deterministic\
-  \ model ofimmunological surveillance involving tumour cell\u2013T-lymphocyteinteraction,\
-  \ cell surface expression of Fas/FasL, and thei"
+description: "Webb2002 - Fas/FasL mediated tumor T-cell interaction This deterministic model ofimmunological surveillance involving tumour cell\u2013T-lymphocyteinteraction, cell surface expression of Fas/FasL, and thei. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

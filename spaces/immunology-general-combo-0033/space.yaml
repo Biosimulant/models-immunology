@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: General (COMBO_0033)'
-description: Immunology general comparative space with 3 models, configured as non-causal
-  co-simulation.
+description: "Immunology General (COMBO_0033) organizes gallaher2018_tum_1, ganguli2018_immu_2, garcia2018basic__3 into a comparative simulation setup to examine how general mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-immunology
   alias: gallaher2018_tum_1

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Wilson2012TumorVaccineEfficacyBiomd0000000791Model'
-description: 'The paper describes a model of antitumor vaccine therapy.Created by
-  COPASI 4.25 (Build 207) This model is described in the article: A Mathematical Model
-  of the Enhancement of Tumor Vaccine Efficacy by'
+description: "The paper describes a model of antitumor vaccine therapy.Created by COPASI 4.25 (Build 207) This model is described in the article: A Mathematical Model of the Enhancement of Tumor Vaccine Efficacy by. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Bidot2008MathematicalModellingOfTCellActivModel1910290003Model'
-description: Mathematical modeling representing Tcell actiavtion regualtion by TCR,
-  IL2 and other players.
+description: "Mathematical modeling representing Tcell actiavtion regualtion by TCR, IL2 and other players. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

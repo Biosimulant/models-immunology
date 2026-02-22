@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Palsson2013FullyIntegratedImmuneResponseModBiomd0000000608Model'
-description: Palsson2013 - Fully-integration immune response model (FIRM) FIRM (The
-  Fully-integrated Immune Response Modeling) is a hybrid construct incorporating multiple
-  existing models of the immune system [ De
+description: "Palsson2013 - Fully-integration immune response model (FIRM) FIRM (The Fully-integrated Immune Response Modeling) is a hybrid construct incorporating multiple existing models of the immune system [ De. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

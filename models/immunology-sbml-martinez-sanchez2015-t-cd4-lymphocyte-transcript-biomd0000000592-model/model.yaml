@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: MartinezSanchez2015TCd4LymphocyteTranscriptBiomd0000000592Model'
-description: Mariana Esther Martinez-Sanchez, Luis Mendoza, Carlos Villarreal & Elena
-  R. Alvarez-Buylla. A Minimal Regulatory Network of Extrinsic and Intrinsic Factors
-  Recovers Observed Patterns of CD4+ T Cell Di
+description: "Mariana Esther Martinez-Sanchez, Luis Mendoza, Carlos Villarreal & Elena R. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Mullinax2016MathematicalModelOfTumorImmuneModel2109110006Model'
-description: "This model is described in the publication:John Mullinax, Cliona O\u2019\
-  Farrelly, Jacob G. Scott, Andreas Buttensch\xF6n, Asmaa E. Elkenawi, Fadoua El Moustaid,\
-  \ Alexander G. Fletcher, Clemens Grassberger, Eun"
+description: "This model is described in the publication:John Mullinax, Cliona O\u2019Farrelly, Jacob G. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Bianca2012MathematicalModelingOfTheImmuneSModel1907260002Model'
-description: This model describes the humoral and cellular response of the immune
-  system to a tumor associate antigen and the recognition process between B cells,
-  T cells and antigen presenting cells. The model is
+description: "This model describes the humoral and cellular response of the immune system to a tumor associate antigen and the recognition process between B cells, T cells and antigen presenting cells. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

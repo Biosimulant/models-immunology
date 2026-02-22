@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: General (COMBO_0045)'
-description: Immunology general comparative space with 3 models, configured as non-causal
-  co-simulation.
+description: "Immunology General (COMBO_0045) assembles montagud2022_pro_1, mufudza2012_estr_2, mullinax2016_mat_3 as a comparative composed simulation to examine how general mechanisms compare across these models. When you run it, you can compare synchronized outputs through the declared wiring paths and monitor views."
 models:
 - repo: Biosimulant/models-immunology
   alias: montagud2022_pro_1

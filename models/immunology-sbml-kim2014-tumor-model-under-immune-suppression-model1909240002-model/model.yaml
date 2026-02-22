@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Kim2014TumorModelUnderImmuneSuppressionModel1909240002Model'
-description: its a mathematical model explaining the impact of chemotherapy and immunotherpay
-  together on Tumor cells involving cytokines like Il2, IL10 and TGFbeta, immune cells
-  like CD4+ T cells, CD8+ T cells, M
+description: "its a mathematical model explaining the impact of chemotherapy and immunotherpay together on Tumor cells involving cytokines like Il2, IL10 and TGFbeta, immune cells like CD4+ T cells, CD8+ T cells, M. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

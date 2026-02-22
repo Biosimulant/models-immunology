@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Wilkie2013rImmuneInducedCancerDormancyAndIBiomd0000000752Model'
-description: 'The paper describes a model of immune-induced cancer dormancy and immune
-  evasion with resistance. Created by COPASI 4.25 (Build 207) This model is described
-  in the article: Mathematical models of immu'
+description: "The paper describes a model of immune-induced cancer dormancy and immune evasion with resistance. Created by COPASI 4.25 (Build 207) This model is described in the article: Mathematical models of immu."
 standard: other
 tags:
 - immunology

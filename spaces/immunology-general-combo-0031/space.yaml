@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: General (COMBO_0031)'
-description: Immunology general comparative space with 3 models, configured as non-causal
-  co-simulation.
+description: "Immunology General (COMBO_0031) brings together fallon2000_inter_1, feizabadi2011_im_2, figueredo2013_im_3 in a comparative space to examine how general mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-immunology
   alias: fallon2000_inter_1

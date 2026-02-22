@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Arciero2004AMathematicalModelOfTumorImmuneModel1907310002Model'
-description: This is a mathematical model consisting of a system of nonlinear ordinary
-  differential equations describing tumor cells and immune effectors, as well as the
-  immuno-stimulatory and suppressive cytokine
+description: "This is a mathematical model consisting of a system of nonlinear ordinary differential equations describing tumor cells and immune effectors, as well as the immuno-stimulatory and suppressive cytokine. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

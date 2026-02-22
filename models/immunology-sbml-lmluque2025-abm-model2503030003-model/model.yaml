@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Lmluque2025AbmModel2503030003Model'
-description: Multi-scale Agent-Based Model for Tissue Regeneration, Tumor Growth,
-  and CAR T-Cell Therapy
+description: "Multi-scale Agent-Based Model for Tissue Regeneration, Tumor Growth, and CAR T-Cell Therapy. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

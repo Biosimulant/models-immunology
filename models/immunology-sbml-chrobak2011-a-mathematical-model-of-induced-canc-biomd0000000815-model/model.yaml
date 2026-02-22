@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Chrobak2011AMathematicalModelOfInducedCancBiomd0000000815Model'
-description: This is a mathematical model describing competition between an artificially
-  induced tumor and the adaptive immune system based on the use of an autonomous system
-  of ordinary differential equations.
+description: "This is a mathematical model describing competition between an artificially induced tumor and the adaptive immune system based on the use of an autonomous system of ordinary differential equations. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

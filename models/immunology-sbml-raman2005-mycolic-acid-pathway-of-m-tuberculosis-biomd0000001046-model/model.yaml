@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Raman2005MycolicAcidPathwayOfMTuberculosisBiomd0000001046Model'
-description: "The mycobacterial cell wall is a distinctive thick layer that protects\
-  \ the tubercle bacillus from general antibiotics and the host\u2019s immune system.\
-  \ Mycolic acids, which are long-chain \u03B1-alkyl-\u03B2-hydrox"
+description: "The mycobacterial cell wall is a distinctive thick layer that protects the tubercle bacillus from general antibiotics and the host\u2019s immune system. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

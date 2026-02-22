@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Alexander2010TcellRegulationSys2Biomd0000000290Model'
-description: 'This is system 2, the model with Michelis Menten type antigen uptake
-  by pAPCs, described in the article: Self-tolerance and Autoimmunity in a Regulatory
-  T Cell Model. Alexander HK, Wahl LM. Bull Math '
+description: "This is system 2, the model with Michelis Menten type antigen uptake by pAPCs, described in the article: Self-tolerance and Autoimmunity in a Regulatory T Cell Model. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

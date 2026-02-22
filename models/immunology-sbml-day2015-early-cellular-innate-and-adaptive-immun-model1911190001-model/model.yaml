@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Day2015EarlyCellularInnateAndAdaptiveImmunModel1911190001Model'
-description: This is an ordinary differential equation model of the early inflammatory
-  response during transplantion. Descriptions are included of the inflammatory events
-  associated with the initial surgical proce
+description: "This is an ordinary differential equation model of the early inflammatory response during transplantion. Descriptions are included of the inflammatory events associated with the initial surgical proce."
 standard: other
 tags:
 - immunology

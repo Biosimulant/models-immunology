@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Kirschner1998ImmunotherapyTumourBiomd0000000732Model'
-description: 'This a model from the article: Modeling immunotherapy of the tumor-immune
-  interaction. Kirschner D, Panetta JC. J Math Biol 1998 Sep;37(3):235-52 9785481
-  , Abstract: A number of lines of evidence sugg'
+description: "This a model from the article: Modeling immunotherapy of the tumor-immune interaction. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

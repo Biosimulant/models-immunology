@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Moore2004ChronicMyeloidLeukemicCellsAndTLBiomd0000000662Model'
-description: Moore2004 - Chronic Myeloid Leukemic cellsand T-lymphocytes interaction
-  A mathematical model for theinteraction of between cancer cells and immune system,
-  involvingCML cancer cells, naive and effector
+description: "Moore2004 - Chronic Myeloid Leukemic cellsand T-lymphocytes interaction A mathematical model for theinteraction of between cancer cells and immune system, involvingCML cancer cells, naive and effector. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

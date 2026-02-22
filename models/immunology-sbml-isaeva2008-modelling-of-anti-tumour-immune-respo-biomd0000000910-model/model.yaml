@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Isaeva2008ModellingOfAntiTumourImmuneRespoBiomd0000000910Model'
-description: 'Modelling of anti-tumour immune response: Immunocorrective effectof
-  weak centimetre electromagnetic wavesO.G. Isaeva* and V.A. OsipovBogoliubov Laboratory
-  of Theoretical Physics, Joint Institute for N'
+description: "Modelling of anti-tumour immune response: Immunocorrective effectof weak centimetre electromagnetic wavesO.G. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

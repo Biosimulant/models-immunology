@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Saad2017ImmuneCheckpointAndBcgInSuperficiaBiomd0000000746Model'
-description: 'The paper describes a model on the Dynamics of Immune Checkpoints, Immune
-  System, and BCG in the Treatment of Superficial Bladder Cancer. Created by COPASI
-  4.25 (Build 207) This model is described in '
+description: "The paper describes a model on the Dynamics of Immune Checkpoints, Immune System, and BCG in the Treatment of Superficial Bladder Cancer. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

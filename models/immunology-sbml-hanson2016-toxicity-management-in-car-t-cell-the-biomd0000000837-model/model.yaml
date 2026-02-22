@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Hanson2016ToxicityManagementInCarTCellTheBiomd0000000837Model'
-description: This model provides an in silico mathematical platform to explore the
-  interactions between chimeric antigen receptor-modified T cells, inflammatory toxicitiy,
-  and the tumour burdens of individual pati
+description: "This model provides an in silico mathematical platform to explore the interactions between chimeric antigen receptor-modified T cells, inflammatory toxicitiy, and the tumour burdens of individual pati. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

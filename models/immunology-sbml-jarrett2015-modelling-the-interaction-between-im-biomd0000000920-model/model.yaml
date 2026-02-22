@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Jarrett2015ModellingTheInteractionBetweenImBiomd0000000920Model'
-description: Mathematical model of pro- and anti-inflammatory response, inflammation/damage
-  and infection dynamics in BALB/c mouse with Staphylococcal aureus infection.
+description: "Mathematical model of pro- and anti-inflammatory response, inflammation/damage and infection dynamics in BALB/c mouse with Staphylococcal aureus infection. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

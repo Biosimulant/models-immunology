@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Coulibaly2019Interleukin15SignalingInHif1aBiomd0000000867Model'
-description: This is a mathematical model comprised of non-linear ordinary differential
-  equations describing the dynamic relationship between hypoxia-inducible factor-1
-  alpha (HIF-1a) mRNA, HIF-1a protein, and int
+description: "This is a mathematical model comprised of non-linear ordinary differential equations describing the dynamic relationship between hypoxia-inducible factor-1 alpha (HIF-1a) mRNA, HIF-1a protein, and int. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

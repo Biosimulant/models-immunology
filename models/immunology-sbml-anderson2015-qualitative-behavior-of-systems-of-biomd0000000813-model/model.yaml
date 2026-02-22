@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Anderson2015QualitativeBehaviorOfSystemsOfBiomd0000000813Model'
-description: This is a mathematical model describing tumor-CD4+-cytokine interactions,
-  with specific emphasis on the role that CD4+ T lymphocytes play in tumor regression.
+description: "This is a mathematical model describing tumor-CD4+-cytokine interactions, with specific emphasis on the role that CD4+ T lymphocytes play in tumor regression. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

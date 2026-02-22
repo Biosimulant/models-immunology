@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Sontag2017DynamicModelOfImmuneResponsesToBiomd0000001030Model'
-description: This model of the immune system response to antigen presentation is based
-  on the publication:Eduardo D.Sontag (2017) 'A Dynamic Model of Immune Responses
-  to Antigen Presentation Predicts Different Reg
+description: "This model of the immune system response to antigen presentation is based on the publication:Eduardo D.Sontag (2017) 'A Dynamic Model of Immune Responses to Antigen Presentation Predicts Different Reg. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

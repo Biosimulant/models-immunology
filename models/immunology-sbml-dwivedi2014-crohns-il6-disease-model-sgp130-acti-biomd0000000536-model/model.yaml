@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Dwivedi2014CrohnsIl6DiseaseModelSgp130ActiBiomd0000000536Model'
-description: 'Dwivedi2014 - Crohns IL6 Disease model -sgp130 activity This model is
-  comprised of four models: [BIOMD0000000534] Healthy Volunteer model [BIOMD0000000535]
-  Crohn''s Disease - IL-6 Antibody [BIOMD000000'
+description: "Dwivedi2014 - Crohns IL6 Disease model -sgp130 activity This model is comprised of four models: [BIOMD0000000534] Healthy Volunteer model [BIOMD0000000535] Crohn's Disease - IL-6 Antibody [BIOMD000000. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

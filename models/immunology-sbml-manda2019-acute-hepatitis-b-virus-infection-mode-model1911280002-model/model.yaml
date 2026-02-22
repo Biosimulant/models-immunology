@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Manda2019AcuteHepatitisBVirusInfectionModeModel1911280002Model'
-description: This is a within-host hepatitis B viral mathematical model for hepatitis
-  B in the acute phase of infection. The model incorporates hepatocytes, hepatitis
-  B virus, immune system cells and cytokine dyna
+description: "This is a within-host hepatitis B viral mathematical model for hepatitis B in the acute phase of infection. The model incorporates hepatocytes, hepatitis B virus, immune system cells and cytokine dyna."
 standard: other
 tags:
 - immunology

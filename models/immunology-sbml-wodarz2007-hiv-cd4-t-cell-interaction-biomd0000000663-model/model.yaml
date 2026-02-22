@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Wodarz2007HivCd4TCellInteractionBiomd0000000663Model'
-description: 'Wodarz2007 - HIV/CD4 T-cell interaction A deterministic model illustrating
-  howCD4 T-cells can influence HIV infection. This model is described in the article:
-  Infection dynamics in HIV-specific CD4 T '
+description: "Wodarz2007 - HIV/CD4 T-cell interaction A deterministic model illustrating howCD4 T-cells can influence HIV infection. This model is described in the article: Infection dynamics in HIV-specific CD4 T."
 standard: other
 tags:
 - immunology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Wei2017TumorTCellAndCytokineInteractionBiomd0000000778Model'
-description: 'The paper describes a model of tumor-immune interaction. Created by
-  COPASI 4.25 (Build 207) This model is described in the article: Periodically Pulsed
-  Immunotherapy in a Mathematical Model of Tumor, '
+description: "The paper describes a model of tumor-immune interaction. Created by COPASI 4.25 (Build 207) This model is described in the article: Periodically Pulsed Immunotherapy in a Mathematical Model of Tumor,."
 standard: other
 tags:
 - immunology

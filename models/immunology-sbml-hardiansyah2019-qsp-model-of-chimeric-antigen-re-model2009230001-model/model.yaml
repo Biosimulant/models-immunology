@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Hardiansyah2019QspModelOfChimericAntigenReModel2009230001Model'
-description: This QSP model explains how the mechanism of action connects to the clinical
-  outcomes and, therefore, may serve as an important model-based platform to guide
-  the development and personalized dosing of
+description: "This QSP model explains how the mechanism of action connects to the clinical outcomes and, therefore, may serve as an important model-based platform to guide the development and personalized dosing of. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

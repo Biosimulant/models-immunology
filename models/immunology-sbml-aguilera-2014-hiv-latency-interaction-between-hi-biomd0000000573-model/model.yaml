@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Aguilera2014HivLatencyInteractionBetweenHiBiomd0000000573Model'
-description: 'Aguilera 2014 - HIV latency. Interactionbetween HIV proteins and immune
-  response This model is described in the article: Studying HIV latency by modeling
-  the interaction between HIV proteins and the i'
+description: "Aguilera 2014 - HIV latency. Interactionbetween HIV proteins and immune response This model is described in the article: Studying HIV latency by modeling the interaction between HIV proteins and the i."
 standard: other
 tags:
 - immunology

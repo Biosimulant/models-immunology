@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Bachmann2011DivisionOfLaborByDualFeedbackBiomd0000000861Model'
-description: This is a dynamic pathway model examining the roles of of the two transcriptional
-  negative feedback regulators of the suppressor of cytokine signaling (SOCS) family,
-  CIS and SOCS3, in JAK/STAT5 signal
+description: "This is a dynamic pathway model examining the roles of of the two transcriptional negative feedback regulators of the suppressor of cytokine signaling (SOCS) family, CIS and SOCS3, in JAK/STAT5 signal. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

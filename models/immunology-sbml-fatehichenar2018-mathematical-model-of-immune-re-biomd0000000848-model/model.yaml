@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Fatehichenar2018MathematicalModelOfImmuneReBiomd0000000848Model'
-description: This is a mathematical model describing the dynamics of the immune response
-  to hepatitis B, which takes into account contributions form innate and adaptive
-  immune responses, as well as cytokines.
+description: "This is a mathematical model describing the dynamics of the immune response to hepatitis B, which takes into account contributions form innate and adaptive immune responses, as well as cytokines. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

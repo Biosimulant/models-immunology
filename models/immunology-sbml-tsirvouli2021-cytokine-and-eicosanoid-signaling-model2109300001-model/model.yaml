@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Tsirvouli2021CytokineAndEicosanoidSignalingModel2109300001Model'
-description: The psoKC (psoriatic keratinocyte) model is represnting the behavour
-  of keratinocytes in the later or chronic stage of psoriasis in response to the main
-  cytokines that constitute the characteristic cy
+description: "The psoKC (psoriatic keratinocyte) model is represnting the behavour of keratinocytes in the later or chronic stage of psoriasis in response to the main cytokines that constitute the characteristic cy. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

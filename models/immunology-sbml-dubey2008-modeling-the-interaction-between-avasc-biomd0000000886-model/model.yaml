@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Dubey2008ModelingTheInteractionBetweenAvascBiomd0000000886Model'
-description: 'MODELING THE INTERACTION BETWEEN AVASCULAR CANCEROUS CELLS AND ACQUIRED
-  IMMUNE RESPONSEB. DUBEY, UMA S. DUBEY and SANDIP BANERJEEAbstractThis paper deals
-  with the interaction between dispersed cancer '
+description: "MODELING THE INTERACTION BETWEEN AVASCULAR CANCEROUS CELLS AND ACQUIRED IMMUNE RESPONSEB. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

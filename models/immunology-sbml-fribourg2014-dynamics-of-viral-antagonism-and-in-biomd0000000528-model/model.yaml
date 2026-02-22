@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Fribourg2014DynamicsOfViralAntagonismAndInBiomd0000000528Model'
-description: Fribourg2014 - Dynamics of viral antagonism and innate immune response
-  (H1N1 influenza A virus - Cal/09) The dynamics of the interplay between the viral
-  antagonism and the innate immune response has b
+description: "Fribourg2014 - Dynamics of viral antagonism and innate immune response (H1N1 influenza A virus - Cal/09) The dynamics of the interplay between the viral antagonism and the innate immune response has b. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

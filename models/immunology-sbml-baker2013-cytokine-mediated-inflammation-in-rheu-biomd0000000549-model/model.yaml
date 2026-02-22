@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Baker2013CytokineMediatedInflammationInRheuBiomd0000000549Model'
-description: Baker2013 - Cytokine Mediated Inflammation inRheumatoid Arthritis - Age
-  Dependant This model by Baker M. 2013, describesthe interaction between pro and
-  anti-inflammatory cytokinesignalling in rheumato
+description: "Baker2013 - Cytokine Mediated Inflammation inRheumatoid Arthritis - Age Dependant This model by Baker M. 2013, describesthe interaction between pro and anti-inflammatory cytokinesignalling in rheumato."
 standard: other
 tags:
 - immunology

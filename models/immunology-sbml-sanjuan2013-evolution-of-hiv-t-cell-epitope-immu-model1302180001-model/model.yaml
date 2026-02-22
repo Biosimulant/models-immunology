@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Sanjuan2013EvolutionOfHivTCellEpitopeImmuModel1302180001Model'
-description: 'Sanjuan2013 - Evolution of HIV T-cell epitope, immune activation model
-  Model of cellular immune response against HIV. This model is described in the article:
-  Immune activation promotes evolutionary co'
+description: "Sanjuan2013 - Evolution of HIV T-cell epitope, immune activation model Model of cellular immune response against HIV. This model is described in the article: Immune activation promotes evolutionary co."
 standard: other
 tags:
 - immunology

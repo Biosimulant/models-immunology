@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Lewkiewics2019EffectsOfAgingOnNaiveTCellBiomd0000000824Model'
-description: This model is built by COPASI 4.24(Build197), based on paper:A mathematical
-  model of the effects of aging on naive T-cell population and diversityAuthors:Stephanie
-  Lewkiewicz, Yao-li Chuang, Tom ChouA
+description: "This model is built by COPASI 4.24(Build197), based on paper:A mathematical model of the effects of aging on naive T-cell population and diversityAuthors:Stephanie Lewkiewicz, Yao-li Chuang, Tom ChouA. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

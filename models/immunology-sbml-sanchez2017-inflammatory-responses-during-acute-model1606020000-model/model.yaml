@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Sanchez2017InflammatoryResponsesDuringAcuteModel1606020000Model'
-description: 'Sanchez2017 - Inflammatory responses during acute hyperinsulinemia This
-  model is described in the article: The CD4+ T cell regulatory network mediates inflammatory
-  responses during acute hyperinsuline'
+description: "Sanchez2017 - Inflammatory responses during acute hyperinsulinemia This model is described in the article: The CD4+ T cell regulatory network mediates inflammatory responses during acute hyperinsuline. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

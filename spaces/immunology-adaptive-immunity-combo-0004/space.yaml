@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Adaptive Immunity (COMBO_0004)'
-description: Immunology adaptive immunity comparative space with 2 models, configured
-  as non-causal co-simulation.
+description: "Immunology Adaptive Immunity (COMBO_0004) organizes dwivedi2014_croh_1, dwivedi2014_heal_2, state_compare_mon into a comparative simulation setup to examine how adaptive immunity mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-immunology
   alias: dwivedi2014_croh_1

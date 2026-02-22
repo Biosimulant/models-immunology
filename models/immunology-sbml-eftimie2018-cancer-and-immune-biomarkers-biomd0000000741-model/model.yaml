@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Eftimie2018CancerAndImmuneBiomarkersBiomd0000000741Model'
-description: 'The paper describes a model on the detection of cancer based on cancer
-  and immune biomarkers. Created by COPASI 4.25 (Build 207) This model is described
-  in the article: Improving cancer detection thro'
+description: "The paper describes a model on the detection of cancer based on cancer and immune biomarkers. Created by COPASI 4.25 (Build 207) This model is described in the article: Improving cancer detection thro."
 standard: other
 tags:
 - immunology

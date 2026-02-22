@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Khajanchi2019StabilityAnalysisOfAMathematicBiomd0000000891Model'
-description: Stability Analysis of a Mathematical Model for Glioma-Immune Interaction
-  under Optimal TherapySubhas KhajanchiAbstractWe investigate a mathematical model
-  using a system of coupled ordinary differentia
+description: "Stability Analysis of a Mathematical Model for Glioma-Immune Interaction under Optimal TherapySubhas KhajanchiAbstractWe investigate a mathematical model using a system of coupled ordinary differentia. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

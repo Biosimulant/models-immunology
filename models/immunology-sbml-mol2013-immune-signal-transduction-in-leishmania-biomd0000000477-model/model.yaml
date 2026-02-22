@@ -1,6 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Mol2013ImmuneSignalTransductionInLeishmaniaBiomd0000000477Model'
-description: Created by The MathWorks, Inc. SimBiology tool, Version 3.3
+description: "Created by The MathWorks, Inc. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

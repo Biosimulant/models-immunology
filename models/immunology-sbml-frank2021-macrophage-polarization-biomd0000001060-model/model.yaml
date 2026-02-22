@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Frank2021MacrophagePolarizationBiomd0000001060Model'
-description: 'The model describes the mechanisms by which macrophages differentiate
-  into a given phenotype. The model shows that both extracellular and intracellular
-  signalling are both important for that process. '
+description: "The model describes the mechanisms by which macrophages differentiate into a given phenotype. The model shows that both extracellular and intracellular signalling are both important for that process."
 standard: other
 tags:
 - immunology

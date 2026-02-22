@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: Frascoli2014ADynamicalModelOfTumourImmunotBiomd0000000787Model'
-description: 'This is a coupled ordinary differential equation model of tumour-immune
-  dynamics, accounting for biological and clinical factors which regulate the interaction
-  rates of cytotoxic T lymphocytes on the '
+description: "This is a coupled ordinary differential equation model of tumour-immune dynamics, accounting for biological and clinical factors which regulate the interaction rates of cytotoxic T lymphocytes on the. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology

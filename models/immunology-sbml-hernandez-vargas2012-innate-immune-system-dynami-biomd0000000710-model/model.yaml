@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Immunology: HernandezVargas2012InnateImmuneSystemDynamiBiomd0000000710Model'
-description: A. Esteban Hernandez-Vargas & Michael Meyer-Hermann. Innate Immune System
-  Dynamics to Influenza Virus. IFAC Proceedings Volumes 45, 18 (2012). The understanding
-  of how influenza virus infection activa
+description: "A. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
 - immunology
