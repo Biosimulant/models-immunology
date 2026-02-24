@@ -17,6 +17,10 @@ if TYPE_CHECKING:  # pragma: no cover - typing only
 import biosim
 from biosim.signals import BioSignal, SignalMetadata
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 class SbmlAbbott2021PredictionOfImmunotherapyResponseInMelanoma(biosim.BioModule):
     """BioModule wrapper for SBML model: Abbott2021 - Prediction of Immunotherapy Response in Melanoma through Combined Modeling of NB and Immune-Related Resistance Mechanisms."""
 
@@ -60,7 +64,8 @@ class SbmlAbbott2021PredictionOfImmunotherapyResponseInMelanoma(biosim.BioModule
         for sid in self._species_ids:
             try:
                 concentrations[sid] = float(self._rr[sid])
-            except Exception:
+            except (KeyError, ValueError, TypeError):  # narrowed from bare Exception
+                logger.warning("Failed to read species %s, defaulting to 0.0", sid)
                 concentrations[sid] = 0.0
         self._outputs = {
             "state": BioSignal(

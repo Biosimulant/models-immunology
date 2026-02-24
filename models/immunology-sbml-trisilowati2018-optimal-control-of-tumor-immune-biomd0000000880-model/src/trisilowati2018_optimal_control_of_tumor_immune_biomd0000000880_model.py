@@ -17,6 +17,10 @@ if TYPE_CHECKING:  # pragma: no cover - typing only
 import biosim
 from biosim.signals import BioSignal, SignalMetadata
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 class SbmlTrisilowati2018OptimalControlOfTumorImmuneSystem(biosim.BioModule):
     """BioModule wrapper for SBML model: Trisilowati2018 - Optimal control of tumor-immune system interaction with treatment."""
 
@@ -60,7 +64,8 @@ class SbmlTrisilowati2018OptimalControlOfTumorImmuneSystem(biosim.BioModule):
         for sid in self._species_ids:
             try:
                 concentrations[sid] = float(self._rr[sid])
-            except Exception:
+            except (KeyError, ValueError, TypeError):  # narrowed from bare Exception
+                logger.warning("Failed to read species %s, defaulting to 0.0", sid)
                 concentrations[sid] = 0.0
         self._outputs = {
             "state": BioSignal(
@@ -93,7 +98,7 @@ class SbmlTrisilowati2018OptimalControlOfTumorImmuneSystem(biosim.BioModule):
                     "name": species_id,
                     "points": [[self._t, value]]
                 })
-            except Exception:
+            except (KeyError, ValueError, TypeError):  # narrowed from bare Exception
                 continue
 
         if not series:
