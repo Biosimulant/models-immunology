@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Diego2021ImprovedPredictionOfIcbEfficacyAcModel2407210002Model'
+title: "Diego2021 - Improved Prediction of ICB Efficacy Across Multiple Cancer Types using Random Forests"
 description: "In this study, the authors had developed a machine learning model to predict immune checkpoint blockade (ICB) response by integrating genomic, molecular, demographic and clinical data from a curated c. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

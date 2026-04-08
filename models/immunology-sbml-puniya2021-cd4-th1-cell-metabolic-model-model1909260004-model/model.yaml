@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Puniya2021Cd4Th1CellMetabolicModelModel1909260004Model'
+title: "Puniya2021 - CD4+ Th1 cell metabolic model"
 description: "CD4+ T cells are critical components in the human immune system. They produce cytokines to fight against pathogens and abnormal cells and stimulate other cells, such as B cells, macrophages, and neutr."
 standard: other
 tags:

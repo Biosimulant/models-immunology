@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Mullinax2016MathematicalModelOfTumorImmuneModel2109110006Model'
+title: "Mullinax2016 - Mathematical model of tumor-immune cell interactions to optimize the meta-phenotype of TIL subpopulations"
 description: "This model is described in the publication:John Mullinax, Cliona O\u2019Farrelly, Jacob G. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

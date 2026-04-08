@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Ganguli2018ImmunoRegulatoryMechanismsInTumoBiomd0000000810Model'
+title: "Ganguli2018-immuno regulatory mechanisms in tumor microenvironment"
 description: "This model describes the concept of Cancer Stem Cells(CSC) differentiation and tumor-immune interaction into a generic model that has been validated with known experimental data. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

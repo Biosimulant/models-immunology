@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Hancioglu2007HumanImmuneResponseToInfluenzaBiomd0000000711Model'
+title: "Hancioglu2007 - Human Immune Response to Influenza A virus Infection"
 description: "Baris Hancioglu, David Swigon & Gilles Clermont. A dynamical model of human immune response to influenza A virus infection."
 standard: other
 tags:

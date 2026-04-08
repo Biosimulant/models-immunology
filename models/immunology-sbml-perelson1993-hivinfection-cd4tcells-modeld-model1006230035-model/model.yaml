@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Perelson1993HivinfectionCd4tcellsModeldModel1006230035Model'
+title: "Perelson1993_HIVinfection_CD4Tcells_ModelD"
 description: "This a model from the article: Dynamics of HIV infection of CD4+ T cells. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

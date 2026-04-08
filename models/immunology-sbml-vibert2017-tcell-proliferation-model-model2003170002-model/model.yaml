@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Vibert2017TcellProliferationModelModel2003170002Model'
+title: "Vibert2017 - Tcell proliferation model"
 description: "model allows us to infer proliferation rates and cell cycle phase durations from complex experimental 5-ethynyl-2'-deoxyuridine (EdU) data, revealing T cell proliferation heterogeneity and specific si. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

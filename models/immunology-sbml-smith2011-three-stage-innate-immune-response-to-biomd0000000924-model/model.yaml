@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Smith2011ThreeStageInnateImmuneResponseToBiomd0000000924Model'
+title: "Smith2011 - Three Stage Innate Immune Response to a Pneumococcal Lung Infection"
 description: "Pneumococcal pneumonia is a leading cause of death and a major source of human morbidity. The initial immune response plays a central role in determining the course and outcome of pneumococcal disease."
 standard: other
 tags:

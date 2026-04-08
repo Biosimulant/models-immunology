@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Louzoun2014AMathematicalModelForPancreaticModel1909100002Model'
+title: "Louzoun2014 - A mathematical model for pancreatic cancer growth and treatments"
 description: "This is a mathematical model of pancreatic cancer, geared towards examining the efficacy of tumor-suppressing drugs in tandem with an immune response. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

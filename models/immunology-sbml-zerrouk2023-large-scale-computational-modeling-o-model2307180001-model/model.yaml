@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Zerrouk2023LargeScaleComputationalModelingOModel2307180001Model'
+title: "Zerrouk2023 - Large scale computational modeling of the M1 synovial macrophage in rheumatoid arthritis"
 description: "Immunology Zerrouk2023Large Scale Computational Modeling OModel2307180001Model captures core biological behavior in the context of immunology, sbml, biomodels_ebi using a biomodels_ebi-sourced OTHER model. When you run it, you can observe state and evaluate how the modeled system changes across runs."
 standard: other
 tags:

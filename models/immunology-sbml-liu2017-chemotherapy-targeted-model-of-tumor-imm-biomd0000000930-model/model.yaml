@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Liu2017ChemotherapyTargetedModelOfTumorImmBiomd0000000930Model'
+title: "Liu2017 - chemotherapy targeted model of tumor immune system"
 description: "Its a mathematical model reflecting chemotherapy response in tumor immune interaction system. Model encoded by Sarubini Kananathan and annotated+submitted to Biomodels by Krishna Tiwari."
 standard: other
 tags:

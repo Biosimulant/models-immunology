@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Waugh2006DiabeticWoundHealingTreatedAndUntBiomd0000000681Model'
+title: "Waugh2006 - Diabetic Wound Healing - Treated and Untreated Macrophage Dynamics"
 description: "This a model from the article: Macrophage dynamics in diabetic wound dealing. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

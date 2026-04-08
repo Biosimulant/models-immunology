@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Depillis2007ChemotherapyForTumorsAnAnalysisModel2001160001Model'
+title: "dePillis2007 - Chemotherapy for tumors An analysis of the dynamics and a study of quadratic and linear optimal controls"
 description: "AbstractWe investigate a mathematical model of tumor\u2013immune interactions with chemotherapy, and strategiesfor optimally administering treatment. In this paper we analyze the dynamics of this model, ch."
 standard: other
 tags:

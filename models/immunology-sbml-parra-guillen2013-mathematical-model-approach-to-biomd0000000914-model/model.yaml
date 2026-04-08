@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: ParraGuillen2013MathematicalModelApproachToBiomd0000000914Model'
+title: "Parra_Guillen2013 - Mathematical model approach to describe tumour response in mice after vaccine administration_model1"
 description: "Mathematical model approach to describe tumour response in mice after vaccine administration and its applicability to immune-stimulatory cytokine-based strategies.Parra-Guillen ZP1, Berraondo P, Greni. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

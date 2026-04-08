@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Leung2016SirwsModelWithImmuneBoostingAndCModel1808280006Model'
+title: "Leung2016 - SIRWS model with immune boosting and cross-immunity between two pathogens"
 description: "Immunology Leung2016Sirws Model With Immune Boosting And CModel1808280006Model represents core biological mechanisms from biomodels_ebi reference biomodels_ebi:MODEL1808280006. When you run it, you can inspect state and compare temporal behavior between baseline and adjusted inputs."
 standard: other
 tags:

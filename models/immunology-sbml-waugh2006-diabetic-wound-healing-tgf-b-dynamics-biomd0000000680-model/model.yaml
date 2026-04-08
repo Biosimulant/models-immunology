@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Waugh2006DiabeticWoundHealingTgfBDynamicsBiomd0000000680Model'
+title: "Waugh2006 - Diabetic Wound Healing - TGF-B Dynamics"
 description: "This a model from the article: Macrophage dynamics in diabetic wound dealing. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

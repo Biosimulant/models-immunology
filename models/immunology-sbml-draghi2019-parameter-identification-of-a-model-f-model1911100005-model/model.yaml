@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Draghi2019ParameterIdentificationOfAModelFModel1911100005Model'
+title: "Draghi2019 - Parameter identification of a model for prostate cancer treated by intermittent therapy"
 description: "This is a mathematical describing the interaction between the prostate adenocarcinoma tumor environment, the prostate specific antigen (PSA) produced by hormone-dependent and hormone-independent tumor. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Kirschner1998ImmunotherapyTumourBiomd0000000732Model'
+title: "Kirschner1998_Immunotherapy_Tumour"
 description: "This a model from the article: Modeling immunotherapy of the tumor-immune interaction. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

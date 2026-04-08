@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Nowak1996HostresponseInfectiousagentsModel1006230050Model'
+title: "Nowak1996_HostResponse_InfectiousAgents"
 description: "This a model from the article: Population dynamics of immune responses to persistent viruses. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

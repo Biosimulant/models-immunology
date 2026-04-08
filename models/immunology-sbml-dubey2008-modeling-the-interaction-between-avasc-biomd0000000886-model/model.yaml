@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Dubey2008ModelingTheInteractionBetweenAvascBiomd0000000886Model'
+title: "Dubey2008 - Modeling the interaction between avascular cancerous cells and acquired immune response"
 description: "MODELING THE INTERACTION BETWEEN AVASCULAR CANCEROUS CELLS AND ACQUIRED IMMUNE RESPONSEB. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

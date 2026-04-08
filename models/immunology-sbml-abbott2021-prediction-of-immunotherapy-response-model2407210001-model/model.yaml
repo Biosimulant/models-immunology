@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Abbott2021PredictionOfImmunotherapyResponseModel2407210001Model'
+title: "Abbott2021 - Prediction of Immunotherapy Response in Melanoma through Combined Modeling of NB and Immune-Related Resistance Mechanisms"
 description: "In this manuscript, the authors had hypothesized a multi-dimensional approach modeling of both tumor and immune-related molecular mechanisms would better predict immune checkpoint blockade (ICB) respo. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

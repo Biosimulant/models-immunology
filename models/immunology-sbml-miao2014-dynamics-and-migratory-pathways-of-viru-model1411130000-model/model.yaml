@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Miao2014DynamicsAndMigratoryPathwaysOfViruModel1411130000Model'
+title: "Miao2014 - Dynamics and migratory pathways of virus-specific antibody-secreting cell populations"
 description: "This model is from the paper available at http://www.ncbi.nlm.nih.gov/pubmed/25171166. The original model contains time-varying parameters which are describedby a smoothing spline."
 standard: other
 tags:

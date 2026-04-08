@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: ImmunologicalHealthyStateModelOfSphingolipiModel2301110002Model'
+title: "Immunological Healthy State Model of Sphingolipids with IL-6/IL-17/IL-23 immune axis in L.major infection"
 description: "In Healthy State, we demonstrated the controlled expression of sphingolipids and the controlled IL-6,IL-17,IL-23 cytokines signalling via SOCS3 mediated regulation. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

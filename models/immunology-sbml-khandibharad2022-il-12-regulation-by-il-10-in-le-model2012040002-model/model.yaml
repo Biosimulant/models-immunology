@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Khandibharad2022Il12RegulationByIl10InLeModel2012040002Model'
+title: "Khandibharad2022 - IL-12 regulation by IL-10 in Leishmaniasis"
 description: "In this model, TLR2-TLR6 mediates MyD88 pathway gets activated, which activates IL-12 production and induces iNOS expression when the Macrophage is infected with Leishmania parasite. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

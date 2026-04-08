@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Tsirvouli2021CytokineAndEicosanoidSignalingModel2109300001Model'
+title: "Tsirvouli2021 - Cytokine and eicosanoid signaling in psoriatic keratinocytes"
 description: "The psoKC (psoriatic keratinocyte) model is represnting the behavour of keratinocytes in the later or chronic stage of psoriasis in response to the main cytokines that constitute the characteristic cy. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

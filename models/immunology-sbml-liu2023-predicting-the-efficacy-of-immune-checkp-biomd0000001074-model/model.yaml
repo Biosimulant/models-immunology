@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Liu2023PredictingTheEfficacyOfImmuneCheckpBiomd0000001074Model'
+title: "Liu2023 - Predicting the efficacy of immune checkpoint inhibitors monotherapy in advanced non-small cell lung cancer: a machine learning method based on multidimensional data"
 description: "Immunotherapy has improved the prognosis of patients with advanced non-small cell lungcancer (NSCLC), but only a small subset of patients achieved clinical benefit. The purpose of our study was to int."
 standard: other
 tags:

@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Feizabadi20111ImmunodeficiencyInCancerCoreBiomd0000000760Model'
+title: "Feizabadi2011/1 - immunodeficiency in cancer core model"
 description: "The paper describes a basic model of immune-cancer interaction. Created by COPASI 4.25 (Build 207) This model is described in the article: Modeling the Effects of a Simple Immune System and Immunodefi."
 standard: other
 tags:

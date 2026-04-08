@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: RobertsonTessiM2012AModelOfTumorImmuneIBiomd0000000731Model'
+title: "Robertson-Tessi M 2012 A model of tumor Immune interaction"
 description: "Its a mathematical model presenting the interaction between a growing tumor and immune system. Model involves tumor cells, dendritic cell, helper Tcells, regulatory Tcells, effector cells and certain."
 standard: other
 tags:

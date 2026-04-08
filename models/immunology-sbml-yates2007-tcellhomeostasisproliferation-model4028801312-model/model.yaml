@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Yates2007TcellhomeostasisproliferationModel4028801312Model'
+title: "Yates2007_TcellHomeostasisProliferation"
 description: "This a model from the article: Understanding the slow depletion of memory CD4+ T cells in HIV infection. Yates A, Stark J, Klein N, Antia R, Callard R."
 standard: other
 tags:

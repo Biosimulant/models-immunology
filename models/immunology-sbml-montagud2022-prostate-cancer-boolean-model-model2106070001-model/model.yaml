@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Montagud2022ProstateCancerBooleanModelModel2106070001Model'
+title: "Montagud2022 - Prostate cancer Boolean model"
 description: "Prostate cancer is the second most occurring cancer in men worldwide, and with the advances made with screening for prostate-specific antigen, it has been prone to early diagnosis and over-treatment. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

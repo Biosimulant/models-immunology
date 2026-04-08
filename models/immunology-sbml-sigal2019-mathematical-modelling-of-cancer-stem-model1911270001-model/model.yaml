@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Sigal2019MathematicalModellingOfCancerStemModel1911270001Model'
+title: "Sigal2019 - Mathematical modelling of cancer stem cell-targeted immunotherapy"
 description: "This is a mathematical model studies how specific immune system components, namely dendritic cells and cytotoxic T-cells, interact with different cancer cell types, specifically cancer stem cells (CSC. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

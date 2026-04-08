@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Wei2017TumorTCellAndCytokineInteractionBiomd0000000778Model'
+title: "Wei2017 - tumor, T cell and cytokine interaction"
 description: "The paper describes a model of tumor-immune interaction. Created by COPASI 4.25 (Build 207) This model is described in the article: Periodically Pulsed Immunotherapy in a Mathematical Model of Tumor,."
 standard: other
 tags:

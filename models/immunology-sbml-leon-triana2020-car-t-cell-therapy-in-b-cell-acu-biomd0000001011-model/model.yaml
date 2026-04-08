@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: LeonTriana2020CarTCellTherapyInBCellAcuBiomd0000001011Model'
+title: "Leon-Triana2020 - CAR T-cell therapy in B-cell acute lymphoblastic leukaemia"
 description: "This model is based on the publication:'CAR T cell therapy in B-cell acute lymphoblastic leukaemia: Insights from mathematical models'.Odelaisy Le\u00f3n-Triana, Soukaina Sabir, Gabriel F. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

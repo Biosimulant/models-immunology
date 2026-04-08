@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Bose2011NoiseAssistedInteractionsOfTumorAnBiomd0000000894Model'
+title: "Bose2011 - Noise-assisted interactions of tumor and immune cells"
 description: "Noise-assisted interactions of tumor and immune cells.Bose T1, Trimper S.Author information1 Institute of Physics, Martin-Luther-University, D-06099 Halle, Germany. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

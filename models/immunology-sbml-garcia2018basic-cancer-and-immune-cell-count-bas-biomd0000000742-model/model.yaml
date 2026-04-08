@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Garcia2018basicCancerAndImmuneCellCountBasBiomd0000000742Model'
+title: "Garcia2018basic - cancer and immune cell count basic model"
 description: "The paper describes a basic model of immune-tumor cell interactions. Created by COPASI 4.25 (Build 207) This model is described in the article: Cancer-Induced Immunosuppression can enable Effectivenes."
 standard: other
 tags:

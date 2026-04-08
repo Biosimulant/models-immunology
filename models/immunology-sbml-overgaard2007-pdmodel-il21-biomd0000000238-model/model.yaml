@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Overgaard2007PdmodelIl21Biomd0000000238Model'
+title: "Overgaard2007_PDmodel_IL21"
 description: "This a model from the article: PKPD model of interleukin-21 effects on thermoregulation in monkeys--application and evaluation of stochastic differential equations. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

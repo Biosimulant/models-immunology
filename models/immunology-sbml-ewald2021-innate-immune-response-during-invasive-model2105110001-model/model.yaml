@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Ewald2021InnateImmuneResponseDuringInvasiveModel2105110001Model'
+title: "Ewald2021 - Innate immune response during invasive aspergillosis by dynamic optimization"
 description: "Aspergillus fumigatus is an important human fungal pathogen and its conidia are constantly inhaled by humans. In immunocompromised individuals, conidia can grow out as hyphae that damage lung epitheli."
 standard: other
 tags:

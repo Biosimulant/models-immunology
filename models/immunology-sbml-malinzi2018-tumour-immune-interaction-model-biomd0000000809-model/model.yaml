@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: Malinzi2018TumourImmuneInteractionModelBiomd0000000809Model'
+title: "Malinzi2018 - tumour-immune interaction model"
 description: "The paper describes a spatio-temporal mathematical model, in the form of a moving boundary problem, to explain cancer dormancy is developed. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:

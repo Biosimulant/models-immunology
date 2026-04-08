@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Immunology: AlTuwairqi2020DynamicsOfCancerVirotherapyWBiomd0000001035Model'
+title: "Al-Tuwairqi2020 - Dynamics of cancer virotherapy with immune response"
 description: "This ordinary differential equation model of the role of the immune response in cancer virotherapy dynamics is described in the publication:Al-Tuwairqi, S.M., Al-Johani, N.O., Simbawa, E.A. It can be used to explore immune response dynamics and compare pathway-level behavior across conditions."
 standard: other
 tags:
