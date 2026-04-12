@@ -11,14 +11,13 @@ Its a mathematical model reflecting chemotherapy response in tumor immune intera
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-liu2017-chemotherapy-targeted-model-of-tumor-imm-biomd0000000930-model
     alias: model
-    manifest_path: models/immunology-sbml-liu2017-chemotherapy-targeted-model-of-tumor-imm-biomd0000000930-model/model.yaml
 ```
 
 ## Tags

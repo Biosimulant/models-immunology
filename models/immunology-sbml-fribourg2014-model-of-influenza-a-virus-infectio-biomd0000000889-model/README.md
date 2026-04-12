@@ -11,14 +11,13 @@ This is an ordinary differential equation mathematical model investigating the e
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-fribourg2014-model-of-influenza-a-virus-infectio-biomd0000000889-model
     alias: model
-    manifest_path: models/immunology-sbml-fribourg2014-model-of-influenza-a-virus-infectio-biomd0000000889-model/model.yaml
 ```
 
 ## Tags

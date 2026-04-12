@@ -11,14 +11,13 @@ A. Esteban Hernandez-Vargas & Michael Meyer-Hermann. Innate Immune System Dynami
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-hernandez-vargas2012-innate-immune-system-dynami-biomd0000000710-model
     alias: model
-    manifest_path: models/immunology-sbml-hernandez-vargas2012-innate-immune-system-dynami-biomd0000000710-model/model.yaml
 ```
 
 ## Tags

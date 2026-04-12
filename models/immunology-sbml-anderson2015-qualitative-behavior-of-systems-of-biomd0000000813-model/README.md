@@ -11,14 +11,13 @@ This is a mathematical model describing tumor-CD4+-cytokine interactions, with s
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-anderson2015-qualitative-behavior-of-systems-of-biomd0000000813-model
     alias: model
-    manifest_path: models/immunology-sbml-anderson2015-qualitative-behavior-of-systems-of-biomd0000000813-model/model.yaml
 ```
 
 ## Tags

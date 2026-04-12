@@ -11,14 +11,13 @@ Stability Analysis of a Mathematical Model for Glioma-Immune Interaction under O
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-khajanchi2019-stability-analysis-of-a-mathematic-biomd0000000891-model
     alias: model
-    manifest_path: models/immunology-sbml-khajanchi2019-stability-analysis-of-a-mathematic-biomd0000000891-model/model.yaml
 ```
 
 ## Tags

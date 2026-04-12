@@ -11,14 +11,13 @@ Carbo2013 - Cytokine driven CD4+ T Cell differentiation and phenotype plasticity
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-carbo2013-cytokine-driven-cd4-t-cell-differentia-biomd0000000451-model
     alias: model
-    manifest_path: models/immunology-sbml-carbo2013-cytokine-driven-cd4-t-cell-differentia-biomd0000000451-model/model.yaml
 ```
 
 ## Tags

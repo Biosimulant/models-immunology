@@ -11,14 +11,13 @@ This ordinary differential equation model, simulating the tumor-immune interacti
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-bunimovich-mendrazitsky2007-mathematical-model-o-biomd0000001034-model
     alias: model
-    manifest_path: models/immunology-sbml-bunimovich-mendrazitsky2007-mathematical-model-o-biomd0000001034-model/model.yaml
 ```
 
 ## Tags

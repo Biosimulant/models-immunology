@@ -11,14 +11,13 @@ This ordinary differential equation model simulating the mechanisms that govern 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-creemers2021-tumor-immune-dynamics-and-implicati-biomd0000001022-model
     alias: model
-    manifest_path: models/immunology-sbml-creemers2021-tumor-immune-dynamics-and-implicati-biomd0000001022-model/model.yaml
 ```
 
 ## Tags

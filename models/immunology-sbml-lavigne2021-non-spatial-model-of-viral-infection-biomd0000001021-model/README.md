@@ -11,14 +11,13 @@ This ordinary differential equation model is described in the following article:
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-lavigne2021-non-spatial-model-of-viral-infection-biomd0000001021-model
     alias: model
-    manifest_path: models/immunology-sbml-lavigne2021-non-spatial-model-of-viral-infection-biomd0000001021-model/model.yaml
 ```
 
 ## Tags

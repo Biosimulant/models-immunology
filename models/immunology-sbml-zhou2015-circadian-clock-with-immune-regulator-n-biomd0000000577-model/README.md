@@ -11,14 +11,13 @@ Zhou2015 - Circadian clock with immuneregulator NPR1 Arabidopsis clock model mod
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-zhou2015-circadian-clock-with-immune-regulator-n-biomd0000000577-model
     alias: model
-    manifest_path: models/immunology-sbml-zhou2015-circadian-clock-with-immune-regulator-n-biomd0000000577-model/model.yaml
 ```
 
 ## Tags

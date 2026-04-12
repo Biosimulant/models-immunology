@@ -11,14 +11,13 @@ Fribourg2014 - Dynamics of viral antagonism and innate immune response (H1N1 inf
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-fribourg2014-dynamics-of-viral-antagonism-and-in-biomd0000000528-model
     alias: model
-    manifest_path: models/immunology-sbml-fribourg2014-dynamics-of-viral-antagonism-and-in-biomd0000000528-model/model.yaml
 ```
 
 ## Tags

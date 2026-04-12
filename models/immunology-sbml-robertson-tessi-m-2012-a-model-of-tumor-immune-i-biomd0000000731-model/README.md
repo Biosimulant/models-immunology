@@ -11,14 +11,13 @@ Its a mathematical model presenting the interaction between a growing tumor and 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-robertson-tessi-m-2012-a-model-of-tumor-immune-i-biomd0000000731-model
     alias: model
-    manifest_path: models/immunology-sbml-robertson-tessi-m-2012-a-model-of-tumor-immune-i-biomd0000000731-model/model.yaml
 ```
 
 ## Tags

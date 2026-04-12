@@ -11,14 +11,13 @@ Aspergillus fumigatus is an important human fungal pathogen and its conidia are 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-ewald2021-innate-immune-response-during-invasive-model2105110001-model
     alias: model
-    manifest_path: models/immunology-sbml-ewald2021-innate-immune-response-during-invasive-model2105110001-model/model.yaml
 ```
 
 ## Tags

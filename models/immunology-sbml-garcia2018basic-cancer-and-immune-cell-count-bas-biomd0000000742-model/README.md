@@ -11,14 +11,13 @@ The paper describes a basic model of immune-tumor cell interactions. Created by 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-garcia2018basic-cancer-and-immune-cell-count-bas-biomd0000000742-model
     alias: model
-    manifest_path: models/immunology-sbml-garcia2018basic-cancer-and-immune-cell-count-bas-biomd0000000742-model/model.yaml
 ```
 
 ## Tags

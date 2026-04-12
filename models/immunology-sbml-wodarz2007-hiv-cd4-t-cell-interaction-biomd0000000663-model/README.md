@@ -11,14 +11,13 @@ Wodarz2007 - HIV/CD4 T-cell interaction A deterministic model illustrating howCD
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-wodarz2007-hiv-cd4-t-cell-interaction-biomd0000000663-model
     alias: model
-    manifest_path: models/immunology-sbml-wodarz2007-hiv-cd4-t-cell-interaction-biomd0000000663-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ Baris Hancioglu, David Swigon & Gilles Clermont. A dynamical model of human immu
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-hancioglu2007-human-immune-response-to-influenza-biomd0000000711-model
     alias: model
-    manifest_path: models/immunology-sbml-hancioglu2007-human-immune-response-to-influenza-biomd0000000711-model/model.yaml
 ```
 
 ## Tags

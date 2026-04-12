@@ -11,14 +11,13 @@ Webb2002 - Fas/FasL mediated tumor T-cell interaction This deterministic model o
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-webb2002-fas-fasl-mediated-tumor-t-cell-interact-biomd0000000661-model
     alias: model
-    manifest_path: models/immunology-sbml-webb2002-fas-fasl-mediated-tumor-t-cell-interact-biomd0000000661-model/model.yaml
 ```
 
 ## Tags

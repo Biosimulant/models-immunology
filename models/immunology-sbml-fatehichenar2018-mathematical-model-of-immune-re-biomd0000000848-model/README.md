@@ -11,14 +11,13 @@ This is a mathematical model describing the dynamics of the immune response to h
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-fatehichenar2018-mathematical-model-of-immune-re-biomd0000000848-model
     alias: model
-    manifest_path: models/immunology-sbml-fatehichenar2018-mathematical-model-of-immune-re-biomd0000000848-model/model.yaml
 ```
 
 ## Tags

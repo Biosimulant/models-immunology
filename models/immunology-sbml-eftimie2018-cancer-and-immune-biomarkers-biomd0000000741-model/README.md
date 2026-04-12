@@ -11,14 +11,13 @@ The paper describes a model on the detection of cancer based on cancer and immun
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-eftimie2018-cancer-and-immune-biomarkers-biomd0000000741-model
     alias: model
-    manifest_path: models/immunology-sbml-eftimie2018-cancer-and-immune-biomarkers-biomd0000000741-model/model.yaml
 ```
 
 ## Tags

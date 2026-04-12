@@ -11,14 +11,13 @@ Dwivedi2014 - Crohns IL6 Disease model -Anti-IL6R Antibody This model is compris
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-dwivedi2014-crohns-il6-disease-model-anti-il6r-a-biomd0000000537-model
     alias: model
-    manifest_path: models/immunology-sbml-dwivedi2014-crohns-il6-disease-model-anti-il6r-a-biomd0000000537-model/model.yaml
 ```
 
 ## Tags

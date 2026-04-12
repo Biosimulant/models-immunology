@@ -11,14 +11,13 @@ This is a simple mathematical population model for pembrolizumab-treated advance
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-tsur2019-response-of-patients-with-melanoma-to-i-biomd0000000838-model
     alias: model
-    manifest_path: models/immunology-sbml-tsur2019-response-of-patients-with-melanoma-to-i-biomd0000000838-model/model.yaml
 ```
 
 ## Tags

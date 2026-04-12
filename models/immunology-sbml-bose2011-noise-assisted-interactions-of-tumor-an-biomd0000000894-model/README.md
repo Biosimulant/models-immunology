@@ -11,14 +11,13 @@ Noise-assisted interactions of tumor and immune cells.Bose T1, Trimper S.Author 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-bose2011-noise-assisted-interactions-of-tumor-an-biomd0000000894-model
     alias: model
-    manifest_path: models/immunology-sbml-bose2011-noise-assisted-interactions-of-tumor-an-biomd0000000894-model/model.yaml
 ```
 
 ## Tags

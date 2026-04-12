@@ -11,14 +11,13 @@ The paper describes a model of re-polarisation of M2 and M1 macrophages and its 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-den-breems2015-macrophage-in-cancer-biomd0000000759-model
     alias: model
-    manifest_path: models/immunology-sbml-den-breems2015-macrophage-in-cancer-biomd0000000759-model/model.yaml
 ```
 
 ## Tags

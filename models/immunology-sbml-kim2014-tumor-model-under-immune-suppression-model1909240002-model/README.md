@@ -11,14 +11,13 @@ its a mathematical model explaining the impact of chemotherapy and immunotherpay
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-kim2014-tumor-model-under-immune-suppression-model1909240002-model
     alias: model
-    manifest_path: models/immunology-sbml-kim2014-tumor-model-under-immune-suppression-model1909240002-model/model.yaml
 ```
 
 ## Tags

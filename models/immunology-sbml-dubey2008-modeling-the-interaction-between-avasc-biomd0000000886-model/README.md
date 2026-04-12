@@ -11,14 +11,13 @@ MODELING THE INTERACTION BETWEEN AVASCULAR CANCEROUS CELLS AND ACQUIRED IMMUNE R
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-dubey2008-modeling-the-interaction-between-avasc-biomd0000000886-model
     alias: model
-    manifest_path: models/immunology-sbml-dubey2008-modeling-the-interaction-between-avasc-biomd0000000886-model/model.yaml
 ```
 
 ## Tags

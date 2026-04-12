@@ -11,14 +11,13 @@ In this paper we present a model of the macrophageT lymphocyte interactions that
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-boer1985-macrophage-t-cell-interaction-in-anti-t-model1911130003-model
     alias: model
-    manifest_path: models/immunology-sbml-boer1985-macrophage-t-cell-interaction-in-anti-t-model1911130003-model/model.yaml
 ```
 
 ## Tags

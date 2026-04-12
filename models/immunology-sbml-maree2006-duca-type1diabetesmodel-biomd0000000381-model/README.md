@@ -11,14 +11,13 @@ This a model from the article: Modelling the onset of Type 1 diabetes: can impai
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-maree2006-duca-type1diabetesmodel-biomd0000000381-model
     alias: model
-    manifest_path: models/immunology-sbml-maree2006-duca-type1diabetesmodel-biomd0000000381-model/model.yaml
 ```
 
 ## Tags

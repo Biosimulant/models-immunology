@@ -11,14 +11,13 @@ This is a mathematical model investigating the effects of continuous and intermi
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-nikolopoulou2018-tumour-immune-dynamics-with-an-model1908270001-model
     alias: model
-    manifest_path: models/immunology-sbml-nikolopoulou2018-tumour-immune-dynamics-with-an-model1908270001-model/model.yaml
 ```
 
 ## Tags

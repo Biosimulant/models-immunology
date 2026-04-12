@@ -11,14 +11,13 @@ Its a Deterministic ODE model showcasing mechanism of PDL1 induced TCR and CD38 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-theinmozhi2018-mechanism-of-pd1-inhibiting-tcr-s-biomd0000000724-model
     alias: model
-    manifest_path: models/immunology-sbml-theinmozhi2018-mechanism-of-pd1-inhibiting-tcr-s-biomd0000000724-model/model.yaml
 ```
 
 ## Tags

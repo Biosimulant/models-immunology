@@ -11,14 +11,13 @@ This mathematical model describes interactions between glioma tumors and the imm
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-kronik2008-improving-alloreactive-ctl-immunother-biomd0000000808-model
     alias: model
-    manifest_path: models/immunology-sbml-kronik2008-improving-alloreactive-ctl-immunother-biomd0000000808-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ A generic genome-scale metabolic model (GEMs) of human CD4+ T-cells. Several cel
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-sen2021-htimmr-a-generic-human-cd4-t-cell-model-model2101270002-model
     alias: model
-    manifest_path: models/immunology-sbml-sen2021-htimmr-a-generic-human-cd4-t-cell-model-model2101270002-model/model.yaml
 ```
 
 ## Tags

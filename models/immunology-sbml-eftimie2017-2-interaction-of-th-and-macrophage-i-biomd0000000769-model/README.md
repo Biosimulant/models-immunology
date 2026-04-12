@@ -11,14 +11,13 @@ The paper describes a model of interaction of Th cells and macrophage in melanom
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-eftimie2017-2-interaction-of-th-and-macrophage-i-biomd0000000769-model
     alias: model
-    manifest_path: models/immunology-sbml-eftimie2017-2-interaction-of-th-and-macrophage-i-biomd0000000769-model/model.yaml
 ```
 
 ## Tags

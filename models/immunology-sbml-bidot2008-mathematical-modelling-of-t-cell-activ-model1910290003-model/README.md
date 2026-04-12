@@ -11,14 +11,13 @@ Mathematical modeling representing Tcell actiavtion regualtion by TCR, IL2 and o
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-bidot2008-mathematical-modelling-of-t-cell-activ-model1910290003-model
     alias: model
-    manifest_path: models/immunology-sbml-bidot2008-mathematical-modelling-of-t-cell-activ-model1910290003-model/model.yaml
 ```
 
 ## Tags

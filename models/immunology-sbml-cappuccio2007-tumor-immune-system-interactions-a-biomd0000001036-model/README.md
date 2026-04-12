@@ -11,14 +11,13 @@ This ordinary differential equation model is the Panetta-Kirschner model of tumo
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-cappuccio2007-tumor-immune-system-interactions-a-biomd0000001036-model
     alias: model
-    manifest_path: models/immunology-sbml-cappuccio2007-tumor-immune-system-interactions-a-biomd0000001036-model/model.yaml
 ```
 
 ## Tags

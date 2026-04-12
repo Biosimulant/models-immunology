@@ -11,14 +11,13 @@ The paper describes a model of antitumor vaccine therapy.Created by COPASI 4.25 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-wilson2012-tumor-vaccine-efficacy-biomd0000000791-model
     alias: model
-    manifest_path: models/immunology-sbml-wilson2012-tumor-vaccine-efficacy-biomd0000000791-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ In this manuscript, the authors had hypothesized a multi-dimensional approach mo
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-abbott2021-prediction-of-immunotherapy-response-model2407210001-model
     alias: model
-    manifest_path: models/immunology-sbml-abbott2021-prediction-of-immunotherapy-response-model2407210001-model/model.yaml
 ```
 
 ## Tags

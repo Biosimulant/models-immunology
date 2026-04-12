@@ -11,14 +11,13 @@ Begitt2014 - STAT1 cooperative DNA binding - double GAS polymer model The import
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-begitt2014-stat1-cooperative-dna-binding-double-biomd0000000501-model
     alias: model
-    manifest_path: models/immunology-sbml-begitt2014-stat1-cooperative-dna-binding-double-biomd0000000501-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ Immunotherapy has improved the prognosis of patients with advanced non-small cel
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-liu2023-predicting-the-efficacy-of-immune-checkp-biomd0000001074-model
     alias: model
-    manifest_path: models/immunology-sbml-liu2023-predicting-the-efficacy-of-immune-checkp-biomd0000001074-model/model.yaml
 ```
 
 ## Tags

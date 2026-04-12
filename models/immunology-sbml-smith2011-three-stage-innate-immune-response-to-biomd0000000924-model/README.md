@@ -11,14 +11,13 @@ Pneumococcal pneumonia is a leading cause of death and a major source of human m
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-smith2011-three-stage-innate-immune-response-to-biomd0000000924-model
     alias: model
-    manifest_path: models/immunology-sbml-smith2011-three-stage-innate-immune-response-to-biomd0000000924-model/model.yaml
 ```
 
 ## Tags

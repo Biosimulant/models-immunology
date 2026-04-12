@@ -11,14 +11,13 @@ A Random Forest model is developed to incorporate tumor mutation data within the
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-patterson2022-tumour-mutation-data-driven-random-biomd0000001073-model
     alias: model
-    manifest_path: models/immunology-sbml-patterson2022-tumour-mutation-data-driven-random-biomd0000001073-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ This is a COPASI version of the HIV/HPV coinfection model submitted to PLoS One.
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-verma2016-hiv-and-hpv-co-infection-t-cell-respon-biomd0000000872-model
     alias: model
-    manifest_path: models/immunology-sbml-verma2016-hiv-and-hpv-co-infection-t-cell-respon-biomd0000000872-model/model.yaml
 ```
 
 ## Tags

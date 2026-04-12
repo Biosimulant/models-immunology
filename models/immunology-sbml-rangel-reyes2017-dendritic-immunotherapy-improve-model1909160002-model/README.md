@@ -11,14 +11,13 @@ This is a mathematical model provides a platform for investigating the efficacy 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-rangel-reyes2017-dendritic-immunotherapy-improve-model1909160002-model
     alias: model
-    manifest_path: models/immunology-sbml-rangel-reyes2017-dendritic-immunotherapy-improve-model1909160002-model/model.yaml
 ```
 
 ## Tags

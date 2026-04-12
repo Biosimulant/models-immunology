@@ -11,14 +11,13 @@ Baker2013 - Cytokine Mediated Inflammation inRheumatoid Arthritis - Age Dependan
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-baker2013-cytokine-mediated-inflammation-in-rheu-biomd0000000549-model
     alias: model
-    manifest_path: models/immunology-sbml-baker2013-cytokine-mediated-inflammation-in-rheu-biomd0000000549-model/model.yaml
 ```
 
 ## Tags

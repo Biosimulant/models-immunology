@@ -11,14 +11,13 @@ This model describes the concept of Cancer Stem Cells(CSC) differentiation and t
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-ganguli2018-immuno-regulatory-mechanisms-in-tumo-biomd0000000810-model
     alias: model
-    manifest_path: models/immunology-sbml-ganguli2018-immuno-regulatory-mechanisms-in-tumo-biomd0000000810-model/model.yaml
 ```
 
 ## Tags

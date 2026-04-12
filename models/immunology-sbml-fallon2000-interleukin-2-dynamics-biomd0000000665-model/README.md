@@ -11,14 +11,13 @@ This a model from the article: Computational model for effects of ligand/recepto
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-fallon2000-interleukin-2-dynamics-biomd0000000665-model
     alias: model
-    manifest_path: models/immunology-sbml-fallon2000-interleukin-2-dynamics-biomd0000000665-model/model.yaml
 ```
 
 ## Tags

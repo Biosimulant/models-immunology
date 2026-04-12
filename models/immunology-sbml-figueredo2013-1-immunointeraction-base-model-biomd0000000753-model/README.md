@@ -11,14 +11,13 @@ The paper describes a basic model of immune-itumor interaction.Created by COPASI
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-figueredo2013-1-immunointeraction-base-model-biomd0000000753-model
     alias: model
-    manifest_path: models/immunology-sbml-figueredo2013-1-immunointeraction-base-model-biomd0000000753-model/model.yaml
 ```
 
 ## Tags

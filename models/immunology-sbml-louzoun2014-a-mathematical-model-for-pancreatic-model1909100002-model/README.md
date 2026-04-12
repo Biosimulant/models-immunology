@@ -11,14 +11,13 @@ This is a mathematical model of pancreatic cancer, geared towards examining the 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-louzoun2014-a-mathematical-model-for-pancreatic-model1909100002-model
     alias: model
-    manifest_path: models/immunology-sbml-louzoun2014-a-mathematical-model-for-pancreatic-model1909100002-model/model.yaml
 ```
 
 ## Tags

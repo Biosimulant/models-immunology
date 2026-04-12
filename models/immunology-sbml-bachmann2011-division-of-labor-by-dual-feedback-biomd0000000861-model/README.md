@@ -11,14 +11,13 @@ This is a dynamic pathway model examining the roles of of the two transcriptiona
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-bachmann2011-division-of-labor-by-dual-feedback-biomd0000000861-model
     alias: model
-    manifest_path: models/immunology-sbml-bachmann2011-division-of-labor-by-dual-feedback-biomd0000000861-model/model.yaml
 ```
 
 ## Tags

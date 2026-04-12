@@ -11,14 +11,13 @@ The paper describes a spatio-temporal mathematical model, in the form of a movin
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-malinzi2018-tumour-immune-interaction-model-biomd0000000809-model
     alias: model
-    manifest_path: models/immunology-sbml-malinzi2018-tumour-immune-interaction-model-biomd0000000809-model/model.yaml
 ```
 
 ## Tags

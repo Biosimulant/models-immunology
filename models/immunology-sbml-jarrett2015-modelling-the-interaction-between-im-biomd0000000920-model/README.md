@@ -11,14 +11,13 @@ Mathematical model of pro- and anti-inflammatory response, inflammation/damage a
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-jarrett2015-modelling-the-interaction-between-im-biomd0000000920-model
     alias: model
-    manifest_path: models/immunology-sbml-jarrett2015-modelling-the-interaction-between-im-biomd0000000920-model/model.yaml
 ```
 
 ## Tags

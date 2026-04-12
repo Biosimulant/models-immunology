@@ -11,14 +11,13 @@ IL-6 has been proposed to favor the development of Th2 responses and play an imp
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-soni2018-il6-induced-m2-phenotype-in-leishmania-biomd0000000873-model
     alias: model
-    manifest_path: models/immunology-sbml-soni2018-il6-induced-m2-phenotype-in-leishmania-biomd0000000873-model/model.yaml
 ```
 
 ## Tags

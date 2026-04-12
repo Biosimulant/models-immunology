@@ -11,14 +11,13 @@ This model is based on:Computational Modeling of the Crosstalk Between Macrophag
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-lix2019-macrophage-polarization-and-tumor-cell-p-model1909230002-model
     alias: model
-    manifest_path: models/immunology-sbml-lix2019-macrophage-polarization-and-tumor-cell-p-model1909230002-model/model.yaml
 ```
 
 ## Tags

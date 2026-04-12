@@ -11,14 +11,13 @@ The model describes the mechanisms by which macrophages differentiate into a giv
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-frank2021-macrophage-polarization-biomd0000001060-model
     alias: model
-    manifest_path: models/immunology-sbml-frank2021-macrophage-polarization-biomd0000001060-model/model.yaml
 ```
 
 ## Tags

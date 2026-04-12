@@ -11,14 +11,13 @@ Martinez-Sanchez2015 - T CD4+ lymphocytetranscriptional-signaling regulatory net
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-martinez-sanchez2015-t-cd4-lymphocyte-transcript-biomd0000000593-model
     alias: model
-    manifest_path: models/immunology-sbml-martinez-sanchez2015-t-cd4-lymphocyte-transcript-biomd0000000593-model/model.yaml
 ```
 
 ## Tags

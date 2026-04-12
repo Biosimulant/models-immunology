@@ -11,14 +11,13 @@ This is a simple mathematical model describing the interactions of an advanced m
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-tsur2019-predicting-response-to-pembrolizumab-in-model1911150001-model
     alias: model
-    manifest_path: models/immunology-sbml-tsur2019-predicting-response-to-pembrolizumab-in-model1911150001-model/model.yaml
 ```
 
 ## Tags

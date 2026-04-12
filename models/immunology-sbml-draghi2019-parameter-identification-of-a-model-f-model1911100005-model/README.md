@@ -11,14 +11,13 @@ This is a mathematical describing the interaction between the prostate adenocarc
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-draghi2019-parameter-identification-of-a-model-f-model1911100005-model
     alias: model
-    manifest_path: models/immunology-sbml-draghi2019-parameter-identification-of-a-model-f-model1911100005-model/model.yaml
 ```
 
 ## Tags

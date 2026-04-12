@@ -11,14 +11,13 @@ This model is described in the publication:John Mullinax, Cliona O’Farrelly, J
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-mullinax2016-mathematical-model-of-tumor-immune-model2109110006-model
     alias: model
-    manifest_path: models/immunology-sbml-mullinax2016-mathematical-model-of-tumor-immune-model2109110006-model/model.yaml
 ```
 
 ## Tags

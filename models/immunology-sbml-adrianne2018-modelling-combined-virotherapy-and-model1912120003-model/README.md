@@ -11,14 +11,13 @@ Modelling combined virotherapy and immunotherapy:strengthening the antitumour im
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-adrianne2018-modelling-combined-virotherapy-and-model1912120003-model
     alias: model
-    manifest_path: models/immunology-sbml-adrianne2018-modelling-combined-virotherapy-and-model1912120003-model/model.yaml
 ```
 
 ## Tags

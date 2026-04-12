@@ -11,14 +11,13 @@ The paper describes a model on the key components for tumor–immune dynamics in
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-gallaher2018-tumor-immune-dynamics-in-multiple-m-biomd0000000743-model
     alias: model
-    manifest_path: models/immunology-sbml-gallaher2018-tumor-immune-dynamics-in-multiple-m-biomd0000000743-model/model.yaml
 ```
 
 ## Tags

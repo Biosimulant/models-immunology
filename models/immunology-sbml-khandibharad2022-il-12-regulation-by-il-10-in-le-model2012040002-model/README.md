@@ -11,14 +11,13 @@ In this model, TLR2-TLR6 mediates MyD88 pathway gets activated, which activates 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-khandibharad2022-il-12-regulation-by-il-10-in-le-model2012040002-model
     alias: model
-    manifest_path: models/immunology-sbml-khandibharad2022-il-12-regulation-by-il-10-in-le-model2012040002-model/model.yaml
 ```
 
 ## Tags

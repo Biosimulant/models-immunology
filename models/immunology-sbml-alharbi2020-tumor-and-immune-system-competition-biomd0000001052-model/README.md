@@ -11,14 +11,13 @@ Sana Abdulkream Alharbi & Azmin Sham Rambely. A New ODE-Based Model for Tumor Ce
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-alharbi2020-tumor-and-immune-system-competition-biomd0000001052-model
     alias: model
-    manifest_path: models/immunology-sbml-alharbi2020-tumor-and-immune-system-competition-biomd0000001052-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ Aguilera 2014 - HIV latency. Interactionbetween HIV proteins and immune response
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-aguilera-2014-hiv-latency-interaction-between-hi-biomd0000000573-model
     alias: model
-    manifest_path: models/immunology-sbml-aguilera-2014-hiv-latency-interaction-between-hi-biomd0000000573-model/model.yaml
 ```
 
 ## Tags

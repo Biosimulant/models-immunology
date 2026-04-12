@@ -11,14 +11,13 @@ The model is first model of tissue level cellular immune responses to H. pylori 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-leber2016-host-immune-response-h-pylori-infectio-model1611160002-model
     alias: model
-    manifest_path: models/immunology-sbml-leber2016-host-immune-response-h-pylori-infectio-model1611160002-model/model.yaml
 ```
 
 ## Tags

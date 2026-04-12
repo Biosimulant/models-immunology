@@ -11,14 +11,13 @@ A properly functioning immune system is vital for an organism's wellbeing. Immun
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-shin2019-regulation-of-nuclear-factor-of-activat-model2003200003-model
     alias: model
-    manifest_path: models/immunology-sbml-shin2019-regulation-of-nuclear-factor-of-activat-model2003200003-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ NCBS Curation Comments: This model shows the control mechanism of Jak-Stat pathw
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-yamada2003-jak-stat-socs1-knockout-biomd0000000094-model
     alias: model
-    manifest_path: models/immunology-sbml-yamada2003-jak-stat-socs1-knockout-biomd0000000094-model/model.yaml
 ```
 
 ## Tags

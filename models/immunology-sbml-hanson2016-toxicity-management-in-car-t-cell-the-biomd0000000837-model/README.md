@@ -11,14 +11,13 @@ This model provides an in silico mathematical platform to explore the interactio
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-hanson2016-toxicity-management-in-car-t-cell-the-biomd0000000837-model
     alias: model
-    manifest_path: models/immunology-sbml-hanson2016-toxicity-management-in-car-t-cell-the-biomd0000000837-model/model.yaml
 ```
 
 ## Tags

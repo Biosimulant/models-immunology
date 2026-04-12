@@ -11,14 +11,13 @@ This is system 1, the model with linear antigen uptake by pAPCs, described in th
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-alexander2010-tcell-regulation-sys1-biomd0000000289-model
     alias: model
-    manifest_path: models/immunology-sbml-alexander2010-tcell-regulation-sys1-biomd0000000289-model/model.yaml
 ```
 
 ## Tags

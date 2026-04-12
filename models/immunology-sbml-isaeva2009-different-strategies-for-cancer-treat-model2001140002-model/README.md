@@ -11,14 +11,13 @@ We formulate and analyse a mathematical model describing immune response to avas
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-isaeva2009-different-strategies-for-cancer-treat-model2001140002-model
     alias: model
-    manifest_path: models/immunology-sbml-isaeva2009-different-strategies-for-cancer-treat-model2001140002-model/model.yaml
 ```
 
 ## Tags

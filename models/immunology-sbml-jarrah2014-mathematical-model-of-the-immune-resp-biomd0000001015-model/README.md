@@ -11,14 +11,13 @@ Duchenne muscular dystrophy (DMD) is a genetic disease that results in the death
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-jarrah2014-mathematical-model-of-the-immune-resp-biomd0000001015-model
     alias: model
-    manifest_path: models/immunology-sbml-jarrah2014-mathematical-model-of-the-immune-resp-biomd0000001015-model/model.yaml
 ```
 
 ## Tags

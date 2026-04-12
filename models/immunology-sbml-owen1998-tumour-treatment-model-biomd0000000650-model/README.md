@@ -11,14 +11,13 @@ Owen1998 - tumour treatment model This model is described in the article: Modell
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-owen1998-tumour-treatment-model-biomd0000000650-model
     alias: model
-    manifest_path: models/immunology-sbml-owen1998-tumour-treatment-model-biomd0000000650-model/model.yaml
 ```
 
 ## Tags

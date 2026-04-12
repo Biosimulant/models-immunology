@@ -11,14 +11,13 @@ CD4+ T cells recognize antigens through their T cell receptors (TCRs); however, 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-rodr-guez-jorge2019-boolean-model-of-tcr-signali-model1903260001-model
     alias: model
-    manifest_path: models/immunology-sbml-rodr-guez-jorge2019-boolean-model-of-tcr-signali-model1903260001-model/model.yaml
 ```
 
 ## Tags

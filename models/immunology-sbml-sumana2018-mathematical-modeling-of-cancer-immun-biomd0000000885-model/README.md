@@ -11,14 +11,13 @@ Mathematical modeling of cancer-immune system, considering the role of antibodie
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-sumana2018-mathematical-modeling-of-cancer-immun-biomd0000000885-model
     alias: model
-    manifest_path: models/immunology-sbml-sumana2018-mathematical-modeling-of-cancer-immun-biomd0000000885-model/model.yaml
 ```
 
 ## Tags

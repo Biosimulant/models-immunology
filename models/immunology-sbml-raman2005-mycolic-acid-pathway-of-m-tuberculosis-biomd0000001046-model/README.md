@@ -11,14 +11,13 @@ The mycobacterial cell wall is a distinctive thick layer that protects the tuber
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-raman2005-mycolic-acid-pathway-of-m-tuberculosis-biomd0000001046-model
     alias: model
-    manifest_path: models/immunology-sbml-raman2005-mycolic-acid-pathway-of-m-tuberculosis-biomd0000001046-model/model.yaml
 ```
 
 ## Tags

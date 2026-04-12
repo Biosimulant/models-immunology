@@ -11,14 +11,13 @@ Prostate cancer is the second most occurring cancer in men worldwide, and with t
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-montagud2022-prostate-cancer-boolean-model-model2106070001-model
     alias: model
-    manifest_path: models/immunology-sbml-montagud2022-prostate-cancer-boolean-model-model2106070001-model/model.yaml
 ```
 
 ## Tags

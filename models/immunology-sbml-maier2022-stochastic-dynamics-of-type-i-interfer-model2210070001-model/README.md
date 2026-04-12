@@ -11,14 +11,13 @@ Maier2022 - Stochastic Dynamics of Type I Interferon ResponsesOur study aims to 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-maier2022-stochastic-dynamics-of-type-i-interfer-model2210070001-model
     alias: model
-    manifest_path: models/immunology-sbml-maier2022-stochastic-dynamics-of-type-i-interfer-model2210070001-model/model.yaml
 ```
 
 ## Tags

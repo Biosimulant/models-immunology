@@ -11,14 +11,13 @@ We present a novel mathematical model involving various immune cell populations 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-mahasa2016-tumor-immune-surveillance-model2003040001-model
     alias: model
-    manifest_path: models/immunology-sbml-mahasa2016-tumor-immune-surveillance-model2003040001-model/model.yaml
 ```
 
 ## Tags

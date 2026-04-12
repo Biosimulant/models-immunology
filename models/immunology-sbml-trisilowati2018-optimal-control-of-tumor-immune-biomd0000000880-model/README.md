@@ -11,14 +11,13 @@ This is a mathematical model of a growing tumor and its interaction with the imm
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-trisilowati2018-optimal-control-of-tumor-immune-biomd0000000880-model
     alias: model
-    manifest_path: models/immunology-sbml-trisilowati2018-optimal-control-of-tumor-immune-biomd0000000880-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ model allows us to infer proliferation rates and cell cycle phase durations from
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-vibert2017-tcell-proliferation-model-model2003170002-model
     alias: model
-    manifest_path: models/immunology-sbml-vibert2017-tcell-proliferation-model-model2003170002-model/model.yaml
 ```
 
 ## Tags

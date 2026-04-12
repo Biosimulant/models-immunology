@@ -11,14 +11,13 @@ This is a non-linear mathematical model of cancer immunosurveillance that takes 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-alvarez2019-a-nonlinear-mathematical-model-of-ce-biomd0000000790-model
     alias: model
-    manifest_path: models/immunology-sbml-alvarez2019-a-nonlinear-mathematical-model-of-ce-biomd0000000790-model/model.yaml
 ```
 
 ## Tags

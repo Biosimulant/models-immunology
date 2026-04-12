@@ -11,14 +11,13 @@ Moore2004 - Chronic Myeloid Leukemic cellsand T-lymphocytes interaction A mathem
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-moore2004-chronic-myeloid-leukemic-cells-and-t-l-biomd0000000662-model
     alias: model
-    manifest_path: models/immunology-sbml-moore2004-chronic-myeloid-leukemic-cells-and-t-l-biomd0000000662-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ On optimal chemotherapy with a strongly targeted agent for a model of tumor-immu
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-ledzewicz2013-on-optimal-chemotherapy-with-a-str-biomd0000000919-model
     alias: model
-    manifest_path: models/immunology-sbml-ledzewicz2013-on-optimal-chemotherapy-with-a-str-biomd0000000919-model/model.yaml
 ```
 
 ## Tags

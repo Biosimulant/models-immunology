@@ -11,14 +11,13 @@ This a model from the article: PKPD model of interleukin-21 effects on thermoreg
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-overgaard2007-pdmodel-il21-biomd0000000238-model
     alias: model
-    manifest_path: models/immunology-sbml-overgaard2007-pdmodel-il21-biomd0000000238-model/model.yaml
 ```
 
 ## Tags

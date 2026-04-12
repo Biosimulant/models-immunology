@@ -11,14 +11,13 @@ This model of the use of chimeric antigen receptor (CAR)-T cell therapy in the t
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-leon-triana2021-competition-between-tumour-cells-biomd0000001013-model
     alias: model
-    manifest_path: models/immunology-sbml-leon-triana2021-competition-between-tumour-cells-biomd0000001013-model/model.yaml
 ```
 
 ## Tags

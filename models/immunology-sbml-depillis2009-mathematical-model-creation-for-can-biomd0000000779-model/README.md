@@ -11,14 +11,13 @@ This is an updated version of a previous model that described the dynamics of ca
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-depillis2009-mathematical-model-creation-for-can-biomd0000000779-model
     alias: model
-    manifest_path: models/immunology-sbml-depillis2009-mathematical-model-creation-for-can-biomd0000000779-model/model.yaml
 ```
 
 ## Tags

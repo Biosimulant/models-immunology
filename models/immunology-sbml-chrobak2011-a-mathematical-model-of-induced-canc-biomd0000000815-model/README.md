@@ -11,14 +11,13 @@ This is a mathematical model describing competition between an artificially indu
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-chrobak2011-a-mathematical-model-of-induced-canc-biomd0000000815-model
     alias: model
-    manifest_path: models/immunology-sbml-chrobak2011-a-mathematical-model-of-induced-canc-biomd0000000815-model/model.yaml
 ```
 
 ## Tags

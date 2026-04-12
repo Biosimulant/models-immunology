@@ -11,14 +11,13 @@ The paper describes a model on the key components for tumor–immune dynamics in
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-phan2017-innate-immune-in-oncolytic-virotherapy-biomd0000000748-model
     alias: model
-    manifest_path: models/immunology-sbml-phan2017-innate-immune-in-oncolytic-virotherapy-biomd0000000748-model/model.yaml
 ```
 
 ## Tags

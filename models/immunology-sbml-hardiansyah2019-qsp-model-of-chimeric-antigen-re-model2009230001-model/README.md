@@ -11,14 +11,13 @@ This QSP model explains how the mechanism of action connects to the clinical out
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-hardiansyah2019-qsp-model-of-chimeric-antigen-re-model2009230001-model
     alias: model
-    manifest_path: models/immunology-sbml-hardiansyah2019-qsp-model-of-chimeric-antigen-re-model2009230001-model/model.yaml
 ```
 
 ## Tags

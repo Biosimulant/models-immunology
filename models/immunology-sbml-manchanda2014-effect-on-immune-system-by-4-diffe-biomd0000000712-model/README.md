@@ -11,14 +11,13 @@ Himanshu Manchanda, Nora Seidel, Andi Krumbholz, Andreas Sauerbrei, Michaela Sch
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-manchanda2014-effect-on-immune-system-by-4-diffe-biomd0000000712-model
     alias: model
-    manifest_path: models/immunology-sbml-manchanda2014-effect-on-immune-system-by-4-diffe-biomd0000000712-model/model.yaml
 ```
 
 ## Tags

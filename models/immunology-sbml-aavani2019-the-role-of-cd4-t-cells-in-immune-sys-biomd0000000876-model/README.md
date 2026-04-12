@@ -11,14 +11,13 @@ This is a mathematical model comprised of a simple system of four ordinary diffe
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-aavani2019-the-role-of-cd4-t-cells-in-immune-sys-biomd0000000876-model
     alias: model
-    manifest_path: models/immunology-sbml-aavani2019-the-role-of-cd4-t-cells-in-immune-sys-biomd0000000876-model/model.yaml
 ```
 
 ## Tags

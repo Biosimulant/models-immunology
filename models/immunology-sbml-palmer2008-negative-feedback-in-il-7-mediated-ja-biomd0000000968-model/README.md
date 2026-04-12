@@ -11,14 +11,13 @@ Interleukin-7 (IL-7) is an essential cytokine for the development and homeostati
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-palmer2008-negative-feedback-in-il-7-mediated-ja-biomd0000000968-model
     alias: model
-    manifest_path: models/immunology-sbml-palmer2008-negative-feedback-in-il-7-mediated-ja-biomd0000000968-model/model.yaml
 ```
 
 ## Tags

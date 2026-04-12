@@ -11,14 +11,13 @@ This a model from the article: Population dynamics of immune responses to persis
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-nowak1996-hostresponse-infectiousagents-model1006230050-model
     alias: model
-    manifest_path: models/immunology-sbml-nowak1996-hostresponse-infectiousagents-model1006230050-model/model.yaml
 ```
 
 ## Tags

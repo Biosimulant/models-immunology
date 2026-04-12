@@ -11,14 +11,13 @@ This model is based on the publication:'CAR T cell therapy in B-cell acute lymph
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-leon-triana2020-car-t-cell-therapy-in-b-cell-acu-biomd0000001012-model
     alias: model
-    manifest_path: models/immunology-sbml-leon-triana2020-car-t-cell-therapy-in-b-cell-acu-biomd0000001012-model/model.yaml
 ```
 
 ## Tags

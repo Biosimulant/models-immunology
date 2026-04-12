@@ -11,14 +11,13 @@ Modeling the dynamics of hepatitis C virus with combined antiviral drug therapy:
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-sandip2013-modeling-the-dynamics-of-hepatitis-c-biomd0000000892-model
     alias: model
-    manifest_path: models/immunology-sbml-sandip2013-modeling-the-dynamics-of-hepatitis-c-biomd0000000892-model/model.yaml
 ```
 
 ## Tags

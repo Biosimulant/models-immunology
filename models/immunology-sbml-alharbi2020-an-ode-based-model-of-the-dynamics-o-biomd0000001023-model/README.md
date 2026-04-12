@@ -11,14 +11,13 @@ This ordinary differential equation model of tumor cell growth, called the norma
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-alharbi2020-an-ode-based-model-of-the-dynamics-o-biomd0000001023-model
     alias: model
-    manifest_path: models/immunology-sbml-alharbi2020-an-ode-based-model-of-the-dynamics-o-biomd0000001023-model/model.yaml
 ```
 
 ## Tags

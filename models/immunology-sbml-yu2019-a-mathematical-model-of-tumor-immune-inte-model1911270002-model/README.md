@@ -11,14 +11,13 @@ This is a mathematical model investigating interactions among malignant tumor ce
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-yu2019-a-mathematical-model-of-tumor-immune-inte-model1911270002-model
     alias: model
-    manifest_path: models/immunology-sbml-yu2019-a-mathematical-model-of-tumor-immune-inte-model1911270002-model/model.yaml
 ```
 
 ## Tags

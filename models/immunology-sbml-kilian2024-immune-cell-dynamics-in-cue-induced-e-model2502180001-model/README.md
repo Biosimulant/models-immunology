@@ -11,14 +11,13 @@ Kilian2024 - Immune cell dynamics in Cue-Induced Extended Human Colitis ModelSin
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-kilian2024-immune-cell-dynamics-in-cue-induced-e-model2502180001-model
     alias: model
-    manifest_path: models/immunology-sbml-kilian2024-immune-cell-dynamics-in-cue-induced-e-model2502180001-model/model.yaml
 ```
 
 ## Tags

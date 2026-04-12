@@ -11,14 +11,13 @@ Sanjuan2013 - Evolution of HIV T-cell epitope, control model Control model in wh
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-sanjuan2013-evolution-of-hiv-t-cell-epitope-cont-model1302180002-model
     alias: model
-    manifest_path: models/immunology-sbml-sanjuan2013-evolution-of-hiv-t-cell-epitope-cont-model1302180002-model/model.yaml
 ```
 
 ## Tags

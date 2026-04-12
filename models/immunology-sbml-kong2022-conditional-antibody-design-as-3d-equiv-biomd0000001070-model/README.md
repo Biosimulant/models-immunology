@@ -11,14 +11,13 @@ Multi-channel Equivariant Attention Network (MEAN) to co-design 1D sequences and
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-kong2022-conditional-antibody-design-as-3d-equiv-biomd0000001070-model
     alias: model
-    manifest_path: models/immunology-sbml-kong2022-conditional-antibody-design-as-3d-equiv-biomd0000001070-model/model.yaml
 ```
 
 ## Tags

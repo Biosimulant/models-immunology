@@ -11,14 +11,13 @@ Multi-scale Agent-Based Model for Tissue Regeneration, Tumor Growth, and CAR T-C
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-lmluque2025-abm-model2503030003-model
     alias: model
-    manifest_path: models/immunology-sbml-lmluque2025-abm-model2503030003-model/model.yaml
 ```
 
 ## Tags

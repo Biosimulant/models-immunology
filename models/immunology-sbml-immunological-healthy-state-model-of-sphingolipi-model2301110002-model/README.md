@@ -11,14 +11,13 @@ In Healthy State, we demonstrated the controlled expression of sphingolipids and
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-immunological-healthy-state-model-of-sphingolipi-model2301110002-model
     alias: model
-    manifest_path: models/immunology-sbml-immunological-healthy-state-model-of-sphingolipi-model2301110002-model/model.yaml
 ```
 
 ## Tags

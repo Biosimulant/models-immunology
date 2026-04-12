@@ -11,14 +11,13 @@ This model describes the effects of Il-21 on tumor eradication via natural kille
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-cappuccio2006-cancer-immunotherapy-by-interleuki-biomd0000000761-model
     alias: model
-    manifest_path: models/immunology-sbml-cappuccio2006-cancer-immunotherapy-by-interleuki-biomd0000000761-model/model.yaml
 ```
 
 ## Tags

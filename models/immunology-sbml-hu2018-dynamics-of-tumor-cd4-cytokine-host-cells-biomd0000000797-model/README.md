@@ -11,14 +11,13 @@ This is a proposed mathematical model describing interactions between tumor cell
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-hu2018-dynamics-of-tumor-cd4-cytokine-host-cells-biomd0000000797-model
     alias: model
-    manifest_path: models/immunology-sbml-hu2018-dynamics-of-tumor-cd4-cytokine-host-cells-biomd0000000797-model/model.yaml
 ```
 
 ## Tags

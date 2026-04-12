@@ -11,14 +11,13 @@ This is the first report evaluating the use of fluorescent imaging to determine 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-wu2017-murine-bevacizumab-pk-model-model2003030003-model
     alias: model
-    manifest_path: models/immunology-sbml-wu2017-murine-bevacizumab-pk-model-model2003030003-model/model.yaml
 ```
 
 ## Tags

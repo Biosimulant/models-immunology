@@ -11,14 +11,13 @@ This model is from the paper available at http://www.ncbi.nlm.nih.gov/pubmed/251
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-miao2014-dynamics-and-migratory-pathways-of-viru-model1411130000-model
     alias: model
-    manifest_path: models/immunology-sbml-miao2014-dynamics-and-migratory-pathways-of-viru-model1411130000-model/model.yaml
 ```
 
 ## Tags

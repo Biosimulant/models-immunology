@@ -11,14 +11,13 @@ Its a mathematical model presenting the interaction between a growing tumor and 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-nwabugwu2013-a-tumor-immune-mathematical-model-o-model2007090001-model
     alias: model
-    manifest_path: models/immunology-sbml-nwabugwu2013-a-tumor-immune-mathematical-model-o-model2007090001-model/model.yaml
 ```
 
 ## Tags

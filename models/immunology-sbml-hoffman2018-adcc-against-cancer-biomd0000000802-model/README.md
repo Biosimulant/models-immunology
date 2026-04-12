@@ -11,14 +11,13 @@ The paper describes a model of ADCC. Created by COPASI 4.26 (Build 213) This mod
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-hoffman2018-adcc-against-cancer-biomd0000000802-model
     alias: model
-    manifest_path: models/immunology-sbml-hoffman2018-adcc-against-cancer-biomd0000000802-model/model.yaml
 ```
 
 ## Tags

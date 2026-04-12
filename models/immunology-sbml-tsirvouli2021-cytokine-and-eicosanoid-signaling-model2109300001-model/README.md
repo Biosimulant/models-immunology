@@ -11,14 +11,13 @@ The psoKC (psoriatic keratinocyte) model is represnting the behavour of keratino
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-tsirvouli2021-cytokine-and-eicosanoid-signaling-model2109300001-model
     alias: model
-    manifest_path: models/immunology-sbml-tsirvouli2021-cytokine-and-eicosanoid-signaling-model2109300001-model/model.yaml
 ```
 
 ## Tags

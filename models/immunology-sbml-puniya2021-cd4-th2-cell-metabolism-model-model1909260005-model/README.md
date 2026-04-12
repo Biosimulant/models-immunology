@@ -11,14 +11,13 @@ CD4+ T cells are critical components in the human immune system. They produce cy
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-puniya2021-cd4-th2-cell-metabolism-model-model1909260005-model
     alias: model
-    manifest_path: models/immunology-sbml-puniya2021-cd4-th2-cell-metabolism-model-model1909260005-model/model.yaml
 ```
 
 ## Tags

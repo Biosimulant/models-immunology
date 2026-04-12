@@ -11,14 +11,13 @@ Modelling of anti-tumour immune response: Immunocorrective effectof weak centime
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-isaeva2008-modelling-of-anti-tumour-immune-respo-biomd0000000910-model
     alias: model
-    manifest_path: models/immunology-sbml-isaeva2008-modelling-of-anti-tumour-immune-respo-biomd0000000910-model/model.yaml
 ```
 
 ## Tags

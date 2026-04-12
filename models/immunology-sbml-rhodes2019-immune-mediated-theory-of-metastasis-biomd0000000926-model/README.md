@@ -11,14 +11,13 @@
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-rhodes2019-immune-mediated-theory-of-metastasis-biomd0000000926-model
     alias: model
-    manifest_path: models/immunology-sbml-rhodes2019-immune-mediated-theory-of-metastasis-biomd0000000926-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ This a model from the article: Sequential polarization and imprinting of type 1 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-schulz2009-th1-differentiation-biomd0000000215-model
     alias: model
-    manifest_path: models/immunology-sbml-schulz2009-th1-differentiation-biomd0000000215-model/model.yaml
 ```
 
 ## Tags

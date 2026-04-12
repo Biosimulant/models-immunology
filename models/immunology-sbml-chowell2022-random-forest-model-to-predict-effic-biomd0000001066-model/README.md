@@ -11,14 +11,13 @@ This is a Random Forest algorithm-based machine learning model called RF16, whic
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-chowell2022-random-forest-model-to-predict-effic-biomd0000001066-model
     alias: model
-    manifest_path: models/immunology-sbml-chowell2022-random-forest-model-to-predict-effic-biomd0000001066-model/model.yaml
 ```
 
 ## Tags

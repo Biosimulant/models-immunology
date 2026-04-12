@@ -11,14 +11,13 @@ The paper describes a basic model of immune-cancer interaction. Created by COPAS
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-feizabadi2011-1-immunodeficiency-in-cancer-core-biomd0000000760-model
     alias: model
-    manifest_path: models/immunology-sbml-feizabadi2011-1-immunodeficiency-in-cancer-core-biomd0000000760-model/model.yaml
 ```
 
 ## Tags

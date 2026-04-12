@@ -11,14 +11,13 @@ Casandra W. Philipson, Josep Bassaganya-Riera, Monica Viladomiu, Barbara Kronste
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-philipson2015-innate-immune-response-modulated-b-biomd0000000596-model
     alias: model
-    manifest_path: models/immunology-sbml-philipson2015-innate-immune-response-modulated-b-biomd0000000596-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ This a model from the article: Macrophage dynamics in diabetic wound dealing. Wa
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-waugh2006-diabetic-wound-healing-tgf-b-dynamics-biomd0000000680-model
     alias: model
-    manifest_path: models/immunology-sbml-waugh2006-diabetic-wound-healing-tgf-b-dynamics-biomd0000000680-model/model.yaml
 ```
 
 ## Tags

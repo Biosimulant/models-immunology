@@ -11,14 +11,13 @@ Faithful wrapper of upstream SBML model.
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-carbo2013-mucosal-immune-response-during-h-pylor-biomd0000000480-model
     alias: model
-    manifest_path: models/immunology-sbml-carbo2013-mucosal-immune-response-during-h-pylor-biomd0000000480-model/model.yaml
 ```
 
 ## Tags

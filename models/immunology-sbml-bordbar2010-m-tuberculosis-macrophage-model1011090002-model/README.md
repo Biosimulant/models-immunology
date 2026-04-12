@@ -11,14 +11,13 @@ This is the joined genome scale reconstruction of both Mycobacterium tuberculosi
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-bordbar2010-m-tuberculosis-macrophage-model1011090002-model
     alias: model
-    manifest_path: models/immunology-sbml-bordbar2010-m-tuberculosis-macrophage-model1011090002-model/model.yaml
 ```
 
 ## Tags

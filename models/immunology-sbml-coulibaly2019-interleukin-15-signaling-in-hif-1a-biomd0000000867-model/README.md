@@ -11,14 +11,13 @@ This is a mathematical model comprised of non-linear ordinary differential equat
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-coulibaly2019-interleukin-15-signaling-in-hif-1a-biomd0000000867-model
     alias: model
-    manifest_path: models/immunology-sbml-coulibaly2019-interleukin-15-signaling-in-hif-1a-biomd0000000867-model/model.yaml
 ```
 
 ## Tags

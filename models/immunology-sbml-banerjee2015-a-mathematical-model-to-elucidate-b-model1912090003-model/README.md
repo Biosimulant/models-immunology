@@ -11,14 +11,13 @@ T11 Target structure (T11TS), a membrane glycoprotein isolated from sheep erythr
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/immunology-sbml-banerjee2015-a-mathematical-model-to-elucidate-b-model1912090003-model
     alias: model
-    manifest_path: models/immunology-sbml-banerjee2015-a-mathematical-model-to-elucidate-b-model1912090003-model/model.yaml
 ```
 
 ## Tags
