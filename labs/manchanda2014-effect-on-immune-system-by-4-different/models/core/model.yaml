@@ -1,0 +1,90 @@
+schema_version: '2.0'
+title: Manchanda2014 - Effect on Immune System by 4 different Influenza A virus strains
+description: 'Himanshu Manchanda, Nora Seidel, Andi Krumbholz, Andreas Sauerbrei,
+  Michaela Schmidtke & Reinhard Guthke. Within-host influenza dynamics: a small-scale
+  mathematical modeling approach.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Himanshu Manchanda
+- Nora Seidel
+- Andi Krumbholz
+- Andreas Sauerbrei
+- Michaela Schmidtke
+upstream:
+  id: biomodels_ebi:BIOMD0000000712
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000712
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000712
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000712?filename=Jena5258.xml
+  license: CC0
+biosim:
+  entrypoint: src.manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model:Manchanda2014EffectOnImmuneSystemBy4DiffeBiomd0000000712Model
+  init_kwargs:
+    model_path: data/BIOMD0000000712.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_virus_pathogenicity_p
+    maps_to: P
+    label: Initial Virus Pathogenicity P
+    default: 0.01
+    units: native source value
+    description: Initial Virus Pathogenicity P. Sets the initial value of bundled
+      SBML species `P`.
+  - name: initial_antiviral_immune_defense_d
+    maps_to: D
+    label: Initial Antiviral Immune Defense D
+    default: 0.0
+    units: native source value
+    description: Initial Antiviral Immune Defense D. Sets the initial value of bundled
+      SBML species `D`.
+  - name: initial_inflammation_i
+    maps_to: I
+    label: Initial Inflammation I
+    default: 0.0
+    units: native source value
+    description: Initial Inflammation I. Sets the initial value of bundled SBML species
+      `I`.
+  - name: infection_of_virus_rate
+    maps_to: alpha
+    label: Infection Of Virus Rate
+    default: 3.63
+    units: native source value
+    description: Infection Of Virus Rate. Sets bundled SBML parameter `alpha`.
+  outputs:
+  - name: virus_pathogenicity_p
+    maps_to: P
+    label: Virus Pathogenicity P
+    description: Virus Pathogenicity P. Maps to bundled source symbol `P`.
+  - name: antiviral_immune_defense_d
+    maps_to: D
+    label: Antiviral Immune Defense D
+    description: Antiviral Immune Defense D. Maps to bundled source symbol `D`.
+  - name: inflammation_i
+    maps_to: I
+    label: Inflammation I
+    description: Inflammation I. Maps to bundled source symbol `I`.
+  - name: clinical_score_s
+    maps_to: S
+    label: Clinical Score S
+    description: Clinical Score S. Maps to bundled source symbol `S`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

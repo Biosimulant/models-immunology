@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Hu2018 - Dynamics of tumor-CD4+-cytokine-host cells interactions with treatments
+  Lab Visualisation
+description: Dedicated presentation model for Hu2018 - Dynamics of tumor-CD4+-cytokine-host
+  cells interactions with treatments Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Hu2018 - Dynamics of tumor-CD4+-cytokine-host cells interactions with
+      treatments Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model
+      title: Hu2018 - Dynamics of tumor-CD4+-cytokine-host cells interactions with
+        treatments
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: x_Tumor_Cells
+        label: Tumor Cells
+      - id: y_CD4_T_Cells
+        label: CD4 T Cells
+      - id: z_Cytokine
+        label: Cytokine
+      - id: w_Healthy_Tissue
+        label: Healthy Tissue
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model_state
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.state
+    description: Core state record.
+  - name: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model_summary
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model_species_labels
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.species_labels
+    description: Core source-label map.
+  outputs: []

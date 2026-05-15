@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: Hancioglu2007 - Human Immune Response to Influenza A virus Infection Lab
+description: Baris Hancioglu, David Swigon & Gilles Clermont. A dynamical model of
+  human immune response to influenza A virus infection.
+models:
+- alias: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.state
+  to:
+  - visualisation.immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model_state
+- from: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.summary
+  to:
+  - visualisation.immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model_summary
+- from: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.species_labels
+  to:
+  - visualisation.immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_viral_load_v
+    maps_to: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.initial_viral_load_v
+    label: Initial Viral Load V
+    default: 0.01
+    units: native source value
+    description: Initial Viral Load V. Sets the initial value of bundled SBML species
+      `Viral_Load__V`.
+  - name: initial_infected_epithelial_cells_i
+    maps_to: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.initial_infected_epithelial_cells_i
+    label: Initial Infected Epithelial Cells I
+    default: 0.0
+    units: native source value
+    description: Initial Infected Epithelial Cells I. Sets the initial value of bundled
+      SBML species `Infected_Epithelial_cells__I`.
+  - name: initial_healthy_epithelial_cells_h
+    maps_to: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.initial_healthy_epithelial_cells_h
+    label: Initial Healthy Epithelial Cells H
+    default: 1.0
+    units: native source value
+    description: Initial Healthy Epithelial Cells H. Sets the initial value of bundled
+      SBML species `Healthy_Epithelial_cells__H`.
+  - name: initial_antigen_presenting_cell_cells_m
+    maps_to: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.initial_antigen_presenting_cell_cells_m
+    label: Initial Antigen Presenting Cell Cells M
+    default: 0.0
+    units: native source value
+    description: Initial Antigen Presenting Cell Cells M. Sets the initial value of
+      bundled SBML species `APC_cells__M`.
+  - name: initial_interferons_f
+    maps_to: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.initial_interferons_f
+    label: Initial Interferons F
+    default: 0.0
+    units: native source value
+    description: Initial Interferons F. Sets the initial value of bundled SBML species
+      `Interferons__F`.
+  outputs:
+  - name: viral_load_v
+    maps_to: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.viral_load_v
+  - name: infected_epithelial_cells_i
+    maps_to: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.infected_epithelial_cells_i
+  - name: healthy_epithelial_cells_h
+    maps_to: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.healthy_epithelial_cells_h
+  - name: antigen_presenting_cell_cells_m
+    maps_to: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.antigen_presenting_cell_cells_m
+  - name: interferons_f
+    maps_to: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.interferons_f
+  - name: state
+    maps_to: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.state
+  - name: summary
+    maps_to: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_hancioglu2007_human_immune_response_to_influenza_biomd0000000711_model.species_labels

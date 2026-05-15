@@ -1,0 +1,110 @@
+schema_version: '2.0'
+title: Bianca2012 - Mathematical modeling of the immune system recognition to mammary
+  carcinoma antigen Lab
+description: This model describes the humoral and cellular response of the immune
+  system to a tumor associate antigen and the recognition process between B cells,
+  T cells and antigen presenting cells. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.state
+  to:
+  - visualisation.immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model_state
+- from: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.summary
+  to:
+  - visualisation.immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model_summary
+- from: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.species_labels
+  to:
+  - visualisation.immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `VC`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `TAA`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `B`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `TH`.
+  - name: initial_interleukin_12
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.initial_interleukin_12
+    label: Initial Interleukin 12
+    default: 0.0
+    units: native source value
+    description: Initial Interleukin 12. Sets the initial value of bundled SBML species
+      `IL12`.
+  - name: taa_release_vc_rate
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.taa_release_vc_rate
+    label: Taa Release Vc Rate
+    default: 3.0
+    units: native source value
+    description: Taa Release Vc Rate. Sets bundled SBML parameter `gamma_21`.
+  - name: taa_release_cc_rate
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.taa_release_cc_rate
+    label: Taa Release Cc Rate
+    default: 3.0
+    units: native source value
+    description: Taa Release Cc Rate. Sets bundled SBML parameter `gamma_28`.
+  - name: b_death_rate
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.b_death_rate
+    label: B Death Rate
+    default: 0.693147
+    units: native source value
+    description: B Death Rate. Sets bundled SBML parameter `mu_3`.
+  - name: th_death_rate
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.th_death_rate
+    label: Th Death Rate
+    default: 0.693147
+    units: native source value
+    description: Th Death Rate. Sets bundled SBML parameter `mu_4`.
+  - name: interleukin_12_release_vc_rate
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.interleukin_12_release_vc_rate
+    label: Interleukin 12 Release Vc Rate
+    default: 10.0
+    units: native source value
+    description: Interleukin 12 Release Vc Rate. Sets bundled SBML parameter `gamma_51`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.unresolved_tumor_observable_4
+  - name: interleukin_12
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.interleukin_12
+  - name: state
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.state
+  - name: summary
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model.species_labels

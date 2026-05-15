@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "ff297c27-851a-4213-b81b-019a85f948bc",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "a14a22f7-2b1d-42c3-b5cd-4ce511ca2398",
+  "created_at": "2026-05-15T15:53:06.898560693+00:00",
+  "last_synced_at": "2026-05-15T19:21:30.477383+00:00",
+  "hub_manifest_hash": "d47ab22af28825313b105e9c294a58cb60a1fd3764caa535a21e020fa31f3c7c",
+  "package_name": "palmer2008-negative-feedback-in-il-7-mediated-jak-stat-signaling"
+}

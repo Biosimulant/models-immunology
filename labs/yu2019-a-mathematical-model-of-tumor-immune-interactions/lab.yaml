@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Yu2019 - A mathematical model of tumor-immune interactions with an immune checkpoint
+  inhibitor Lab
+description: This is a mathematical model investigating interactions among malignant
+  tumor cells, CD4+ T cells, anti-tumor cytokines (specifically IFN-gamma), and the
+  immune checkpoint inhibitor CTLA-4 to assess t. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.state
+  to:
+  - visualisation.immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model_state
+- from: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.summary
+  to:
+  - visualisation.immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model_summary
+- from: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.species_labels
+  to:
+  - visualisation.immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 250000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `x`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `y`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `z`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `w`.
+  - name: tumor_growth_rate
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.tumor_growth_rate
+    label: Tumor Growth Rate
+    default: 0.514
+    units: native source value
+    description: Tumor Growth Rate. Sets bundled SBML parameter `r`.
+  - name: tumor_death_cytokines_rate
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.tumor_death_cytokines_rate
+    label: Tumor Death Cytokines Rate
+    default: 0.2
+    units: native source value
+    description: Tumor Death Cytokines Rate. Sets bundled SBML parameter `delta`.
+  - name: th_proliferation_rate
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.th_proliferation_rate
+    label: Th Proliferation Rate
+    default: 0.09
+    units: native source value
+    description: Th Proliferation Rate. Sets bundled SBML parameter `beta`.
+  - name: interferon_gamma_decay_rate
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.interferon_gamma_decay_rate
+    label: Interferon Gamma Decay Rate
+    default: 34.0
+    units: native source value
+    description: Interferon Gamma Decay Rate. Sets bundled SBML parameter `mu`.
+  - name: ctla_4_decay_rate
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.ctla_4_decay_rate
+    label: Ctla 4 Decay Rate
+    default: 8.3178
+    units: native source value
+    description: Ctla 4 Decay Rate. Sets bundled SBML parameter `d`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.unresolved_tumor_observable_4
+  - name: state
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.state
+  - name: summary
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_yu2019_a_mathematical_model_of_tumor_immune_inte_model1911270002_model.species_labels

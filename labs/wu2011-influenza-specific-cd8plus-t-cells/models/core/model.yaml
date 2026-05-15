@@ -1,0 +1,105 @@
+schema_version: '2.0'
+title: Wu2011 - Influenza-specific CD8+ T cells
+description: Immunology Wu2011Influenza Specific Cd8TCells Model1504160000Model models
+  immunology wu2011 influenza specific cd8 t dynamics as a OTHER simulation curated
+  from biomodels_ebi (biomodels_ebi:MODEL1504160000), fo. When you run it, you can
+  track state over time and compare response patterns across parameter settings.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Hulin Wu
+- Arun Kumar
+- Hongyu Miao
+- Jeanne Holden-Wiltse
+- Timothy R Mosmann
+upstream:
+  id: biomodels_ebi:MODEL1504160000
+  source_db: biomodels_ebi
+  source_id: MODEL1504160000
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1504160000
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1504160000?filename=MODEL1504160000_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.wu2011_influenza_specific_cd8_t_cells_model1504160000_model:Wu2011InfluenzaSpecificCd8TCellsModel1504160000Model
+  init_kwargs:
+    model_path: data/MODEL1504160000.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_cd8_t_cells_in_spleen
+    maps_to: cd8_in_spleen
+    label: Initial CD8 T Cells In Spleen
+    default: 36400.0
+    units: native source value
+    description: Initial CD8 T Cells In Spleen. Sets the initial value of bundled
+      SBML species `cd8_in_spleen`.
+  - name: initial_cd8_t_cells_in_lung
+    maps_to: cd8_in_lung
+    label: Initial CD8 T Cells In Lung
+    default: 1310.0
+    units: native source value
+    description: Initial CD8 T Cells In Lung. Sets the initial value of bundled SBML
+      species `cd8_in_lung`.
+  - name: initial_cd8_t_cells_in_mln
+    maps_to: cd8_in_mln
+    label: Initial CD8 T Cells In Mln
+    default: 3960.0
+    units: native source value
+    description: Initial CD8 T Cells In Mln. Sets the initial value of bundled SBML
+      species `cd8_in_mln`.
+  - name: initial_unresolved_infection_observable_1
+    maps_to: s6
+    label: Initial Unresolved Infection Observable 1
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `s6`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: s7
+    label: Initial Unresolved Infection Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `s7`.
+  outputs:
+  - name: cd8_t_cells_in_spleen
+    maps_to: cd8_in_spleen
+    label: CD8 T Cells In Spleen
+    description: CD8 T Cells In Spleen. Maps to bundled source symbol `cd8_in_spleen`.
+  - name: cd8_t_cells_in_lung
+    maps_to: cd8_in_lung
+    label: CD8 T Cells In Lung
+    description: CD8 T Cells In Lung. Maps to bundled source symbol `cd8_in_lung`.
+  - name: cd8_t_cells_in_mln
+    maps_to: cd8_in_mln
+    label: CD8 T Cells In Mln
+    description: CD8 T Cells In Mln. Maps to bundled source symbol `cd8_in_mln`.
+  - name: unresolved_infection_observable_1
+    maps_to: s6
+    label: Unresolved Infection Observable 1
+    description: Unresolved Infection Observable 1. Maps to bundled source symbol
+      `s6`.
+  - name: unresolved_infection_observable_2
+    maps_to: s7
+    label: Unresolved Infection Observable 2
+    description: Unresolved Infection Observable 2. Maps to bundled source symbol
+      `s7`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

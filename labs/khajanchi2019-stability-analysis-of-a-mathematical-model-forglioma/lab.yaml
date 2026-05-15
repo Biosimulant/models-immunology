@@ -1,0 +1,62 @@
+schema_version: '2.0'
+title: Khajanchi2019 - Stability Analysis of a Mathematical Model forGlioma-Immune
+  Interaction under OptimalTherapy Lab
+description: Stability Analysis of a Mathematical Model for Glioma-Immune Interaction
+  under Optimal TherapySubhas KhajanchiAbstractWe investigate a mathematical model
+  using a system of coupled ordinary differentia. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model.state
+  to:
+  - visualisation.immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model_state
+- from: immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model.summary
+  to:
+  - visualisation.immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model_summary
+- from: immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model.species_labels
+  to:
+  - visualisation.immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_immune_observable_1
+    maps_to: immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model.initial_unresolved_immune_observable_1
+    label: Initial Unresolved Immune Observable 1
+    default: 0.1
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `u`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model.initial_unresolved_immune_observable_2
+    label: Initial Unresolved Immune Observable 2
+    default: 0.55
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `v`.
+  - name: initial_unresolved_immune_observable_3
+    maps_to: immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model.initial_unresolved_immune_observable_3
+    label: Initial Unresolved Immune Observable 3
+    default: 0.2
+    units: native source value
+    description: Initial Unresolved Immune Observable 3. Sets the initial value of
+      bundled SBML species `w`.
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model.unresolved_immune_observable_1
+  - name: unresolved_immune_observable_2
+    maps_to: immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model.unresolved_immune_observable_2
+  - name: unresolved_immune_observable_3
+    maps_to: immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model.unresolved_immune_observable_3
+  - name: state
+    maps_to: immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model.state
+  - name: summary
+    maps_to: immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model.species_labels

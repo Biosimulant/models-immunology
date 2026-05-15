@@ -1,0 +1,74 @@
+schema_version: '2.0'
+title: Fallon2000 - Interleukin-2 dynamics Lab
+description: 'This a model from the article: Computational model for effects of ligand/receptor
+  binding properties oninterleukin-2 trafficking dynamics and T cell proliferation
+  response. It can be used to explore immune response dynamics and compare pathway-level
+  behavior across conditions.'
+models:
+- alias: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.state
+  to:
+  - visualisation.immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model_state
+- from: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.summary
+  to:
+  - visualisation.immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model_summary
+- from: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.species_labels
+  to:
+  - visualisation.immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_rs_0
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.initial_rs_0
+    label: Initial Rs 0
+    default: 1500.0
+    units: native source value
+    description: Initial Rs 0. Sets the initial value of bundled SBML species `Rs_0`.
+  - name: initial_cs_0
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.initial_cs_0
+    label: Initial Cs 0
+    default: 1.0
+    units: native source value
+    description: Initial Cs 0. Sets the initial value of bundled SBML species `Cs_0`.
+  - name: initial_ri_0
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.initial_ri_0
+    label: Initial Ri 0
+    default: 300.0
+    units: native source value
+    description: Initial Ri 0. Sets the initial value of bundled SBML species `Ri_0`.
+  - name: initial_ci_0
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.initial_ci_0
+    label: Initial Ci 0
+    default: 1.0
+    units: native source value
+    description: Initial Ci 0. Sets the initial value of bundled SBML species `Ci_0`.
+  - name: initial_li_0
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.initial_li_0
+    label: Initial Li 0
+    default: 0.01
+    units: native source value
+    description: Initial Li 0. Sets the initial value of bundled SBML species `Li_0`.
+  outputs:
+  - name: rs_0
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.rs_0
+  - name: cs_0
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.cs_0
+  - name: ri_0
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.ri_0
+  - name: ci_0
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.ci_0
+  - name: li_0
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.li_0
+  - name: state
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.state
+  - name: summary
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.species_labels

@@ -1,0 +1,102 @@
+schema_version: '2.0'
+title: Malinzi2018 - tumour-immune interaction model
+description: The paper describes a spatio-temporal mathematical model, in the form
+  of a moving boundary problem, to explain cancer dormancy is developed. It can be
+  used to explore immune response dynamics and compare pathway-level behavior across
+  conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Joseph Malinzi
+- Innocenter Amima
+upstream:
+  id: biomodels_ebi:BIOMD0000000809
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000809
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000809
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000809?filename=Malinzi2018
+    - tumour-immune interaction model.xml
+  license: CC0
+biosim:
+  entrypoint: src.malinzi2018_tumour_immune_interaction_model_biomd0000000809_model:Malinzi2018TumourImmuneInteractionModelBiomd0000000809Model
+  init_kwargs:
+    model_path: data/BIOMD0000000809.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_immune_cell_x
+    maps_to: x
+    label: Initial Immune Cell X
+    default: 0.3
+    units: native source value
+    description: Initial Immune Cell X. Sets the initial value of bundled SBML species
+      `x`.
+  - name: initial_tumour_cell_y
+    maps_to: y
+    label: Initial Tumour Cell Y
+    default: 0.8
+    units: native source value
+    description: Initial Tumour Cell Y. Sets the initial value of bundled SBML species
+      `y`.
+  - name: initial_dead_tumour_cell_ystar
+    maps_to: ystar
+    label: Initial Dead Tumour Cell Ystar
+    default: 0.1
+    units: native source value
+    description: Initial Dead Tumour Cell Ystar. Sets the initial value of bundled
+      SBML species `ystar`.
+  - name: initial_chemokine_concentration_u
+    maps_to: u
+    label: Initial Chemokine Concentration U
+    default: 1.0e-06
+    units: native source value
+    description: Initial Chemokine Concentration U. Sets the initial value of bundled
+      SBML species `u`.
+  - name: immune_cell_x_proliferation_rate
+    maps_to: delta
+    label: Immune Cell X Proliferation Rate
+    default: 3.0218
+    units: native source value
+    description: Immune Cell X Proliferation Rate. Sets bundled SBML parameter `delta`.
+  - name: immune_cell_x_proliferation_rate_2
+    maps_to: gamma
+    label: Immune Cell X Proliferation Rate 2
+    default: 2.02
+    units: native source value
+    description: Immune Cell X Proliferation Rate 2. Sets bundled SBML parameter `gamma`.
+  outputs:
+  - name: immune_cell_x
+    maps_to: x
+    label: Immune Cell X
+    description: Immune Cell X. Maps to bundled source symbol `x`.
+  - name: tumour_cell_y
+    maps_to: y
+    label: Tumour Cell Y
+    description: Tumour Cell Y. Maps to bundled source symbol `y`.
+  - name: dead_tumour_cell_ystar
+    maps_to: ystar
+    label: Dead Tumour Cell Ystar
+    description: Dead Tumour Cell Ystar. Maps to bundled source symbol `ystar`.
+  - name: chemokine_concentration_u
+    maps_to: u
+    label: Chemokine Concentration U
+    description: Chemokine Concentration U. Maps to bundled source symbol `u`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

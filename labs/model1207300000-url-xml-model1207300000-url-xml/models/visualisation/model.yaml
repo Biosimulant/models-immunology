@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: MODEL1207300000_url.xml Lab Visualisation
+description: Dedicated presentation model for MODEL1207300000_url.xml Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: MODEL1207300000_url.xml Lab
+    question: Which signaling or cytokine states show the strongest activity during
+      the simulation?
+    answer_focus: cytokine/signaling trajectories, activation states, and largest
+      excursions
+    context: immune_signaling
+    sources:
+    - alias: immunology_sbml_model1207300000_url_xml_model1207300000_model
+      title: MODEL1207300000_url.xml
+      visual_scope: Immune signaling activity
+      observables:
+      - id: s1
+        label: Acoa
+      - id: s2
+        label: Hmg Coa
+      - id: s3
+        label: Unresolved Signaling Observable 1
+      - id: s4
+        label: Unresolved Signaling Observable 1 2
+      - id: s5
+        label: Unresolved Signaling Observable 2
+      - id: s6
+        label: IsPP
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_model1207300000_url_xml_model1207300000_model_state
+    maps_to: immunology_sbml_model1207300000_url_xml_model1207300000_model.state
+    description: Core state record.
+  - name: immunology_sbml_model1207300000_url_xml_model1207300000_model_summary
+    maps_to: immunology_sbml_model1207300000_url_xml_model1207300000_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_model1207300000_url_xml_model1207300000_model_species_labels
+    maps_to: immunology_sbml_model1207300000_url_xml_model1207300000_model.species_labels
+    description: Core source-label map.
+  outputs: []

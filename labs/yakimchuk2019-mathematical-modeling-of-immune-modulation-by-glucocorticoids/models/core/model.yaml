@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Yakimchuk2019 - Mathematical modeling of immune modulation by glucocorticoids
+description: Mathematical modeling of immune modulation by glucocorticoidsKonstantin
+  Yakimchukhttps://doi.org/10.1016/j.biosystems.2019.104066AbstractThe cellular and
+  molecular mechanisms of immunomodulatory actio. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Konstantin Yakimchuk
+upstream:
+  id: biomodels_ebi:MODEL1912170005
+  source_db: biomodels_ebi
+  source_id: MODEL1912170005
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1912170005
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1912170005?filename=Yakimchuk2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model:Yakimchuk2019MathematicalModelingOfImmuneMoModel1912170005Model
+  init_kwargs:
+    model_path: data/MODEL1912170005.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_immune_observable_1
+    maps_to: Te
+    label: Initial Unresolved Immune Observable 1
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `Te`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: N
+    label: Initial Unresolved Immune Observable 2
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `N`.
+  - name: initial_unresolved_immune_observable_3
+    maps_to: A
+    label: Initial Unresolved Immune Observable 3
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 3. Sets the initial value of
+      bundled SBML species `A`.
+  - name: initial_unresolved_immune_observable_4
+    maps_to: Tr
+    label: Initial Unresolved Immune Observable 4
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 4. Sets the initial value of
+      bundled SBML species `Tr`.
+  - name: initial_unresolved_immune_observable_5
+    maps_to: T_dc
+    label: Initial Unresolved Immune Observable 5
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 5. Sets the initial value of
+      bundled SBML species `T_dc`.
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: Te
+    label: Unresolved Immune Observable 1
+    description: Unresolved Immune Observable 1. Maps to bundled source symbol `Te`.
+  - name: unresolved_immune_observable_2
+    maps_to: N
+    label: Unresolved Immune Observable 2
+    description: Unresolved Immune Observable 2. Maps to bundled source symbol `N`.
+  - name: unresolved_immune_observable_3
+    maps_to: A
+    label: Unresolved Immune Observable 3
+    description: Unresolved Immune Observable 3. Maps to bundled source symbol `A`.
+  - name: unresolved_immune_observable_4
+    maps_to: Tr
+    label: Unresolved Immune Observable 4
+    description: Unresolved Immune Observable 4. Maps to bundled source symbol `Tr`.
+  - name: unresolved_immune_observable_5
+    maps_to: T_dc
+    label: Unresolved Immune Observable 5
+    description: Unresolved Immune Observable 5. Maps to bundled source symbol `T_dc`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

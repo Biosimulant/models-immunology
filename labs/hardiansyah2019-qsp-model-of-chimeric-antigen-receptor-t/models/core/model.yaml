@@ -1,0 +1,100 @@
+schema_version: '2.0'
+title: Hardiansyah2019 - QSP model of chimeric antigen receptor T-Cell therapy
+description: This QSP model explains how the mechanism of action connects to the clinical
+  outcomes and, therefore, may serve as an important model-based platform to guide
+  the development and personalized dosing of. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Deni Hardiansyah
+- Chee Meng Ng
+upstream:
+  id: biomodels_ebi:MODEL2009230001
+  source_db: biomodels_ebi
+  source_id: MODEL2009230001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2009230001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2009230001?filename=Haridansyah2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.hardiansyah2019_qsp_model_of_chimeric_antigen_re_model2009230001_model:Hardiansyah2019QspModelOfChimericAntigenReModel2009230001Model
+  init_kwargs:
+    model_path: data/MODEL2009230001.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_immune_observable_1
+    maps_to: B_pb
+    label: Initial Unresolved Immune Observable 1
+    default: 11000000000.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `B_pb`.
+  - name: initial_carte_pb
+    maps_to: CARTE_pb
+    label: Initial Carte Pb
+    default: 0.0
+    units: native source value
+    description: Initial Carte Pb. Sets the initial value of bundled SBML species
+      `CARTE_pb`.
+  - name: initial_interleukin_6
+    maps_to: IL6
+    label: Initial Interleukin 6
+    default: 0.0
+    units: native source value
+    description: Initial Interleukin 6. Sets the initial value of bundled SBML species
+      `IL6`.
+  - name: initial_interleukin_10
+    maps_to: IL10
+    label: Initial Interleukin 10
+    default: 0.0
+    units: native source value
+    description: Initial Interleukin 10. Sets the initial value of bundled SBML species
+      `IL10`.
+  - name: initial_interferon_gamma
+    maps_to: IFNg
+    label: Initial Interferon Gamma
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Gamma. Sets the initial value of bundled SBML
+      species `IFNg`.
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: B_pb
+    label: Unresolved Immune Observable 1
+    description: Unresolved Immune Observable 1. Maps to bundled source symbol `B_pb`.
+  - name: carte_pb
+    maps_to: CARTE_pb
+    label: Carte Pb
+    description: Carte Pb. Maps to bundled source symbol `CARTE_pb`.
+  - name: interleukin_6
+    maps_to: IL6
+    label: Interleukin 6
+    description: Interleukin 6. Maps to bundled source symbol `IL6`.
+  - name: interleukin_10
+    maps_to: IL10
+    label: Interleukin 10
+    description: Interleukin 10. Maps to bundled source symbol `IL10`.
+  - name: interferon_gamma
+    maps_to: IFNg
+    label: Interferon Gamma
+    description: Interferon Gamma. Maps to bundled source symbol `IFNg`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

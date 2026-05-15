@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "53ef9d8c-192c-4dc9-9356-65bea92563bc",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "8b78e4ed-390c-4226-9258-906895d2fe60",
+  "created_at": "2026-05-15T15:53:07.853397795+00:00",
+  "last_synced_at": "2026-05-15T20:27:08.366797+00:00",
+  "hub_manifest_hash": "0a022000077f18a05d2e9fb407d76afac20726c42f6d805d12c8dced72d220d6",
+  "package_name": "yamada2003-jak-stat-socs1-knockout-lab"
+}

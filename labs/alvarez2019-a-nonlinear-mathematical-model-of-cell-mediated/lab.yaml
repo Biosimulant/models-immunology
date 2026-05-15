@@ -1,0 +1,89 @@
+schema_version: '2.0'
+title: Alvarez2019 - A nonlinear mathematical model of cell-mediated immune response
+  for tumor phenotypic heterogeneity Lab
+description: This is a non-linear mathematical model of cancer immunosurveillance
+  that takes into account intratumoral phenotypic heterogeneity, such as differential
+  expression of cell surface receptors and growth. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.state
+  to:
+  - visualisation.immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model_state
+- from: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.summary
+  to:
+  - visualisation.immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model_summary
+- from: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.species_labels
+  to:
+  - visualisation.immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 80000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T_1`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 20000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `T_2`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 10500000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `E_1_Innate`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `E_2_Adaptive`.
+  - name: tumor_killing_t1_e2_rate
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.tumor_killing_t1_e2_rate
+    label: Tumor Killing T1 E2 Rate
+    default: 1.101e-10
+    units: native source value
+    description: Tumor Killing T1 E2 Rate. Sets bundled SBML parameter `beta`.
+  - name: e1_death_rate
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.e1_death_rate
+    label: E1 Death Rate
+    default: 0.0412
+    units: native source value
+    description: E1 Death Rate. Sets bundled SBML parameter `c_2`.
+  - name: e2_death_rate
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.e2_death_rate
+    label: E2 Death Rate
+    default: 0.02
+    units: native source value
+    description: E2 Death Rate. Sets bundled SBML parameter `d_3`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.unresolved_tumor_observable_4
+  - name: state
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.state
+  - name: summary
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model.species_labels

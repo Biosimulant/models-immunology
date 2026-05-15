@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Leon-Triana2021 - Competition between tumour cells and dual-target CAR T-cells
+  Lab
+description: This model of the use of chimeric antigen receptor (CAR)-T cell therapy
+  in the treatment of solid tumours is described in the article:'Dual-Target CAR-Ts
+  with On- and Off-Tumour Activity May Override. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.state
+  to:
+  - visualisation.immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model_state
+- from: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.summary
+  to:
+  - visualisation.immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model_summary
+- from: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.species_labels
+  to:
+  - visualisation.immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_car_t_cells_on_tumour
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.initial_car_t_cells_on_tumour
+    label: Initial Car T Cells On Tumour
+    default: 0.0
+    units: native source value
+    description: Initial Car T Cells On Tumour. Sets the initial value of bundled
+      SBML species `CAR_T_cells_on_tumour`.
+  - name: initial_car_t_cells_off_tumour
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.initial_car_t_cells_off_tumour
+    label: Initial Car T Cells Off Tumour
+    default: 200000000.0
+    units: native source value
+    description: Initial Car T Cells Off Tumour. Sets the initial value of bundled
+      SBML species `CAR_T_cells_off_tumour`.
+  - name: initial_tumour_cells
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.initial_tumour_cells
+    label: Initial Tumour Cells
+    default: 33500000000.0
+    units: native source value
+    description: Initial Tumour Cells. Sets the initial value of bundled SBML species
+      `Tumour_cells`.
+  - name: initial_cells
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.initial_cells
+    label: Initial Cells
+    default: 25000000000.0
+    units: native source value
+    description: Initial Cells. Sets the initial value of bundled SBML species `B_cells`.
+  - name: tumour_death_rate
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.tumour_death_rate
+    label: Tumour Death Rate
+    default: 2.5e-10
+    units: unit_3
+    description: Tumour Death Rate. Sets bundled SBML parameter `alpha_2`.
+  outputs:
+  - name: car_t_cells_on_tumour
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.car_t_cells_on_tumour
+  - name: car_t_cells_off_tumour
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.car_t_cells_off_tumour
+  - name: car_t_cells_total
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.car_t_cells_total
+  - name: tumour_cells
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.tumour_cells
+  - name: cells
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.cells
+  - name: state
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.state
+  - name: summary
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001014_model.species_labels

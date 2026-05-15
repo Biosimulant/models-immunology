@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "4ba30909-b417-4079-af52-62ec30ac3ec6",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "0d859791-201f-4482-9552-4330808b4618",
+  "created_at": "2026-05-15T15:53:06.301398821+00:00",
+  "last_synced_at": "2026-05-15T18:50:59.644421+00:00",
+  "hub_manifest_hash": "a17b2ac89de772bcce9f4e52d9e2756781f58439cb074156626a1c11e0144654",
+  "package_name": "leon-triana2021-competition-between-tumour-cells-and-dual-target"
+}

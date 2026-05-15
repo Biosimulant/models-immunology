@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "783df840-a7e3-4a3a-ab39-3ce32625804b",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "806b32bc-c70b-4c59-9860-f801e3b77265",
+  "created_at": "2026-05-15T15:53:07.335642347+00:00",
+  "last_synced_at": "2026-05-15T20:09:38.158003+00:00",
+  "hub_manifest_hash": "efd159189d8c0947cc9ebeebf0156f9119c29eae50886c510144e6d438f5efd7",
+  "package_name": "sigal2019-mathematical-modelling-of-cancer-stem-cell-targeted-im"
+}

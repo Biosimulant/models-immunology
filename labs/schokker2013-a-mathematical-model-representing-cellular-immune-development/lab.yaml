@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Schokker2013 - A mathematical model representing cellular immune development
+  and response to Salmonella of chicken intestinal tissue Lab
+description: This is a dynamic mathematical model describing the development of the
+  cellular branch of the intestinal immune system of poultry during the first 42 days
+  of life, and of its response towards an oral. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.state
+  to:
+  - visualisation.immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model_state
+- from: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.summary
+  to:
+  - visualisation.immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model_summary
+- from: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.species_labels
+  to:
+  - visualisation.immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_cd4
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.initial_cd4
+    label: Initial CD4
+    default: 9000000.0
+    units: native source value
+    description: Initial CD4. Sets the initial value of bundled SBML species `CD4`.
+  - name: initial_cd8
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.initial_cd8
+    label: Initial CD8
+    default: 7000000.0
+    units: native source value
+    description: Initial CD8. Sets the initial value of bundled SBML species `CD8`.
+  - name: initial_cd4_receptor
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.initial_cd4_receptor
+    label: Initial CD4 Receptor
+    default: 27000000.0
+    units: native source value
+    description: Initial CD4 Receptor. Sets the initial value of bundled SBML species
+      `CD4rec`.
+  - name: initial_unresolved_immune_observable_1
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.initial_unresolved_immune_observable_1
+    label: Initial Unresolved Immune Observable 1
+    default: 9000000.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `Mr`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.initial_unresolved_immune_observable_2
+    label: Initial Unresolved Immune Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `Ma`.
+  outputs:
+  - name: cd4
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.cd4
+  - name: cd8
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.cd8
+  - name: cd4_receptor
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.cd4_receptor
+  - name: unresolved_immune_observable_1
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.unresolved_immune_observable_1
+  - name: unresolved_immune_observable_2
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.unresolved_immune_observable_2
+  - name: state
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.state
+  - name: summary
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.species_labels

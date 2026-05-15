@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Bachmann2011 - Division of labor by dual feedback regulators controls JAK2/STAT5
+  signaling over broad ligand range Lab Visualisation
+description: Dedicated presentation model for Bachmann2011 - Division of labor by
+  dual feedback regulators controls JAK2/STAT5 signaling over broad ligand range Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Bachmann2011 - Division of labor by dual feedback regulators controls
+      JAK2/STAT5 signaling over broad ligand range Lab
+    question: Which signaling or cytokine states show the strongest activity during
+      the simulation?
+    answer_focus: cytokine/signaling trajectories, activation states, and largest
+      excursions
+    context: immune_signaling
+    sources:
+    - alias: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model
+      title: Bachmann2011 - Division of labor by dual feedback regulators controls
+        JAK2/STAT5 signaling over broad ligand range
+      visual_scope: Immune signaling activity
+      observables:
+      - id: EpoRJAK2
+        label: Erythropoietin Receptor Jak2 Complex
+      - id: EpoRpJAK2
+        label: Phosphorylated Erythropoietin Receptor Jak2 Complex
+      - id: p1EpoRpJAK2
+        label: Phosphorylated Erythropoietin Receptor Jak2 Site 1
+      - id: p2EpoRpJAK2
+        label: Phosphorylated Erythropoietin Receptor Jak2 Site 2
+      - id: p12EpoRpJAK2
+        label: Phosphorylated Erythropoietin Receptor Jak2 Sites 1 2
+      - id: EpoRJAK2_CIS
+        label: EpoRJAK2_CIS
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model_state
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.state
+    description: Core state record.
+  - name: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model_summary
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model_species_labels
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.species_labels
+    description: Core source-label map.
+  outputs: []

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "19f1d9af-6bcf-4417-b698-9eee78f190eb",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "8d2cfd1c-f7d3-49dc-bc41-0d6300016611",
+  "created_at": "2026-05-15T15:53:07.244604199+00:00",
+  "last_synced_at": "2026-05-15T20:06:30.349370+00:00",
+  "hub_manifest_hash": "3750ddbad5f2d260c396ea69c00bce83be25a1f86299d726cefc7ffce9a73f55",
+  "package_name": "sandip2013-modeling-the-dynamics-of-hepatitis-c-virus-with-combi"
+}

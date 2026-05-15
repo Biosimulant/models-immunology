@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "3549e32e-ba1d-4539-85fb-0ef89bfcdb77",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "2e1e0d98-9fd3-42be-b854-a58df37c35a2",
+  "created_at": "2026-05-15T15:53:06.622698959+00:00",
+  "last_synced_at": "2026-05-15T19:09:11.319546+00:00",
+  "hub_manifest_hash": "d86bd6ad4e60f8aba27ef00e7806f5196c130fc9c3ba887fc3f8ce87da59e80a",
+  "package_name": "miao2010-innate-and-adaptive-immune-responses-to-primary-influen"
+}

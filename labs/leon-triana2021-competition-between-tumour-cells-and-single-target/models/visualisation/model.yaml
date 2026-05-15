@@ -1,0 +1,49 @@
+schema_version: '2.0'
+title: Leon-Triana2021 - Competition between tumour cells and single-target CAR T-cells
+  Lab Visualisation
+description: Dedicated presentation model for Leon-Triana2021 - Competition between
+  tumour cells and single-target CAR T-cells Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Leon-Triana2021 - Competition between tumour cells and single-target
+      CAR T-cells Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001013_model
+      title: Leon-Triana2021 - Competition between tumour cells and single-target
+        CAR T-cells
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: CAR_T_cells
+        label: Car T Cells
+      - id: Tumour_cells
+        label: Tumour Cells
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001013_model_state
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001013_model.state
+    description: Core state record.
+  - name: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001013_model_summary
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001013_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001013_model_species_labels
+    maps_to: immunology_sbml_leon_triana2021_competition_between_tumour_cells_biomd0000001013_model.species_labels
+    description: Core source-label map.
+  outputs: []

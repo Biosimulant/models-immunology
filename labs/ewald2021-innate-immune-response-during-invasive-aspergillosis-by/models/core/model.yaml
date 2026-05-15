@@ -1,0 +1,103 @@
+schema_version: '2.0'
+title: Ewald2021 - Innate immune response during invasive aspergillosis by dynamic
+  optimization
+description: Aspergillus fumigatus is an important human fungal pathogen and its conidia
+  are constantly inhaled by humans. In immunocompromised individuals, conidia can
+  grow out as hyphae that damage lung epitheli.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Jan Ewald
+- Flora Rivieccio
+- Lukas Radosa
+- Schuster S
+- Axel Brakhage
+upstream:
+  id: biomodels_ebi:MODEL2105110001
+  source_db: biomodels_ebi
+  source_id: MODEL2105110001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2105110001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2105110001?filename=dynopt_aspergillosis.xml
+  license: CC0
+biosim:
+  entrypoint: src.ewald2021_innate_immune_response_during_invasive_model2105110001_model:Ewald2021InnateImmuneResponseDuringInvasiveModel2105110001Model
+  init_kwargs:
+    model_path: data/MODEL2105110001.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_immune_observable_1
+    maps_to: NEU
+    label: Initial Unresolved Immune Observable 1
+    default: 0.2628
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `NEU`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: AEC
+    label: Initial Unresolved Immune Observable 2
+    default: 11.43
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `AEC`.
+  - name: initial_unresolved_immune_observable_3
+    maps_to: AM
+    label: Initial Unresolved Immune Observable 3
+    default: 0.2926
+    units: native source value
+    description: Initial Unresolved Immune Observable 3. Sets the initial value of
+      bundled SBML species `AM`.
+  - name: initial_unresolved_immune_observable_4
+    maps_to: SWO
+    label: Initial Unresolved Immune Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 4. Sets the initial value of
+      bundled SBML species `SWO`.
+  - name: initial_unresolved_immune_observable_5
+    maps_to: CYT
+    label: Initial Unresolved Immune Observable 5
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 5. Sets the initial value of
+      bundled SBML species `CYT`.
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: NEU
+    label: Unresolved Immune Observable 1
+    description: Unresolved Immune Observable 1. Maps to bundled source symbol `NEU`.
+  - name: unresolved_immune_observable_2
+    maps_to: AEC
+    label: Unresolved Immune Observable 2
+    description: Unresolved Immune Observable 2. Maps to bundled source symbol `AEC`.
+  - name: unresolved_immune_observable_3
+    maps_to: AM
+    label: Unresolved Immune Observable 3
+    description: Unresolved Immune Observable 3. Maps to bundled source symbol `AM`.
+  - name: unresolved_immune_observable_4
+    maps_to: SWO
+    label: Unresolved Immune Observable 4
+    description: Unresolved Immune Observable 4. Maps to bundled source symbol `SWO`.
+  - name: unresolved_immune_observable_5
+    maps_to: CYT
+    label: Unresolved Immune Observable 5
+    description: Unresolved Immune Observable 5. Maps to bundled source symbol `CYT`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

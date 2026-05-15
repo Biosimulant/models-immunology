@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Saad2017 - immune checkpoint and BCG in superficial bladder cancer
+description: The paper describes a model on the Dynamics of Immune Checkpoints, Immune
+  System, and BCG in the Treatment of Superficial Bladder Cancer. It can be used to
+  explore immune response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Farouk Tijjani Saad
+- Evren Hincal
+- Bilgen Kaymakamzade
+upstream:
+  id: biomodels_ebi:BIOMD0000000746
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000746
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000746
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000746?filename=Saad2017.xml
+  license: CC0
+biosim:
+  entrypoint: src.saad2017_immune_checkpoint_and_bcg_in_superficia_biomd0000000746_model:Saad2017ImmuneCheckpointAndBcgInSuperficiaBiomd0000000746Model
+  init_kwargs:
+    model_path: data/BIOMD0000000746.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: C
+    label: Initial Unresolved Tumor Observable 1
+    default: 100000.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `C`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: E
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `E`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: B
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `B`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: P
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `P`.
+  - name: cancer_growth_rate
+    maps_to: r
+    label: Cancer Growth Rate
+    default: 0.0033
+    units: unit_0
+    description: Cancer Growth Rate. Sets bundled SBML parameter `r`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: C
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `C`.
+  - name: unresolved_tumor_observable_2
+    maps_to: E
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `E`.
+  - name: unresolved_tumor_observable_3
+    maps_to: B
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `B`.
+  - name: unresolved_tumor_observable_4
+    maps_to: P
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `P`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

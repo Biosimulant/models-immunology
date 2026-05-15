@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "acbea94d-7d09-4a14-85db-621f7c65923e",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "11195e49-dd3a-4d85-9aef-e9ec9c11d8a6",
+  "created_at": "2026-05-15T15:53:07.288967780+00:00",
+  "last_synced_at": "2026-05-15T20:08:04.364252+00:00",
+  "hub_manifest_hash": "44dc0cd54fff5f17d6ba63da8957748a738b01ed57f0589e5790b491defd6590",
+  "package_name": "schokker2013-a-mathematical-model-representing-cellular-immune-d"
+}

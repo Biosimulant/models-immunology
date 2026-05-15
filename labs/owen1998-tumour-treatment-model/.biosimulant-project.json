@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "a36f3fc3-03a2-4c9a-80ef-df3d7553ee0d",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "022b100c-e5b8-4121-9c76-f64fbe56526c",
+  "created_at": "2026-05-15T15:53:06.875918347+00:00",
+  "last_synced_at": "2026-05-15T19:20:38.010107+00:00",
+  "hub_manifest_hash": "4d29e4bc6fd185237e5105557f1752a39aa7e34f9b70322e429d408e41fc1569",
+  "package_name": "owen1998-tumour-treatment-model-lab"
+}

@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: 'Scharf2023 - Holistic View on the Structure of Immune Response: Petri Net
+  Model Lab'
+description: Immunology Scharf2023Holistic View On The Structure Of Imm Model2304260001Model
+  models core biological dynamics as a OTHER simulation curated from biomodels_ebi
+  (biomodels_ebi:MODEL2304260001), focused on immun. When you run it, you can track
+  state over time and compare response patterns across parameter settings.
+models:
+- alias: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.state
+  to:
+  - visualisation.immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model_state
+- from: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.summary
+  to:
+  - visualisation.immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model_summary
+- from: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.species_labels
+  to:
+  - visualisation.immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_t_bl
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.initial_t_bl
+    label: Initial T Bl
+    default: 0.0
+    units: native source value
+    description: Initial T Bl. Sets the initial value of bundled SBML species `P3`.
+  - name: initial_unresolved_signaling_observable_1
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.initial_unresolved_signaling_observable_1
+    label: Initial Unresolved Signaling Observable 1
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Signaling Observable 1. Sets the initial value
+      of bundled SBML species `P4`.
+  - name: initial_unresolved_signaling_observable_2
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.initial_unresolved_signaling_observable_2
+    label: Initial Unresolved Signaling Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Signaling Observable 2. Sets the initial value
+      of bundled SBML species `P7`.
+  - name: initial_t_tz
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.initial_t_tz
+    label: Initial T Tz
+    default: 0.0
+    units: native source value
+    description: Initial T Tz. Sets the initial value of bundled SBML species `P8`.
+  - name: initial_unresolved_immune_observable_1
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.initial_unresolved_immune_observable_1
+    label: Initial Unresolved Immune Observable 1
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `P137`.
+  outputs:
+  - name: t_bl
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.t_bl
+  - name: unresolved_signaling_observable_1
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.unresolved_signaling_observable_1
+  - name: unresolved_signaling_observable_2
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.unresolved_signaling_observable_2
+  - name: t_tz
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.t_tz
+  - name: unresolved_immune_observable_1
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.unresolved_immune_observable_1
+  - name: state
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.state
+  - name: summary
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.species_labels

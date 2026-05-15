@@ -1,0 +1,52 @@
+schema_version: '2.0'
+title: Owen1998 - Tumour treatment model Lab
+description: 'Owen1998 - tumour treatment model This model is described in the article:
+  Modelling the macrophage invasion of tumours: effects on growth and composition.
+  It can be used to explore immune response dynamics and compare pathway-level behavior
+  across conditions.'
+models:
+- alias: immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model.state
+  to:
+  - visualisation.immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model_state
+- from: immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model.summary
+  to:
+  - visualisation.immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model_summary
+- from: immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model.species_labels
+  to:
+  - visualisation.immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: treatment_start_parameter
+    maps_to: immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model.treatment_start_parameter
+    label: Treatment Start Parameter
+    default: 10.0
+    units: native source value
+    description: Treatment Start Parameter. Sets bundled SBML parameter `treatment_start`.
+  - name: treatment_end_parameter
+    maps_to: immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model.treatment_end_parameter
+    label: Treatment End Parameter
+    default: 400.0
+    units: native source value
+    description: Treatment End Parameter. Sets bundled SBML parameter `treatment_end`.
+  outputs:
+  - name: macrophage
+    maps_to: immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model.macrophage
+  - name: mutated_cell
+    maps_to: immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model.mutated_cell
+  - name: normal_cell
+    maps_to: immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model.normal_cell
+  - name: state
+    maps_to: immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model.state
+  - name: summary
+    maps_to: immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_owen1998_tumour_treatment_model_biomd0000000650_model.species_labels

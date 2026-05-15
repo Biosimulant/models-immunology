@@ -1,0 +1,71 @@
+schema_version: '2.0'
+title: Sontag2017 - Dynamic model of immune responses to antigen presentation by tumor
+  or pathogen
+description: This model of the immune system response to antigen presentation is based
+  on the publication:Eduardo D.Sontag (2017) 'A Dynamic Model of Immune Responses
+  to Antigen Presentation Predicts Different Reg. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Eduardo D Sontag
+upstream:
+  id: biomodels_ebi:BIOMD0000001030
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001030
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001030
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001030?filename=Sontag2017.xml
+  license: CC0
+biosim:
+  entrypoint: src.sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model:Sontag2017DynamicModelOfImmuneResponsesToBiomd0000001030Model
+  init_kwargs:
+    model_path: data/BIOMD0000001030.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_regulatory_cells
+    maps_to: Regulatory_cells
+    label: Initial Regulatory Cells
+    default: 1.0
+    units: native source value
+    description: Initial Regulatory Cells. Sets the initial value of bundled SBML
+      species `Regulatory_cells`.
+  - name: initial_effector_cells
+    maps_to: Effector_cells
+    label: Initial Effector Cells
+    default: 1.0
+    units: native source value
+    description: Initial Effector Cells. Sets the initial value of bundled SBML species
+      `Effector_cells`.
+  outputs:
+  - name: antigen_expressing_cells
+    maps_to: Antigen_expressing_cells
+    label: Antigen Expressing Cells
+    description: Antigen Expressing Cells. Maps to bundled source symbol `Antigen_expressing_cells`.
+  - name: regulatory_cells
+    maps_to: Regulatory_cells
+    label: Regulatory Cells
+    description: Regulatory Cells. Maps to bundled source symbol `Regulatory_cells`.
+  - name: effector_cells
+    maps_to: Effector_cells
+    label: Effector Cells
+    description: Effector Cells. Maps to bundled source symbol `Effector_cells`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

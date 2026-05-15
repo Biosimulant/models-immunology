@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Rhodes2019 - Immune-Mediated theory of Metastasis Lab
+description: '&lt;notes xmlns=&quot;http://www.sbml.org/sbml/level2/version4&quot;&gt;
+  &lt;body xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt; &lt;p&gt;Abstract:Accumulating
+  experimental and clinical evidence s. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.'
+models:
+- alias: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.state
+  to:
+  - visualisation.immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model_state
+- from: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.summary
+  to:
+  - visualisation.immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model_summary
+- from: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.species_labels
+  to:
+  - visualisation.immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_te_immune_cell_y_1
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.initial_te_immune_cell_y_1
+    label: Initial Te Immune Cell Y 1
+    default: 0.001
+    units: native source value
+    description: Initial Te Immune Cell Y 1. Sets the initial value of bundled SBML
+      species `TE_immune_Cell_y_1`.
+  - name: initial_ct_immune_cell_x_1
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.initial_ct_immune_cell_x_1
+    label: Initial Ct Immune Cell X 1
+    default: 1694915.25423729
+    units: native source value
+    description: Initial Ct Immune Cell X 1. Sets the initial value of bundled SBML
+      species `CT_immune_Cell_x_1`.
+  - name: initial_ct_immune_cell_x_2
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.initial_ct_immune_cell_x_2
+    label: Initial Ct Immune Cell X 2
+    default: 1694915.25423729
+    units: native source value
+    description: Initial Ct Immune Cell X 2. Sets the initial value of bundled SBML
+      species `CT_immune_Cell_x_2`.
+  - name: initial_te_immune_cell_y_2
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.initial_te_immune_cell_y_2
+    label: Initial Te Immune Cell Y 2
+    default: 1.0e-10
+    units: native source value
+    description: Initial Te Immune Cell Y 2. Sets the initial value of bundled SBML
+      species `TE_immune_Cell_y_2`.
+  - name: initial_tumor_cell_u_1
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.initial_tumor_cell_u_1
+    label: Initial Tumor Cell U 1
+    default: 1.0
+    units: native source value
+    description: Initial Tumor Cell U 1. Sets the initial value of bundled SBML species
+      `Tumor_Cell_u_1`.
+  outputs:
+  - name: te_immune_cell_y_1
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.te_immune_cell_y_1
+  - name: ct_immune_cell_x_1
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.ct_immune_cell_x_1
+  - name: ct_immune_cell_x_2
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.ct_immune_cell_x_2
+  - name: te_immune_cell_y_2
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.te_immune_cell_y_2
+  - name: tumor_cell_u_1
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.tumor_cell_u_1
+  - name: state
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.state
+  - name: summary
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.species_labels

@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Eftimie2017/2 - interaction of Th and macrophage in melanoma
+description: 'The paper describes a model of interaction of Th cells and macrophage
+  in melanoma. Created by COPASI 4.25 (Build 207) This model is described in the article:
+  Modelling and investigation of the CD4 T c.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Eftimie R
+- Haneen Hamam
+upstream:
+  id: biomodels_ebi:BIOMD0000000769
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000769
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000769
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000769?filename=Eftimie2017_2.xml
+  license: CC0
+biosim:
+  entrypoint: src.eftimie2017_2_interaction_of_th_and_macrophage_i_biomd0000000769_model:Eftimie20172InteractionOfThAndMacrophageIBiomd0000000769Model
+  init_kwargs:
+    model_path: data/BIOMD0000000769.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: T
+    label: Initial Unresolved Tumor Observable 1
+    default: 100000.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: H1
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `H1`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: H2
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `H2`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: M1
+    label: Initial Unresolved Tumor Observable 4
+    default: 100.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `M1`.
+  - name: initial_unresolved_tumor_observable_5
+    maps_to: M2
+    label: Initial Unresolved Tumor Observable 5
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 5. Sets the initial value of
+      bundled SBML species `M2`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: T
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `T`.
+  - name: unresolved_tumor_observable_2
+    maps_to: H1
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `H1`.
+  - name: unresolved_tumor_observable_3
+    maps_to: H2
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `H2`.
+  - name: unresolved_tumor_observable_4
+    maps_to: M1
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `M1`.
+  - name: unresolved_tumor_observable_5
+    maps_to: M2
+    label: Unresolved Tumor Observable 5
+    description: Unresolved Tumor Observable 5. Maps to bundled source symbol `M2`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

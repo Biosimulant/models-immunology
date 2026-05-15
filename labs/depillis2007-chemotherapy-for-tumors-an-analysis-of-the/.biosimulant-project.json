@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "d4bd1efc-5655-4aa3-87d1-ea307b019a19",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "a4ded483-ce5b-42fe-955f-0cb45ea93d5f",
+  "created_at": "2026-05-15T15:53:04.997478706+00:00",
+  "last_synced_at": "2026-05-15T19:26:35.804829+00:00",
+  "hub_manifest_hash": "969a84c3599d61fc62693b3f1cf4cd43b156f492fd61767da20296db14895401",
+  "package_name": "depillis2007-chemotherapy-for-tumors-an-analysis-of-the-dynamics"
+}

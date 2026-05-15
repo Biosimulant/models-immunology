@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "64828c4e-021d-43e9-91cf-89c604552366",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "71805f8d-7297-477c-a1e2-13bf7b813163",
+  "created_at": "2026-05-15T15:53:06.929945343+00:00",
+  "last_synced_at": "2026-05-15T19:22:35.051751+00:00",
+  "hub_manifest_hash": "ceb482adc40cb3f77a7431b61453e652df24b6c47050114230a3733914950f5e",
+  "package_name": "palsson2013-fully-integrated-immune-response-model-firm-lab"
+}

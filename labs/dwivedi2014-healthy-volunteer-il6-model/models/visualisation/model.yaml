@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Dwivedi2014 - Healthy Volunteer IL6 Model Lab Visualisation
+description: Dedicated presentation model for Dwivedi2014 - Healthy Volunteer IL6
+  Model Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Dwivedi2014 - Healthy Volunteer IL6 Model Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_dwivedi2014_healthy_volunteer_il6_model_biomd0000000534_model
+      title: Dwivedi2014 - Healthy Volunteer IL6 Model
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: mwf626e95e_543f_41e4_aad4_c6bf60ab345b
+        label: Interleukin 6
+      - id: mwbbbce920_e8dd_4320_9386_fc94bfb2fc99
+        label: Unresolved Immune Observable 1
+      - id: mw810ff751_fa4e_4143_bd50_169b3e325e1e
+        label: Soluble Interleukin 6 Sgp130 Complex
+      - id: mw114aa90f_5f5b_4fe8_9406_361c8489b6a1
+        label: Reactive Protein
+      - id: mw30ae63db_6cd3_4b6f_93ad_3350cd360bcc
+        label: Unresolved Immune Observable 2
+      - id: mw03db56ac_8dc6_4931_ae82_fef706d2ee3d
+        label: sR_IL6
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_dwivedi2014_healthy_volunteer_il6_model_biomd0000000534_model_state
+    maps_to: immunology_sbml_dwivedi2014_healthy_volunteer_il6_model_biomd0000000534_model.state
+    description: Core state record.
+  - name: immunology_sbml_dwivedi2014_healthy_volunteer_il6_model_biomd0000000534_model_summary
+    maps_to: immunology_sbml_dwivedi2014_healthy_volunteer_il6_model_biomd0000000534_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_dwivedi2014_healthy_volunteer_il6_model_biomd0000000534_model_species_labels
+    maps_to: immunology_sbml_dwivedi2014_healthy_volunteer_il6_model_biomd0000000534_model.species_labels
+    description: Core source-label map.
+  outputs: []

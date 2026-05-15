@@ -1,0 +1,134 @@
+schema_version: '2.0'
+title: Dwivedi2014 - Crohns IL6 Disease model - sgp130 activity
+description: 'Dwivedi2014 - Crohns IL6 Disease model -sgp130 activity This model is
+  comprised of four models: [BIOMD0000000534] Healthy Volunteer model [BIOMD0000000535]
+  Crohn''s Disease - IL-6 Antibody [BIOMD000000. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- G Dwivedi
+- L Fitz
+- M Hegen
+- S W Martin
+- J Harrold
+upstream:
+  id: biomodels_ebi:BIOMD0000000536
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000536
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000536
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000536?filename=BIOMD0000000536_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model:Dwivedi2014CrohnsIl6DiseaseModelSgp130ActiBiomd0000000536Model
+  init_kwargs:
+    model_path: data/BIOMD0000000536.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_interleukin_6
+    maps_to: mwf626e95e_543f_41e4_aad4_c6bf60ab345b
+    label: Initial Interleukin 6
+    default: 0.000435628896551166
+    units: native source value
+    description: Initial Interleukin 6. Sets the initial value of bundled SBML species
+      `mwf626e95e_543f_41e4_aad4_c6bf60ab345b`.
+  - name: initial_unresolved_immune_observable_1
+    maps_to: mwbbbce920_e8dd_4320_9386_fc94bfb2fc99
+    label: Initial Unresolved Immune Observable 1
+    default: 3.9
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `mwbbbce920_e8dd_4320_9386_fc94bfb2fc99`.
+  - name: initial_soluble_interleukin_6_sgp130_complex
+    maps_to: mw810ff751_fa4e_4143_bd50_169b3e325e1e
+    label: Initial Soluble Interleukin 6 Sgp130 Complex
+    default: 0.0874060669217432
+    units: native source value
+    description: Initial Soluble Interleukin 6 Sgp130 Complex. Sets the initial value
+      of bundled SBML species `mw810ff751_fa4e_4143_bd50_169b3e325e1e`.
+  - name: initial_reactive_protein
+    maps_to: mw114aa90f_5f5b_4fe8_9406_361c8489b6a1
+    label: Initial Reactive Protein
+    default: 221.06367608557
+    units: native source value
+    description: Initial Reactive Protein. Sets the initial value of bundled SBML
+      species `mw114aa90f_5f5b_4fe8_9406_361c8489b6a1`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: mw30ae63db_6cd3_4b6f_93ad_3350cd360bcc
+    label: Initial Unresolved Immune Observable 2
+    default: 4.25350679194445
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `mw30ae63db_6cd3_4b6f_93ad_3350cd360bcc`.
+  - name: dose_q1w_parameter
+    maps_to: parameter_1
+    label: Dose Q1w Parameter
+    default: 0.0
+    units: native source value
+    description: Dose Q1w Parameter. Sets bundled SBML parameter `parameter_1`.
+  - name: dose_q2w_parameter
+    maps_to: parameter_2
+    label: Dose Q2w Parameter
+    default: 0.0
+    units: native source value
+    description: Dose Q2w Parameter. Sets bundled SBML parameter `parameter_2`.
+  - name: dose_q4w_parameter
+    maps_to: parameter_3
+    label: Dose Q4w Parameter
+    default: 0.0
+    units: native source value
+    description: Dose Q4w Parameter. Sets bundled SBML parameter `parameter_3`.
+  - name: dose_q1w_initial_parameter
+    maps_to: ModelValue_3
+    label: Dose Q1w Initial Parameter
+    default: 0.0
+    units: native source value
+    description: Dose Q1w Initial Parameter. Sets bundled SBML parameter `ModelValue_3`.
+  - name: dose_q2w_initial_parameter
+    maps_to: ModelValue_4
+    label: Dose Q2w Initial Parameter
+    default: 0.0
+    units: native source value
+    description: Dose Q2w Initial Parameter. Sets bundled SBML parameter `ModelValue_4`.
+  outputs:
+  - name: interleukin_6
+    maps_to: mwf626e95e_543f_41e4_aad4_c6bf60ab345b
+    label: Interleukin 6
+    description: Interleukin 6. Maps to bundled source symbol `mwf626e95e_543f_41e4_aad4_c6bf60ab345b`.
+  - name: unresolved_immune_observable_1
+    maps_to: mwbbbce920_e8dd_4320_9386_fc94bfb2fc99
+    label: Unresolved Immune Observable 1
+    description: Unresolved Immune Observable 1. Maps to bundled source symbol `mwbbbce920_e8dd_4320_9386_fc94bfb2fc99`.
+  - name: soluble_interleukin_6_sgp130_complex
+    maps_to: mw810ff751_fa4e_4143_bd50_169b3e325e1e
+    label: Soluble Interleukin 6 Sgp130 Complex
+    description: Soluble Interleukin 6 Sgp130 Complex. Maps to bundled source symbol
+      `mw810ff751_fa4e_4143_bd50_169b3e325e1e`.
+  - name: reactive_protein
+    maps_to: mw114aa90f_5f5b_4fe8_9406_361c8489b6a1
+    label: Reactive Protein
+    description: Reactive Protein. Maps to bundled source symbol `mw114aa90f_5f5b_4fe8_9406_361c8489b6a1`.
+  - name: unresolved_immune_observable_2
+    maps_to: mw30ae63db_6cd3_4b6f_93ad_3350cd360bcc
+    label: Unresolved Immune Observable 2
+    description: Unresolved Immune Observable 2. Maps to bundled source symbol `mw30ae63db_6cd3_4b6f_93ad_3350cd360bcc`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

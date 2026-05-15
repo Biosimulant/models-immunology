@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "974dcd8b-41ad-4719-b517-09cf5b894668",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "a7a11b21-8658-40db-9260-25870ff75ce6",
+  "created_at": "2026-05-15T15:53:05.888846362+00:00",
+  "last_synced_at": "2026-05-15T19:49:37.175006+00:00",
+  "hub_manifest_hash": "4de68385a0e06fcf9439b5793323201f6d63d11cf1759aa821c36ec39bb6f5f6",
+  "package_name": "immunological-healthy-state-model-of-sphingolipids-with-il-6-il"
+}

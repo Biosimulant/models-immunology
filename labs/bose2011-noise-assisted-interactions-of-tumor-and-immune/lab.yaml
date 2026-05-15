@@ -1,0 +1,61 @@
+schema_version: '2.0'
+title: Bose2011 - Noise-assisted interactions of tumor and immune cells Lab
+description: Noise-assisted interactions of tumor and immune cells.Bose T1, Trimper
+  S.Author information1 Institute of Physics, Martin-Luther-University, D-06099 Halle,
+  Germany. It can be used to explore immune response dynamics and compare pathway-level
+  behavior across conditions.
+models:
+- alias: immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model.state
+  to:
+  - visualisation.immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model_state
+- from: immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model.summary
+  to:
+  - visualisation.immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model_summary
+- from: immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model.species_labels
+  to:
+  - visualisation.immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 1.0e-06
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `x`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.01
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `y`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `z`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model.unresolved_tumor_observable_3
+  - name: state
+    maps_to: immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model.state
+  - name: summary
+    maps_to: immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_bose2011_noise_assisted_interactions_of_tumor_an_biomd0000000894_model.species_labels

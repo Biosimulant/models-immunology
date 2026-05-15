@@ -1,0 +1,62 @@
+schema_version: '2.0'
+title: Cappuccio2007 - Tumor-immune system interactions and determination of the optimal
+  therapeutic protocol in immunotherapy Lab
+description: This ordinary differential equation model is the Panetta-Kirschner model
+  of tumor-immune interactions is described in the publication:Cappuccio A, Castiglione
+  F, Piccoli B.' Determination of the optim. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.state
+  to:
+  - visualisation.immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model_state
+- from: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.summary
+  to:
+  - visualisation.immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model_summary
+- from: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.species_labels
+  to:
+  - visualisation.immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_effector_cells
+    maps_to: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.initial_effector_cells
+    label: Initial Effector Cells
+    default: 1.0e-05
+    units: native source value
+    description: Initial Effector Cells. Sets the initial value of bundled SBML species
+      `Effector_cells`.
+  - name: initial_tumor_cells
+    maps_to: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.initial_tumor_cells
+    label: Initial Tumor Cells
+    default: 1.0e-05
+    units: native source value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML species
+      `Tumor_cells`.
+  - name: initial_interleukin_2
+    maps_to: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.initial_interleukin_2
+    label: Initial Interleukin 2
+    default: 1.0e-05
+    units: native source value
+    description: Initial Interleukin 2. Sets the initial value of bundled SBML species
+      `IL_2`.
+  outputs:
+  - name: effector_cells
+    maps_to: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.effector_cells
+  - name: tumor_cells
+    maps_to: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.tumor_cells
+  - name: interleukin_2
+    maps_to: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.interleukin_2
+  - name: state
+    maps_to: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.state
+  - name: summary
+    maps_to: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.species_labels

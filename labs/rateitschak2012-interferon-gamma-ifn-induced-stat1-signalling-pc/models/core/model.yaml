@@ -1,0 +1,73 @@
+schema_version: '2.0'
+title: "Rateitschak2012 - Interferon-gamma (IFN\u03B3) induced STAT1 signalling (PC_IFNg100)"
+description: "Rateitschak2012 - Interferon-gamma (IFN\u03B3) induced STAT1 signalling\
+  \ (PC_IFNg100) This model is described in the article: Parameter identifiability\
+  \ and sensitivity analysis predict targets for enhanceme. It can be used to explore\
+  \ immune response dynamics and compare pathway-level behavior across conditions."
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Katja Rateitschak
+- Felix Winter
+- Falko Lange
+- Robert Jaster
+- Olaf Wolkenhauer
+upstream:
+  id: biomodels_ebi:BIOMD0000000585
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000585
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000585
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000585?filename=BIOMD0000000585_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model:Rateitschak2012InterferonGammaIfnInducedStaBiomd0000000585Model
+  init_kwargs:
+    model_path: data/BIOMD0000000585.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs: []
+  outputs:
+  - name: phosphorylated_stat1_dimer
+    maps_to: Stat1Pd
+    label: Phosphorylated Stat1 Dimer
+    description: Phosphorylated Stat1 Dimer. Maps to bundled source symbol `Stat1Pd`.
+  - name: nuclear_phosphorylated_stat1_dimer
+    maps_to: Stat1Pdn
+    label: Nuclear Phosphorylated Stat1 Dimer
+    description: Nuclear Phosphorylated Stat1 Dimer. Maps to bundled source symbol
+      `Stat1Pdn`.
+  - name: unphosphorylated_stat1
+    maps_to: Stat1U
+    label: Unphosphorylated Stat1
+    description: Unphosphorylated Stat1. Maps to bundled source symbol `Stat1U`.
+  - name: nuclear_unphosphorylated_stat1
+    maps_to: Stat1Un
+    label: Nuclear Unphosphorylated Stat1
+    description: Nuclear Unphosphorylated Stat1. Maps to bundled source symbol `Stat1Un`.
+  - name: socs1_mrna
+    maps_to: mRNA
+    label: Socs1 mRNA
+    description: Socs1 mRNA. Maps to bundled source symbol `mRNA`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.
+caveats: 'No scientifically safe input was exposed in this pass: the bundled SBML
+  did not provide a headline species initial value or meaningfully named constant/intervention
+  parameter that could be surfaced without turning raw source symbols into unsupported
+  biological claims.'

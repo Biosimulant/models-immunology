@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Al-Tuwairqi2020 - Dynamics of cancer virotherapy with immune response Lab Visualisation
+description: Dedicated presentation model for Al-Tuwairqi2020 - Dynamics of cancer
+  virotherapy with immune response Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Al-Tuwairqi2020 - Dynamics of cancer virotherapy with immune response
+      Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model
+      title: Al-Tuwairqi2020 - Dynamics of cancer virotherapy with immune response
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: uninfected_cancer_cells
+        label: Uninfected Cancer Cells
+      - id: infected_cancer_cells
+        label: Infected Cancer Cells
+      - id: free_virus
+        label: Free Virus
+      - id: immune_cells
+        label: Immune Cells
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model_state
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.state
+    description: Core state record.
+  - name: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model_summary
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model_species_labels
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.species_labels
+    description: Core source-label map.
+  outputs: []

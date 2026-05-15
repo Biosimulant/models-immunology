@@ -1,0 +1,93 @@
+schema_version: '2.0'
+title: Trisilowati2018 - Optimal control of tumor-immune system interaction with treatment
+description: 'This is a mathematical model of a growing tumor and its interaction
+  with the immune system. The model consists of four populations: tumor cells, dendritic
+  cells (representing the innate immune system).'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Trisilowati, T.
+upstream:
+  id: biomodels_ebi:BIOMD0000000880
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000880
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000880
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000880?filename=Trisilowati2018.xml
+  license: CC0
+biosim:
+  entrypoint: src.trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model:Trisilowati2018OptimalControlOfTumorImmuneBiomd0000000880Model
+  init_kwargs:
+    model_path: data/BIOMD0000000880.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: T_Tumor_Cells
+    label: Initial Unresolved Tumor Observable 1
+    default: 1000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T_Tumor_Cells`.
+  - name: initial_cd8_t_cells
+    maps_to: L_CD8_T_Cells
+    label: Initial CD8 T Cells
+    default: 10.0
+    units: native source value
+    description: Initial CD8 T Cells. Sets the initial value of bundled SBML species
+      `L_CD8_T_Cells`.
+  - name: initial_cd4_t_cells
+    maps_to: H_CD4_T_Cells
+    label: Initial CD4 T Cells
+    default: 5.0
+    units: native source value
+    description: Initial CD4 T Cells. Sets the initial value of bundled SBML species
+      `H_CD4_T_Cells`.
+  - name: initial_dendritic_cells
+    maps_to: D_Dendritic_Cells
+    label: Initial Dendritic Cells
+    default: 10.0
+    units: native source value
+    description: Initial Dendritic Cells. Sets the initial value of bundled SBML species
+      `D_Dendritic_Cells`.
+  - name: tumor_death_cd8_rate
+    maps_to: alpha_1
+    label: Tumor Death CD8 Rate
+    default: 4.2e-08
+    units: native source value
+    description: Tumor Death CD8 Rate. Sets bundled SBML parameter `alpha_1`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: T_Tumor_Cells
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `T_Tumor_Cells`.
+  - name: cd8_t_cells
+    maps_to: L_CD8_T_Cells
+    label: CD8 T Cells
+    description: CD8 T Cells. Maps to bundled source symbol `L_CD8_T_Cells`.
+  - name: cd4_t_cells
+    maps_to: H_CD4_T_Cells
+    label: CD4 T Cells
+    description: CD4 T Cells. Maps to bundled source symbol `H_CD4_T_Cells`.
+  - name: dendritic_cells
+    maps_to: D_Dendritic_Cells
+    label: Dendritic Cells
+    description: Dendritic Cells. Maps to bundled source symbol `D_Dendritic_Cells`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

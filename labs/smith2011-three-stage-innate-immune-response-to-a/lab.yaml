@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Smith2011 - Three Stage Innate Immune Response to a Pneumococcal Lung Infection
+  Lab
+description: Pneumococcal pneumonia is a leading cause of death and a major source
+  of human morbidity. The initial immune response plays a central role in determining
+  the course and outcome of pneumococcal disease.
+models:
+- alias: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.state
+  to:
+  - visualisation.immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model_state
+- from: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.summary
+  to:
+  - visualisation.immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model_summary
+- from: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.species_labels
+  to:
+  - visualisation.immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_epithelial_cells_with_bacteria_attached_ea
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.initial_epithelial_cells_with_bacteria_attached_ea
+    label: Initial Epithelial Cells With Bacteria Attached Ea
+    default: 0.0
+    units: substance
+    description: Initial Epithelial Cells With Bacteria Attached Ea. Sets the initial
+      value of bundled SBML species `Epithelial_cells_with_bacteria_attached__Ea`.
+  - name: initial_pneumococci_p
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.initial_pneumococci_p
+    label: Initial Pneumococci P
+    default: 100000.0
+    units: substance
+    description: Initial Pneumococci P. Sets the initial value of bundled SBML species
+      `Pneumococci___P`.
+  - name: initial_susceptible_epithelial_cells_eu
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.initial_susceptible_epithelial_cells_eu
+    label: Initial Susceptible Epithelial Cells Eu
+    default: 100000000.0
+    units: substance
+    description: Initial Susceptible Epithelial Cells Eu. Sets the initial value of
+      bundled SBML species `Susceptible_epithelial_cells__EU`.
+  - name: initial_proinflammatory_cytokine_c
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.initial_proinflammatory_cytokine_c
+    label: Initial Proinflammatory Cytokine C
+    default: 0.0
+    units: substance
+    description: Initial Proinflammatory Cytokine C. Sets the initial value of bundled
+      SBML species `proinflammatory_cytokine__C`.
+  - name: initial_neutrophils_n
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.initial_neutrophils_n
+    label: Initial Neutrophils N
+    default: 0.0
+    units: substance
+    description: Initial Neutrophils N. Sets the initial value of bundled SBML species
+      `Neutrophils__N`.
+  outputs:
+  - name: epithelial_cells_with_bacteria_attached_ea
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.epithelial_cells_with_bacteria_attached_ea
+  - name: pneumococci_p
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.pneumococci_p
+  - name: susceptible_epithelial_cells_eu
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.susceptible_epithelial_cells_eu
+  - name: proinflammatory_cytokine_c
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.proinflammatory_cytokine_c
+  - name: neutrophils_n
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.neutrophils_n
+  - name: state
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.state
+  - name: summary
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.species_labels

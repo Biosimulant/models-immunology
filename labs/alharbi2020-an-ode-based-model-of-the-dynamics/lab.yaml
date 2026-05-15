@@ -1,0 +1,92 @@
+schema_version: '2.0'
+title: Alharbi2020 - An ODE-based model of the dynamics of tumor cell progression
+  and its effects on normal cell growth and immune system functionality Lab
+description: This ordinary differential equation model of tumor cell growth, called
+  the normal-tumor-immune-unhealthy diet model (NTIUNHDM), is described by the publication:Alharbi,
+  S.A.; Rambely, A.S.'A New ODE-B. It can be used to explore immune response dynamics
+  and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.state
+  to:
+  - visualisation.immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model_state
+- from: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.summary
+  to:
+  - visualisation.immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model_summary
+- from: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.species_labels
+  to:
+  - visualisation.immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.initial_tumor_cells
+    label: Initial Tumor Cells
+    default: 1.0
+    units: native source value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML species
+      `Tumor_cells`.
+  - name: initial_immune_cells
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.initial_immune_cells
+    label: Initial Immune Cells
+    default: 1.22
+    units: native source value
+    description: Initial Immune Cells. Sets the initial value of bundled SBML species
+      `Immune_cells`.
+  - name: initial_normal_cells
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.initial_normal_cells
+    label: Initial Normal Cells
+    default: 1.0
+    units: native source value
+    description: Initial Normal Cells. Sets the initial value of bundled SBML species
+      `Normal_cells`.
+  - name: normal_cell_growth_rate
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.normal_cell_growth_rate
+    label: Normal Cell Growth Rate
+    default: 0.4312
+    units: native source value
+    description: Normal Cell Growth Rate. Sets bundled SBML parameter `r`.
+  - name: normal_cell_growth_rate_2
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.normal_cell_growth_rate_2
+    label: Normal Cell Growth Rate 2
+    default: 2.99e-06
+    units: native source value
+    description: Normal Cell Growth Rate 2. Sets bundled SBML parameter `beta_1`.
+  - name: normal_cell_death_inhibition_rate
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.normal_cell_death_inhibition_rate
+    label: Normal Cell Death Inhibition Rate
+    default: 0.9314
+    units: native source value
+    description: Normal Cell Death Inhibition Rate. Sets bundled SBML parameter `gamma`.
+  - name: tumor_cell_growth_rate
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.tumor_cell_growth_rate
+    label: Tumor Cell Growth Rate
+    default: 0.4426
+    units: native source value
+    description: Tumor Cell Growth Rate. Sets bundled SBML parameter `alpha_1`.
+  - name: tumor_cell_growth_rate_2
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.tumor_cell_growth_rate_2
+    label: Tumor Cell Growth Rate 2
+    default: 0.4
+    units: native source value
+    description: Tumor Cell Growth Rate 2. Sets bundled SBML parameter `alpha_2`.
+  outputs:
+  - name: tumor_cells
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.tumor_cells
+  - name: immune_cells
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.immune_cells
+  - name: normal_cells
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.normal_cells
+  - name: state
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.state
+  - name: summary
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.species_labels

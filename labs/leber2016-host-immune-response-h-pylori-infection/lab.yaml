@@ -1,0 +1,71 @@
+schema_version: '2.0'
+title: Leber2016 - Host immune response - H.pylori infection Lab
+description: The model is first model of tissue level cellular immune responses to
+  H. pylori in the publication, 'Modeling the role of lanthionine synthetase C-like
+  2 (LANCL2) in the modulation of immune responses.
+models:
+- alias: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.state
+  to:
+  - visualisation.immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model_state
+- from: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.summary
+  to:
+  - visualisation.immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model_summary
+- from: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.species_labels
+  to:
+  - visualisation.immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_interferon_gamma
+    maps_to: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.initial_interferon_gamma
+    label: Initial Interferon Gamma
+    default: 10000.0
+    units: native source value
+    description: Initial Interferon Gamma. Sets the initial value of bundled SBML
+      species `s142`.
+  - name: initial_unresolved_infection_observable_1
+    maps_to: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.initial_unresolved_infection_observable_1
+    label: Initial Unresolved Infection Observable 1
+    default: 100000000.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `s1`.
+  - name: initial_hplumdead
+    maps_to: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.initial_hplumdead
+    label: Initial Hplumdead
+    default: 0.0
+    units: native source value
+    description: Initial Hplumdead. Sets the initial value of bundled SBML species
+      `s47`.
+  - name: initial_tolb_signaling_component
+    maps_to: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.initial_tolb_signaling_component
+    label: Initial Tolb Signaling Component
+    default: 0.0
+    units: native source value
+    description: Initial Tolb Signaling Component. Sets the initial value of bundled
+      SBML species `s82`.
+  outputs:
+  - name: interferon_gamma
+    maps_to: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.interferon_gamma
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.unresolved_infection_observable_1
+  - name: hplumdead
+    maps_to: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.hplumdead
+  - name: tolb_signaling_component
+    maps_to: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.tolb_signaling_component
+  - name: total_t
+    maps_to: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.total_t
+  - name: state
+    maps_to: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.state
+  - name: summary
+    maps_to: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_leber2016_host_immune_response_h_pylori_infectio_model1611160002_model.species_labels

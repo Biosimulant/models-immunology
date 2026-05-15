@@ -1,0 +1,48 @@
+schema_version: '2.0'
+title: Macnamara2015/2 - virotherapy virus-free submodel Lab Visualisation
+description: Dedicated presentation model for Macnamara2015/2 - virotherapy virus-free
+  submodel Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Macnamara2015/2 - virotherapy virus-free submodel Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model
+      title: Macnamara2015/2 - virotherapy virus-free submodel
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: U
+        label: Unresolved Tumor Observable 1
+      - id: M
+        label: Unresolved Tumor Observable 2
+      - id: E
+        label: Unresolved Tumor Observable 3
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model_state
+    maps_to: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.state
+    description: Core state record.
+  - name: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model_summary
+    maps_to: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model_species_labels
+    maps_to: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.species_labels
+    description: Core source-label map.
+  outputs: []

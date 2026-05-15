@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Mol2013 - Immune Signal Transduction in Leishmaniasis
+description: Created by The MathWorks, Inc. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Milsee Mol
+- Milind S Patole
+- Shailza Singh
+upstream:
+  id: biomodels_ebi:BIOMD0000000477
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000477
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000477
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000477?filename=BIOMD0000000477_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.mol2013_immune_signal_transduction_in_leishmania_biomd0000000477_model:Mol2013ImmuneSignalTransductionInLeishmaniaBiomd0000000477Model
+  init_kwargs:
+    model_path: data/BIOMD0000000477.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_tumor_necrosis_factor
+    maps_to: mw4d2e70a7_f499_461d_ae18_bc53b365b091
+    label: Initial Tumor Necrosis Factor
+    default: 1.5
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Tumor Necrosis Factor. Sets the initial value of bundled
+      SBML species `mw4d2e70a7_f499_461d_ae18_bc53b365b091`.
+  - name: initial_tnf_receptor_1
+    maps_to: mw8cc67de0_64e6_428f_ab09_4c2825cc172c
+    label: Initial Tnf Receptor 1
+    default: 1.3
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Tnf Receptor 1. Sets the initial value of bundled SBML species
+      `mw8cc67de0_64e6_428f_ab09_4c2825cc172c`.
+  - name: initial_tradd_traf2_rip_complex
+    maps_to: mw6ee00a71_ab68_454b_b1cd_60c1ebd19cfa
+    label: Initial Tradd Traf2 Rip Complex
+    default: 1.3
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Tradd Traf2 Rip Complex. Sets the initial value of bundled
+      SBML species `mw6ee00a71_ab68_454b_b1cd_60c1ebd19cfa`.
+  - name: initial_unresolved_infection_observable_1
+    maps_to: mw2dc73059_a841_48d5_b4bd_3ac24d94c42e
+    label: Initial Unresolved Infection Observable 1
+    default: 0.8
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `mw2dc73059_a841_48d5_b4bd_3ac24d94c42e`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: mw136c8391_14f4_4a28_83a3_35cc74a2e040
+    label: Initial Unresolved Infection Observable 2
+    default: 1.5
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `mw136c8391_14f4_4a28_83a3_35cc74a2e040`.
+  outputs:
+  - name: tumor_necrosis_factor
+    maps_to: mw4d2e70a7_f499_461d_ae18_bc53b365b091
+    label: Tumor Necrosis Factor
+    description: Tumor Necrosis Factor. Maps to bundled source symbol `mw4d2e70a7_f499_461d_ae18_bc53b365b091`.
+  - name: tnf_receptor_1
+    maps_to: mw8cc67de0_64e6_428f_ab09_4c2825cc172c
+    label: Tnf Receptor 1
+    description: Tnf Receptor 1. Maps to bundled source symbol `mw8cc67de0_64e6_428f_ab09_4c2825cc172c`.
+  - name: tradd_traf2_rip_complex
+    maps_to: mw6ee00a71_ab68_454b_b1cd_60c1ebd19cfa
+    label: Tradd Traf2 Rip Complex
+    description: Tradd Traf2 Rip Complex. Maps to bundled source symbol `mw6ee00a71_ab68_454b_b1cd_60c1ebd19cfa`.
+  - name: unresolved_infection_observable_1
+    maps_to: mw2dc73059_a841_48d5_b4bd_3ac24d94c42e
+    label: Unresolved Infection Observable 1
+    description: Unresolved Infection Observable 1. Maps to bundled source symbol
+      `mw2dc73059_a841_48d5_b4bd_3ac24d94c42e`.
+  - name: unresolved_infection_observable_2
+    maps_to: mw136c8391_14f4_4a28_83a3_35cc74a2e040
+    label: Unresolved Infection Observable 2
+    description: Unresolved Infection Observable 2. Maps to bundled source symbol
+      `mw136c8391_14f4_4a28_83a3_35cc74a2e040`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

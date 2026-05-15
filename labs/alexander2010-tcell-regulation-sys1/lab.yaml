@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Alexander2010 Tcell Regulation Sys1 Lab
+description: 'This is system 1, the model with linear antigen uptake by pAPCs, described
+  in the article: Self-tolerance and Autoimmunity in a Regulatory T Cell Model. It
+  can be used to explore immune response dynamics and compare pathway-level behavior
+  across conditions.'
+models:
+- alias: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.state
+  to:
+  - visualisation.immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model_state
+- from: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.summary
+  to:
+  - visualisation.immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model_summary
+- from: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.species_labels
+  to:
+  - visualisation.immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_immune_observable_1
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.initial_unresolved_immune_observable_1
+    label: Initial Unresolved Immune Observable 1
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `A`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.initial_unresolved_immune_observable_2
+    label: Initial Unresolved Immune Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `R`.
+  - name: initial_unresolved_immune_observable_3
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.initial_unresolved_immune_observable_3
+    label: Initial Unresolved Immune Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 3. Sets the initial value of
+      bundled SBML species `E`.
+  - name: initial_unresolved_immune_observable_4
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.initial_unresolved_immune_observable_4
+    label: Initial Unresolved Immune Observable 4
+    default: 100000000.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 4. Sets the initial value of
+      bundled SBML species `G`.
+  - name: r2_self_antigen_release_triggered_by_e_rate
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.r2_self_antigen_release_triggered_by_e_rate
+    label: R2 Self Antigen Release Triggered By E Rate
+    default: 2000.0
+    units: per_day
+    description: R2 Self Antigen Release Triggered By E Rate. Sets bundled SBML parameter
+      `gamma`.
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.unresolved_immune_observable_1
+  - name: unresolved_immune_observable_2
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.unresolved_immune_observable_2
+  - name: unresolved_immune_observable_3
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.unresolved_immune_observable_3
+  - name: unresolved_immune_observable_4
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.unresolved_immune_observable_4
+  - name: unresolved_immune_observable_5
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.unresolved_immune_observable_5
+  - name: state
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.state
+  - name: summary
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.species_labels

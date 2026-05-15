@@ -1,0 +1,107 @@
+schema_version: '2.0'
+title: Ganguli2018-immuno regulatory mechanisms in tumor microenvironment Lab
+description: This model describes the concept of Cancer Stem Cells(CSC) differentiation
+  and tumor-immune interaction into a generic model that has been validated with known
+  experimental data. It can be used to explore immune response dynamics and compare
+  pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.state
+  to:
+  - visualisation.immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model_state
+- from: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.summary
+  to:
+  - visualisation.immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model_summary
+- from: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.species_labels
+  to:
+  - visualisation.immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_cancer_stem_cells_s
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.initial_cancer_stem_cells_s
+    label: Initial Cancer Stem Cells S
+    default: 1.0
+    units: native source value
+    description: Initial Cancer Stem Cells S. Sets the initial value of bundled SBML
+      species `Cancer_Stem_Cells_S`.
+  - name: initial_cancer_cells_c
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.initial_cancer_cells_c
+    label: Initial Cancer Cells C
+    default: 0.0
+    units: native source value
+    description: Initial Cancer Cells C. Sets the initial value of bundled SBML species
+      `Cancer_Cells_C`.
+  - name: initial_resistant_cancer_cells_c_r
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.initial_resistant_cancer_cells_c_r
+    label: Initial Resistant Cancer Cells C R
+    default: 0.0
+    units: native source value
+    description: Initial Resistant Cancer Cells C R. Sets the initial value of bundled
+      SBML species `Resistant_Cancer_Cells_C_R`.
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 85000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `M1_Tumor_Associated_Macrophages`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 15000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `M2_Tumor_Associated_Macrophages`.
+  - name: gompertzian_growth_of_cancer_cells_c_rate
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.gompertzian_growth_of_cancer_cells_c_rate
+    label: Gompertzian Growth Of Cancer Cells C Rate
+    default: 0.0001
+    units: native source value
+    description: Gompertzian Growth Of Cancer Cells C Rate. Sets bundled SBML parameter
+      `r_1`.
+  - name: gompertzian_growth_of_resistant_cancer_cells_cr_rate
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.gompertzian_growth_of_resistant_cancer_cells_cr_rate
+    label: Gompertzian Growth Of Resistant Cancer Cells Cr Rate
+    default: 1.0e-05
+    units: native source value
+    description: Gompertzian Growth Of Resistant Cancer Cells Cr Rate. Sets bundled
+      SBML parameter `r_2`.
+  - name: proliferation_on_cancer_cells_c_interleukin_10_rate
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.proliferation_on_cancer_cells_c_interleukin_10_rate
+    label: Proliferation On Cancer Cells C Interleukin 10 Rate
+    default: 2.0531
+    units: unit_2
+    description: Proliferation On Cancer Cells C Interleukin 10 Rate. Sets bundled
+      SBML parameter `k3`.
+  - name: proliferation_on_resistant_cancer_cells_cr_interleukin_10_rate
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.proliferation_on_resistant_cancer_cells_cr_interleukin_10_rate
+    label: Proliferation On Resistant Cancer Cells Cr Interleukin 10 Rate
+    default: 6.7979
+    units: unit_2
+    description: Proliferation On Resistant Cancer Cells Cr Interleukin 10 Rate. Sets
+      bundled SBML parameter `k5`.
+  outputs:
+  - name: cancer_stem_cells_s
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.cancer_stem_cells_s
+  - name: cancer_cells_c
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.cancer_cells_c
+  - name: resistant_cancer_cells_c_r
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.resistant_cancer_cells_c_r
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.unresolved_tumor_observable_2
+  - name: state
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.state
+  - name: summary
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model.species_labels

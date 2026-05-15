@@ -1,0 +1,46 @@
+schema_version: '2.0'
+title: Frascoli2014 - A dynamical model of tumour immunotherapy Lab Visualisation
+description: Dedicated presentation model for Frascoli2014 - A dynamical model of
+  tumour immunotherapy Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Frascoli2014 - A dynamical model of tumour immunotherapy Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model
+      title: Frascoli2014 - A dynamical model of tumour immunotherapy
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: V_Tumor_Volume
+        label: Tumor Volume
+      - id: C_Cytotoxic_T_Lymphocytes_Coverage
+        label: Cytotoxic T Lymphocytes Coverage
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model_state
+    maps_to: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.state
+    description: Core state record.
+  - name: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model_summary
+    maps_to: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model_species_labels
+    maps_to: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.species_labels
+    description: Core source-label map.
+  outputs: []

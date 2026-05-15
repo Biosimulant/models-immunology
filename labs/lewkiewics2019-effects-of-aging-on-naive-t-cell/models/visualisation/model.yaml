@@ -1,0 +1,47 @@
+schema_version: '2.0'
+title: Lewkiewics2019 - effects of aging on naive T cell populations and diversity
+  Lab Visualisation
+description: Dedicated presentation model for Lewkiewics2019 - effects of aging on
+  naive T cell populations and diversity Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Lewkiewics2019 - effects of aging on naive T cell populations and diversity
+      Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_lewkiewics2019_effects_of_aging_on_naive_t_cell_biomd0000000824_model
+      title: Lewkiewics2019 - effects of aging on naive T cell populations and diversity
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: N
+        label: Naive T Cells N
+      - id: myu
+        label: Unresolved Immune Observable 1
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_lewkiewics2019_effects_of_aging_on_naive_t_cell_biomd0000000824_model_state
+    maps_to: immunology_sbml_lewkiewics2019_effects_of_aging_on_naive_t_cell_biomd0000000824_model.state
+    description: Core state record.
+  - name: immunology_sbml_lewkiewics2019_effects_of_aging_on_naive_t_cell_biomd0000000824_model_summary
+    maps_to: immunology_sbml_lewkiewics2019_effects_of_aging_on_naive_t_cell_biomd0000000824_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_lewkiewics2019_effects_of_aging_on_naive_t_cell_biomd0000000824_model_species_labels
+    maps_to: immunology_sbml_lewkiewics2019_effects_of_aging_on_naive_t_cell_biomd0000000824_model.species_labels
+    description: Core source-label map.
+  outputs: []

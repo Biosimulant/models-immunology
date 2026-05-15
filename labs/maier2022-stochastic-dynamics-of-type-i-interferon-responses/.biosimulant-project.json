@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "fe273e2f-e277-4fb5-8bd4-85bc7594a13f",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "0b740fda-6868-4ba0-9111-e4e3779ccb9f",
+  "created_at": "2026-05-15T15:53:06.501360777+00:00",
+  "last_synced_at": "2026-05-15T19:04:04.837886+00:00",
+  "hub_manifest_hash": "299533849c5c0b10f7281b8f4203cc76973705f7412a8cc351a954c2e2ce895f",
+  "package_name": "maier2022-stochastic-dynamics-of-type-i-interferon-responses-lab"
+}

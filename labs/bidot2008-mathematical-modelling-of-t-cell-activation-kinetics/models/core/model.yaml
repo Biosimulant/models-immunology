@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Bidot2008 - Mathematical modelling of T cell activation kinetics
+description: Mathematical modeling representing Tcell actiavtion regualtion by TCR,
+  IL2 and other players. It can be used to explore immune response dynamics and compare
+  pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- C Bidot
+- F Gruy
+- C-S Haudin
+- F El Hentati
+- B Guy
+upstream:
+  id: biomodels_ebi:MODEL1910290003
+  source_db: biomodels_ebi
+  source_id: MODEL1910290003
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1910290003
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1910290003?filename=Bidot2008.xml
+  license: CC0
+biosim:
+  entrypoint: src.bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model:Bidot2008MathematicalModellingOfTCellActivModel1910290003Model
+  init_kwargs:
+    model_path: data/MODEL1910290003.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_cd4_cd8_binding_state
+    maps_to: CD4_8
+    label: Initial CD4 CD8 Binding State
+    default: 40000.0
+    units: native source value
+    description: Initial CD4 CD8 Binding State. Sets the initial value of bundled
+      SBML species `CD4_8`.
+  - name: initial_cd28_cd80_costimulation_complex
+    maps_to: CD28_CD80
+    label: Initial Cd28 Cd80 Costimulation Complex
+    default: 1.0
+    units: native source value
+    description: Initial Cd28 Cd80 Costimulation Complex. Sets the initial value of
+      bundled SBML species `CD28_CD80`.
+  - name: initial_tl_0
+    maps_to: TL_0
+    label: Initial Tl 0
+    default: 1.0
+    units: native source value
+    description: Initial Tl 0. Sets the initial value of bundled SBML species `TL_0`.
+  - name: initial_unresolved_immune_observable_1
+    maps_to: T_0
+    label: Initial Unresolved Immune Observable 1
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `T_0`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: T_i
+    label: Initial Unresolved Immune Observable 2
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `T_i`.
+  outputs:
+  - name: cd4_cd8_binding_state
+    maps_to: CD4_8
+    label: CD4 CD8 Binding State
+    description: CD4 CD8 Binding State. Maps to bundled source symbol `CD4_8`.
+  - name: cd28_cd80_costimulation_complex
+    maps_to: CD28_CD80
+    label: Cd28 Cd80 Costimulation Complex
+    description: Cd28 Cd80 Costimulation Complex. Maps to bundled source symbol `CD28_CD80`.
+  - name: tl_0
+    maps_to: TL_0
+    label: Tl 0
+    description: Tl 0. Maps to bundled source symbol `TL_0`.
+  - name: unresolved_immune_observable_1
+    maps_to: T_0
+    label: Unresolved Immune Observable 1
+    description: Unresolved Immune Observable 1. Maps to bundled source symbol `T_0`.
+  - name: unresolved_immune_observable_2
+    maps_to: T_i
+    label: Unresolved Immune Observable 2
+    description: Unresolved Immune Observable 2. Maps to bundled source symbol `T_i`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

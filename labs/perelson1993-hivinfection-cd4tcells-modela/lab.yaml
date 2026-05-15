@@ -1,0 +1,69 @@
+schema_version: '2.0'
+title: Perelson1993 - HIVinfection CD4Tcells ModelA Lab
+description: 'This a model from the article: Dynamics of HIV infection of CD4+ T cells.
+  It can be used to explore immune response dynamics and compare pathway-level behavior
+  across conditions.'
+models:
+- alias: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.state
+  to:
+  - visualisation.immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model_state
+- from: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.summary
+  to:
+  - visualisation.immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model_summary
+- from: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.species_labels
+  to:
+  - visualisation.immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_infection_observable_1
+    maps_to: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.initial_unresolved_infection_observable_1
+    label: Initial Unresolved Infection Observable 1
+    default: 1000.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `T`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.initial_unresolved_infection_observable_2
+    label: Initial Unresolved Infection Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `T_1`.
+  - name: initial_unresolved_infection_observable_3
+    maps_to: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.initial_unresolved_infection_observable_3
+    label: Initial Unresolved Infection Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 3. Sets the initial value
+      of bundled SBML species `T_2`.
+  - name: initial_unresolved_infection_observable_4
+    maps_to: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.initial_unresolved_infection_observable_4
+    label: Initial Unresolved Infection Observable 4
+    default: 0.001
+    units: native source value
+    description: Initial Unresolved Infection Observable 4. Sets the initial value
+      of bundled SBML species `V`.
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.unresolved_infection_observable_1
+  - name: unresolved_infection_observable_2
+    maps_to: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.unresolved_infection_observable_2
+  - name: unresolved_infection_observable_3
+    maps_to: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.unresolved_infection_observable_3
+  - name: unresolved_infection_observable_4
+    maps_to: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.unresolved_infection_observable_4
+  - name: state
+    maps_to: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.state
+  - name: summary
+    maps_to: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_perelson1993_hivinfection_cd4tcells_modela_biomd0000000874_model.species_labels

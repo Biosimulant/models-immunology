@@ -1,0 +1,69 @@
+schema_version: '2.0'
+title: Liu2017 - chemotherapy targeted model of tumor immune system Lab
+description: Its a mathematical model reflecting chemotherapy response in tumor immune
+  interaction system. Model encoded by Sarubini Kananathan and annotated+submitted
+  to Biomodels by Krishna Tiwari.
+models:
+- alias: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.state
+  to:
+  - visualisation.immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model_state
+- from: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.summary
+  to:
+  - visualisation.immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model_summary
+- from: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.species_labels
+  to:
+  - visualisation.immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_effector_immune_cell_population_n
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.initial_effector_immune_cell_population_n
+    label: Initial Effector Immune Cell Population N
+    default: 300000.0
+    units: native source value
+    description: Initial Effector Immune Cell Population N. Sets the initial value
+      of bundled SBML species `Effector_immune_cell_population__N`.
+  - name: initial_tumor_cell_population_t
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.initial_tumor_cell_population_t
+    label: Initial Tumor Cell Population T
+    default: 10000000.0
+    units: native source value
+    description: Initial Tumor Cell Population T. Sets the initial value of bundled
+      SBML species `Tumor_Cell_Population__T`.
+  - name: initial_chemotherapeutic_drug_concentration_m
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.initial_chemotherapeutic_drug_concentration_m
+    label: Initial Chemotherapeutic Drug Concentration M
+    default: 0.45
+    units: native source value
+    description: Initial Chemotherapeutic Drug Concentration M. Sets the initial value
+      of bundled SBML species `Chemotherapeutic_drug_concentration__M`.
+  - name: initial_circulating_lymphocyte_population_c
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.initial_circulating_lymphocyte_population_c
+    label: Initial Circulating Lymphocyte Population C
+    default: 62500000000.0
+    units: native source value
+    description: Initial Circulating Lymphocyte Population C. Sets the initial value
+      of bundled SBML species `Circulating_lymphocyte_population__C`.
+  outputs:
+  - name: effector_immune_cell_population_n
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.effector_immune_cell_population_n
+  - name: tumor_cell_population_t
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.tumor_cell_population_t
+  - name: chemotherapeutic_drug_concentration_m
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.chemotherapeutic_drug_concentration_m
+  - name: circulating_lymphocyte_population_c
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.circulating_lymphocyte_population_c
+  - name: state
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.state
+  - name: summary
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.species_labels

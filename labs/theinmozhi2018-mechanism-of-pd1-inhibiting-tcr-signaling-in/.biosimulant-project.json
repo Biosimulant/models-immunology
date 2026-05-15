@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "6b70b9a0-612c-4270-9e72-cd0a7a3a9f55",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "5b269404-c69a-49f2-8cbf-770e489a6b71",
+  "created_at": "2026-05-15T15:53:07.456621558+00:00",
+  "last_synced_at": "2026-05-15T20:13:15.889655+00:00",
+  "hub_manifest_hash": "036f72599d23d4d9ca6d66ec6b38f26622de7c490927314d9003d5dde5f9a2da",
+  "package_name": "theinmozhi2018-mechanism-of-pd1-inhibiting-tcr-signaling-in-tumo"
+}

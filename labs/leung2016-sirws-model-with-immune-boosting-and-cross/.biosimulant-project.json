@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "5f1d8cdf-3ada-49a4-b58f-95660a94b1ac",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "a375779c-1eae-493d-a1c6-f8712ba571f3",
+  "created_at": "2026-05-15T15:53:06.338833861+00:00",
+  "last_synced_at": "2026-05-15T19:52:55.316520+00:00",
+  "hub_manifest_hash": "7d94fb0f8ad92af3b835d8795936b177ff52db8e64711d5ca201a1fcf1e52e18",
+  "package_name": "leung2016-sirws-model-with-immune-boosting-and-cross-immunity-be"
+}

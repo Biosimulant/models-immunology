@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Almuallem2020 - Virus-macrophage-tumour interactions in oncolytic viral therapies
+  Lab Visualisation
+description: Dedicated presentation model for Almuallem2020 - Virus-macrophage-tumour
+  interactions in oncolytic viral therapies Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Almuallem2020 - Virus-macrophage-tumour interactions in oncolytic viral
+      therapies Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model
+      title: Almuallem2020 - Virus-macrophage-tumour interactions in oncolytic viral
+        therapies
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: Infected_tumour_cells
+        label: Infected Tumour Cells
+      - id: Uninfected_tumour_cells
+        label: Uninfected Tumour Cells
+      - id: Oncolytic_viruses
+        label: Oncolytic Viruses
+      - id: M1_macrophages
+        label: Unresolved Tumor Observable 1
+      - id: Uninfected_M2_macrophages
+        label: Uninfected M2 Macrophages
+      - id: Infected_M2_macrophages
+        label: Infected_M2_macrophages
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model_state
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.state
+    description: Core state record.
+  - name: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model_summary
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model_species_labels
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.species_labels
+    description: Core source-label map.
+  outputs: []

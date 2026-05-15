@@ -1,0 +1,55 @@
+schema_version: '2.0'
+title: Sontag2017 - Dynamic model of immune responses to antigen presentation by tumor
+  or pathogen Lab
+description: This model of the immune system response to antigen presentation is based
+  on the publication:Eduardo D.Sontag (2017) 'A Dynamic Model of Immune Responses
+  to Antigen Presentation Predicts Different Reg. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.state
+  to:
+  - visualisation.immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model_state
+- from: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.summary
+  to:
+  - visualisation.immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model_summary
+- from: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.species_labels
+  to:
+  - visualisation.immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_regulatory_cells
+    maps_to: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.initial_regulatory_cells
+    label: Initial Regulatory Cells
+    default: 1.0
+    units: native source value
+    description: Initial Regulatory Cells. Sets the initial value of bundled SBML
+      species `Regulatory_cells`.
+  - name: initial_effector_cells
+    maps_to: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.initial_effector_cells
+    label: Initial Effector Cells
+    default: 1.0
+    units: native source value
+    description: Initial Effector Cells. Sets the initial value of bundled SBML species
+      `Effector_cells`.
+  outputs:
+  - name: antigen_expressing_cells
+    maps_to: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.antigen_expressing_cells
+  - name: regulatory_cells
+    maps_to: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.regulatory_cells
+  - name: effector_cells
+    maps_to: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.effector_cells
+  - name: state
+    maps_to: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.state
+  - name: summary
+    maps_to: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.species_labels

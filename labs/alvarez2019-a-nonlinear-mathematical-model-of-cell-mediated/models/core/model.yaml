@@ -1,0 +1,109 @@
+schema_version: '2.0'
+title: Alvarez2019 - A nonlinear mathematical model of cell-mediated immune response
+  for tumor phenotypic heterogeneity
+description: This is a non-linear mathematical model of cancer immunosurveillance
+  that takes into account intratumoral phenotypic heterogeneity, such as differential
+  expression of cell surface receptors and growth. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Robinson F Alvarez
+- "Jos\xE9 A M Barbuto"
+- Roberto Venegeroles
+upstream:
+  id: biomodels_ebi:BIOMD0000000790
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000790
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000790
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000790?filename=Alvarez2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.alvarez2019_a_nonlinear_mathematical_model_of_ce_biomd0000000790_model:Alvarez2019ANonlinearMathematicalModelOfCeBiomd0000000790Model
+  init_kwargs:
+    model_path: data/BIOMD0000000790.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: T_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 80000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T_1`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: T_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 20000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `T_2`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: E_1_Innate
+    label: Initial Unresolved Tumor Observable 3
+    default: 10500000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `E_1_Innate`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: E_2_Adaptive
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `E_2_Adaptive`.
+  - name: tumor_killing_t1_e2_rate
+    maps_to: beta
+    label: Tumor Killing T1 E2 Rate
+    default: 1.101e-10
+    units: native source value
+    description: Tumor Killing T1 E2 Rate. Sets bundled SBML parameter `beta`.
+  - name: e1_death_rate
+    maps_to: c_2
+    label: E1 Death Rate
+    default: 0.0412
+    units: native source value
+    description: E1 Death Rate. Sets bundled SBML parameter `c_2`.
+  - name: e2_death_rate
+    maps_to: d_3
+    label: E2 Death Rate
+    default: 0.02
+    units: native source value
+    description: E2 Death Rate. Sets bundled SBML parameter `d_3`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: T_1
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `T_1`.
+  - name: unresolved_tumor_observable_2
+    maps_to: T_2
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `T_2`.
+  - name: unresolved_tumor_observable_3
+    maps_to: E_1_Innate
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `E_1_Innate`.
+  - name: unresolved_tumor_observable_4
+    maps_to: E_2_Adaptive
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `E_2_Adaptive`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: den Breems2015 - macrophage in cancer Lab
+description: 'The paper describes a model of re-polarisation of M2 and M1 macrophages
+  and its role on cancer outcomes. Created by COPASI 4.25 (Build 207) This model is
+  described in the article: The re-polarisation.'
+models:
+- alias: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.state
+  to:
+  - visualisation.immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model_state
+- from: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.summary
+  to:
+  - visualisation.immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model_summary
+- from: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.species_labels
+  to:
+  - visualisation.immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 1000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `Tn`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 1000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `Ts`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 100.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `M1`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 100.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `M2`.
+  - name: initial_unresolved_tumor_observable_5
+    maps_to: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.initial_unresolved_tumor_observable_5
+    label: Initial Unresolved Tumor Observable 5
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 5. Sets the initial value of
+      bundled SBML species `Th1`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.unresolved_tumor_observable_4
+  - name: unresolved_tumor_observable_5
+    maps_to: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.unresolved_tumor_observable_5
+  - name: state
+    maps_to: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.state
+  - name: summary
+    maps_to: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_den_breems2015_macrophage_in_cancer_biomd0000000759_model.species_labels

@@ -1,0 +1,69 @@
+schema_version: '2.0'
+title: Owen1998 - Tumour treatment model
+description: 'Owen1998 - tumour treatment model This model is described in the article:
+  Modelling the macrophage invasion of tumours: effects on growth and composition.
+  It can be used to explore immune response dynamics and compare pathway-level behavior
+  across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- M R Owen
+- J A Sherratt
+upstream:
+  id: biomodels_ebi:BIOMD0000000650
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000650
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000650
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000650?filename=BIOMD0000000650_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.owen1998_tumour_treatment_model_biomd0000000650_model:Owen1998TumourTreatmentModelBiomd0000000650Model
+  init_kwargs:
+    model_path: data/BIOMD0000000650.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: treatment_start_parameter
+    maps_to: treatment_start
+    label: Treatment Start Parameter
+    default: 10.0
+    units: native source value
+    description: Treatment Start Parameter. Sets bundled SBML parameter `treatment_start`.
+  - name: treatment_end_parameter
+    maps_to: treatment_end
+    label: Treatment End Parameter
+    default: 400.0
+    units: native source value
+    description: Treatment End Parameter. Sets bundled SBML parameter `treatment_end`.
+  outputs:
+  - name: macrophage
+    maps_to: l
+    label: Macrophage
+    description: Macrophage. Maps to bundled source symbol `l`.
+  - name: mutated_cell
+    maps_to: m
+    label: Mutated Cell
+    description: Mutated Cell. Maps to bundled source symbol `m`.
+  - name: normal_cell
+    maps_to: n
+    label: Normal Cell
+    description: Normal Cell. Maps to bundled source symbol `n`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

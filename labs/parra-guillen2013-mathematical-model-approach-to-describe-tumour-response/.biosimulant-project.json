@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "81d6db0d-159a-417f-a95b-7d4475be18f4",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "dd34392e-45b9-4392-99fa-6b337e355619",
+  "created_at": "2026-05-15T15:53:06.958133439+00:00",
+  "last_synced_at": "2026-05-15T19:23:30.780795+00:00",
+  "hub_manifest_hash": "1b01a066903bc13ebbbda04af36419ceec0b68e6fa49d5b61641efb895811977",
+  "package_name": "parra-guillen2013-mathematical-model-approach-to-describe-tumour"
+}

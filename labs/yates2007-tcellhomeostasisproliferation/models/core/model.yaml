@@ -1,0 +1,60 @@
+schema_version: '2.0'
+title: Yates2007_TcellHomeostasisProliferation
+description: 'This a model from the article: Understanding the slow depletion of memory
+  CD4+ T cells in HIV infection. Yates A, Stark J, Klein N, Antia R, Callard R.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Andrew Yates
+- Jaroslav Stark
+- Nigel Klein
+- Rustom Antia
+- Robin Callard
+upstream:
+  id: biomodels_ebi:MODEL4028801312
+  source_db: biomodels_ebi
+  source_id: MODEL4028801312
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL4028801312
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL4028801312?filename=MODEL4028801312_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.yates2007_tcellhomeostasisproliferation_model4028801312_model:Yates2007TcellhomeostasisproliferationModel4028801312Model
+  init_kwargs:
+    model_path: data/MODEL4028801312.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs: []
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: x
+    label: Unresolved Infection Observable 1
+    description: Unresolved Infection Observable 1. Maps to bundled source symbol
+      `x`.
+  - name: unresolved_infection_observable_2
+    maps_to: y
+    label: Unresolved Infection Observable 2
+    description: Unresolved Infection Observable 2. Maps to bundled source symbol
+      `y`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.
+caveats: 'No scientifically safe input was exposed in this pass: the bundled SBML
+  did not provide a headline species initial value or meaningfully named constant/intervention
+  parameter that could be surfaced without turning raw source symbols into unsupported
+  biological claims.'

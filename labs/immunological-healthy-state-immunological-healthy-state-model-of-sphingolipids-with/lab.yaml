@@ -1,0 +1,66 @@
+schema_version: '2.0'
+title: Immunological Healthy State Model of Sphingolipids with IL-6/IL-17/IL-23 immune
+  axis in L.major infection Lab
+description: In Healthy State, we demonstrated the controlled expression of sphingolipids
+  and the controlled IL-6,IL-17,IL-23 cytokines signalling via SOCS3 mediated regulation.
+  It can be used to explore immune response dynamics and compare pathway-level behavior
+  across conditions.
+models:
+- alias: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.state
+  to:
+  - visualisation.immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model_state
+- from: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.summary
+  to:
+  - visualisation.immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model_summary
+- from: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.species_labels
+  to:
+  - visualisation.immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_lpg_toll_like_receptor_complex
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.initial_lpg_toll_like_receptor_complex
+    label: Initial Lpg Toll Like Receptor Complex
+    default: 1000.0
+    units: MWBUILTINUNIT_molecule
+    description: Initial Lpg Toll Like Receptor Complex. Sets the initial value of
+      bundled SBML species `mw3d4055f8_c490_4463_911f_eed820b1323c`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.initial_unresolved_infection_observable_2
+    label: Initial Unresolved Infection Observable 2
+    default: 3980.0
+    units: MWBUILTINUNIT_molecule
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `mwc4164d07_8269_4b39_b8af_6c1b22eee1ea`.
+  - name: initial_irak1_irak4_complex
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.initial_irak1_irak4_complex
+    label: Initial Irak1 Irak4 Complex
+    default: 2000.0
+    units: MWBUILTINUNIT_molecule
+    description: Initial Irak1 Irak4 Complex. Sets the initial value of bundled SBML
+      species `mw21d5a961_4d66_4509_88cd_c983fa74e314`.
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.unresolved_infection_observable_1
+  - name: toll_like_receptor
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.toll_like_receptor
+  - name: lpg_toll_like_receptor_complex
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.lpg_toll_like_receptor_complex
+  - name: unresolved_infection_observable_2
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.unresolved_infection_observable_2
+  - name: irak1_irak4_complex
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.irak1_irak4_complex
+  - name: state
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.state
+  - name: summary
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.species_labels

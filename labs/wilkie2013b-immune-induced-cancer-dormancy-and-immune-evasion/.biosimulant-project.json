@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "7354f2d8-e906-4c7f-a223-4fdc7466e3b9",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "b0a9f9a2-14e3-4216-a413-f539df063ec6",
+  "created_at": "2026-05-15T15:53:07.689189702+00:00",
+  "last_synced_at": "2026-05-15T20:21:29.650274+00:00",
+  "hub_manifest_hash": "e107e021d215196d158caf4acf7ef1e10666e66a93e2773fc7edc1df1bb681eb",
+  "package_name": "wilkie2013b-immune-induced-cancer-dormancy-and-immune-evasion-ba"
+}

@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Sumana2018 - Mathematical modeling of cancer-immune system, considering the
+  role of antibodies. Lab Visualisation
+description: Dedicated presentation model for Sumana2018 - Mathematical modeling of
+  cancer-immune system, considering the role of antibodies. Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Sumana2018 - Mathematical modeling of cancer-immune system, considering
+      the role of antibodies. Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model
+      title: Sumana2018 - Mathematical modeling of cancer-immune system, considering
+        the role of antibodies.
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: B
+        label: Unresolved Tumor Observable 1
+      - id: P
+        label: Unresolved Tumor Observable 2
+      - id: A
+        label: Unresolved Tumor Observable 3
+      - id: T
+        label: Unresolved Tumor Observable 4
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model_state
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.state
+    description: Core state record.
+  - name: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model_summary
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model_species_labels
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.species_labels
+    description: Core source-label map.
+  outputs: []

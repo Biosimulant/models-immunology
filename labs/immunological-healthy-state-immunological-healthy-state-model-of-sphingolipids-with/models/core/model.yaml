@@ -1,0 +1,91 @@
+schema_version: '2.0'
+title: Immunological Healthy State Model of Sphingolipids with IL-6/IL-17/IL-23 immune
+  axis in L.major infection
+description: In Healthy State, we demonstrated the controlled expression of sphingolipids
+  and the controlled IL-6,IL-17,IL-23 cytokines signalling via SOCS3 mediated regulation.
+  It can be used to explore immune response dynamics and compare pathway-level behavior
+  across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Diksha Jawale
+- Shweta Khandibharad
+- Shailza Singh
+upstream:
+  id: biomodels_ebi:MODEL2301110002
+  source_db: biomodels_ebi
+  source_id: MODEL2301110002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2301110002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2301110002?filename=Healthy
+    with Sensitivity.xml
+  license: CC0
+biosim:
+  entrypoint: src.immunological_healthy_state_model_of_sphingolipi_model2301110002_model:ImmunologicalHealthyStateModelOfSphingolipiModel2301110002Model
+  init_kwargs:
+    model_path: data/MODEL2301110002.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_lpg_toll_like_receptor_complex
+    maps_to: mw3d4055f8_c490_4463_911f_eed820b1323c
+    label: Initial Lpg Toll Like Receptor Complex
+    default: 1000.0
+    units: MWBUILTINUNIT_molecule
+    description: Initial Lpg Toll Like Receptor Complex. Sets the initial value of
+      bundled SBML species `mw3d4055f8_c490_4463_911f_eed820b1323c`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: mwc4164d07_8269_4b39_b8af_6c1b22eee1ea
+    label: Initial Unresolved Infection Observable 2
+    default: 3980.0
+    units: MWBUILTINUNIT_molecule
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `mwc4164d07_8269_4b39_b8af_6c1b22eee1ea`.
+  - name: initial_irak1_irak4_complex
+    maps_to: mw21d5a961_4d66_4509_88cd_c983fa74e314
+    label: Initial Irak1 Irak4 Complex
+    default: 2000.0
+    units: MWBUILTINUNIT_molecule
+    description: Initial Irak1 Irak4 Complex. Sets the initial value of bundled SBML
+      species `mw21d5a961_4d66_4509_88cd_c983fa74e314`.
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: mw9d20c481_4a3d_42a5_b526_167ce449298b
+    label: Unresolved Infection Observable 1
+    description: Unresolved Infection Observable 1. Maps to bundled source symbol
+      `mw9d20c481_4a3d_42a5_b526_167ce449298b`.
+  - name: toll_like_receptor
+    maps_to: mwc0182ee7_4ec3_4849_a8d5_601287219f3e
+    label: Toll Like Receptor
+    description: Toll Like Receptor. Maps to bundled source symbol `mwc0182ee7_4ec3_4849_a8d5_601287219f3e`.
+  - name: lpg_toll_like_receptor_complex
+    maps_to: mw3d4055f8_c490_4463_911f_eed820b1323c
+    label: Lpg Toll Like Receptor Complex
+    description: Lpg Toll Like Receptor Complex. Maps to bundled source symbol `mw3d4055f8_c490_4463_911f_eed820b1323c`.
+  - name: unresolved_infection_observable_2
+    maps_to: mwc4164d07_8269_4b39_b8af_6c1b22eee1ea
+    label: Unresolved Infection Observable 2
+    description: Unresolved Infection Observable 2. Maps to bundled source symbol
+      `mwc4164d07_8269_4b39_b8af_6c1b22eee1ea`.
+  - name: irak1_irak4_complex
+    maps_to: mw21d5a961_4d66_4509_88cd_c983fa74e314
+    label: Irak1 Irak4 Complex
+    description: Irak1 Irak4 Complex. Maps to bundled source symbol `mw21d5a961_4d66_4509_88cd_c983fa74e314`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

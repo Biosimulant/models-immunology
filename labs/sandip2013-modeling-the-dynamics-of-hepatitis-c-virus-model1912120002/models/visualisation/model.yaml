@@ -1,0 +1,54 @@
+schema_version: '2.0'
+title: 'Sandip2013 - Modeling the dynamics of hepatitis C virus with combined antiviral
+  drug therapy: interferon and ribavirin. Lab Visualisation'
+description: 'Dedicated presentation model for Sandip2013 - Modeling the dynamics
+  of hepatitis C virus with combined antiviral drug therapy: interferon and ribavirin.
+  Lab.'
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: 'Sandip2013 - Modeling the dynamics of hepatitis C virus with combined
+      antiviral drug therapy: interferon and ribavirin. Lab'
+    question: How do pathogen-associated states and immune response variables shift
+      during the simulated run?
+    answer_focus: pathogen load, infected-cell states, lymphocyte or cytokine response,
+      and dominant excursions
+    context: infection_immunity
+    sources:
+    - alias: immunology_sbml_sandip2013_modeling_the_dynamics_of_hepatitis_c_model1912120002_model
+      title: 'Sandip2013 - Modeling the dynamics of hepatitis C virus with combined
+        antiviral drug therapy: interferon and ribavirin.'
+      visual_scope: Pathogen and immune response
+      observables:
+      - id: T
+        label: Unresolved Infection Observable 1
+      - id: I
+        label: Unresolved Infection Observable 2
+      - id: VI
+        label: Unresolved Infection Observable 3
+      - id: VNI
+        label: Unresolved Infection Observable 4
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_sandip2013_modeling_the_dynamics_of_hepatitis_c_model1912120002_model_state
+    maps_to: immunology_sbml_sandip2013_modeling_the_dynamics_of_hepatitis_c_model1912120002_model.state
+    description: Core state record.
+  - name: immunology_sbml_sandip2013_modeling_the_dynamics_of_hepatitis_c_model1912120002_model_summary
+    maps_to: immunology_sbml_sandip2013_modeling_the_dynamics_of_hepatitis_c_model1912120002_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_sandip2013_modeling_the_dynamics_of_hepatitis_c_model1912120002_model_species_labels
+    maps_to: immunology_sbml_sandip2013_modeling_the_dynamics_of_hepatitis_c_model1912120002_model.species_labels
+    description: Core source-label map.
+  outputs: []

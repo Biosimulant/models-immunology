@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f7f176d0-132e-49ba-a8a0-00bd44055d62",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "a49ce951-6337-4b7c-b898-4ccd73c03700",
+  "created_at": "2026-05-15T15:53:06.725328371+00:00",
+  "last_synced_at": "2026-05-15T19:55:58.734004+00:00",
+  "hub_manifest_hash": "f8d8be4adeded40106da1520112b2b3f2569ca58e028765fc49bcd418a832014",
+  "package_name": "mol2013-leishmania-macrophage-signaling-network-lab"
+}

@@ -1,0 +1,108 @@
+schema_version: '2.0'
+title: Leung2016 - SIRWS model with immune boosting and cross-immunity between two
+  pathogens
+description: Immunology Leung2016Sirws Model With Immune Boosting And CModel1808280006Model
+  represents core biological mechanisms from biomodels_ebi reference biomodels_ebi:MODEL1808280006.
+  When you run it, you can inspect state and compare temporal behavior between baseline
+  and adjusted inputs.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Tiffany Leung
+- Hughes BD
+- Federico Frascoli
+- James M McCaw
+upstream:
+  id: biomodels_ebi:MODEL1808280006
+  source_db: biomodels_ebi
+  source_id: MODEL1808280006
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1808280006
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1808280006?filename=V4  Reactions.xml
+  license: CC0
+biosim:
+  entrypoint: src.leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model:Leung2016SirwsModelWithImmuneBoostingAndCModel1808280006Model
+  init_kwargs:
+    model_path: data/MODEL1808280006.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_signaling_observable_1
+    maps_to: X_SS
+    label: Initial Unresolved Signaling Observable 1
+    default: 0.058
+    units: native source value
+    description: Initial Unresolved Signaling Observable 1. Sets the initial value
+      of bundled SBML species `X_SS`.
+  - name: initial_unresolved_signaling_observable_2
+    maps_to: X_IS
+    label: Initial Unresolved Signaling Observable 2
+    default: 0.001
+    units: native source value
+    description: Initial Unresolved Signaling Observable 2. Sets the initial value
+      of bundled SBML species `X_IS`.
+  - name: initial_unresolved_signaling_observable_3
+    maps_to: X_RS
+    label: Initial Unresolved Signaling Observable 3
+    default: 0.41
+    units: native source value
+    description: Initial Unresolved Signaling Observable 3. Sets the initial value
+      of bundled SBML species `X_RS`.
+  - name: initial_unresolved_signaling_observable_4
+    maps_to: X_WS
+    label: Initial Unresolved Signaling Observable 4
+    default: 0.1
+    units: native source value
+    description: Initial Unresolved Signaling Observable 4. Sets the initial value
+      of bundled SBML species `X_WS`.
+  - name: initial_unresolved_signaling_observable_5
+    maps_to: X_SI
+    label: Initial Unresolved Signaling Observable 5
+    default: 0.001
+    units: native source value
+    description: Initial Unresolved Signaling Observable 5. Sets the initial value
+      of bundled SBML species `X_SI`.
+  outputs:
+  - name: unresolved_signaling_observable_1
+    maps_to: X_SS
+    label: Unresolved Signaling Observable 1
+    description: Unresolved Signaling Observable 1. Maps to bundled source symbol
+      `X_SS`.
+  - name: unresolved_signaling_observable_2
+    maps_to: X_IS
+    label: Unresolved Signaling Observable 2
+    description: Unresolved Signaling Observable 2. Maps to bundled source symbol
+      `X_IS`.
+  - name: unresolved_signaling_observable_3
+    maps_to: X_RS
+    label: Unresolved Signaling Observable 3
+    description: Unresolved Signaling Observable 3. Maps to bundled source symbol
+      `X_RS`.
+  - name: unresolved_signaling_observable_4
+    maps_to: X_WS
+    label: Unresolved Signaling Observable 4
+    description: Unresolved Signaling Observable 4. Maps to bundled source symbol
+      `X_WS`.
+  - name: unresolved_signaling_observable_5
+    maps_to: X_SI
+    label: Unresolved Signaling Observable 5
+    description: Unresolved Signaling Observable 5. Maps to bundled source symbol
+      `X_SI`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,92 @@
+schema_version: '2.0'
+title: Draghi2019 - Parameter identification of a model for prostate cancer treated
+  by intermittent therapy
+description: This is a mathematical describing the interaction between the prostate
+  adenocarcinoma tumor environment, the prostate specific antigen (PSA) produced by
+  hormone-dependent and hormone-independent tumor. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- "Cl\xE9ment Draghi"
+- Fabrice Denis
+- "Alain Tol\xE9dano"
+- Christophe Letellier
+upstream:
+  id: biomodels_ebi:MODEL1911100005
+  source_db: biomodels_ebi
+  source_id: MODEL1911100005
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1911100005
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911100005?filename=Draghi2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.draghi2019_parameter_identification_of_a_model_f_model1911100005_model:Draghi2019ParameterIdentificationOfAModelFModel1911100005Model
+  init_kwargs:
+    model_path: data/MODEL1911100005.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: p
+    label: Initial Unresolved Tumor Observable 1
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `p`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: a
+    label: Initial Unresolved Tumor Observable 2
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `a`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: t_d
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.1
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `t_d`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: t_i
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `t_i`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: p
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `p`.
+  - name: unresolved_tumor_observable_2
+    maps_to: a
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `a`.
+  - name: unresolved_tumor_observable_3
+    maps_to: t_d
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `t_d`.
+  - name: unresolved_tumor_observable_4
+    maps_to: t_i
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `t_i`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

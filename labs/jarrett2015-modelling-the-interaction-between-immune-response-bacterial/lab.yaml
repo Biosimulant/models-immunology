@@ -1,0 +1,71 @@
+schema_version: '2.0'
+title: Jarrett2015 - Modelling the interaction between immune response, bacterial
+  dynamics and inflammatory damage Lab
+description: Mathematical model of pro- and anti-inflammatory response, inflammation/damage
+  and infection dynamics in BALB/c mouse with Staphylococcal aureus infection. It
+  can be used to explore immune response dynamics and compare pathway-level behavior
+  across conditions.
+models:
+- alias: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.state
+  to:
+  - visualisation.immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model_state
+- from: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.summary
+  to:
+  - visualisation.immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model_summary
+- from: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.species_labels
+  to:
+  - visualisation.immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_bacterial_infection_b
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.initial_bacterial_infection_b
+    label: Initial Bacterial Infection B
+    default: 1.0
+    units: native source value
+    description: Initial Bacterial Infection B. Sets the initial value of bundled
+      SBML species `bacterial_infection__B`.
+  - name: initial_anti_inflammatory_a
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.initial_anti_inflammatory_a
+    label: Initial Anti Inflammatory A
+    default: 3.0
+    units: native source value
+    description: Initial Anti Inflammatory A. Sets the initial value of bundled SBML
+      species `anti_inflammatory__A`.
+  - name: initial_inflammation_i
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.initial_inflammation_i
+    label: Initial Inflammation I
+    default: 1.0
+    units: native source value
+    description: Initial Inflammation I. Sets the initial value of bundled SBML species
+      `inflammation__I`.
+  - name: initial_pro_inflammatory_p
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.initial_pro_inflammatory_p
+    label: Initial Pro Inflammatory P
+    default: 1.0
+    units: native source value
+    description: Initial Pro Inflammatory P. Sets the initial value of bundled SBML
+      species `pro_inflammatory__P`.
+  outputs:
+  - name: bacterial_infection_b
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.bacterial_infection_b
+  - name: anti_inflammatory_a
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.anti_inflammatory_a
+  - name: inflammation_i
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.inflammation_i
+  - name: pro_inflammatory_p
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.pro_inflammatory_p
+  - name: state
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.state
+  - name: summary
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.species_labels

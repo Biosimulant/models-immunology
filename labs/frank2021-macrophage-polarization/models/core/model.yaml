@@ -1,0 +1,71 @@
+schema_version: '2.0'
+title: Frank2021 - Macrophage polarization
+description: The model describes the mechanisms by which macrophages differentiate
+  into a given phenotype. The model shows that both extracellular and intracellular
+  signalling are both important for that process.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Frank AS
+- Larripa K
+- Ryu H
+- Snodgrass RG
+- "R\xF6blitz S"
+upstream:
+  id: biomodels_ebi:BIOMD0000001060
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001060
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001060
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001060?filename=Frank2021.xml
+  license: CC0
+biosim:
+  entrypoint: src.frank2021_macrophage_polarization_biomd0000001060_model:Frank2021MacrophagePolarizationBiomd0000001060Model
+  init_kwargs:
+    model_path: data/BIOMD0000001060.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_signaling_observable_1
+    maps_to: x1
+    label: Initial Unresolved Signaling Observable 1
+    default: 1.2
+    units: native source value
+    description: Initial Unresolved Signaling Observable 1. Sets the initial value
+      of bundled SBML species `x1`.
+  - name: initial_unresolved_signaling_observable_2
+    maps_to: x2
+    label: Initial Unresolved Signaling Observable 2
+    default: 2.0
+    units: native source value
+    description: Initial Unresolved Signaling Observable 2. Sets the initial value
+      of bundled SBML species `x2`.
+  outputs:
+  - name: unresolved_signaling_observable_1
+    maps_to: x1
+    label: Unresolved Signaling Observable 1
+    description: Unresolved Signaling Observable 1. Maps to bundled source symbol
+      `x1`.
+  - name: unresolved_signaling_observable_2
+    maps_to: x2
+    label: Unresolved Signaling Observable 2
+    description: Unresolved Signaling Observable 2. Maps to bundled source symbol
+      `x2`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

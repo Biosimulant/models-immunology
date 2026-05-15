@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: Creemers2021 - Tumor-immune dynamics and implications on immunotherapy responses
+  Lab
+description: This ordinary differential equation model simulating the mechanisms that
+  govern cancer-immune dynamics and their role in tumor responses to immunotherapy
+  is described by the publication:Creemers JHA,. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.state
+  to:
+  - visualisation.immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model_state
+- from: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.summary
+  to:
+  - visualisation.immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model_summary
+- from: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.species_labels
+  to:
+  - visualisation.immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_intratumoral_t_cells
+    maps_to: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.initial_intratumoral_t_cells
+    label: Initial Intratumoral T Cells
+    default: 0.0
+    units: native source value
+    description: Initial Intratumoral T Cells. Sets the initial value of bundled SBML
+      species `I`.
+  - name: initial_tumor_cells
+    maps_to: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.initial_tumor_cells
+    label: Initial Tumor Cells
+    default: 1.0
+    units: native source value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML species
+      `T`.
+  - name: initial_specific_t_cells
+    maps_to: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.initial_specific_t_cells
+    label: Initial Specific T Cells
+    default: 0.0
+    units: native source value
+    description: Initial Specific T Cells. Sets the initial value of bundled SBML
+      species `S`.
+  - name: initial_naive_t_cells
+    maps_to: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.initial_naive_t_cells
+    label: Initial Naive T Cells
+    default: 1000000.0
+    units: native source value
+    description: Initial Naive T Cells. Sets the initial value of bundled SBML species
+      `N`.
+  - name: intratumoral_t_cell_death_rate
+    maps_to: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.intratumoral_t_cell_death_rate
+    label: Intratumoral T Cell Death Rate
+    default: 0.019
+    units: native source value
+    description: Intratumoral T Cell Death Rate. Sets bundled SBML parameter `delta`.
+  outputs:
+  - name: intratumoral_t_cells
+    maps_to: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.intratumoral_t_cells
+  - name: tumor_cells
+    maps_to: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.tumor_cells
+  - name: specific_t_cells
+    maps_to: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.specific_t_cells
+  - name: naive_t_cells
+    maps_to: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.naive_t_cells
+  - name: state
+    maps_to: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.state
+  - name: summary
+    maps_to: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model.species_labels

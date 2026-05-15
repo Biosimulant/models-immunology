@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Schokker2013 - A mathematical model representing cellular immune development
+  and response to Salmonella of chicken intestinal tissue Lab Visualisation
+description: Dedicated presentation model for Schokker2013 - A mathematical model
+  representing cellular immune development and response to Salmonella of chicken intestinal
+  tissue Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Schokker2013 - A mathematical model representing cellular immune development
+      and response to Salmonella of chicken intestinal tissue Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model
+      title: Schokker2013 - A mathematical model representing cellular immune development
+        and response to Salmonella of chicken intestinal tissue
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: CD4
+        label: CD4
+      - id: CD8
+        label: CD8
+      - id: CD4rec
+        label: CD4 Receptor
+      - id: Mr
+        label: Unresolved Immune Observable 1
+      - id: Ma
+        label: Unresolved Immune Observable 2
+      - id: Mi
+        label: Mi
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model_state
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.state
+    description: Core state record.
+  - name: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model_summary
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model_species_labels
+    maps_to: immunology_sbml_schokker2013_a_mathematical_model_representing_c_biomd0000000895_model.species_labels
+    description: Core source-label map.
+  outputs: []

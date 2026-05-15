@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: "Mahasa2016-tumor\u2013immune surveillance Lab"
+description: We present a novel mathematical model involving various immune cell populations
+  and tumor cellpopulations. The model describes how tumor cells evolve and survive
+  the brief encounter with theimmune sys.
+models:
+- alias: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.state
+  to:
+  - visualisation.immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model_state
+- from: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.summary
+  to:
+  - visualisation.immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model_summary
+- from: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.species_labels
+  to:
+  - visualisation.immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 100000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `N`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 100.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `L`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 10000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `T0`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `TN1`.
+  - name: initial_unresolved_tumor_observable_5
+    maps_to: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.initial_unresolved_tumor_observable_5
+    label: Initial Unresolved Tumor Observable 5
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 5. Sets the initial value of
+      bundled SBML species `TL1`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.unresolved_tumor_observable_4
+  - name: unresolved_tumor_observable_5
+    maps_to: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.unresolved_tumor_observable_5
+  - name: state
+    maps_to: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.state
+  - name: summary
+    maps_to: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_mahasa2016_tumor_immune_surveillance_model2003040001_model.species_labels

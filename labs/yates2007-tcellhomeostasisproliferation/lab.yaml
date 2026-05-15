@@ -1,0 +1,40 @@
+schema_version: '2.0'
+title: Yates2007 TcellHomeostasisProliferation Lab
+description: 'This a model from the article: Understanding the slow depletion of memory
+  CD4+ T cells in HIV infection. Yates A, Stark J, Klein N, Antia R, Callard R.'
+models:
+- alias: immunology_sbml_yates2007_tcellhomeostasisproliferation_model4028801312_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_yates2007_tcellhomeostasisproliferation_model4028801312_model.state
+  to:
+  - visualisation.immunology_sbml_yates2007_tcellhomeostasisproliferation_model4028801312_model_state
+- from: immunology_sbml_yates2007_tcellhomeostasisproliferation_model4028801312_model.summary
+  to:
+  - visualisation.immunology_sbml_yates2007_tcellhomeostasisproliferation_model4028801312_model_summary
+- from: immunology_sbml_yates2007_tcellhomeostasisproliferation_model4028801312_model.species_labels
+  to:
+  - visualisation.immunology_sbml_yates2007_tcellhomeostasisproliferation_model4028801312_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_yates2007_tcellhomeostasisproliferation_model4028801312_model.unresolved_infection_observable_1
+  - name: unresolved_infection_observable_2
+    maps_to: immunology_sbml_yates2007_tcellhomeostasisproliferation_model4028801312_model.unresolved_infection_observable_2
+  - name: state
+    maps_to: immunology_sbml_yates2007_tcellhomeostasisproliferation_model4028801312_model.state
+  - name: summary
+    maps_to: immunology_sbml_yates2007_tcellhomeostasisproliferation_model4028801312_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_yates2007_tcellhomeostasisproliferation_model4028801312_model.species_labels
+caveats: 'No scientifically safe input was exposed in this pass: the bundled SBML
+  did not provide a headline species initial value or meaningfully named constant/intervention
+  parameter that could be surfaced without turning raw source symbols into unsupported
+  biological claims.'

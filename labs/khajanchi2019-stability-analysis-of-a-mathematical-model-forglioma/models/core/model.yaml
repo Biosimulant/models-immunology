@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Khajanchi2019 - Stability Analysis of a Mathematical Model forGlioma-Immune
+  Interaction under OptimalTherapy
+description: Stability Analysis of a Mathematical Model for Glioma-Immune Interaction
+  under Optimal TherapySubhas KhajanchiAbstractWe investigate a mathematical model
+  using a system of coupled ordinary differentia. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Subhas Khajanchi
+upstream:
+  id: biomodels_ebi:BIOMD0000000891
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000891
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000891
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000891?filename=Khajanchi2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.khajanchi2019_stability_analysis_of_a_mathematic_biomd0000000891_model:Khajanchi2019StabilityAnalysisOfAMathematicBiomd0000000891Model
+  init_kwargs:
+    model_path: data/BIOMD0000000891.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_immune_observable_1
+    maps_to: u
+    label: Initial Unresolved Immune Observable 1
+    default: 0.1
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `u`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: v
+    label: Initial Unresolved Immune Observable 2
+    default: 0.55
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `v`.
+  - name: initial_unresolved_immune_observable_3
+    maps_to: w
+    label: Initial Unresolved Immune Observable 3
+    default: 0.2
+    units: native source value
+    description: Initial Unresolved Immune Observable 3. Sets the initial value of
+      bundled SBML species `w`.
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: u
+    label: Unresolved Immune Observable 1
+    description: Unresolved Immune Observable 1. Maps to bundled source symbol `u`.
+  - name: unresolved_immune_observable_2
+    maps_to: v
+    label: Unresolved Immune Observable 2
+    description: Unresolved Immune Observable 2. Maps to bundled source symbol `v`.
+  - name: unresolved_immune_observable_3
+    maps_to: w
+    label: Unresolved Immune Observable 3
+    description: Unresolved Immune Observable 3. Maps to bundled source symbol `w`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

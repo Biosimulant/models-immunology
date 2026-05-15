@@ -1,0 +1,63 @@
+schema_version: '2.0'
+title: Nowak1996_HostResponse_InfectiousAgents
+description: 'This a model from the article: Population dynamics of immune responses
+  to persistent viruses. It can be used to explore immune response dynamics and compare
+  pathway-level behavior across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- M A Nowak
+- C R Bangham
+upstream:
+  id: biomodels_ebi:MODEL1006230050
+  source_db: biomodels_ebi
+  source_id: MODEL1006230050
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1006230050
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1006230050?filename=MODEL1006230050_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.nowak1996_hostresponse_infectiousagents_model1006230050_model:Nowak1996HostresponseInfectiousagentsModel1006230050Model
+  init_kwargs:
+    model_path: data/MODEL1006230050.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs: []
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: x
+    label: Unresolved Infection Observable 1
+    description: Unresolved Infection Observable 1. Maps to bundled source symbol
+      `x`.
+  - name: unresolved_infection_observable_2
+    maps_to: y
+    label: Unresolved Infection Observable 2
+    description: Unresolved Infection Observable 2. Maps to bundled source symbol
+      `y`.
+  - name: unresolved_infection_observable_3
+    maps_to: v
+    label: Unresolved Infection Observable 3
+    description: Unresolved Infection Observable 3. Maps to bundled source symbol
+      `v`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.
+caveats: 'No scientifically safe input was exposed in this pass: the bundled SBML
+  did not provide a headline species initial value or meaningfully named constant/intervention
+  parameter that could be surfaced without turning raw source symbols into unsupported
+  biological claims.'

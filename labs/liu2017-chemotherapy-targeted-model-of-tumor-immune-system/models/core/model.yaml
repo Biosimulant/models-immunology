@@ -1,0 +1,91 @@
+schema_version: '2.0'
+title: Liu2017 - chemotherapy targeted model of tumor immune system
+description: Its a mathematical model reflecting chemotherapy response in tumor immune
+  interaction system. Model encoded by Sarubini Kananathan and annotated+submitted
+  to Biomodels by Krishna Tiwari.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Peng Liu
+- Xijun Liu
+upstream:
+  id: biomodels_ebi:BIOMD0000000930
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000930
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000930
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000930?filename=Liu2017.xml
+  license: CC0
+biosim:
+  entrypoint: src.liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model:Liu2017ChemotherapyTargetedModelOfTumorImmBiomd0000000930Model
+  init_kwargs:
+    model_path: data/BIOMD0000000930.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_effector_immune_cell_population_n
+    maps_to: Effector_immune_cell_population__N
+    label: Initial Effector Immune Cell Population N
+    default: 300000.0
+    units: native source value
+    description: Initial Effector Immune Cell Population N. Sets the initial value
+      of bundled SBML species `Effector_immune_cell_population__N`.
+  - name: initial_tumor_cell_population_t
+    maps_to: Tumor_Cell_Population__T
+    label: Initial Tumor Cell Population T
+    default: 10000000.0
+    units: native source value
+    description: Initial Tumor Cell Population T. Sets the initial value of bundled
+      SBML species `Tumor_Cell_Population__T`.
+  - name: initial_chemotherapeutic_drug_concentration_m
+    maps_to: Chemotherapeutic_drug_concentration__M
+    label: Initial Chemotherapeutic Drug Concentration M
+    default: 0.45
+    units: native source value
+    description: Initial Chemotherapeutic Drug Concentration M. Sets the initial value
+      of bundled SBML species `Chemotherapeutic_drug_concentration__M`.
+  - name: initial_circulating_lymphocyte_population_c
+    maps_to: Circulating_lymphocyte_population__C
+    label: Initial Circulating Lymphocyte Population C
+    default: 62500000000.0
+    units: native source value
+    description: Initial Circulating Lymphocyte Population C. Sets the initial value
+      of bundled SBML species `Circulating_lymphocyte_population__C`.
+  outputs:
+  - name: effector_immune_cell_population_n
+    maps_to: Effector_immune_cell_population__N
+    label: Effector Immune Cell Population N
+    description: Effector Immune Cell Population N. Maps to bundled source symbol
+      `Effector_immune_cell_population__N`.
+  - name: tumor_cell_population_t
+    maps_to: Tumor_Cell_Population__T
+    label: Tumor Cell Population T
+    description: Tumor Cell Population T. Maps to bundled source symbol `Tumor_Cell_Population__T`.
+  - name: chemotherapeutic_drug_concentration_m
+    maps_to: Chemotherapeutic_drug_concentration__M
+    label: Chemotherapeutic Drug Concentration M
+    description: Chemotherapeutic Drug Concentration M. Maps to bundled source symbol
+      `Chemotherapeutic_drug_concentration__M`.
+  - name: circulating_lymphocyte_population_c
+    maps_to: Circulating_lymphocyte_population__C
+    label: Circulating Lymphocyte Population C
+    description: Circulating Lymphocyte Population C. Maps to bundled source symbol
+      `Circulating_lymphocyte_population__C`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

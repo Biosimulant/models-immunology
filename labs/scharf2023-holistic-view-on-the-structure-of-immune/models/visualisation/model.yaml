@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: 'Scharf2023 - Holistic View on the Structure of Immune Response: Petri Net
+  Model Lab Visualisation'
+description: 'Dedicated presentation model for Scharf2023 - Holistic View on the Structure
+  of Immune Response: Petri Net Model Lab.'
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: 'Scharf2023 - Holistic View on the Structure of Immune Response: Petri
+      Net Model Lab'
+    question: Which signaling or cytokine states show the strongest activity during
+      the simulation?
+    answer_focus: cytokine/signaling trajectories, activation states, and largest
+      excursions
+    context: immune_signaling
+    sources:
+    - alias: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model
+      title: 'Scharf2023 - Holistic View on the Structure of Immune Response: Petri
+        Net Model'
+      visual_scope: Immune signaling activity
+      observables:
+      - id: P3
+        label: T Bl
+      - id: P4
+        label: Unresolved Signaling Observable 1
+      - id: P7
+        label: Unresolved Signaling Observable 2
+      - id: P8
+        label: T Tz
+      - id: P137
+        label: Unresolved Immune Observable 1
+      - id: P10
+        label: B_GC
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model_state
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.state
+    description: Core state record.
+  - name: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model_summary
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model_species_labels
+    maps_to: immunology_sbml_scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model.species_labels
+    description: Core source-label map.
+  outputs: []

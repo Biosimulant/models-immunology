@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Figueredo2013/3 - immunointeraction full model Lab
+description: 'The paper describes a full model of immune-itumor interaction.Created
+  by COPASI 4.25 (Build 207) This model is described in the article: Investigating
+  mathematical models of immuno-interactions with e. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.'
+models:
+- alias: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.state
+  to:
+  - visualisation.immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model_state
+- from: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.summary
+  to:
+  - visualisation.immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model_summary
+- from: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.species_labels
+  to:
+  - visualisation.immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 1.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 1.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `E`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 10.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `I`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `S`.
+  - name: tumor_death_rate
+    maps_to: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.tumor_death_rate
+    label: Tumor Death Rate
+    default: 10000000000.0
+    units: unit_0
+    description: Tumor Death Rate. Sets bundled SBML parameter `k`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.unresolved_tumor_observable_4
+  - name: state
+    maps_to: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.state
+  - name: summary
+    maps_to: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_figueredo2013_3_immunointeraction_full_model_biomd0000000756_model.species_labels

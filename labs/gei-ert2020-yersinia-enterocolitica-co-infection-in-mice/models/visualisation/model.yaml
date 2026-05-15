@@ -1,0 +1,54 @@
+schema_version: '2.0'
+title: "Gei\xDFert2020 - Yersinia enterocolitica co-infection in mice Lab Visualisation"
+description: "Dedicated presentation model for Gei\xDFert2020 - Yersinia enterocolitica\
+  \ co-infection in mice Lab."
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: "Gei\xDFert2020 - Yersinia enterocolitica co-infection in mice Lab"
+    question: How do pathogen-associated states and immune response variables shift
+      during the simulated run?
+    answer_focus: pathogen load, infected-cell states, lymphocyte or cytokine response,
+      and dominant excursions
+    context: infection_immunity
+    sources:
+    - alias: immunology_sbml_gei_ert2020_yersinia_enterocolitica_co_infection_model2002070001_model
+      title: "Gei\xDFert2020 - Yersinia enterocolitica co-infection in mice"
+      visual_scope: Pathogen and immune response
+      observables:
+      - id: x1
+        label: Commensal Bacteria In Mucosa
+      - id: x4
+        label: Commensal Bacteria In Lumen
+      - id: x2
+        label: Wild Type Yersinia Enterocolitica In Mucosa
+      - id: x3
+        label: Mutant Yersinia Enterocolitica In Mucosa
+      - id: x5
+        label: Wild Type Yersinia Enterocolitica In Lumen
+      - id: x6
+        label: Mutant Yersnia enterocolitica in lumen
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_gei_ert2020_yersinia_enterocolitica_co_infection_model2002070001_model_state
+    maps_to: immunology_sbml_gei_ert2020_yersinia_enterocolitica_co_infection_model2002070001_model.state
+    description: Core state record.
+  - name: immunology_sbml_gei_ert2020_yersinia_enterocolitica_co_infection_model2002070001_model_summary
+    maps_to: immunology_sbml_gei_ert2020_yersinia_enterocolitica_co_infection_model2002070001_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_gei_ert2020_yersinia_enterocolitica_co_infection_model2002070001_model_species_labels
+    maps_to: immunology_sbml_gei_ert2020_yersinia_enterocolitica_co_infection_model2002070001_model.species_labels
+    description: Core source-label map.
+  outputs: []

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "b9ac0f04-57e7-4743-be55-a15aba84fc8c",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "08fe84fe-2807-4895-b43a-d58589523864",
+  "created_at": "2026-05-15T15:53:05.625337082+00:00",
+  "last_synced_at": "2026-05-15T19:41:02.221493+00:00",
+  "hub_manifest_hash": "77b2e4e24a77de25ad355c2b219e4418f3c693afaa38e0db7374e5721bc4b5e0",
+  "package_name": "gallaher2018-tumor-immune-dynamics-in-multiple-myeloma-lab"
+}

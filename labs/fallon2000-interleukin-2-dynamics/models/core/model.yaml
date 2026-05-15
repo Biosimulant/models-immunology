@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Fallon2000 - Interleukin-2 dynamics
+description: 'This a model from the article: Computational model for effects of ligand/receptor
+  binding properties oninterleukin-2 trafficking dynamics and T cell proliferation
+  response. It can be used to explore immune response dynamics and compare pathway-level
+  behavior across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- E M Fallon
+- D A Lauffenburger
+upstream:
+  id: biomodels_ebi:BIOMD0000000665
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000665
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000665
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000665?filename=BIOMD0000000665_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.fallon2000_interleukin_2_dynamics_biomd0000000665_model:Fallon2000Interleukin2DynamicsBiomd0000000665Model
+  init_kwargs:
+    model_path: data/BIOMD0000000665.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_rs_0
+    maps_to: Rs_0
+    label: Initial Rs 0
+    default: 1500.0
+    units: native source value
+    description: Initial Rs 0. Sets the initial value of bundled SBML species `Rs_0`.
+  - name: initial_cs_0
+    maps_to: Cs_0
+    label: Initial Cs 0
+    default: 1.0
+    units: native source value
+    description: Initial Cs 0. Sets the initial value of bundled SBML species `Cs_0`.
+  - name: initial_ri_0
+    maps_to: Ri_0
+    label: Initial Ri 0
+    default: 300.0
+    units: native source value
+    description: Initial Ri 0. Sets the initial value of bundled SBML species `Ri_0`.
+  - name: initial_ci_0
+    maps_to: Ci_0
+    label: Initial Ci 0
+    default: 1.0
+    units: native source value
+    description: Initial Ci 0. Sets the initial value of bundled SBML species `Ci_0`.
+  - name: initial_li_0
+    maps_to: Li_0
+    label: Initial Li 0
+    default: 0.01
+    units: native source value
+    description: Initial Li 0. Sets the initial value of bundled SBML species `Li_0`.
+  outputs:
+  - name: rs_0
+    maps_to: Rs_0
+    label: Rs 0
+    description: Rs 0. Maps to bundled source symbol `Rs_0`.
+  - name: cs_0
+    maps_to: Cs_0
+    label: Cs 0
+    description: Cs 0. Maps to bundled source symbol `Cs_0`.
+  - name: ri_0
+    maps_to: Ri_0
+    label: Ri 0
+    description: Ri 0. Maps to bundled source symbol `Ri_0`.
+  - name: ci_0
+    maps_to: Ci_0
+    label: Ci 0
+    description: Ci 0. Maps to bundled source symbol `Ci_0`.
+  - name: li_0
+    maps_to: Li_0
+    label: Li 0
+    description: Li 0. Maps to bundled source symbol `Li_0`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Miao2014 - Dynamics and migratory pathways of virus-specific antibody-secreting
+  cell populations Lab Visualisation
+description: Dedicated presentation model for Miao2014 - Dynamics and migratory pathways
+  of virus-specific antibody-secreting cell populations Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Miao2014 - Dynamics and migratory pathways of virus-specific antibody-secreting
+      cell populations Lab
+    question: How do pathogen-associated states and immune response variables shift
+      during the simulated run?
+    answer_focus: pathogen load, infected-cell states, lymphocyte or cytokine response,
+      and dominant excursions
+    context: infection_immunity
+    sources:
+    - alias: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model
+      title: Miao2014 - Dynamics and migratory pathways of virus-specific antibody-secreting
+        cell populations
+      visual_scope: Pathogen and immune response
+      observables:
+      - id: s1
+        label: Cell Spleen
+      - id: s2
+        label: Cell Mln
+      - id: s3
+        label: Cell Lung
+      - id: s4
+        label: Unresolved Infection Observable 1
+      - id: s5
+        label: Unresolved Infection Observable 2
+      - id: s6
+        label: s6
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model_state
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.state
+    description: Core state record.
+  - name: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model_summary
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model_species_labels
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.species_labels
+    description: Core source-label map.
+  outputs: []

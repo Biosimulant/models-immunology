@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Aavani2019 - The role of CD4 T cells in immune system activation and viral
+  reproduction in a simple model for HIV infection Lab
+description: This is a mathematical model comprised of a simple system of four ordinary
+  differential equations that account for the two opposing roles of infected and healthy
+  cytotoxic T lymphocytes within the con. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.state
+  to:
+  - visualisation.immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model_state
+- from: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.summary
+  to:
+  - visualisation.immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model_summary
+- from: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.species_labels
+  to:
+  - visualisation.immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_uninfected_cd4_t_cells
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.initial_uninfected_cd4_t_cells
+    label: Initial Uninfected CD4 T Cells
+    default: 1000.0
+    units: native source value
+    description: Initial Uninfected CD4 T Cells. Sets the initial value of bundled
+      SBML species `C_Uninfected_CD4`.
+  - name: initial_infected_cd4_t_cells
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.initial_infected_cd4_t_cells
+    label: Initial Infected CD4 T Cells
+    default: 1.0
+    units: native source value
+    description: Initial Infected CD4 T Cells. Sets the initial value of bundled SBML
+      species `I_Infected_CD4`.
+  - name: initial_virus
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.initial_virus
+    label: Initial Virus
+    default: 200.0
+    units: native source value
+    description: Initial Virus. Sets the initial value of bundled SBML species `V_Virus`.
+  - name: initial_cytotoxic_t_lymphocytes
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.initial_cytotoxic_t_lymphocytes
+    label: Initial Cytotoxic T Lymphocytes
+    default: 1.0
+    units: native source value
+    description: Initial Cytotoxic T Lymphocytes. Sets the initial value of bundled
+      SBML species `F_CTL`.
+  - name: cd4_uninfected_infection_rate
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.cd4_uninfected_infection_rate
+    label: CD4 Uninfected Infection Rate
+    default: 5.75e-05
+    units: native source value
+    description: CD4 Uninfected Infection Rate. Sets bundled SBML parameter `beta`.
+  outputs:
+  - name: uninfected_cd4_t_cells
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.uninfected_cd4_t_cells
+  - name: infected_cd4_t_cells
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.infected_cd4_t_cells
+  - name: virus
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.virus
+  - name: cytotoxic_t_lymphocytes
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.cytotoxic_t_lymphocytes
+  - name: state
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.state
+  - name: summary
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.species_labels

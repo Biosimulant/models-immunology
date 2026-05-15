@@ -1,0 +1,75 @@
+schema_version: '2.0'
+title: Begitt2014 - STAT1 cooperative DNA binding - single GAS polymer model Lab
+description: Begitt2014 - STAT1 cooperative DNA binding - single GAS polymer model
+  The importance of STAT1-cooperative DNA binding in type 1 and type 2 interferon
+  signalling has been studies using experimental and. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.state
+  to:
+  - visualisation.immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model_state
+- from: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.summary
+  to:
+  - visualisation.immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model_summary
+- from: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.species_labels
+  to:
+  - visualisation.immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_signaling_observable_1
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.initial_unresolved_signaling_observable_1
+    label: Initial Unresolved Signaling Observable 1
+    default: 1.0e-10
+    units: native source value
+    description: Initial Unresolved Signaling Observable 1. Sets the initial value
+      of bundled SBML species `S1`.
+  - name: initial_dna_000
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.initial_dna_000
+    label: Initial DNA 000
+    default: 1.0e-10
+    units: native source value
+    description: Initial DNA 000. Sets the initial value of bundled SBML species `DNA_000`.
+  - name: initial_dna_100
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.initial_dna_100
+    label: Initial DNA 100
+    default: 0.0
+    units: native source value
+    description: Initial DNA 100. Sets the initial value of bundled SBML species `DNA_100`.
+  - name: initial_dna_010
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.initial_dna_010
+    label: Initial DNA 010
+    default: 0.0
+    units: native source value
+    description: Initial DNA 010. Sets the initial value of bundled SBML species `DNA_010`.
+  - name: initial_dna_001
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.initial_dna_001
+    label: Initial DNA 001
+    default: 0.0
+    units: native source value
+    description: Initial DNA 001. Sets the initial value of bundled SBML species `DNA_001`.
+  outputs:
+  - name: unresolved_signaling_observable_1
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.unresolved_signaling_observable_1
+  - name: dna_000
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.dna_000
+  - name: dna_100
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.dna_100
+  - name: dna_010
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.dna_010
+  - name: dna_001
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.dna_001
+  - name: state
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.state
+  - name: summary
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.species_labels

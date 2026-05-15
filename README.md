@@ -1,5 +1,8 @@
 # models-immunology
 
+> Storage-only repo: each former root model now lives in `labs/<slug>/models/core/` and is wrapped by
+> `labs/<slug>/lab.yaml`. This repo has no repo-level import catalog and no composed labs at the root.
+
 Curated collection of **immunology** simulation models for the **biosim** platform. This repository contains comprehensive computational models of immune system dynamics, including T cell and B cell regulation, tumor-immune interactions, viral infections, immunotherapy, cytokine signaling, and immune response mechanisms.
 
 ## What's Inside
@@ -90,7 +93,7 @@ Every model implements the `biosim.BioModule` interface:
 
 - **`inputs()`** — declares named input signals the module consumes
 - **`outputs()`** — declares named output signals the module produces
-- **`advance_to(t)`** — advances the model's internal state to time `t`
+- **`advance_window(t)`** — advances the model's internal state to time `t`
 
 Models can be composed to simulate multi-scale immune responses from molecular signaling → cellular dynamics → tissue-level immunity.
 
@@ -101,7 +104,7 @@ All models in this repository:
 - Are sourced from BioModels and immunology-specific repositories
 - Include tellurium runtime for SBML execution
 - Provide `state` output for monitoring immune dynamics
-- Support configurable timesteps via `min_dt` parameter
+- Support configurable timesteps via `communication_step` parameter
 
 ## Getting Started
 
@@ -120,7 +123,7 @@ pip install "biosim @ git+https://github.com/BioSimulant/biosim.git@main"
 
 To integrate immunology models:
 
-1. Reference models by `manifest_path` (e.g., `models/immunology-sbml-alexander2010-tcell-regulation-sys1/model.yaml`)
+1. Reference models by `manifest_path` (e.g., `labs/alexander2010-tcell-regulation-sys1/models/core/model.yaml`)
 2. Wire immune cell populations to cytokine signals and tumor dynamics
 3. Compose multi-scale immune system simulations
 4. Configure simulation parameters for acute vs chronic responses

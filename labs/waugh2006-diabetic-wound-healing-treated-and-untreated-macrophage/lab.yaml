@@ -1,0 +1,46 @@
+schema_version: '2.0'
+title: Waugh2006 - Diabetic Wound Healing - Treated and Untreated Macrophage Dynamics
+  Lab
+description: 'This a model from the article: Macrophage dynamics in diabetic wound
+  dealing. It can be used to explore immune response dynamics and compare pathway-level
+  behavior across conditions.'
+models:
+- alias: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model.state
+  to:
+  - visualisation.immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model_state
+- from: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model.summary
+  to:
+  - visualisation.immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model_summary
+- from: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model.species_labels
+  to:
+  - visualisation.immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model.unresolved_immune_observable_1
+  - name: phi_i
+    maps_to: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model.phi_i
+  - name: phi_r
+    maps_to: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model.phi_r
+  - name: unresolved_immune_observable_2
+    maps_to: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model.unresolved_immune_observable_2
+  - name: state
+    maps_to: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model.state
+  - name: summary
+    maps_to: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model.species_labels
+caveats: 'No scientifically safe input was exposed in this pass: the bundled SBML
+  did not provide a headline species initial value or meaningfully named constant/intervention
+  parameter that could be surfaced without turning raw source symbols into unsupported
+  biological claims.'

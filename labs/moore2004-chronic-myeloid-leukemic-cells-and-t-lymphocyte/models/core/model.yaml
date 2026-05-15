@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: Moore2004 - Chronic Myeloid Leukemic cells and T-lymphocyte interaction
+description: Moore2004 - Chronic Myeloid Leukemic cellsand T-lymphocytes interaction
+  A mathematical model for theinteraction of between cancer cells and immune system,
+  involvingCML cancer cells, naive and effector. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Helen Moore
+- Natasha K Li
+upstream:
+  id: biomodels_ebi:BIOMD0000000662
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000662
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000662
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000662?filename=BIOMD0000000662_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model:Moore2004ChronicMyeloidLeukemicCellsAndTLBiomd0000000662Model
+  init_kwargs:
+    model_path: data/BIOMD0000000662.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: T_cell_effector
+    label: Initial Unresolved Tumor Observable 1
+    default: 20.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T_cell_effector`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: T_cell_naive
+    label: Initial Unresolved Tumor Observable 2
+    default: 1510.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `T_cell_naive`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: CML
+    label: Initial Unresolved Tumor Observable 3
+    default: 10000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `CML`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: T_cell_effector
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `T_cell_effector`.
+  - name: unresolved_tumor_observable_2
+    maps_to: T_cell_naive
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `T_cell_naive`.
+  - name: unresolved_tumor_observable_3
+    maps_to: CML
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `CML`.
+  - name: source
+    maps_to: Source
+    label: Source
+    description: Source. Maps to bundled source symbol `Source`.
+  - name: sink
+    maps_to: Sink
+    label: Sink
+    description: Sink. Maps to bundled source symbol `Sink`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

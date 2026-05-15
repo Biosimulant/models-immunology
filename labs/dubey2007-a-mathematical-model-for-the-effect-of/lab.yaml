@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Dubey2007 - A mathematical model for the effect of toxicant on the immune system
+  (with toxicant effect) Model2 Lab
+description: In this paper, a nonlinear mathematical model is proposed and analyzed
+  to study theeffect of environmental toxicant on the immune response of the body.
+  It can be used to explore immune response dynamics and compare pathway-level behavior
+  across conditions.
+models:
+- alias: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.state
+  to:
+  - visualisation.immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model_state
+- from: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.summary
+  to:
+  - visualisation.immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model_summary
+- from: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.species_labels
+  to:
+  - visualisation.immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_immune_observable_1
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.initial_unresolved_immune_observable_1
+    label: Initial Unresolved Immune Observable 1
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `P`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.initial_unresolved_immune_observable_2
+    label: Initial Unresolved Immune Observable 2
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `I`.
+  - name: initial_unresolved_immune_observable_3
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.initial_unresolved_immune_observable_3
+    label: Initial Unresolved Immune Observable 3
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 3. Sets the initial value of
+      bundled SBML species `M`.
+  - name: initial_unresolved_immune_observable_4
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.initial_unresolved_immune_observable_4
+    label: Initial Unresolved Immune Observable 4
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 4. Sets the initial value of
+      bundled SBML species `T`.
+  - name: initial_unresolved_immune_observable_5
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.initial_unresolved_immune_observable_5
+    label: Initial Unresolved Immune Observable 5
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 5. Sets the initial value of
+      bundled SBML species `U`.
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.unresolved_immune_observable_1
+  - name: unresolved_immune_observable_2
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.unresolved_immune_observable_2
+  - name: unresolved_immune_observable_3
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.unresolved_immune_observable_3
+  - name: unresolved_immune_observable_4
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.unresolved_immune_observable_4
+  - name: unresolved_immune_observable_5
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.unresolved_immune_observable_5
+  - name: state
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.state
+  - name: summary
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.species_labels

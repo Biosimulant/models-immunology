@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Theinmozhi2018 - Mechanism of PD1 inhibiting TCR signaling in Tumor immune
+  regulation Lab Visualisation
+description: Dedicated presentation model for Theinmozhi2018 - Mechanism of PD1 inhibiting
+  TCR signaling in Tumor immune regulation Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Theinmozhi2018 - Mechanism of PD1 inhibiting TCR signaling in Tumor
+      immune regulation Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model
+      title: Theinmozhi2018 - Mechanism of PD1 inhibiting TCR signaling in Tumor immune
+        regulation
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: LCKi
+        label: Lcki
+      - id: LCKyi
+        label: Lckyi
+      - id: LCKya
+        label: Lckya
+      - id: LCKyiya
+        label: Lckyiya
+      - id: LCKpi
+        label: Lckpi
+      - id: LCKt
+        label: LCKt
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model_state
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.state
+    description: Core state record.
+  - name: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model_summary
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model_species_labels
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.species_labels
+    description: Core source-label map.
+  outputs: []

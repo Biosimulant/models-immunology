@@ -1,0 +1,65 @@
+schema_version: '2.0'
+title: Mufudza2012 - Estrogen effect on the dynamics of breast cancer
+description: Mufudza2012 - Estrogen effect on the dynamicsof breast cancer This deterministic
+  model shows thedynamics of breast cancer with immune response. The effects ofestrogen
+  are incorporated to study its eff.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Chipo Mufudza
+- Walter Sorofa
+- Edward T Chiyaka
+upstream:
+  id: biomodels_ebi:BIOMD0000000642
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000642
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000642
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000642?filename=BIOMD0000000642_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model:Mufudza2012EstrogenEffectOnTheDynamicsOfBBiomd0000000642Model
+  init_kwargs:
+    model_path: data/BIOMD0000000642.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs: []
+  outputs:
+  - name: tumour_cells
+    maps_to: T
+    label: Tumour Cells
+    description: Tumour Cells. Maps to bundled source symbol `T`.
+  - name: immune_cells
+    maps_to: I
+    label: Immune Cells
+    description: Immune Cells. Maps to bundled source symbol `I`.
+  - name: normal_cells
+    maps_to: H
+    label: Normal Cells
+    description: Normal Cells. Maps to bundled source symbol `H`.
+  - name: estrogen
+    maps_to: E
+    label: Estrogen
+    description: Estrogen. Maps to bundled source symbol `E`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.
+caveats: 'No scientifically safe input was exposed in this pass: the bundled SBML
+  did not provide a headline species initial value or meaningfully named constant/intervention
+  parameter that could be surfaced without turning raw source symbols into unsupported
+  biological claims.'

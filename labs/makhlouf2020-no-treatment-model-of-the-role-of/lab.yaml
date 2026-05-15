@@ -1,0 +1,92 @@
+schema_version: '2.0'
+title: Makhlouf2020 - No treatment model of the role of CD4 T cells in tumor-immune
+  interactions Lab
+description: This ordinary differential equation model simulating the interactions
+  between tumor and immune cells is detailed in the publication:Ahmed M. It can be
+  used to explore immune response dynamics and compare pathway-level behavior across
+  conditions.
+models:
+- alias: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.state
+  to:
+  - visualisation.immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model_state
+- from: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.summary
+  to:
+  - visualisation.immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model_summary
+- from: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.species_labels
+  to:
+  - visualisation.immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.initial_tumor_cells
+    label: Initial Tumor Cells
+    default: 10000000.0
+    units: native source value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML species
+      `Tumor_cells`.
+  - name: initial_cd8_t_cells
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.initial_cd8_t_cells
+    label: Initial CD8 T Cells
+    default: 100.0
+    units: native source value
+    description: Initial CD8 T Cells. Sets the initial value of bundled SBML species
+      `CD8_T_cells`.
+  - name: initial_cd4_t_cells
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.initial_cd4_t_cells
+    label: Initial CD4 T Cells
+    default: 1000000.0
+    units: native source value
+    description: Initial CD4 T Cells. Sets the initial value of bundled SBML species
+      `CD4_T_cells`.
+  - name: initial_interleukin_2
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.initial_interleukin_2
+    label: Initial Interleukin 2
+    default: 100000.0
+    units: native source value
+    description: Initial Interleukin 2. Sets the initial value of bundled SBML species
+      `IL_2`.
+  - name: initial_natural_killer_cells
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.initial_natural_killer_cells
+    label: Initial Natural Killer Cells
+    default: 1000.0
+    units: native source value
+    description: Initial Natural Killer Cells. Sets the initial value of bundled SBML
+      species `NK_cells`.
+  - name: tumour_death_rate
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.tumour_death_rate
+    label: Tumour Death Rate
+    default: 6.41e-11
+    units: unit_3
+    description: Tumour Death Rate. Sets bundled SBML parameter `c`.
+  - name: tumour_death_rate_2
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.tumour_death_rate_2
+    label: Tumour Death Rate 2
+    default: 0.2
+    units: unit_4
+    description: Tumour Death Rate 2. Sets bundled SBML parameter `c_1`.
+  outputs:
+  - name: tumor_cells
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.tumor_cells
+  - name: cd8_t_cells
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.cd8_t_cells
+  - name: cd4_t_cells
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.cd4_t_cells
+  - name: interleukin_2
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.interleukin_2
+  - name: natural_killer_cells
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.natural_killer_cells
+  - name: state
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.state
+  - name: summary
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model.species_labels

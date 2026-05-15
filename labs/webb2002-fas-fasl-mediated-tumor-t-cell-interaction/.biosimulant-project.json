@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "1d9334f5-1018-44cd-88e8-14e3844ed4c0",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "479be884-0c14-4a0e-8faa-fb34e8a41568",
+  "created_at": "2026-05-15T15:53:07.653134662+00:00",
+  "last_synced_at": "2026-05-15T20:19:57.548877+00:00",
+  "hub_manifest_hash": "538115ec07968f845f778ee6aea42a1316d9e232ab8e9b3f6d0b282f9fec9073",
+  "package_name": "webb2002-fas-fasl-mediated-tumor-t-cell-interaction-lab"
+}

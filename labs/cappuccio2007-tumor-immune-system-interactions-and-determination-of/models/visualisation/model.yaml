@@ -1,0 +1,52 @@
+schema_version: '2.0'
+title: Cappuccio2007 - Tumor-immune system interactions and determination of the optimal
+  therapeutic protocol in immunotherapy Lab Visualisation
+description: Dedicated presentation model for Cappuccio2007 - Tumor-immune system
+  interactions and determination of the optimal therapeutic protocol in immunotherapy
+  Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Cappuccio2007 - Tumor-immune system interactions and determination
+      of the optimal therapeutic protocol in immunotherapy Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model
+      title: Cappuccio2007 - Tumor-immune system interactions and determination of
+        the optimal therapeutic protocol in immunotherapy
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: Effector_cells
+        label: Effector Cells
+      - id: Tumor_cells
+        label: Tumor Cells
+      - id: IL_2
+        label: Interleukin 2
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model_state
+    maps_to: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.state
+    description: Core state record.
+  - name: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model_summary
+    maps_to: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model_species_labels
+    maps_to: immunology_sbml_cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model.species_labels
+    description: Core source-label map.
+  outputs: []

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "e51a0141-4cf6-4757-9ab9-eb6d22bc468a",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "ecf576db-4f4d-4d26-ae78-99344dd3c30c",
+  "created_at": "2026-05-15T15:53:07.630536859+00:00",
+  "last_synced_at": "2026-05-15T20:19:15.000435+00:00",
+  "hub_manifest_hash": "4b07ec84ccb48778b1fddb2dc04b584a0efbd5279c21146e74b6a579fc27499d",
+  "package_name": "waugh2006-diabetic-wound-healing-treated-and-untreated-macrophag"
+}

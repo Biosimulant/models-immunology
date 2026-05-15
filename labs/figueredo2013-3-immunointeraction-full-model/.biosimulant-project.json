@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "a5b6c3ab-9490-4560-8945-d92b635f7f21",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "581cd18b-3149-4223-8441-6695bedbe41e",
+  "created_at": "2026-05-15T15:53:05.508290737+00:00",
+  "last_synced_at": "2026-05-15T19:39:28.748797+00:00",
+  "hub_manifest_hash": "e61f277db226ad74e672e8b5e68fc9169a9417e6c5973dd1983f0f22739d5911",
+  "package_name": "figueredo2013-3-immunointeraction-full-model-lab"
+}

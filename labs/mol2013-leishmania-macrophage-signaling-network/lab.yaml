@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: Mol2013 - Leishmania macrophage signaling network Lab
+description: Created by The MathWorks, Inc. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.state
+  to:
+  - visualisation.immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model_state
+- from: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.summary
+  to:
+  - visualisation.immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model_summary
+- from: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.species_labels
+  to:
+  - visualisation.immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_infection_observable_1
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.initial_unresolved_infection_observable_1
+    label: Initial Unresolved Infection Observable 1
+    default: 0.9
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `mw68f058f9_e632_469e_a51e_b0641d5ac5f1`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.initial_unresolved_infection_observable_2
+    label: Initial Unresolved Infection Observable 2
+    default: 0.38
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `mw589e86be_36cb_41e1_bccf_93824d618644`.
+  - name: initial_unresolved_infection_observable_3
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.initial_unresolved_infection_observable_3
+    label: Initial Unresolved Infection Observable 3
+    default: 0.56
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Unresolved Infection Observable 3. Sets the initial value
+      of bundled SBML species `mw389efde0_d330_42e0_b68c_cb0cfbf8a3c9`.
+  - name: initial_irak4_irak1_complex
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.initial_irak4_irak1_complex
+    label: Initial Irak4 Irak1 Complex
+    default: 0.6
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Irak4 Irak1 Complex. Sets the initial value of bundled SBML
+      species `mw86470798_a991_412f_a9bb_574001df871d`.
+  - name: initial_tumor_necrosis_factor
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.initial_tumor_necrosis_factor
+    label: Initial Tumor Necrosis Factor
+    default: 0.8
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Tumor Necrosis Factor. Sets the initial value of bundled
+      SBML species `mw4535fcdd_0cf2_4ee4_8d52_eadd3c4fec92`.
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.unresolved_infection_observable_1
+  - name: unresolved_infection_observable_2
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.unresolved_infection_observable_2
+  - name: unresolved_infection_observable_3
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.unresolved_infection_observable_3
+  - name: irak4_irak1_complex
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.irak4_irak1_complex
+  - name: tumor_necrosis_factor
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.tumor_necrosis_factor
+  - name: state
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.state
+  - name: summary
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.species_labels

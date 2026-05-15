@@ -1,0 +1,58 @@
+schema_version: '2.0'
+title: Overgaard2007 PDmodel IL21 Lab
+description: 'This a model from the article: PKPD model of interleukin-21 effects
+  on thermoregulation in monkeys--application and evaluation of stochastic differential
+  equations. It can be used to explore immune response dynamics and compare pathway-level
+  behavior across conditions.'
+models:
+- alias: immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model.state
+  to:
+  - visualisation.immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model_state
+- from: immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model.summary
+  to:
+  - visualisation.immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model_summary
+- from: immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model.species_labels
+  to:
+  - visualisation.immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: rate_constant_metabolism_parameter
+    maps_to: immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model.rate_constant_metabolism_parameter
+    label: Rate Constant Metabolism Parameter
+    default: 1.1375
+    units: native source value
+    description: Rate Constant Metabolism Parameter. Sets bundled SBML parameter `km`.
+  - name: amt_dose
+    maps_to: immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model.amt_dose
+    label: Amt Dose
+    default: 3.0
+    units: native source value
+    description: Amt Dose. Sets bundled SBML parameter `AMT_dose`.
+  - name: delta_high_dose
+    maps_to: immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model.delta_high_dose
+    label: Delta High Dose
+    default: 1.0
+    units: native source value
+    description: Delta High Dose. Sets bundled SBML parameter `delta_high_dose`.
+  outputs:
+  - name: metabolic_rate
+    maps_to: immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model.metabolic_rate
+  - name: temperature
+    maps_to: immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model.temperature
+  - name: bound_receptor
+    maps_to: immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model.bound_receptor
+  - name: state
+    maps_to: immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model.state
+  - name: summary
+    maps_to: immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_overgaard2007_pdmodel_il21_biomd0000000238_model.species_labels

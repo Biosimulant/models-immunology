@@ -1,0 +1,109 @@
+schema_version: '2.0'
+title: Dwivedi2014 - Crohns IL6 Disease model - sgp130 activity Lab
+description: 'Dwivedi2014 - Crohns IL6 Disease model -sgp130 activity This model is
+  comprised of four models: [BIOMD0000000534] Healthy Volunteer model [BIOMD0000000535]
+  Crohn''s Disease - IL-6 Antibody [BIOMD000000. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.'
+models:
+- alias: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.state
+  to:
+  - visualisation.immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model_state
+- from: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.summary
+  to:
+  - visualisation.immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model_summary
+- from: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.species_labels
+  to:
+  - visualisation.immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_interleukin_6
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.initial_interleukin_6
+    label: Initial Interleukin 6
+    default: 0.000435628896551166
+    units: native source value
+    description: Initial Interleukin 6. Sets the initial value of bundled SBML species
+      `mwf626e95e_543f_41e4_aad4_c6bf60ab345b`.
+  - name: initial_unresolved_immune_observable_1
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.initial_unresolved_immune_observable_1
+    label: Initial Unresolved Immune Observable 1
+    default: 3.9
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `mwbbbce920_e8dd_4320_9386_fc94bfb2fc99`.
+  - name: initial_soluble_interleukin_6_sgp130_complex
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.initial_soluble_interleukin_6_sgp130_complex
+    label: Initial Soluble Interleukin 6 Sgp130 Complex
+    default: 0.0874060669217432
+    units: native source value
+    description: Initial Soluble Interleukin 6 Sgp130 Complex. Sets the initial value
+      of bundled SBML species `mw810ff751_fa4e_4143_bd50_169b3e325e1e`.
+  - name: initial_reactive_protein
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.initial_reactive_protein
+    label: Initial Reactive Protein
+    default: 221.06367608557
+    units: native source value
+    description: Initial Reactive Protein. Sets the initial value of bundled SBML
+      species `mw114aa90f_5f5b_4fe8_9406_361c8489b6a1`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.initial_unresolved_immune_observable_2
+    label: Initial Unresolved Immune Observable 2
+    default: 4.25350679194445
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `mw30ae63db_6cd3_4b6f_93ad_3350cd360bcc`.
+  - name: dose_q1w_parameter
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.dose_q1w_parameter
+    label: Dose Q1w Parameter
+    default: 0.0
+    units: native source value
+    description: Dose Q1w Parameter. Sets bundled SBML parameter `parameter_1`.
+  - name: dose_q2w_parameter
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.dose_q2w_parameter
+    label: Dose Q2w Parameter
+    default: 0.0
+    units: native source value
+    description: Dose Q2w Parameter. Sets bundled SBML parameter `parameter_2`.
+  - name: dose_q4w_parameter
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.dose_q4w_parameter
+    label: Dose Q4w Parameter
+    default: 0.0
+    units: native source value
+    description: Dose Q4w Parameter. Sets bundled SBML parameter `parameter_3`.
+  - name: dose_q1w_initial_parameter
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.dose_q1w_initial_parameter
+    label: Dose Q1w Initial Parameter
+    default: 0.0
+    units: native source value
+    description: Dose Q1w Initial Parameter. Sets bundled SBML parameter `ModelValue_3`.
+  - name: dose_q2w_initial_parameter
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.dose_q2w_initial_parameter
+    label: Dose Q2w Initial Parameter
+    default: 0.0
+    units: native source value
+    description: Dose Q2w Initial Parameter. Sets bundled SBML parameter `ModelValue_4`.
+  outputs:
+  - name: interleukin_6
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.interleukin_6
+  - name: unresolved_immune_observable_1
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.unresolved_immune_observable_1
+  - name: soluble_interleukin_6_sgp130_complex
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.soluble_interleukin_6_sgp130_complex
+  - name: reactive_protein
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.reactive_protein
+  - name: unresolved_immune_observable_2
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.unresolved_immune_observable_2
+  - name: state
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.state
+  - name: summary
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_dwivedi2014_crohns_il6_disease_model_sgp130_acti_biomd0000000536_model.species_labels

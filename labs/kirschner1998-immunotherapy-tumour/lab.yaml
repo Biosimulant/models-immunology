@@ -1,0 +1,63 @@
+schema_version: '2.0'
+title: Kirschner1998 Immunotherapy Tumour Lab
+description: 'This a model from the article: Modeling immunotherapy of the tumor-immune
+  interaction. It can be used to explore immune response dynamics and compare pathway-level
+  behavior across conditions.'
+models:
+- alias: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.state
+  to:
+  - visualisation.immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model_state
+- from: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.summary
+  to:
+  - visualisation.immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model_summary
+- from: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.species_labels
+  to:
+  - visualisation.immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_tumor
+    maps_to: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.initial_tumor
+    label: Initial Tumor
+    default: 1.0
+    units: native source value
+    description: Initial Tumor. Sets the initial value of bundled SBML species `Tumor`.
+  - name: initial_immune_cells
+    maps_to: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.initial_immune_cells
+    label: Initial Immune Cells
+    default: 0.0
+    units: native source value
+    description: Initial Immune Cells. Sets the initial value of bundled SBML species
+      `Immune_cells`.
+  - name: initial_interleukin_2
+    maps_to: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.initial_interleukin_2
+    label: Initial Interleukin 2
+    default: 0.0
+    units: native source value
+    description: Initial Interleukin 2. Sets the initial value of bundled SBML species
+      `IL2`.
+  outputs:
+  - name: tumor
+    maps_to: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.tumor
+  - name: immune_cells
+    maps_to: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.immune_cells
+  - name: source
+    maps_to: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.source
+  - name: sink
+    maps_to: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.sink
+  - name: interleukin_2
+    maps_to: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.interleukin_2
+  - name: state
+    maps_to: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.state
+  - name: summary
+    maps_to: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_kirschner1998_immunotherapy_tumour_biomd0000000732_model.species_labels

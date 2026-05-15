@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: "Rateitschak2012 - Interferon-gamma (IFN\u03B3) induced STAT1 signalling (PC_IFNg100)\
+  \ Lab Visualisation"
+description: "Dedicated presentation model for Rateitschak2012 - Interferon-gamma\
+  \ (IFN\u03B3) induced STAT1 signalling (PC_IFNg100) Lab."
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: "Rateitschak2012 - Interferon-gamma (IFN\u03B3) induced STAT1 signalling\
+      \ (PC_IFNg100) Lab"
+    question: What response class does the bundled predictive source assign to the
+      supplied feature vector?
+    answer_focus: feature-vector inputs, predicted class, and class-probability evidence
+    context: predictive_ml_or_design
+    sources:
+    - alias: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model
+      title: "Rateitschak2012 - Interferon-gamma (IFN\u03B3) induced STAT1 signalling\
+        \ (PC_IFNg100)"
+      visual_scope: Predictive immunology model
+      observables:
+      - id: Stat1Pd
+        label: Phosphorylated Stat1 Dimer
+      - id: Stat1Pdn
+        label: Nuclear Phosphorylated Stat1 Dimer
+      - id: Stat1U
+        label: Unphosphorylated Stat1
+      - id: Stat1Un
+        label: Nuclear Unphosphorylated Stat1
+      - id: mRNA
+        label: Socs1 mRNA
+      - id: Stat1ex
+        label: STAT1 (observed)
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model_state
+    maps_to: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.state
+    description: Core state record.
+  - name: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model_summary
+    maps_to: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model_species_labels
+    maps_to: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.species_labels
+    description: Core source-label map.
+  outputs: []

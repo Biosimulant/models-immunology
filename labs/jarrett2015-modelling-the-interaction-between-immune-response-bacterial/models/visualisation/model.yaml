@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Jarrett2015 - Modelling the interaction between immune response, bacterial
+  dynamics and inflammatory damage Lab Visualisation
+description: Dedicated presentation model for Jarrett2015 - Modelling the interaction
+  between immune response, bacterial dynamics and inflammatory damage Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Jarrett2015 - Modelling the interaction between immune response, bacterial
+      dynamics and inflammatory damage Lab
+    question: How do pathogen-associated states and immune response variables shift
+      during the simulated run?
+    answer_focus: pathogen load, infected-cell states, lymphocyte or cytokine response,
+      and dominant excursions
+    context: infection_immunity
+    sources:
+    - alias: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model
+      title: Jarrett2015 - Modelling the interaction between immune response, bacterial
+        dynamics and inflammatory damage
+      visual_scope: Pathogen and immune response
+      observables:
+      - id: bacterial_infection__B
+        label: Bacterial Infection B
+      - id: anti_inflammatory__A
+        label: Anti Inflammatory A
+      - id: inflammation__I
+        label: Inflammation I
+      - id: pro_inflammatory__P
+        label: Pro Inflammatory P
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model_state
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.state
+    description: Core state record.
+  - name: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model_summary
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model_species_labels
+    maps_to: immunology_sbml_jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model.species_labels
+    description: Core source-label map.
+  outputs: []

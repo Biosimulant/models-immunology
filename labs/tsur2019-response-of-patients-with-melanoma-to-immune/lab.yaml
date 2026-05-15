@@ -1,0 +1,62 @@
+schema_version: '2.0'
+title: Tsur2019 - Response of patients with melanoma to immune checkpoint blockade
+  Lab
+description: This is a simple mathematical population model for pembrolizumab-treated
+  advanced melanoma patients, used to predict the response of melanoma patients to
+  immune checkpoint inhibitors. It can be used to explore immune response dynamics
+  and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.state
+  to:
+  - visualisation.immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model_state
+- from: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.summary
+  to:
+  - visualisation.immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model_summary
+- from: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.species_labels
+  to:
+  - visualisation.immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_prediction_observable_1
+    maps_to: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.initial_unresolved_prediction_observable_1
+    label: Initial Unresolved Prediction Observable 1
+    default: 14119.9020779221
+    units: native source value
+    description: Initial Unresolved Prediction Observable 1. Sets the initial value
+      of bundled SBML species `A`.
+  - name: initial_unresolved_prediction_observable_2
+    maps_to: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.initial_unresolved_prediction_observable_2
+    label: Initial Unresolved Prediction Observable 2
+    default: 66094173.0355407
+    units: native source value
+    description: Initial Unresolved Prediction Observable 2. Sets the initial value
+      of bundled SBML species `T`.
+  - name: initial_unresolved_prediction_observable_3
+    maps_to: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.initial_unresolved_prediction_observable_3
+    label: Initial Unresolved Prediction Observable 3
+    default: 1000000.0
+    units: native source value
+    description: Initial Unresolved Prediction Observable 3. Sets the initial value
+      of bundled SBML species `M`.
+  outputs:
+  - name: unresolved_prediction_observable_1
+    maps_to: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.unresolved_prediction_observable_1
+  - name: unresolved_prediction_observable_2
+    maps_to: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.unresolved_prediction_observable_2
+  - name: unresolved_prediction_observable_3
+    maps_to: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.unresolved_prediction_observable_3
+  - name: state
+    maps_to: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.state
+  - name: summary
+    maps_to: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.species_labels

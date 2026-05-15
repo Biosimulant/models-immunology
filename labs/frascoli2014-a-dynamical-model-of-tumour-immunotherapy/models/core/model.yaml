@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Frascoli2014 - A dynamical model of tumour immunotherapy
+description: This is a coupled ordinary differential equation model of tumour-immune
+  dynamics, accounting for biological and clinical factors which regulate the interaction
+  rates of cytotoxic T lymphocytes on the. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Federico Frascoli
+- Peter S Kim
+- Barry D Hughes
+- Kerry A Landman
+upstream:
+  id: biomodels_ebi:BIOMD0000000787
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000787
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000787
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000787?filename=Frascoli2014.xml
+  license: CC0
+biosim:
+  entrypoint: src.frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model:Frascoli2014ADynamicalModelOfTumourImmunotBiomd0000000787Model
+  init_kwargs:
+    model_path: data/BIOMD0000000787.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_tumor_volume
+    maps_to: V_Tumor_Volume
+    label: Initial Tumor Volume
+    default: 1.0
+    units: native source value
+    description: Initial Tumor Volume. Sets the initial value of bundled SBML species
+      `V_Tumor_Volume`.
+  - name: initial_cytotoxic_t_lymphocytes_coverage
+    maps_to: C_Cytotoxic_T_Lymphocytes_Coverage
+    label: Initial Cytotoxic T Lymphocytes Coverage
+    default: 0.1
+    units: native source value
+    description: Initial Cytotoxic T Lymphocytes Coverage. Sets the initial value
+      of bundled SBML species `C_Cytotoxic_T_Lymphocytes_Coverage`.
+  - name: tumor_killing_cytotoxic_t_lymphocytes_rate
+    maps_to: k
+    label: Tumor Killing Cytotoxic T Lymphocytes Rate
+    default: 0.2
+    units: native source value
+    description: Tumor Killing Cytotoxic T Lymphocytes Rate. Sets bundled SBML parameter
+      `k`.
+  outputs:
+  - name: tumor_volume
+    maps_to: V_Tumor_Volume
+    label: Tumor Volume
+    description: Tumor Volume. Maps to bundled source symbol `V_Tumor_Volume`.
+  - name: cytotoxic_t_lymphocytes_coverage
+    maps_to: C_Cytotoxic_T_Lymphocytes_Coverage
+    label: Cytotoxic T Lymphocytes Coverage
+    description: Cytotoxic T Lymphocytes Coverage. Maps to bundled source symbol `C_Cytotoxic_T_Lymphocytes_Coverage`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

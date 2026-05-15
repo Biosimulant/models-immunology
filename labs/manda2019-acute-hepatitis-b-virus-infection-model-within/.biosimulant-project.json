@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f29b500c-5fff-49fe-b68a-1f950128c239",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "7ccc9f11-fcd9-4142-af9e-78417f36d49d",
+  "created_at": "2026-05-15T15:53:06.590477034+00:00",
+  "last_synced_at": "2026-05-15T19:07:15.876192+00:00",
+  "hub_manifest_hash": "0ae376b26dc7a63c4085b8f20bb3a6d100b29872513f695c8aa04299d8202ef4",
+  "package_name": "manda2019-acute-hepatitis-b-virus-infection-model-within-the-hos"
+}

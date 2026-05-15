@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Day2015 - Early cellular innate and adaptive immune responses to ischemia/reperfusion
+  injury and solid organ allotransplantation
+description: This is an ordinary differential equation model of the early inflammatory
+  response during transplantion. Descriptions are included of the inflammatory events
+  associated with the initial surgical proce.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Day, J.D.
+- Metes, D.M.
+- Vodovotz, Y.
+upstream:
+  id: biomodels_ebi:MODEL1911190001
+  source_db: biomodels_ebi
+  source_id: MODEL1911190001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1911190001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911190001?filename=Day2015.xml
+  license: CC0
+biosim:
+  entrypoint: src.day2015_early_cellular_innate_and_adaptive_immun_model1911190001_model:Day2015EarlyCellularInnateAndAdaptiveImmunModel1911190001Model
+  init_kwargs:
+    model_path: data/MODEL1911190001.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_immune_observable_1
+    maps_to: D
+    label: Initial Unresolved Immune Observable 1
+    default: 4.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `D`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: DG
+    label: Initial Unresolved Immune Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `DG`.
+  - name: initial_unresolved_immune_observable_3
+    maps_to: I
+    label: Initial Unresolved Immune Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 3. Sets the initial value of
+      bundled SBML species `I`.
+  - name: initial_unresolved_immune_observable_4
+    maps_to: A
+    label: Initial Unresolved Immune Observable 4
+    default: 0.125
+    units: native source value
+    description: Initial Unresolved Immune Observable 4. Sets the initial value of
+      bundled SBML species `A`.
+  - name: initial_unresolved_immune_observable_5
+    maps_to: TP
+    label: Initial Unresolved Immune Observable 5
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 5. Sets the initial value of
+      bundled SBML species `TP`.
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: D
+    label: Unresolved Immune Observable 1
+    description: Unresolved Immune Observable 1. Maps to bundled source symbol `D`.
+  - name: unresolved_immune_observable_2
+    maps_to: DG
+    label: Unresolved Immune Observable 2
+    description: Unresolved Immune Observable 2. Maps to bundled source symbol `DG`.
+  - name: unresolved_immune_observable_3
+    maps_to: I
+    label: Unresolved Immune Observable 3
+    description: Unresolved Immune Observable 3. Maps to bundled source symbol `I`.
+  - name: unresolved_immune_observable_4
+    maps_to: A
+    label: Unresolved Immune Observable 4
+    description: Unresolved Immune Observable 4. Maps to bundled source symbol `A`.
+  - name: unresolved_immune_observable_5
+    maps_to: TP
+    label: Unresolved Immune Observable 5
+    description: Unresolved Immune Observable 5. Maps to bundled source symbol `TP`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

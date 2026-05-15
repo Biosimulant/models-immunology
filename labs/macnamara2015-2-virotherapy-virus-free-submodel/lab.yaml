@@ -1,0 +1,66 @@
+schema_version: '2.0'
+title: Macnamara2015/2 - virotherapy virus-free submodel Lab
+description: 'The paper describes a submodel of oncolytic virotherapy. Created by
+  COPASI 4.25 (Build 207) This model is described in the article: Memory versus effector
+  immune responses in oncolytic virotherapiesCi.'
+models:
+- alias: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.state
+  to:
+  - visualisation.immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model_state
+- from: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.summary
+  to:
+  - visualisation.immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model_summary
+- from: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.species_labels
+  to:
+  - visualisation.immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 1000000.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `U`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 1.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `M`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `E`.
+  - name: tumor_growth_rate
+    maps_to: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.tumor_growth_rate
+    label: Tumor Growth Rate
+    default: 0.927
+    units: unit_0
+    description: Tumor Growth Rate. Sets bundled SBML parameter `r`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.unresolved_tumor_observable_3
+  - name: state
+    maps_to: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.state
+  - name: summary
+    maps_to: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_macnamara2015_2_virotherapy_virus_free_submodel_biomd0000000767_model.species_labels

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "3df575e4-005b-4db1-8519-832864096c6d",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "e8883d99-49bb-48c9-ac5c-99e522294603",
+  "created_at": "2026-05-15T15:53:05.358232778+00:00",
+  "last_synced_at": "2026-05-15T19:33:29.587739+00:00",
+  "hub_manifest_hash": "dfd3122b57306f9189f88ead664d552ee2728c5fc6180a8f0c15ee3281a8c2b0",
+  "package_name": "eftimie2018-cancer-and-immune-biomarkers-lab"
+}

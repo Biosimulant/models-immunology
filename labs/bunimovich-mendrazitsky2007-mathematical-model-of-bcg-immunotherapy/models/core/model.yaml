@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Bunimovich-Mendrazitsky2007 - Mathematical model of BCG immunotherapy
+description: This ordinary differential equation model, simulating the tumor-immune
+  interactions involved in BCG immunotherapy to treat superficial bladder cancer,
+  is described by the publication:Bunimovich-Mendra. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Svetlana Bunimovich-Mendrazitsky
+- Eliezer Shochat
+- Lewi Stone
+upstream:
+  id: biomodels_ebi:BIOMD0000001034
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001034
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001034
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001034?filename=Bunimovich-Mendrazitsky2007.xml
+  license: CC0
+biosim:
+  entrypoint: src.bunimovich_mendrazitsky2007_mathematical_model_o_biomd0000001034_model:BunimovichMendrazitsky2007MathematicalModelOBiomd0000001034Model
+  init_kwargs:
+    model_path: data/BIOMD0000001034.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_effector_cells
+    maps_to: Effector_cells
+    label: Initial Effector Cells
+    default: 0.05
+    units: native source value
+    description: Initial Effector Cells. Sets the initial value of bundled SBML species
+      `Effector_cells`.
+  - name: initial_tumor_infected_cells
+    maps_to: Tumor_infected_cells
+    label: Initial Tumor Infected Cells
+    default: 0.0
+    units: native source value
+    description: Initial Tumor Infected Cells. Sets the initial value of bundled SBML
+      species `Tumor_infected_cells`.
+  - name: initial_tumor_uninfected_cells
+    maps_to: Tumor_uninfected_cells
+    label: Initial Tumor Uninfected Cells
+    default: 0.55
+    units: native source value
+    description: Initial Tumor Uninfected Cells. Sets the initial value of bundled
+      SBML species `Tumor_uninfected_cells`.
+  - name: initial_bcg
+    maps_to: BCG
+    label: Initial BCG
+    default: 0.0
+    units: native source value
+    description: Initial BCG. Sets the initial value of bundled SBML species `BCG`.
+  - name: tumor_growth_rate
+    maps_to: beta
+    label: Tumor Growth Rate
+    default: 0.0155
+    units: native source value
+    description: Tumor Growth Rate. Sets bundled SBML parameter `beta`.
+  - name: tumor_growth_rate_2
+    maps_to: r
+    label: Tumor Growth Rate 2
+    default: 0.12
+    units: native source value
+    description: Tumor Growth Rate 2. Sets bundled SBML parameter `r`.
+  outputs:
+  - name: effector_cells
+    maps_to: Effector_cells
+    label: Effector Cells
+    description: Effector Cells. Maps to bundled source symbol `Effector_cells`.
+  - name: tumor_infected_cells
+    maps_to: Tumor_infected_cells
+    label: Tumor Infected Cells
+    description: Tumor Infected Cells. Maps to bundled source symbol `Tumor_infected_cells`.
+  - name: tumor_uninfected_cells
+    maps_to: Tumor_uninfected_cells
+    label: Tumor Uninfected Cells
+    description: Tumor Uninfected Cells. Maps to bundled source symbol `Tumor_uninfected_cells`.
+  - name: bcg
+    maps_to: BCG
+    label: BCG
+    description: BCG. Maps to bundled source symbol `BCG`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

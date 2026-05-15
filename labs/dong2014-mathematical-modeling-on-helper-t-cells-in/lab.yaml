@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: Dong2014 - Mathematical modeling on helper t cells in a tumor immune system
+  Lab
+description: This model gives a mathematical description of the interactions between
+  tumor cells, cytotoxic T lymphocytes and helper T cells (HTCs) within the tumor
+  microenvironment, with emphasis on the role play. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.state
+  to:
+  - visualisation.immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model_state
+- from: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.summary
+  to:
+  - visualisation.immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model_summary
+- from: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.species_labels
+  to:
+  - visualisation.immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.initial_tumor_cells
+    label: Initial Tumor Cells
+    default: 1.0
+    units: native source value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML species
+      `x_Tumor_Cells`.
+  - name: initial_effector_cells
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.initial_effector_cells
+    label: Initial Effector Cells
+    default: 1.0
+    units: native source value
+    description: Initial Effector Cells. Sets the initial value of bundled SBML species
+      `y_Effector_Cells`.
+  - name: initial_helper_t_cells
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.initial_helper_t_cells
+    label: Initial Helper T Cells
+    default: 1.0
+    units: native source value
+    description: Initial Helper T Cells. Sets the initial value of bundled SBML species
+      `z_Helper_T_Cells`.
+  - name: tumor_growth_rate
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.tumor_growth_rate
+    label: Tumor Growth Rate
+    default: 1.636
+    units: native source value
+    description: Tumor Growth Rate. Sets bundled SBML parameter `alpha`.
+  - name: tumor_growth_rate_2
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.tumor_growth_rate_2
+    label: Tumor Growth Rate 2
+    default: 0.002
+    units: native source value
+    description: Tumor Growth Rate 2. Sets bundled SBML parameter `beta`.
+  - name: ec_natural_death_rate
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.ec_natural_death_rate
+    label: Ec Natural Death Rate
+    default: 0.3743
+    units: native source value
+    description: Ec Natural Death Rate. Sets bundled SBML parameter `delta_1`.
+  - name: htc_natural_death_rate
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.htc_natural_death_rate
+    label: Htc Natural Death Rate
+    default: 0.055
+    units: native source value
+    description: Htc Natural Death Rate. Sets bundled SBML parameter `delta_2`.
+  outputs:
+  - name: tumor_cells
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.tumor_cells
+  - name: effector_cells
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.effector_cells
+  - name: helper_t_cells
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.helper_t_cells
+  - name: state
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.state
+  - name: summary
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.species_labels

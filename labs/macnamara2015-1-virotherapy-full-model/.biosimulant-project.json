@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "90faef9a-ba23-46ec-8f88-26034e91c6ba",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "a77ec9a4-3eda-480e-af85-ec7ff2fe3a90",
+  "created_at": "2026-05-15T15:53:06.426653453+00:00",
+  "last_synced_at": "2026-05-15T19:54:23.383175+00:00",
+  "hub_manifest_hash": "4084dc258bc215510e9171b7590efae0b4120bea6b68c729bd9b0044efa818b3",
+  "package_name": "macnamara2015-1-virotherapy-full-model-lab"
+}

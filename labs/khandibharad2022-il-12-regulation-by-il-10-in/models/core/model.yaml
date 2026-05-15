@@ -1,0 +1,87 @@
+schema_version: '2.0'
+title: Khandibharad2022 - IL-12 regulation by IL-10 in Leishmaniasis
+description: In this model, TLR2-TLR6 mediates MyD88 pathway gets activated, which
+  activates IL-12 production and induces iNOS expression when the Macrophage is infected
+  with Leishmania parasite. It can be used to explore immune response dynamics and
+  compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Shweta Khandibharad
+- Shailza Singh
+upstream:
+  id: biomodels_ebi:MODEL2012040002
+  source_db: biomodels_ebi
+  source_id: MODEL2012040002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2012040002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2012040002?filename=M2
+    diseased model.xml
+  license: CC0
+biosim:
+  entrypoint: src.khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model:Khandibharad2022Il12RegulationByIl10InLeModel2012040002Model
+  init_kwargs:
+    model_path: data/MODEL2012040002.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_uev1a_signaling_component
+    maps_to: mwf17ae875_af88_4db8_9258_cd8beb914829
+    label: Initial Uev1a Signaling Component
+    default: 1200.0
+    units: MWBUILTINUNIT_molecule
+    description: Initial Uev1a Signaling Component. Sets the initial value of bundled
+      SBML species `mwf17ae875_af88_4db8_9258_cd8beb914829`.
+  - name: initial_interferon_gamma
+    maps_to: mw71e2a0cf_cc5b_4cd2_93ae_4e19d7cb4ace
+    label: Initial Interferon Gamma
+    default: 60.0
+    units: MWBUILTINUNIT_molecule
+    description: Initial Interferon Gamma. Sets the initial value of bundled SBML
+      species `mw71e2a0cf_cc5b_4cd2_93ae_4e19d7cb4ace`.
+  - name: initial_interferon_g
+    maps_to: mw1a35c486_7d05_4436_9876_766365a69447
+    label: Initial Interferon G
+    default: 60.0
+    units: MWBUILTINUNIT_molecule
+    description: Initial Interferon G. Sets the initial value of bundled SBML species
+      `mw1a35c486_7d05_4436_9876_766365a69447`.
+  outputs:
+  - name: uev1a_signaling_component
+    maps_to: mwf17ae875_af88_4db8_9258_cd8beb914829
+    label: Uev1a Signaling Component
+    description: Uev1a Signaling Component. Maps to bundled source symbol `mwf17ae875_af88_4db8_9258_cd8beb914829`.
+  - name: ikb_p65_p50_complex
+    maps_to: mwdc0b1e9c_8b4b_4bc9_a94b_f8aa945ecd4d
+    label: Ikb P65 P50 Complex
+    description: Ikb P65 P50 Complex. Maps to bundled source symbol `mwdc0b1e9c_8b4b_4bc9_a94b_f8aa945ecd4d`.
+  - name: interferon_gamma
+    maps_to: mw71e2a0cf_cc5b_4cd2_93ae_4e19d7cb4ace
+    label: Interferon Gamma
+    description: Interferon Gamma. Maps to bundled source symbol `mw71e2a0cf_cc5b_4cd2_93ae_4e19d7cb4ace`.
+  - name: interferon_g
+    maps_to: mw1a35c486_7d05_4436_9876_766365a69447
+    label: Interferon G
+    description: Interferon G. Maps to bundled source symbol `mw1a35c486_7d05_4436_9876_766365a69447`.
+  - name: interferon_gamma_receptor
+    maps_to: mw3cfafb6e_ff8f_4498_a6ec_01f5ab3724aa
+    label: Interferon Gamma Receptor
+    description: Interferon Gamma Receptor. Maps to bundled source symbol `mw3cfafb6e_ff8f_4498_a6ec_01f5ab3724aa`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

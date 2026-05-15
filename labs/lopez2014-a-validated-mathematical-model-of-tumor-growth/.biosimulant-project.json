@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "3b661cf3-fac0-4755-a360-53dc16fce448",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "86c9ae8f-bc21-42b7-a5d1-9472ef25904d",
+  "created_at": "2026-05-15T15:53:06.387805204+00:00",
+  "last_synced_at": "2026-05-15T18:56:12.344339+00:00",
+  "hub_manifest_hash": "44124ff0284ad03113511d573691ee7303499dd2d416d71acfc391f21327748f",
+  "package_name": "lopez2014-a-validated-mathematical-model-of-tumor-growth-includi"
+}

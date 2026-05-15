@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "9d53aa64-81f0-4652-a5b5-2ae5adcf43ad",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "bf8b5570-9be4-4882-963d-6132b7e9e5a5",
+  "created_at": "2026-05-15T15:53:07.477377431+00:00",
+  "last_synced_at": "2026-05-15T20:13:58.723953+00:00",
+  "hub_manifest_hash": "7d7c0f9fd4ae75fd0e2c94568956ef88855a5236e78e26954efdcf1f16818630",
+  "package_name": "trisilowati2018-optimal-control-of-tumor-immune-system-interacti"
+}

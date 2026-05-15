@@ -1,0 +1,109 @@
+schema_version: '2.0'
+title: FatehiChenar2018 - Mathematical model of immune response to hepatitis B Lab
+description: This is a mathematical model describing the dynamics of the immune response
+  to hepatitis B, which takes into account contributions form innate and adaptive
+  immune responses, as well as cytokines. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.state
+  to:
+  - visualisation.immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model_state
+- from: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.summary
+  to:
+  - visualisation.immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model_summary
+- from: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.species_labels
+  to:
+  - visualisation.immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_infection_observable_1
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.initial_unresolved_infection_observable_1
+    label: Initial Unresolved Infection Observable 1
+    default: 0.9
+    units: native source value
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `T`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.initial_unresolved_infection_observable_2
+    label: Initial Unresolved Infection Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `I`.
+  - name: initial_unresolved_infection_observable_3
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.initial_unresolved_infection_observable_3
+    label: Initial Unresolved Infection Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 3. Sets the initial value
+      of bundled SBML species `F_1`.
+  - name: initial_unresolved_infection_observable_4
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.initial_unresolved_infection_observable_4
+    label: Initial Unresolved Infection Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 4. Sets the initial value
+      of bundled SBML species `F_2`.
+  - name: initial_unresolved_infection_observable_5
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.initial_unresolved_infection_observable_5
+    label: Initial Unresolved Infection Observable 5
+    default: 0.1
+    units: native source value
+    description: Initial Unresolved Infection Observable 5. Sets the initial value
+      of bundled SBML species `N`.
+  - name: uninfected_death_rate
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.uninfected_death_rate
+    label: Uninfected Death Rate
+    default: 0.003
+    units: native source value
+    description: Uninfected Death Rate. Sets bundled SBML parameter `d`.
+  - name: uninfected_infection_rate
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.uninfected_infection_rate
+    label: Uninfected Infection Rate
+    default: 7.0
+    units: native source value
+    description: Uninfected Infection Rate. Sets bundled SBML parameter `beta`.
+  - name: infected_death_rate
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.infected_death_rate
+    label: Infected Death Rate
+    default: 0.56
+    units: native source value
+    description: Infected Death Rate. Sets bundled SBML parameter `delta`.
+  - name: infected_killing_immune_rate
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.infected_killing_immune_rate
+    label: Infected Killing Immune Rate
+    default: 5.0
+    units: native source value
+    description: Infected Killing Immune Rate. Sets bundled SBML parameter `mu_1`.
+  - name: infected_killing_immune_rate_2
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.infected_killing_immune_rate_2
+    label: Infected Killing Immune Rate 2
+    default: 0.14
+    units: native source value
+    description: Infected Killing Immune Rate 2. Sets bundled SBML parameter `mu_2`.
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.unresolved_infection_observable_1
+  - name: unresolved_infection_observable_2
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.unresolved_infection_observable_2
+  - name: unresolved_infection_observable_3
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.unresolved_infection_observable_3
+  - name: unresolved_infection_observable_4
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.unresolved_infection_observable_4
+  - name: unresolved_infection_observable_5
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.unresolved_infection_observable_5
+  - name: state
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.state
+  - name: summary
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_fatehichenar2018_mathematical_model_of_immune_re_biomd0000000848_model.species_labels

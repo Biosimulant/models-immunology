@@ -1,0 +1,83 @@
+schema_version: '2.0'
+title: Tsur2019 - Response of patients with melanoma to immune checkpoint blockade
+description: This is a simple mathematical population model for pembrolizumab-treated
+  advanced melanoma patients, used to predict the response of melanoma patients to
+  immune checkpoint inhibitors. It can be used to explore immune response dynamics
+  and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- N Tsur
+- Y Kogan
+- Markus Rehm
+- Z Agur
+upstream:
+  id: biomodels_ebi:BIOMD0000000838
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000838
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000838
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000838?filename=Tsur2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model:Tsur2019ResponseOfPatientsWithMelanomaToIBiomd0000000838Model
+  init_kwargs:
+    model_path: data/BIOMD0000000838.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_prediction_observable_1
+    maps_to: A
+    label: Initial Unresolved Prediction Observable 1
+    default: 14119.9020779221
+    units: native source value
+    description: Initial Unresolved Prediction Observable 1. Sets the initial value
+      of bundled SBML species `A`.
+  - name: initial_unresolved_prediction_observable_2
+    maps_to: T
+    label: Initial Unresolved Prediction Observable 2
+    default: 66094173.0355407
+    units: native source value
+    description: Initial Unresolved Prediction Observable 2. Sets the initial value
+      of bundled SBML species `T`.
+  - name: initial_unresolved_prediction_observable_3
+    maps_to: M
+    label: Initial Unresolved Prediction Observable 3
+    default: 1000000.0
+    units: native source value
+    description: Initial Unresolved Prediction Observable 3. Sets the initial value
+      of bundled SBML species `M`.
+  outputs:
+  - name: unresolved_prediction_observable_1
+    maps_to: A
+    label: Unresolved Prediction Observable 1
+    description: Unresolved Prediction Observable 1. Maps to bundled source symbol
+      `A`.
+  - name: unresolved_prediction_observable_2
+    maps_to: T
+    label: Unresolved Prediction Observable 2
+    description: Unresolved Prediction Observable 2. Maps to bundled source symbol
+      `T`.
+  - name: unresolved_prediction_observable_3
+    maps_to: M
+    label: Unresolved Prediction Observable 3
+    description: Unresolved Prediction Observable 3. Maps to bundled source symbol
+      `M`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

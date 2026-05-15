@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Leon-Triana2020 - CAR T-cell therapy in B-cell acute lymphoblastic leukaemia
+  with contribution from immature B cells Lab Visualisation
+description: Dedicated presentation model for Leon-Triana2020 - CAR T-cell therapy
+  in B-cell acute lymphoblastic leukaemia with contribution from immature B cells
+  Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Leon-Triana2020 - CAR T-cell therapy in B-cell acute lymphoblastic
+      leukaemia with contribution from immature B cells Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model
+      title: Leon-Triana2020 - CAR T-cell therapy in B-cell acute lymphoblastic leukaemia
+        with contribution from immature B cells
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: CAR_T_cells
+        label: Car T Cells
+      - id: Leukaemic_B_cells
+        label: Leukaemic B Cells
+      - id: B_cells_healthy
+        label: Cells Healthy
+      - id: B_cell_progenitors
+        label: Cell Progenitors
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model_state
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.state
+    description: Core state record.
+  - name: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model_summary
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model_species_labels
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.species_labels
+    description: Core source-label map.
+  outputs: []

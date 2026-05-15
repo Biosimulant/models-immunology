@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "14ecce61-e71f-4cab-87a9-474506fae3fd",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "fd042b04-bed5-4a59-b31a-c68a3e954a1b",
+  "created_at": "2026-05-15T15:53:07.359591106+00:00",
+  "last_synced_at": "2026-05-15T20:10:20.456263+00:00",
+  "hub_manifest_hash": "7beeb72ae0a92b191bba7cfac7a0773f7a819f8424fede2f3889f1c667385451",
+  "package_name": "smith2011-three-stage-innate-immune-response-to-a-pneumococcal-l"
+}

@@ -1,0 +1,83 @@
+schema_version: '2.0'
+title: Wodarz2007 - HIV/CD4 T-cell interaction
+description: 'Wodarz2007 - HIV/CD4 T-cell interaction A deterministic model illustrating
+  howCD4 T-cells can influence HIV infection. This model is described in the article:
+  Infection dynamics in HIV-specific CD4 T.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Dominik Wodarz
+- Dean H Hamer
+upstream:
+  id: biomodels_ebi:BIOMD0000000663
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000663
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000663
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000663?filename=BIOMD0000000663_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model:Wodarz2007HivCd4TCellInteractionBiomd0000000663Model
+  init_kwargs:
+    model_path: data/BIOMD0000000663.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_t_cell_infected
+    maps_to: x
+    label: Initial T Cell Infected
+    default: 0.1
+    units: native source value
+    description: Initial T Cell Infected. Sets the initial value of bundled SBML species
+      `x`.
+  - name: initial_t_cell_uninfected
+    maps_to: y
+    label: Initial T Cell Uninfected
+    default: 0.0
+    units: native source value
+    description: Initial T Cell Uninfected. Sets the initial value of bundled SBML
+      species `y`.
+  - name: initial_free_virus
+    maps_to: v
+    label: Initial Free Virus
+    default: 1.0
+    units: native source value
+    description: Initial Free Virus. Sets the initial value of bundled SBML species
+      `v`.
+  - name: uninfected_t_cell_death_rate
+    maps_to: d
+    label: Uninfected T Cell Death Rate
+    default: 0.1
+    units: native source value
+    description: Uninfected T Cell Death Rate. Sets bundled SBML parameter `d`.
+  outputs:
+  - name: t_cell_infected
+    maps_to: x
+    label: T Cell Infected
+    description: T Cell Infected. Maps to bundled source symbol `x`.
+  - name: t_cell_uninfected
+    maps_to: y
+    label: T Cell Uninfected
+    description: T Cell Uninfected. Maps to bundled source symbol `y`.
+  - name: free_virus
+    maps_to: v
+    label: Free Virus
+    description: Free Virus. Maps to bundled source symbol `v`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

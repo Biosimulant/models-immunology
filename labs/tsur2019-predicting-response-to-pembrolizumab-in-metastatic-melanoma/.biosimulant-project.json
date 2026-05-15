@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "8b035858-7696-4769-93f7-0afbc962f1ed",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "35b647c8-9b1d-4f77-9a2e-67ea401082be",
+  "created_at": "2026-05-15T15:53:07.493527874+00:00",
+  "last_synced_at": "2026-05-15T20:14:42.342893+00:00",
+  "hub_manifest_hash": "1c04940ee482a864844123166b19377a734d0c2d60d481abc29e8b68728d652e",
+  "package_name": "tsur2019-predicting-response-to-pembrolizumab-in-metastatic-mela"
+}

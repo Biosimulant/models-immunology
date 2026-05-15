@@ -1,0 +1,111 @@
+schema_version: '2.0'
+title: Robertson-Tessi M 2012 A model of tumor Immune interaction
+description: Its a mathematical model presenting the interaction between a growing
+  tumor and immune system. Model involves tumor cells, dendritic cell, helper Tcells,
+  regulatory Tcells, effector cells and certain.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Mark Robertson-Tessi
+- Ardith El-Kareh
+- Alain Goriely
+upstream:
+  id: biomodels_ebi:BIOMD0000000731
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000731
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000731
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000731?filename=22051568_Tessi.xml
+  license: CC0
+biosim:
+  entrypoint: src.robertson_tessi_m_2012_a_model_of_tumor_immune_i_biomd0000000731_model:RobertsonTessiM2012AModelOfTumorImmuneIBiomd0000000731Model
+  init_kwargs:
+    model_path: data/BIOMD0000000731.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_memtcell
+    maps_to: M
+    label: Initial Memtcell
+    default: 10000000.0
+    units: substance
+    description: Initial Memtcell. Sets the initial value of bundled SBML species
+      `M`.
+  - name: initial_memhelpertcells
+    maps_to: Mh
+    label: Initial Memhelpertcells
+    default: 6000000.0
+    units: substance
+    description: Initial Memhelpertcells. Sets the initial value of bundled SBML species
+      `Mh`.
+  - name: initial_memeffectorcells
+    maps_to: Me
+    label: Initial Memeffectorcells
+    default: 3000000.0
+    units: substance
+    description: Initial Memeffectorcells. Sets the initial value of bundled SBML
+      species `Me`.
+  - name: initial_regmemtcell
+    maps_to: Mr
+    label: Initial Regmemtcell
+    default: 1000000.0
+    units: substance
+    description: Initial Regmemtcell. Sets the initial value of bundled SBML species
+      `Mr`.
+  - name: tumor_growth_rate
+    maps_to: gamma
+    label: Tumor Growth Rate
+    default: 333.0
+    units: unit_0
+    description: Tumor Growth Rate. Sets bundled SBML parameter `gamma`.
+  - name: tumor_cell_killing_rate
+    maps_to: k2
+    label: Tumor Cell Killing Rate
+    default: 1.2
+    units: unit_1
+    description: Tumor Cell Killing Rate. Sets bundled SBML parameter `k2`.
+  - name: tumor_cell_killing_rate_2
+    maps_to: k3
+    label: Tumor Cell Killing Rate 2
+    default: 11.0
+    units: unit_1
+    description: Tumor Cell Killing Rate 2. Sets bundled SBML parameter `k3`.
+  outputs:
+  - name: memtcell
+    maps_to: M
+    label: Memtcell
+    description: Memtcell. Maps to bundled source symbol `M`.
+  - name: memhelpertcells
+    maps_to: Mh
+    label: Memhelpertcells
+    description: Memhelpertcells. Maps to bundled source symbol `Mh`.
+  - name: memeffectorcells
+    maps_to: Me
+    label: Memeffectorcells
+    description: Memeffectorcells. Maps to bundled source symbol `Me`.
+  - name: regmemtcell
+    maps_to: Mr
+    label: Regmemtcell
+    description: Regmemtcell. Maps to bundled source symbol `Mr`.
+  - name: source
+    maps_to: Pool
+    label: Source
+    description: Source. Maps to bundled source symbol `Pool`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

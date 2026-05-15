@@ -1,0 +1,59 @@
+schema_version: '2.0'
+title: Frascoli2014 - A dynamical model of tumour immunotherapy Lab
+description: This is a coupled ordinary differential equation model of tumour-immune
+  dynamics, accounting for biological and clinical factors which regulate the interaction
+  rates of cytotoxic T lymphocytes on the. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.state
+  to:
+  - visualisation.immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model_state
+- from: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.summary
+  to:
+  - visualisation.immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model_summary
+- from: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.species_labels
+  to:
+  - visualisation.immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_tumor_volume
+    maps_to: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.initial_tumor_volume
+    label: Initial Tumor Volume
+    default: 1.0
+    units: native source value
+    description: Initial Tumor Volume. Sets the initial value of bundled SBML species
+      `V_Tumor_Volume`.
+  - name: initial_cytotoxic_t_lymphocytes_coverage
+    maps_to: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.initial_cytotoxic_t_lymphocytes_coverage
+    label: Initial Cytotoxic T Lymphocytes Coverage
+    default: 0.1
+    units: native source value
+    description: Initial Cytotoxic T Lymphocytes Coverage. Sets the initial value
+      of bundled SBML species `C_Cytotoxic_T_Lymphocytes_Coverage`.
+  - name: tumor_killing_cytotoxic_t_lymphocytes_rate
+    maps_to: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.tumor_killing_cytotoxic_t_lymphocytes_rate
+    label: Tumor Killing Cytotoxic T Lymphocytes Rate
+    default: 0.2
+    units: native source value
+    description: Tumor Killing Cytotoxic T Lymphocytes Rate. Sets bundled SBML parameter
+      `k`.
+  outputs:
+  - name: tumor_volume
+    maps_to: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.tumor_volume
+  - name: cytotoxic_t_lymphocytes_coverage
+    maps_to: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.cytotoxic_t_lymphocytes_coverage
+  - name: state
+    maps_to: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.state
+  - name: summary
+    maps_to: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_frascoli2014_a_dynamical_model_of_tumour_immunot_biomd0000000787_model.species_labels

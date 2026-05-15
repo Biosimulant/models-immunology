@@ -1,0 +1,54 @@
+schema_version: '2.0'
+title: Mol2013 - Immune Signal Transduction in Leishmaniasis Lab Visualisation
+description: Dedicated presentation model for Mol2013 - Immune Signal Transduction
+  in Leishmaniasis Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Mol2013 - Immune Signal Transduction in Leishmaniasis Lab
+    question: How do pathogen-associated states and immune response variables shift
+      during the simulated run?
+    answer_focus: pathogen load, infected-cell states, lymphocyte or cytokine response,
+      and dominant excursions
+    context: infection_immunity
+    sources:
+    - alias: immunology_sbml_mol2013_immune_signal_transduction_in_leishmania_biomd0000000477_model
+      title: Mol2013 - Immune Signal Transduction in Leishmaniasis
+      visual_scope: Pathogen and immune response
+      observables:
+      - id: mw4d2e70a7_f499_461d_ae18_bc53b365b091
+        label: Tumor Necrosis Factor
+      - id: mw8cc67de0_64e6_428f_ab09_4c2825cc172c
+        label: Tnf Receptor 1
+      - id: mw6ee00a71_ab68_454b_b1cd_60c1ebd19cfa
+        label: Tradd Traf2 Rip Complex
+      - id: mw2dc73059_a841_48d5_b4bd_3ac24d94c42e
+        label: Unresolved Infection Observable 1
+      - id: mw136c8391_14f4_4a28_83a3_35cc74a2e040
+        label: Unresolved Infection Observable 2
+      - id: mw7204ab72_2ee5_4b92_b420_2583dacc4343
+        label: IkK_NFkB
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_mol2013_immune_signal_transduction_in_leishmania_biomd0000000477_model_state
+    maps_to: immunology_sbml_mol2013_immune_signal_transduction_in_leishmania_biomd0000000477_model.state
+    description: Core state record.
+  - name: immunology_sbml_mol2013_immune_signal_transduction_in_leishmania_biomd0000000477_model_summary
+    maps_to: immunology_sbml_mol2013_immune_signal_transduction_in_leishmania_biomd0000000477_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_mol2013_immune_signal_transduction_in_leishmania_biomd0000000477_model_species_labels
+    maps_to: immunology_sbml_mol2013_immune_signal_transduction_in_leishmania_biomd0000000477_model.species_labels
+    description: Core source-label map.
+  outputs: []

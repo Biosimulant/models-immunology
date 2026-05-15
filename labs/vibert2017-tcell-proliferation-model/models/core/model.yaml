@@ -1,0 +1,100 @@
+schema_version: '2.0'
+title: Vibert2017 - Tcell proliferation model
+description: model allows us to infer proliferation rates and cell cycle phase durations
+  from complex experimental 5-ethynyl-2'-deoxyuridine (EdU) data, revealing T cell
+  proliferation heterogeneity and specific si. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Julien Vibert
+- "V\xE9ronique Thomas-Vaslin"
+upstream:
+  id: biomodels_ebi:MODEL2003170002
+  source_db: biomodels_ebi
+  source_id: MODEL2003170002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2003170002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003170002?filename=Vibert2017.xml
+  license: CC0
+biosim:
+  entrypoint: src.vibert2017_tcell_proliferation_model_model2003170002_model:Vibert2017TcellProliferationModelModel2003170002Model
+  init_kwargs:
+    model_path: data/MODEL2003170002.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_immune_observable_1
+    maps_to: M
+    label: Initial Unresolved Immune Observable 1
+    default: 12.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `M`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: M_p
+    label: Initial Unresolved Immune Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `M_p`.
+  - name: initial_unresolved_immune_observable_3
+    maps_to: G
+    label: Initial Unresolved Immune Observable 3
+    default: 4.88455
+    units: native source value
+    description: Initial Unresolved Immune Observable 3. Sets the initial value of
+      bundled SBML species `G`.
+  - name: initial_unresolved_immune_observable_4
+    maps_to: S
+    label: Initial Unresolved Immune Observable 4
+    default: 88.8988
+    units: native source value
+    description: Initial Unresolved Immune Observable 4. Sets the initial value of
+      bundled SBML species `S`.
+  - name: initial_unresolved_immune_observable_5
+    maps_to: G_p
+    label: Initial Unresolved Immune Observable 5
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 5. Sets the initial value of
+      bundled SBML species `G_p`.
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: M
+    label: Unresolved Immune Observable 1
+    description: Unresolved Immune Observable 1. Maps to bundled source symbol `M`.
+  - name: unresolved_immune_observable_2
+    maps_to: M_p
+    label: Unresolved Immune Observable 2
+    description: Unresolved Immune Observable 2. Maps to bundled source symbol `M_p`.
+  - name: unresolved_immune_observable_3
+    maps_to: G
+    label: Unresolved Immune Observable 3
+    description: Unresolved Immune Observable 3. Maps to bundled source symbol `G`.
+  - name: unresolved_immune_observable_4
+    maps_to: S
+    label: Unresolved Immune Observable 4
+    description: Unresolved Immune Observable 4. Maps to bundled source symbol `S`.
+  - name: unresolved_immune_observable_5
+    maps_to: G_p
+    label: Unresolved Immune Observable 5
+    description: Unresolved Immune Observable 5. Maps to bundled source symbol `G_p`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,98 @@
+schema_version: '2.0'
+title: Creemers2021 - Tumor-immune dynamics and implications on immunotherapy responses
+description: This ordinary differential equation model simulating the mechanisms that
+  govern cancer-immune dynamics and their role in tumor responses to immunotherapy
+  is described by the publication:Creemers JHA,. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Jeroen H A Creemers
+- W Joost Lesterhuis
+- Niven Mehra
+- Winald R Gerritsen
+- Carl G Figdor
+upstream:
+  id: biomodels_ebi:BIOMD0000001022
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001022
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001022
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001022?filename=Creemers2021.xml
+  license: CC0
+biosim:
+  entrypoint: src.creemers2021_tumor_immune_dynamics_and_implicati_biomd0000001022_model:Creemers2021TumorImmuneDynamicsAndImplicatiBiomd0000001022Model
+  init_kwargs:
+    model_path: data/BIOMD0000001022.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_intratumoral_t_cells
+    maps_to: I
+    label: Initial Intratumoral T Cells
+    default: 0.0
+    units: native source value
+    description: Initial Intratumoral T Cells. Sets the initial value of bundled SBML
+      species `I`.
+  - name: initial_tumor_cells
+    maps_to: T
+    label: Initial Tumor Cells
+    default: 1.0
+    units: native source value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML species
+      `T`.
+  - name: initial_specific_t_cells
+    maps_to: S
+    label: Initial Specific T Cells
+    default: 0.0
+    units: native source value
+    description: Initial Specific T Cells. Sets the initial value of bundled SBML
+      species `S`.
+  - name: initial_naive_t_cells
+    maps_to: N
+    label: Initial Naive T Cells
+    default: 1000000.0
+    units: native source value
+    description: Initial Naive T Cells. Sets the initial value of bundled SBML species
+      `N`.
+  - name: intratumoral_t_cell_death_rate
+    maps_to: delta
+    label: Intratumoral T Cell Death Rate
+    default: 0.019
+    units: native source value
+    description: Intratumoral T Cell Death Rate. Sets bundled SBML parameter `delta`.
+  outputs:
+  - name: intratumoral_t_cells
+    maps_to: I
+    label: Intratumoral T Cells
+    description: Intratumoral T Cells. Maps to bundled source symbol `I`.
+  - name: tumor_cells
+    maps_to: T
+    label: Tumor Cells
+    description: Tumor Cells. Maps to bundled source symbol `T`.
+  - name: specific_t_cells
+    maps_to: S
+    label: Specific T Cells
+    description: Specific T Cells. Maps to bundled source symbol `S`.
+  - name: naive_t_cells
+    maps_to: N
+    label: Naive T Cells
+    description: Naive T Cells. Maps to bundled source symbol `N`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,104 @@
+schema_version: '2.0'
+title: Lavigne2021 - Non-spatial model of viral infection dynamics and interferon
+  response of well-mixed viral infection
+description: "This ordinary differential equation model is described in the following\
+  \ article:'Autocrine and paracrine interferon signalling as \u2018ring vaccination\u2019\
+  \ and \u2018contact tracing\u2019 strategies to suppress virus. It can be used to\
+  \ explore immune response dynamics and compare pathway-level behavior across conditions."
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- G Michael Lavigne
+- Hayley Russell
+- Barbara Sherry
+- Ruian Ke
+upstream:
+  id: biomodels_ebi:BIOMD0000001021
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001021
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001021
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001021?filename=Lavigne2021
+    - ODE model.xml
+  license: CC0
+biosim:
+  entrypoint: src.lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model:Lavigne2021NonSpatialModelOfViralInfectionBiomd0000001021Model
+  init_kwargs:
+    model_path: data/BIOMD0000001021.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_infected_cells_antiviral
+    maps_to: Infected_cells_antiviral
+    label: Initial Infected Cells Antiviral
+    default: 0.0
+    units: native source value
+    description: Initial Infected Cells Antiviral. Sets the initial value of bundled
+      SBML species `Infected_cells_antiviral`.
+  - name: initial_infected_cells
+    maps_to: Infected_cells
+    label: Initial Infected Cells
+    default: 0.0
+    units: native source value
+    description: Initial Infected Cells. Sets the initial value of bundled SBML species
+      `Infected_cells`.
+  - name: initial_interferon
+    maps_to: IFN
+    label: Initial Interferon
+    default: 0.0
+    units: native source value
+    description: Initial Interferon. Sets the initial value of bundled SBML species
+      `IFN`.
+  - name: initial_target_cells
+    maps_to: Target_cells
+    label: Initial Target Cells
+    default: 400000000.0
+    units: native source value
+    description: Initial Target Cells. Sets the initial value of bundled SBML species
+      `Target_cells`.
+  - name: initial_refractory_cells
+    maps_to: Refractory_cells
+    label: Initial Refractory Cells
+    default: 0.0
+    units: native source value
+    description: Initial Refractory Cells. Sets the initial value of bundled SBML
+      species `Refractory_cells`.
+  outputs:
+  - name: infected_cells_antiviral
+    maps_to: Infected_cells_antiviral
+    label: Infected Cells Antiviral
+    description: Infected Cells Antiviral. Maps to bundled source symbol `Infected_cells_antiviral`.
+  - name: infected_cells
+    maps_to: Infected_cells
+    label: Infected Cells
+    description: Infected Cells. Maps to bundled source symbol `Infected_cells`.
+  - name: interferon
+    maps_to: IFN
+    label: Interferon
+    description: Interferon. Maps to bundled source symbol `IFN`.
+  - name: target_cells
+    maps_to: Target_cells
+    label: Target Cells
+    description: Target Cells. Maps to bundled source symbol `Target_cells`.
+  - name: refractory_cells
+    maps_to: Refractory_cells
+    label: Refractory Cells
+    description: Refractory Cells. Maps to bundled source symbol `Refractory_cells`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

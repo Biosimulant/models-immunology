@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "704ade1e-0da6-4936-a09a-32bb7a36c321",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "527b9f24-f413-400a-bd0a-2557b9c6e5dc",
+  "created_at": "2026-05-15T15:53:06.350405999+00:00",
+  "last_synced_at": "2026-05-15T18:54:37.732137+00:00",
+  "hub_manifest_hash": "a006129df724fe5808e3f8715a43cbdaa1adf6d186fb46a4bb305d2cdd70f1d8",
+  "package_name": "lewkiewics2019-effects-of-aging-on-naive-t-cell-populations-and"
+}

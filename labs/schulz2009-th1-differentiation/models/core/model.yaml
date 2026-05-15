@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Schulz2009_Th1_differentiation
+description: "This a model from the article: Sequential polarization and imprinting\
+  \ of type 1 T helper lymphocytes by interferon-gamma and interleukin-12. Schulz\
+  \ EG, Mariani L, Radbruch A, H\xF6fer T."
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Edda G Schulz
+- Luca Mariani
+- Andreas Radbruch
+- "Thomas H\xF6fer"
+upstream:
+  id: biomodels_ebi:BIOMD0000000215
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000215
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000215
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000215?filename=BIOMD0000000215_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.schulz2009_th1_differentiation_biomd0000000215_model:Schulz2009Th1DifferentiationBiomd0000000215Model
+  init_kwargs:
+    model_path: data/BIOMD0000000215.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_interferon_mrna
+    maps_to: Ifn_mRNA
+    label: Initial Interferon mRNA
+    default: 0.0
+    units: native source value
+    description: Initial Interferon mRNA. Sets the initial value of bundled SBML species
+      `Ifn_mRNA`.
+  - name: initial_interferon_prot
+    maps_to: Ifn_Prot
+    label: Initial Interferon Prot
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Prot. Sets the initial value of bundled SBML species
+      `Ifn_Prot`.
+  - name: initial_tbet_mrna
+    maps_to: Tbet_mRNA
+    label: Initial Tbet mRNA
+    default: 0.0440000000000001
+    units: native source value
+    description: Initial Tbet mRNA. Sets the initial value of bundled SBML species
+      `Tbet_mRNA`.
+  - name: initial_rec_prot
+    maps_to: Rec_Prot
+    label: Initial Rec Prot
+    default: 0.0
+    units: native source value
+    description: Initial Rec Prot. Sets the initial value of bundled SBML species
+      `Rec_Prot`.
+  outputs:
+  - name: interferon_mrna
+    maps_to: Ifn_mRNA
+    label: Interferon mRNA
+    description: Interferon mRNA. Maps to bundled source symbol `Ifn_mRNA`.
+  - name: interferon_prot
+    maps_to: Ifn_Prot
+    label: Interferon Prot
+    description: Interferon Prot. Maps to bundled source symbol `Ifn_Prot`.
+  - name: tbet_mrna
+    maps_to: Tbet_mRNA
+    label: Tbet mRNA
+    description: Tbet mRNA. Maps to bundled source symbol `Tbet_mRNA`.
+  - name: unresolved_signaling_observable_1
+    maps_to: Ag
+    label: Unresolved Signaling Observable 1
+    description: Unresolved Signaling Observable 1. Maps to bundled source symbol
+      `Ag`.
+  - name: rec_prot
+    maps_to: Rec_Prot
+    label: Rec Prot
+    description: Rec Prot. Maps to bundled source symbol `Rec_Prot`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

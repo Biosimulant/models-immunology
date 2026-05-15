@@ -1,0 +1,100 @@
+schema_version: '2.0'
+title: Webb2002 - Fas/FasL mediated tumor T-cell interaction
+description: "Webb2002 - Fas/FasL mediated tumor T-cell interaction This deterministic\
+  \ model ofimmunological surveillance involving tumour cell\u2013T-lymphocyteinteraction,\
+  \ cell surface expression of Fas/FasL, and thei. It can be used to explore immune\
+  \ response dynamics and compare pathway-level behavior across conditions."
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Steven D Webb
+- Jonathan A Sherratt
+- Reginald G Fish
+upstream:
+  id: biomodels_ebi:BIOMD0000000661
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000661
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000661
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000661?filename=BIOMD0000000661_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model:Webb2002FasFaslMediatedTumorTCellInteractBiomd0000000661Model
+  init_kwargs:
+    model_path: data/BIOMD0000000661.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_t_cells_t
+    maps_to: T
+    label: Initial T Cells T
+    default: 500.000000000001
+    units: native source value
+    description: Initial T Cells T. Sets the initial value of bundled SBML species
+      `T`.
+  - name: initial_tumour_cells_m
+    maps_to: m
+    label: Initial Tumour Cells M
+    default: 500.000000000001
+    units: native source value
+    description: Initial Tumour Cells M. Sets the initial value of bundled SBML species
+      `m`.
+  - name: initial_mfasl_lt
+    maps_to: LT
+    label: Initial Mfasl Lt
+    default: 0.0
+    units: native source value
+    description: Initial Mfasl Lt. Sets the initial value of bundled SBML species
+      `LT`.
+  - name: initial_fasr_rt
+    maps_to: RT
+    label: Initial Fasr Rt
+    default: 10000.0000000001
+    units: native source value
+    description: Initial Fasr Rt. Sets the initial value of bundled SBML species `RT`.
+  - name: initial_mfasl_lm
+    maps_to: Lm
+    label: Initial Mfasl Lm
+    default: 1000.0
+    units: native source value
+    description: Initial Mfasl Lm. Sets the initial value of bundled SBML species
+      `Lm`.
+  outputs:
+  - name: t_cells_t
+    maps_to: T
+    label: T Cells T
+    description: T Cells T. Maps to bundled source symbol `T`.
+  - name: tumour_cells_m
+    maps_to: m
+    label: Tumour Cells M
+    description: Tumour Cells M. Maps to bundled source symbol `m`.
+  - name: mfasl_lt
+    maps_to: LT
+    label: Mfasl Lt
+    description: Mfasl Lt. Maps to bundled source symbol `LT`.
+  - name: fasr_rt
+    maps_to: RT
+    label: Fasr Rt
+    description: Fasr Rt. Maps to bundled source symbol `RT`.
+  - name: mfasl_lm
+    maps_to: Lm
+    label: Mfasl Lm
+    description: Mfasl Lm. Maps to bundled source symbol `Lm`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

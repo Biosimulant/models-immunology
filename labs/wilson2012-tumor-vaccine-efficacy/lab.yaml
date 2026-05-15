@@ -1,0 +1,85 @@
+schema_version: '2.0'
+title: Wilson2012 - tumor vaccine efficacy Lab
+description: 'The paper describes a model of antitumor vaccine therapy.Created by
+  COPASI 4.25 (Build 207) This model is described in the article: A Mathematical Model
+  of the Enhancement of Tumor Vaccine Efficacy by. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.'
+models:
+- alias: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.state
+  to:
+  - visualisation.immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model_state
+- from: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.summary
+  to:
+  - visualisation.immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model_summary
+- from: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.species_labels
+  to:
+  - visualisation.immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 3.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `B`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 100.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `E`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 1.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `R`.
+  - name: initial_unresolved_tumor_observable_5
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.initial_unresolved_tumor_observable_5
+    label: Initial Unresolved Tumor Observable 5
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 5. Sets the initial value of
+      bundled SBML species `V`.
+  - name: tgfb_decay_rate
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.tgfb_decay_rate
+    label: Tgfb Decay Rate
+    default: 0.0007
+    units: unit_1
+    description: Tgfb Decay Rate. Sets bundled SBML parameter `d`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.unresolved_tumor_observable_4
+  - name: unresolved_tumor_observable_5
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.unresolved_tumor_observable_5
+  - name: state
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.state
+  - name: summary
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_wilson2012_tumor_vaccine_efficacy_biomd0000000791_model.species_labels

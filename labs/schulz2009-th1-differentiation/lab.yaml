@@ -1,0 +1,71 @@
+schema_version: '2.0'
+title: Schulz2009 Th1 differentiation Lab
+description: "This a model from the article: Sequential polarization and imprinting\
+  \ of type 1 T helper lymphocytes by interferon-gamma and interleukin-12. Schulz\
+  \ EG, Mariani L, Radbruch A, H\xF6fer T."
+models:
+- alias: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.state
+  to:
+  - visualisation.immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model_state
+- from: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.summary
+  to:
+  - visualisation.immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model_summary
+- from: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.species_labels
+  to:
+  - visualisation.immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_interferon_mrna
+    maps_to: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.initial_interferon_mrna
+    label: Initial Interferon mRNA
+    default: 0.0
+    units: native source value
+    description: Initial Interferon mRNA. Sets the initial value of bundled SBML species
+      `Ifn_mRNA`.
+  - name: initial_interferon_prot
+    maps_to: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.initial_interferon_prot
+    label: Initial Interferon Prot
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Prot. Sets the initial value of bundled SBML species
+      `Ifn_Prot`.
+  - name: initial_tbet_mrna
+    maps_to: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.initial_tbet_mrna
+    label: Initial Tbet mRNA
+    default: 0.0440000000000001
+    units: native source value
+    description: Initial Tbet mRNA. Sets the initial value of bundled SBML species
+      `Tbet_mRNA`.
+  - name: initial_rec_prot
+    maps_to: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.initial_rec_prot
+    label: Initial Rec Prot
+    default: 0.0
+    units: native source value
+    description: Initial Rec Prot. Sets the initial value of bundled SBML species
+      `Rec_Prot`.
+  outputs:
+  - name: interferon_mrna
+    maps_to: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.interferon_mrna
+  - name: interferon_prot
+    maps_to: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.interferon_prot
+  - name: tbet_mrna
+    maps_to: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.tbet_mrna
+  - name: unresolved_signaling_observable_1
+    maps_to: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.unresolved_signaling_observable_1
+  - name: rec_prot
+    maps_to: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.rec_prot
+  - name: state
+    maps_to: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.state
+  - name: summary
+    maps_to: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_schulz2009_th1_differentiation_biomd0000000215_model.species_labels

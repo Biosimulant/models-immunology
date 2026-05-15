@@ -1,0 +1,52 @@
+schema_version: '2.0'
+title: Alharbi2020 - An ODE-based model of the dynamics of tumor cell progression
+  and its effects on normal cell growth and immune system functionality Lab Visualisation
+description: Dedicated presentation model for Alharbi2020 - An ODE-based model of
+  the dynamics of tumor cell progression and its effects on normal cell growth and
+  immune system functionality Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Alharbi2020 - An ODE-based model of the dynamics of tumor cell progression
+      and its effects on normal cell growth and immune system functionality Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model
+      title: Alharbi2020 - An ODE-based model of the dynamics of tumor cell progression
+        and its effects on normal cell growth and immune system functionality
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: Tumor_cells
+        label: Tumor Cells
+      - id: Immune_cells
+        label: Immune Cells
+      - id: Normal_cells
+        label: Normal Cells
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model_state
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.state
+    description: Core state record.
+  - name: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model_summary
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model_species_labels
+    maps_to: immunology_sbml_alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model.species_labels
+    description: Core source-label map.
+  outputs: []

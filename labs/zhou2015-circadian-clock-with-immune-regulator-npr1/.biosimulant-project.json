@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "b5dd2d81-1999-4a78-8d76-2d16de241687",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "43071a71-4938-4539-8134-6ff6934859a8",
+  "created_at": "2026-05-15T15:53:07.933882376+00:00",
+  "last_synced_at": "2026-05-15T20:29:13.190118+00:00",
+  "hub_manifest_hash": "e1ac5e803cf091cd7ef31bc690b9c463ec07e91f33e50b1f682bbc4c145f9bc0",
+  "package_name": "zhou2015-circadian-clock-with-immune-regulator-npr1-lab"
+}

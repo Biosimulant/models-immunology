@@ -1,0 +1,135 @@
+schema_version: '2.0'
+title: Manda2019 - Acute hepatitis B virus infection model within the host incorporating
+  immune cells and cytokine response
+description: This is a within-host hepatitis B viral mathematical model for hepatitis
+  B in the acute phase of infection. The model incorporates hepatocytes, hepatitis
+  B virus, immune system cells and cytokine dyna.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Manda, E.C.
+- Chirove, F.
+upstream:
+  id: biomodels_ebi:MODEL1911280002
+  source_db: biomodels_ebi
+  source_id: MODEL1911280002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1911280002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911280002?filename=Manda2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model:Manda2019AcuteHepatitisBVirusInfectionModeModel1911280002Model
+  init_kwargs:
+    model_path: data/MODEL1911280002.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_infection_observable_1
+    maps_to: H
+    label: Initial Unresolved Infection Observable 1
+    default: 9600000.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `H`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: I_H
+    label: Initial Unresolved Infection Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `I_H`.
+  - name: initial_unresolved_infection_observable_3
+    maps_to: T_c
+    label: Initial Unresolved Infection Observable 3
+    default: 1000.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 3. Sets the initial value
+      of bundled SBML species `T_c`.
+  - name: initial_unresolved_infection_observable_4
+    maps_to: T_1
+    label: Initial Unresolved Infection Observable 4
+    default: 1000.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 4. Sets the initial value
+      of bundled SBML species `T_1`.
+  - name: initial_unresolved_infection_observable_5
+    maps_to: T_2
+    label: Initial Unresolved Infection Observable 5
+    default: 1000.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 5. Sets the initial value
+      of bundled SBML species `T_2`.
+  - name: hepatocyte_growth_rate
+    maps_to: r
+    label: Hepatocyte Growth Rate
+    default: 0.00145
+    units: native source value
+    description: Hepatocyte Growth Rate. Sets bundled SBML parameter `r`.
+  - name: hepatocyte_infection_rate
+    maps_to: beta
+    label: Hepatocyte Infection Rate
+    default: 9.9e-10
+    units: native source value
+    description: Hepatocyte Infection Rate. Sets bundled SBML parameter `beta`.
+  - name: infected_hepatocytes_death_rate
+    maps_to: mu
+    label: Infected Hepatocytes Death Rate
+    default: 0.4
+    units: native source value
+    description: Infected Hepatocytes Death Rate. Sets bundled SBML parameter `mu`.
+  - name: th1_death_rate
+    maps_to: mu_1
+    label: Th1 Death Rate
+    default: 0.5
+    units: native source value
+    description: Th1 Death Rate. Sets bundled SBML parameter `mu_1`.
+  - name: th2_death_rate
+    maps_to: mu_2
+    label: Th2 Death Rate
+    default: 0.5
+    units: native source value
+    description: Th2 Death Rate. Sets bundled SBML parameter `mu_2`.
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: H
+    label: Unresolved Infection Observable 1
+    description: Unresolved Infection Observable 1. Maps to bundled source symbol
+      `H`.
+  - name: unresolved_infection_observable_2
+    maps_to: I_H
+    label: Unresolved Infection Observable 2
+    description: Unresolved Infection Observable 2. Maps to bundled source symbol
+      `I_H`.
+  - name: unresolved_infection_observable_3
+    maps_to: T_c
+    label: Unresolved Infection Observable 3
+    description: Unresolved Infection Observable 3. Maps to bundled source symbol
+      `T_c`.
+  - name: unresolved_infection_observable_4
+    maps_to: T_1
+    label: Unresolved Infection Observable 4
+    description: Unresolved Infection Observable 4. Maps to bundled source symbol
+      `T_1`.
+  - name: unresolved_infection_observable_5
+    maps_to: T_2
+    label: Unresolved Infection Observable 5
+    description: Unresolved Infection Observable 5. Maps to bundled source symbol
+      `T_2`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: dePillis2005 - A validated mathematical model of cell-mediated immune response
+  to tumor growth
+description: This model describes interactions between a tumour and the immune system,
+  with specific emphasis on the role of natural killer and CD8-positive T cells in
+  tumor surveillance. It can be used to explore immune response dynamics and compare
+  pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Lisette G de Pillis
+- Ami E Radunskaya
+- Charles L Wiseman
+upstream:
+  id: biomodels_ebi:MODEL1907260001
+  source_db: biomodels_ebi
+  source_id: MODEL1907260001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1907260001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1907260001?filename=dePillis2005.xml
+  license: CC0
+biosim:
+  entrypoint: src.depillis2005_a_validated_mathematical_model_of_c_model1907260001_model:Depillis2005AValidatedMathematicalModelOfCModel1907260001Model
+  init_kwargs:
+    model_path: data/MODEL1907260001.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: T
+    label: Initial Unresolved Tumor Observable 1
+    default: 100.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: N
+    label: Initial Unresolved Tumor Observable 2
+    default: 1000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `N`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: L
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `L`.
+  - name: tumor_killing_natural_killer_rate
+    maps_to: c
+    label: Tumor Killing Natural Killer Rate
+    default: 3.23e-07
+    units: native source value
+    description: Tumor Killing Natural Killer Rate. Sets bundled SBML parameter `c`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: T
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `T`.
+  - name: unresolved_tumor_observable_2
+    maps_to: N
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `N`.
+  - name: unresolved_tumor_observable_3
+    maps_to: L
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `L`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

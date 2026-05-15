@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Leon-Triana2021 - Competition between tumour cells and dual-target CAR T-cells
+description: This model of the use of chimeric antigen receptor (CAR)-T cell therapy
+  in the treatment of solid tumours is described in the article:'Dual-Target CAR-Ts
+  with On- and Off-Tumour Activity May Override. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- "Odelaisy Le\xF3n-Triana"
+- "Antonio P\xE9rez-Mart\xEDnez"
+- "Manuel Ram\xEDrez-Orellana"
+- "V\xEDctor M P\xE9rez-Garc\xEDa"
+upstream:
+  id: biomodels_ebi:BIOMD0000001014
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001014
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001014
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001014?filename=Leon-Triana2021
+    (eqs 3-6).xml
+  license: CC0
+biosim:
+  entrypoint: src.leon_triana2021_competition_between_tumour_cells_biomd0000001014_model:LeonTriana2021CompetitionBetweenTumourCellsBiomd0000001014Model
+  init_kwargs:
+    model_path: data/BIOMD0000001014.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_car_t_cells_on_tumour
+    maps_to: CAR_T_cells_on_tumour
+    label: Initial Car T Cells On Tumour
+    default: 0.0
+    units: native source value
+    description: Initial Car T Cells On Tumour. Sets the initial value of bundled
+      SBML species `CAR_T_cells_on_tumour`.
+  - name: initial_car_t_cells_off_tumour
+    maps_to: CAR_T_cells_off_tumour
+    label: Initial Car T Cells Off Tumour
+    default: 200000000.0
+    units: native source value
+    description: Initial Car T Cells Off Tumour. Sets the initial value of bundled
+      SBML species `CAR_T_cells_off_tumour`.
+  - name: initial_tumour_cells
+    maps_to: Tumour_cells
+    label: Initial Tumour Cells
+    default: 33500000000.0
+    units: native source value
+    description: Initial Tumour Cells. Sets the initial value of bundled SBML species
+      `Tumour_cells`.
+  - name: initial_cells
+    maps_to: B_cells
+    label: Initial Cells
+    default: 25000000000.0
+    units: native source value
+    description: Initial Cells. Sets the initial value of bundled SBML species `B_cells`.
+  - name: tumour_death_rate
+    maps_to: alpha_2
+    label: Tumour Death Rate
+    default: 2.5e-10
+    units: unit_3
+    description: Tumour Death Rate. Sets bundled SBML parameter `alpha_2`.
+  outputs:
+  - name: car_t_cells_on_tumour
+    maps_to: CAR_T_cells_on_tumour
+    label: Car T Cells On Tumour
+    description: Car T Cells On Tumour. Maps to bundled source symbol `CAR_T_cells_on_tumour`.
+  - name: car_t_cells_off_tumour
+    maps_to: CAR_T_cells_off_tumour
+    label: Car T Cells Off Tumour
+    description: Car T Cells Off Tumour. Maps to bundled source symbol `CAR_T_cells_off_tumour`.
+  - name: car_t_cells_total
+    maps_to: CAR_T_cells_total
+    label: Car T Cells Total
+    description: Car T Cells Total. Maps to bundled source symbol `CAR_T_cells_total`.
+  - name: tumour_cells
+    maps_to: Tumour_cells
+    label: Tumour Cells
+    description: Tumour Cells. Maps to bundled source symbol `Tumour_cells`.
+  - name: cells
+    maps_to: B_cells
+    label: Cells
+    description: Cells. Maps to bundled source symbol `B_cells`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

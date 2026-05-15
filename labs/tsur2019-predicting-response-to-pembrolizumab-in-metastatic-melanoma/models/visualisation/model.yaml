@@ -1,0 +1,50 @@
+schema_version: '2.0'
+title: Tsur2019 - Predicting response to pembrolizumab in metastatic melanoma by a
+  new personalization algorithm Lab Visualisation
+description: Dedicated presentation model for Tsur2019 - Predicting response to pembrolizumab
+  in metastatic melanoma by a new personalization algorithm Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Tsur2019 - Predicting response to pembrolizumab in metastatic melanoma
+      by a new personalization algorithm Lab
+    question: What response class does the bundled predictive source assign to the
+      supplied feature vector?
+    answer_focus: feature-vector inputs, predicted class, and class-probability evidence
+    context: predictive_ml_or_design
+    sources:
+    - alias: immunology_sbml_tsur2019_predicting_response_to_pembrolizumab_in_model1911150001_model
+      title: Tsur2019 - Predicting response to pembrolizumab in metastatic melanoma
+        by a new personalization algorithm
+      visual_scope: Predictive immunology model
+      observables:
+      - id: A_pc
+        label: Unresolved Prediction Observable 1
+      - id: T_il
+        label: Unresolved Prediction Observable 2
+      - id: M_el
+        label: Unresolved Prediction Observable 3
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_tsur2019_predicting_response_to_pembrolizumab_in_model1911150001_model_state
+    maps_to: immunology_sbml_tsur2019_predicting_response_to_pembrolizumab_in_model1911150001_model.state
+    description: Core state record.
+  - name: immunology_sbml_tsur2019_predicting_response_to_pembrolizumab_in_model1911150001_model_summary
+    maps_to: immunology_sbml_tsur2019_predicting_response_to_pembrolizumab_in_model1911150001_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_tsur2019_predicting_response_to_pembrolizumab_in_model1911150001_model_species_labels
+    maps_to: immunology_sbml_tsur2019_predicting_response_to_pembrolizumab_in_model1911150001_model.species_labels
+    description: Core source-label map.
+  outputs: []

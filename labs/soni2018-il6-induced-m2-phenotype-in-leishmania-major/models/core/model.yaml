@@ -1,0 +1,74 @@
+schema_version: '2.0'
+title: Soni2018 - IL6 induced M2 Phenotype in Leishmania major infected macrophage
+description: IL-6 has been proposed to favor the development of Th2 responses and
+  play an important role in the communication between cells of multicellular organisms.
+  They are involved in the regulation of comple.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Bhavnita Soni
+- Bhaskar Saha
+- Shailza Singh
+upstream:
+  id: biomodels_ebi:BIOMD0000000873
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000873
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000873
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000873?filename=Soni2018.xml
+  license: CC0
+biosim:
+  entrypoint: src.soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model:Soni2018Il6InducedM2PhenotypeInLeishmaniaBiomd0000000873Model
+  init_kwargs:
+    model_path: data/BIOMD0000000873.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_interferon_gamma_interferon_gamma_receptor
+    maps_to: mwd7270399_0429_4c85_920a_de2e0ae74440
+    label: Initial Interferon Gamma Interferon Gamma Receptor
+    default: 800.0
+    units: native source value
+    description: Initial Interferon Gamma Interferon Gamma Receptor. Sets the initial
+      value of bundled SBML species `mwd7270399_0429_4c85_920a_de2e0ae74440`.
+  outputs:
+  - name: interferon_g
+    maps_to: mw85ae78ed_34f7_460c_b906_1f512a83810c
+    label: Interferon G
+    description: Interferon G. Maps to bundled source symbol `mw85ae78ed_34f7_460c_b906_1f512a83810c`.
+  - name: interferon_gr
+    maps_to: mw49322d55_ad63_4e7c_b1eb_42835c9b577a
+    label: Interferon Gr
+    description: Interferon Gr. Maps to bundled source symbol `mw49322d55_ad63_4e7c_b1eb_42835c9b577a`.
+  - name: interferon_gamma_interferon_gamma_receptor
+    maps_to: mwd7270399_0429_4c85_920a_de2e0ae74440
+    label: Interferon Gamma Interferon Gamma Receptor
+    description: Interferon Gamma Interferon Gamma Receptor. Maps to bundled source
+      symbol `mwd7270399_0429_4c85_920a_de2e0ae74440`.
+  - name: unresolved_infection_observable_1
+    maps_to: mwfaacd7f7_6aa9_4e6c_a7d8_281f2022ba2f
+    label: Unresolved Infection Observable 1
+    description: Unresolved Infection Observable 1. Maps to bundled source symbol
+      `mwfaacd7f7_6aa9_4e6c_a7d8_281f2022ba2f`.
+  - name: toll_like_receptor_6_complex
+    maps_to: mwa244ea2a_3e41_473b_9ae7_d0db512fc366
+    label: Toll Like Receptor 6 Complex
+    description: Toll Like Receptor 6 Complex. Maps to bundled source symbol `mwa244ea2a_3e41_473b_9ae7_d0db512fc366`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

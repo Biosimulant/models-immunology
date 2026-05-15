@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "574168bc-650e-4654-addc-79e832dd7814",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "3f8aa409-d521-488f-9f49-6890e9f26765",
+  "created_at": "2026-05-15T15:53:07.089073200+00:00",
+  "last_synced_at": "2026-05-15T20:32:42.561552+00:00",
+  "hub_manifest_hash": "5158ff3434b73f8e7ae3a425d2b3deb48c4024af7bf6a1a6a57ec190ee9fee79",
+  "package_name": "restif2007-vaccination-invasion-lab"
+}

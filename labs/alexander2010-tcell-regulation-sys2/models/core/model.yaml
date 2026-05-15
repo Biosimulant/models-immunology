@@ -1,0 +1,100 @@
+schema_version: '2.0'
+title: Alexander2010_Tcell_Regulation_Sys2
+description: 'This is system 2, the model with Michelis Menten type antigen uptake
+  by pAPCs, described in the article: Self-tolerance and Autoimmunity in a Regulatory
+  T Cell Model. It can be used to explore immune response dynamics and compare pathway-level
+  behavior across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- H K Alexander
+- L M Wahl
+upstream:
+  id: biomodels_ebi:BIOMD0000000290
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000290
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000290
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000290?filename=BIOMD0000000290_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.alexander2010_tcell_regulation_sys2_biomd0000000290_model:Alexander2010TcellRegulationSys2Biomd0000000290Model
+  init_kwargs:
+    model_path: data/BIOMD0000000290.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_immune_observable_1
+    maps_to: A
+    label: Initial Unresolved Immune Observable 1
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `A`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: R
+    label: Initial Unresolved Immune Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `R`.
+  - name: initial_unresolved_immune_observable_3
+    maps_to: E
+    label: Initial Unresolved Immune Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 3. Sets the initial value of
+      bundled SBML species `E`.
+  - name: initial_unresolved_immune_observable_4
+    maps_to: G
+    label: Initial Unresolved Immune Observable 4
+    default: 100000000.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 4. Sets the initial value of
+      bundled SBML species `G`.
+  - name: r2_self_antigen_release_triggered_by_e_rate
+    maps_to: gamma
+    label: R2 Self Antigen Release Triggered By E Rate
+    default: 2000.0
+    units: per_day
+    description: R2 Self Antigen Release Triggered By E Rate. Sets bundled SBML parameter
+      `gamma`.
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: A
+    label: Unresolved Immune Observable 1
+    description: Unresolved Immune Observable 1. Maps to bundled source symbol `A`.
+  - name: unresolved_immune_observable_2
+    maps_to: R
+    label: Unresolved Immune Observable 2
+    description: Unresolved Immune Observable 2. Maps to bundled source symbol `R`.
+  - name: unresolved_immune_observable_3
+    maps_to: E
+    label: Unresolved Immune Observable 3
+    description: Unresolved Immune Observable 3. Maps to bundled source symbol `E`.
+  - name: unresolved_immune_observable_4
+    maps_to: G
+    label: Unresolved Immune Observable 4
+    description: Unresolved Immune Observable 4. Maps to bundled source symbol `G`.
+  - name: unresolved_immune_observable_5
+    maps_to: A_im
+    label: Unresolved Immune Observable 5
+    description: Unresolved Immune Observable 5. Maps to bundled source symbol `A_im`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

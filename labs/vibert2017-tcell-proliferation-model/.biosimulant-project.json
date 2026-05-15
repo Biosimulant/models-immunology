@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "60878641-4434-4959-94db-ea46cad97ca5",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "bde659d5-64d4-4f11-8db0-36e9c294b23f",
+  "created_at": "2026-05-15T15:53:07.561742170+00:00",
+  "last_synced_at": "2026-05-15T20:17:01.907492+00:00",
+  "hub_manifest_hash": "b5a21b68150c1d962b0770d869efda5bbd1b813d68639ad632f55dd3a956951e",
+  "package_name": "vibert2017-tcell-proliferation-model-lab"
+}

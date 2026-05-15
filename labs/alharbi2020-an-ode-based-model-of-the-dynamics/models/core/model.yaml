@@ -1,0 +1,109 @@
+schema_version: '2.0'
+title: Alharbi2020 - An ODE-based model of the dynamics of tumor cell progression
+  and its effects on normal cell growth and immune system functionality
+description: This ordinary differential equation model of tumor cell growth, called
+  the normal-tumor-immune-unhealthy diet model (NTIUNHDM), is described by the publication:Alharbi,
+  S.A.; Rambely, A.S.'A New ODE-B. It can be used to explore immune response dynamics
+  and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Sana Abdulkream Alharbi
+- Azmin Sham Rambely
+upstream:
+  id: biomodels_ebi:BIOMD0000001023
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001023
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001023
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001023?filename=Alharbi2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.alharbi2020_an_ode_based_model_of_the_dynamics_o_biomd0000001023_model:Alharbi2020AnOdeBasedModelOfTheDynamicsOBiomd0000001023Model
+  init_kwargs:
+    model_path: data/BIOMD0000001023.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: Tumor_cells
+    label: Initial Tumor Cells
+    default: 1.0
+    units: native source value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML species
+      `Tumor_cells`.
+  - name: initial_immune_cells
+    maps_to: Immune_cells
+    label: Initial Immune Cells
+    default: 1.22
+    units: native source value
+    description: Initial Immune Cells. Sets the initial value of bundled SBML species
+      `Immune_cells`.
+  - name: initial_normal_cells
+    maps_to: Normal_cells
+    label: Initial Normal Cells
+    default: 1.0
+    units: native source value
+    description: Initial Normal Cells. Sets the initial value of bundled SBML species
+      `Normal_cells`.
+  - name: normal_cell_growth_rate
+    maps_to: r
+    label: Normal Cell Growth Rate
+    default: 0.4312
+    units: native source value
+    description: Normal Cell Growth Rate. Sets bundled SBML parameter `r`.
+  - name: normal_cell_growth_rate_2
+    maps_to: beta_1
+    label: Normal Cell Growth Rate 2
+    default: 2.99e-06
+    units: native source value
+    description: Normal Cell Growth Rate 2. Sets bundled SBML parameter `beta_1`.
+  - name: normal_cell_death_inhibition_rate
+    maps_to: gamma
+    label: Normal Cell Death Inhibition Rate
+    default: 0.9314
+    units: native source value
+    description: Normal Cell Death Inhibition Rate. Sets bundled SBML parameter `gamma`.
+  - name: tumor_cell_growth_rate
+    maps_to: alpha_1
+    label: Tumor Cell Growth Rate
+    default: 0.4426
+    units: native source value
+    description: Tumor Cell Growth Rate. Sets bundled SBML parameter `alpha_1`.
+  - name: tumor_cell_growth_rate_2
+    maps_to: alpha_2
+    label: Tumor Cell Growth Rate 2
+    default: 0.4
+    units: native source value
+    description: Tumor Cell Growth Rate 2. Sets bundled SBML parameter `alpha_2`.
+  outputs:
+  - name: tumor_cells
+    maps_to: Tumor_cells
+    label: Tumor Cells
+    description: Tumor Cells. Maps to bundled source symbol `Tumor_cells`.
+  - name: immune_cells
+    maps_to: Immune_cells
+    label: Immune Cells
+    description: Immune Cells. Maps to bundled source symbol `Immune_cells`.
+  - name: normal_cells
+    maps_to: Normal_cells
+    label: Normal Cells
+    description: Normal Cells. Maps to bundled source symbol `Normal_cells`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

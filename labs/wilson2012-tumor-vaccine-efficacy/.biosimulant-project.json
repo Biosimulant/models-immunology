@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "7f701291-bff6-475c-bb1a-2704fa5f499b",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "54058a89-31e2-456d-a230-df08d29be30b",
+  "created_at": "2026-05-15T15:53:07.732962265+00:00",
+  "last_synced_at": "2026-05-15T20:23:04.129524+00:00",
+  "hub_manifest_hash": "b4d49df006361bf0d7e53528d399cb66b7a3e671d92c0bc62f81d1a4ee403edf",
+  "package_name": "wilson2012-tumor-vaccine-efficacy-lab"
+}

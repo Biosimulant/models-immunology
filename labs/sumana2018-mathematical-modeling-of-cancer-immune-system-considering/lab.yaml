@@ -1,0 +1,92 @@
+schema_version: '2.0'
+title: Sumana2018 - Mathematical modeling of cancer-immune system, considering the
+  role of antibodies. Lab
+description: Mathematical modeling of cancer-immune system, considering the role of
+  antibodies.Ghosh S1, Banerjee S2.Author information1 Department of Mathematics,
+  Indian Institute of Technology Roorkee, Roorkee,. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.state
+  to:
+  - visualisation.immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model_state
+- from: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.summary
+  to:
+  - visualisation.immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model_summary
+- from: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.species_labels
+  to:
+  - visualisation.immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 90000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `B`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 1000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `P`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 150000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `A`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 100000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `T`.
+  - name: production_of_antibody_against_tumor_rate
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.production_of_antibody_against_tumor_rate
+    label: Production Of Antibody Against Tumor Rate
+    default: 100.0
+    units: native source value
+    description: Production Of Antibody Against Tumor Rate. Sets bundled SBML parameter
+      `r_1`.
+  - name: production_of_antibody_against_tumor_rate_2
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.production_of_antibody_against_tumor_rate_2
+    label: Production Of Antibody Against Tumor Rate 2
+    default: 1000.0
+    units: native source value
+    description: Production Of Antibody Against Tumor Rate 2. Sets bundled SBML parameter
+      `r_2`.
+  - name: removal_of_antibody_from_the_system_rate
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.removal_of_antibody_from_the_system_rate
+    label: Removal Of Antibody From The System Rate
+    default: 6.884
+    units: native source value
+    description: Removal Of Antibody From The System Rate. Sets bundled SBML parameter
+      `mu_2`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.unresolved_tumor_observable_4
+  - name: state
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.state
+  - name: summary
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_sumana2018_mathematical_modeling_of_cancer_immun_biomd0000000885_model.species_labels

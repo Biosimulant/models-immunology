@@ -1,0 +1,110 @@
+schema_version: '2.0'
+title: Hanson2016 - Toxicity Management in CAR T cell therapy for B-ALL Lab
+description: This model provides an in silico mathematical platform to explore the
+  interactions between chimeric antigen receptor-modified T cells, inflammatory toxicitiy,
+  and the tumour burdens of individual pati. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.state
+  to:
+  - visualisation.immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model_state
+- from: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.summary
+  to:
+  - visualisation.immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model_summary
+- from: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.species_labels
+  to:
+  - visualisation.immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 10.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `C_m`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 10.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `C_e`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 10.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `H_m`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 10.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `H_e`.
+  - name: initial_unresolved_tumor_observable_5
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.initial_unresolved_tumor_observable_5
+    label: Initial Unresolved Tumor Observable 5
+    default: 1600.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 5. Sets the initial value of
+      bundled SBML species `L`.
+  - name: tumor_growth_rate
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.tumor_growth_rate
+    label: Tumor Growth Rate
+    default: 0.003
+    units: native source value
+    description: Tumor Growth Rate. Sets bundled SBML parameter `r_1`.
+  - name: tumor_killing_c_e_rate
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.tumor_killing_c_e_rate
+    label: Tumor Killing C E Rate
+    default: 0.0002
+    units: native source value
+    description: Tumor Killing C E Rate. Sets bundled SBML parameter `d_1`.
+  - name: inflammation_decay_rate
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.inflammation_decay_rate
+    label: Inflammation Decay Rate
+    default: 1.5
+    units: native source value
+    description: Inflammation Decay Rate. Sets bundled SBML parameter `d_2`.
+  - name: cytotoxic_t_cells_effector_decay_rate
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.cytotoxic_t_cells_effector_decay_rate
+    label: Cytotoxic T Cells Effector Decay Rate
+    default: 0.004
+    units: native source value
+    description: Cytotoxic T Cells Effector Decay Rate. Sets bundled SBML parameter
+      `d_3`.
+  - name: helper_t_cells_effector_decay_rate
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.helper_t_cells_effector_decay_rate
+    label: Helper T Cells Effector Decay Rate
+    default: 0.004
+    units: native source value
+    description: Helper T Cells Effector Decay Rate. Sets bundled SBML parameter `d_4`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.unresolved_tumor_observable_4
+  - name: unresolved_tumor_observable_5
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.unresolved_tumor_observable_5
+  - name: state
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.state
+  - name: summary
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_hanson2016_toxicity_management_in_car_t_cell_the_biomd0000000837_model.species_labels

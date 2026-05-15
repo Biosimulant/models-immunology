@@ -1,0 +1,71 @@
+schema_version: '2.0'
+title: Leber2016 - Regulatory macrophage differentiation - H.pylori infection Lab
+description: The model is the second model of the publication 'Modeling the role of
+  lanthionine synthetase C-like 2 (LANCL2) in the modulation of immune responses to
+  Helicobacter pylori infection' published in Plo. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.state
+  to:
+  - visualisation.immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model_state
+- from: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.summary
+  to:
+  - visualisation.immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model_summary
+- from: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.species_labels
+  to:
+  - visualisation.immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_cx3cr1_receptor
+    maps_to: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.initial_cx3cr1_receptor
+    label: Initial Cx3cr1 Receptor
+    default: 0.0
+    units: native source value
+    description: Initial Cx3cr1 Receptor. Sets the initial value of bundled SBML species
+      `s1`.
+  - name: initial_unresolved_infection_observable_1
+    maps_to: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.initial_unresolved_infection_observable_1
+    label: Initial Unresolved Infection Observable 1
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `s2`.
+  - name: initial_erk
+    maps_to: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.initial_erk
+    label: Initial ERK
+    default: 0.0
+    units: native source value
+    description: Initial ERK. Sets the initial value of bundled SBML species `s3`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.initial_unresolved_infection_observable_2
+    label: Initial Unresolved Infection Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `s4`.
+  outputs:
+  - name: cx3cr1_receptor
+    maps_to: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.cx3cr1_receptor
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.unresolved_infection_observable_1
+  - name: erk
+    maps_to: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.erk
+  - name: unresolved_infection_observable_2
+    maps_to: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.unresolved_infection_observable_2
+  - name: unresolved_infection_observable_3
+    maps_to: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.unresolved_infection_observable_3
+  - name: state
+    maps_to: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.state
+  - name: summary
+    maps_to: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_leber2016_regulatory_macrophage_differentiation_model1611160001_model.species_labels

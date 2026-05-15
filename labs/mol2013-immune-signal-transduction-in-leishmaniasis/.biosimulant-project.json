@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "428e8fc4-6f67-4467-b31b-77906ce40cd2",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "a61610c5-c674-4b0e-b9f0-7658b00eb264",
+  "created_at": "2026-05-15T15:53:06.697017022+00:00",
+  "last_synced_at": "2026-05-15T19:11:54.405098+00:00",
+  "hub_manifest_hash": "ee826d22a37c740fd7504e5e8aa933506fb8118d582f744c503692b792050618",
+  "package_name": "mol2013-immune-signal-transduction-in-leishmaniasis-lab"
+}

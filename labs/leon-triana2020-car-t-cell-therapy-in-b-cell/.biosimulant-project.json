@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "b3465ab9-01e1-4971-8d03-6cb392008675",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "43918f32-08a1-4d9d-be92-10c2ed10512e",
+  "created_at": "2026-05-15T15:53:06.259236056+00:00",
+  "last_synced_at": "2026-05-15T18:49:11.466134+00:00",
+  "hub_manifest_hash": "e019597bb4d17fa2dcb294997e7db51afcf983ed62b4e457957ef59c6df9c2eb",
+  "package_name": "leon-triana2020-car-t-cell-therapy-in-b-cell-acute-lymphoblastic"
+}

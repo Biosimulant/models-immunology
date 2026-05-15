@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Vibert2017 - Tcell proliferation model Lab Visualisation
+description: Dedicated presentation model for Vibert2017 - Tcell proliferation model
+  Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Vibert2017 - Tcell proliferation model Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_vibert2017_tcell_proliferation_model_model2003170002_model
+      title: Vibert2017 - Tcell proliferation model
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: M
+        label: Unresolved Immune Observable 1
+      - id: M_p
+        label: Unresolved Immune Observable 2
+      - id: G
+        label: Unresolved Immune Observable 3
+      - id: S
+        label: Unresolved Immune Observable 4
+      - id: G_p
+        label: Unresolved Immune Observable 5
+      - id: S_p
+        label: S_p
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_vibert2017_tcell_proliferation_model_model2003170002_model_state
+    maps_to: immunology_sbml_vibert2017_tcell_proliferation_model_model2003170002_model.state
+    description: Core state record.
+  - name: immunology_sbml_vibert2017_tcell_proliferation_model_model2003170002_model_summary
+    maps_to: immunology_sbml_vibert2017_tcell_proliferation_model_model2003170002_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_vibert2017_tcell_proliferation_model_model2003170002_model_species_labels
+    maps_to: immunology_sbml_vibert2017_tcell_proliferation_model_model2003170002_model.species_labels
+    description: Core source-label map.
+  outputs: []

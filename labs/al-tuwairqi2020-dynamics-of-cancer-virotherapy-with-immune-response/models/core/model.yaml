@@ -1,0 +1,123 @@
+schema_version: '2.0'
+title: Al-Tuwairqi2020 - Dynamics of cancer virotherapy with immune response
+description: This ordinary differential equation model of the role of the immune response
+  in cancer virotherapy dynamics is described in the publication:Al-Tuwairqi, S.M.,
+  Al-Johani, N.O., Simbawa, E.A. It can be used to explore immune response dynamics
+  and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Salma M. Al-Tuwairqi
+- Najwa O. Al-Johani
+- Eman A. Simbawa
+upstream:
+  id: biomodels_ebi:BIOMD0000001035
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001035
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001035
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001035?filename=Al-Tuwairqi2020
+    - Virotherapy.xml
+  license: CC0
+biosim:
+  entrypoint: src.al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model:AlTuwairqi2020DynamicsOfCancerVirotherapyWBiomd0000001035Model
+  init_kwargs:
+    model_path: data/BIOMD0000001035.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_uninfected_cancer_cells
+    maps_to: uninfected_cancer_cells
+    label: Initial Uninfected Cancer Cells
+    default: 0.5
+    units: native source value
+    description: Initial Uninfected Cancer Cells. Sets the initial value of bundled
+      SBML species `uninfected_cancer_cells`.
+  - name: initial_infected_cancer_cells
+    maps_to: infected_cancer_cells
+    label: Initial Infected Cancer Cells
+    default: 0.0
+    units: native source value
+    description: Initial Infected Cancer Cells. Sets the initial value of bundled
+      SBML species `infected_cancer_cells`.
+  - name: initial_free_virus
+    maps_to: free_virus
+    label: Initial Free Virus
+    default: 0.01
+    units: native source value
+    description: Initial Free Virus. Sets the initial value of bundled SBML species
+      `free_virus`.
+  - name: initial_immune_cells
+    maps_to: immune_cells
+    label: Initial Immune Cells
+    default: 0.01
+    units: native source value
+    description: Initial Immune Cells. Sets the initial value of bundled SBML species
+      `immune_cells`.
+  - name: tumor_growth_rate
+    maps_to: r_1
+    label: Tumor Growth Rate
+    default: 0.36
+    units: native source value
+    description: Tumor Growth Rate. Sets bundled SBML parameter `r_1`.
+  - name: cancer_cell_infection_rate
+    maps_to: a
+    label: Cancer Cell Infection Rate
+    default: 0.5
+    units: native source value
+    description: Cancer Cell Infection Rate. Sets bundled SBML parameter `a`.
+  - name: uninfected_cancer_cell_killing_death_rate
+    maps_to: d_1
+    label: Uninfected Cancer Cell Killing Death Rate
+    default: 0.1278
+    units: native source value
+    description: Uninfected Cancer Cell Killing Death Rate. Sets bundled SBML parameter
+      `d_1`.
+  - name: infected_cancer_cell_killing_death_rate
+    maps_to: c
+    label: Infected Cancer Cell Killing Death Rate
+    default: 0.48
+    units: native source value
+    description: Infected Cancer Cell Killing Death Rate. Sets bundled SBML parameter
+      `c`.
+  - name: virus_release_rate
+    maps_to: b
+    label: Virus Release Rate
+    default: 2.0
+    units: native source value
+    description: Virus Release Rate. Sets bundled SBML parameter `b`.
+  outputs:
+  - name: uninfected_cancer_cells
+    maps_to: uninfected_cancer_cells
+    label: Uninfected Cancer Cells
+    description: Uninfected Cancer Cells. Maps to bundled source symbol `uninfected_cancer_cells`.
+  - name: infected_cancer_cells
+    maps_to: infected_cancer_cells
+    label: Infected Cancer Cells
+    description: Infected Cancer Cells. Maps to bundled source symbol `infected_cancer_cells`.
+  - name: free_virus
+    maps_to: free_virus
+    label: Free Virus
+    description: Free Virus. Maps to bundled source symbol `free_virus`.
+  - name: immune_cells
+    maps_to: immune_cells
+    label: Immune Cells
+    description: Immune Cells. Maps to bundled source symbol `immune_cells`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

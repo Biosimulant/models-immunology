@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Nwabugwu2013 - A Tumor-Immune Mathematical Model of CD4+ T Helper Cell Lab
+  Visualisation
+description: Dedicated presentation model for Nwabugwu2013 - A Tumor-Immune Mathematical
+  Model of CD4+ T Helper Cell Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Nwabugwu2013 - A Tumor-Immune Mathematical Model of CD4+ T Helper Cell
+      Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model
+      title: Nwabugwu2013 - A Tumor-Immune Mathematical Model of CD4+ T Helper Cell
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: M
+        label: Memtcell
+      - id: Mh
+        label: Memhelpertcells
+      - id: Me
+        label: Memeffectorcells
+      - id: Mr
+        label: Regmemtcell
+      - id: Pool
+        label: Source
+      - id: Tumorcells
+        label: Tumorcells
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model_state
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.state
+    description: Core state record.
+  - name: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model_summary
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model_species_labels
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.species_labels
+    description: Core source-label map.
+  outputs: []

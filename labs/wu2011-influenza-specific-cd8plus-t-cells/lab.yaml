@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Wu2011 - Influenza-specific CD8+ T cells Lab
+description: Immunology Wu2011Influenza Specific Cd8TCells Model1504160000Model models
+  immunology wu2011 influenza specific cd8 t dynamics as a OTHER simulation curated
+  from biomodels_ebi (biomodels_ebi:MODEL1504160000), fo. When you run it, you can
+  track state over time and compare response patterns across parameter settings.
+models:
+- alias: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.state
+  to:
+  - visualisation.immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model_state
+- from: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.summary
+  to:
+  - visualisation.immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model_summary
+- from: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.species_labels
+  to:
+  - visualisation.immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_cd8_t_cells_in_spleen
+    maps_to: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.initial_cd8_t_cells_in_spleen
+    label: Initial CD8 T Cells In Spleen
+    default: 36400.0
+    units: native source value
+    description: Initial CD8 T Cells In Spleen. Sets the initial value of bundled
+      SBML species `cd8_in_spleen`.
+  - name: initial_cd8_t_cells_in_lung
+    maps_to: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.initial_cd8_t_cells_in_lung
+    label: Initial CD8 T Cells In Lung
+    default: 1310.0
+    units: native source value
+    description: Initial CD8 T Cells In Lung. Sets the initial value of bundled SBML
+      species `cd8_in_lung`.
+  - name: initial_cd8_t_cells_in_mln
+    maps_to: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.initial_cd8_t_cells_in_mln
+    label: Initial CD8 T Cells In Mln
+    default: 3960.0
+    units: native source value
+    description: Initial CD8 T Cells In Mln. Sets the initial value of bundled SBML
+      species `cd8_in_mln`.
+  - name: initial_unresolved_infection_observable_1
+    maps_to: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.initial_unresolved_infection_observable_1
+    label: Initial Unresolved Infection Observable 1
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `s6`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.initial_unresolved_infection_observable_2
+    label: Initial Unresolved Infection Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `s7`.
+  outputs:
+  - name: cd8_t_cells_in_spleen
+    maps_to: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.cd8_t_cells_in_spleen
+  - name: cd8_t_cells_in_lung
+    maps_to: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.cd8_t_cells_in_lung
+  - name: cd8_t_cells_in_mln
+    maps_to: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.cd8_t_cells_in_mln
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.unresolved_infection_observable_1
+  - name: unresolved_infection_observable_2
+    maps_to: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.unresolved_infection_observable_2
+  - name: state
+    maps_to: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.state
+  - name: summary
+    maps_to: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_wu2011_influenza_specific_cd8_t_cells_model1504160000_model.species_labels

@@ -1,0 +1,110 @@
+schema_version: '2.0'
+title: dePillis2009 - Mathematical model creation for cancer chemo-immunotherapy
+description: This is an updated version of a previous model that described the dynamics
+  of cancer treatment, with descriptions of tumour cell numbers, specific and non-specific
+  immune cells (NK, CD8+ T cells and o. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- de Pillis, L.
+- Fister, K.R.
+- Gu, W.
+- Collins, C.
+- Daub, M.
+upstream:
+  id: biomodels_ebi:BIOMD0000000779
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000779
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000779
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000779?filename=dePillis2009.xml
+  license: CC0
+biosim:
+  entrypoint: src.depillis2009_mathematical_model_creation_for_can_biomd0000000779_model:Depillis2009MathematicalModelCreationForCanBiomd0000000779Model
+  init_kwargs:
+    model_path: data/BIOMD0000000779.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_chemotherapy_drug
+    maps_to: M_Chemotherapy_Drug
+    label: Initial Chemotherapy Drug
+    default: 0.0
+    units: native source value
+    description: Initial Chemotherapy Drug. Sets the initial value of bundled SBML
+      species `M_Chemotherapy_Drug`.
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: T_Tumour_Cells
+    label: Initial Unresolved Tumor Observable 1
+    default: 10000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T_Tumour_Cells`.
+  - name: initial_cd8_t_cells
+    maps_to: L_CD8_T_Cells
+    label: Initial CD8 T Cells
+    default: 526800.0
+    units: native source value
+    description: Initial CD8 T Cells. Sets the initial value of bundled SBML species
+      `L_CD8_T_Cells`.
+  - name: initial_interleukin_2
+    maps_to: I_IL_2
+    label: Initial Interleukin 2
+    default: 1073.0
+    units: native source value
+    description: Initial Interleukin 2. Sets the initial value of bundled SBML species
+      `I_IL_2`.
+  - name: initial_natural_killer_cells
+    maps_to: N_Natural_Killer_Cells
+    label: Initial Natural Killer Cells
+    default: 250000000.0
+    units: native source value
+    description: Initial Natural Killer Cells. Sets the initial value of bundled SBML
+      species `N_Natural_Killer_Cells`.
+  - name: natural_killer_induced_tumour_death_rate
+    maps_to: c
+    label: Natural Killer Induced Tumour Death Rate
+    default: 2.9077e-13
+    units: native source value
+    description: Natural Killer Induced Tumour Death Rate. Sets bundled SBML parameter
+      `c`.
+  outputs:
+  - name: chemotherapy_drug
+    maps_to: M_Chemotherapy_Drug
+    label: Chemotherapy Drug
+    description: Chemotherapy Drug. Maps to bundled source symbol `M_Chemotherapy_Drug`.
+  - name: unresolved_tumor_observable_1
+    maps_to: T_Tumour_Cells
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `T_Tumour_Cells`.
+  - name: cd8_t_cells
+    maps_to: L_CD8_T_Cells
+    label: CD8 T Cells
+    description: CD8 T Cells. Maps to bundled source symbol `L_CD8_T_Cells`.
+  - name: interleukin_2
+    maps_to: I_IL_2
+    label: Interleukin 2
+    description: Interleukin 2. Maps to bundled source symbol `I_IL_2`.
+  - name: natural_killer_cells
+    maps_to: N_Natural_Killer_Cells
+    label: Natural Killer Cells
+    description: Natural Killer Cells. Maps to bundled source symbol `N_Natural_Killer_Cells`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

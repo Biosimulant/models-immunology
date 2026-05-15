@@ -1,0 +1,91 @@
+schema_version: '2.0'
+title: Jarrett2015 - Modelling the interaction between immune response, bacterial
+  dynamics and inflammatory damage
+description: Mathematical model of pro- and anti-inflammatory response, inflammation/damage
+  and infection dynamics in BALB/c mouse with Staphylococcal aureus infection. It
+  can be used to explore immune response dynamics and compare pathway-level behavior
+  across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Angela M Jarrett
+- N G Cogan
+- M E Shirtliff
+upstream:
+  id: biomodels_ebi:BIOMD0000000920
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000920
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000920
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000920?filename=Jarrett2015.xml
+  license: CC0
+biosim:
+  entrypoint: src.jarrett2015_modelling_the_interaction_between_im_biomd0000000920_model:Jarrett2015ModellingTheInteractionBetweenImBiomd0000000920Model
+  init_kwargs:
+    model_path: data/BIOMD0000000920.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_bacterial_infection_b
+    maps_to: bacterial_infection__B
+    label: Initial Bacterial Infection B
+    default: 1.0
+    units: native source value
+    description: Initial Bacterial Infection B. Sets the initial value of bundled
+      SBML species `bacterial_infection__B`.
+  - name: initial_anti_inflammatory_a
+    maps_to: anti_inflammatory__A
+    label: Initial Anti Inflammatory A
+    default: 3.0
+    units: native source value
+    description: Initial Anti Inflammatory A. Sets the initial value of bundled SBML
+      species `anti_inflammatory__A`.
+  - name: initial_inflammation_i
+    maps_to: inflammation__I
+    label: Initial Inflammation I
+    default: 1.0
+    units: native source value
+    description: Initial Inflammation I. Sets the initial value of bundled SBML species
+      `inflammation__I`.
+  - name: initial_pro_inflammatory_p
+    maps_to: pro_inflammatory__P
+    label: Initial Pro Inflammatory P
+    default: 1.0
+    units: native source value
+    description: Initial Pro Inflammatory P. Sets the initial value of bundled SBML
+      species `pro_inflammatory__P`.
+  outputs:
+  - name: bacterial_infection_b
+    maps_to: bacterial_infection__B
+    label: Bacterial Infection B
+    description: Bacterial Infection B. Maps to bundled source symbol `bacterial_infection__B`.
+  - name: anti_inflammatory_a
+    maps_to: anti_inflammatory__A
+    label: Anti Inflammatory A
+    description: Anti Inflammatory A. Maps to bundled source symbol `anti_inflammatory__A`.
+  - name: inflammation_i
+    maps_to: inflammation__I
+    label: Inflammation I
+    description: Inflammation I. Maps to bundled source symbol `inflammation__I`.
+  - name: pro_inflammatory_p
+    maps_to: pro_inflammatory__P
+    label: Pro Inflammatory P
+    description: Pro Inflammatory P. Maps to bundled source symbol `pro_inflammatory__P`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

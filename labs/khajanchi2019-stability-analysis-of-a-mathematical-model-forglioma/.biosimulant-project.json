@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "d9c91815-d16d-4876-820f-f05d589f879a",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "6f95f328-4099-4737-8bb2-b6e786dd94d4",
+  "created_at": "2026-05-15T15:53:06.053480676+00:00",
+  "last_synced_at": "2026-05-15T19:51:19.167012+00:00",
+  "hub_manifest_hash": "90baec05c920d160ed5e21f834d9b3d4a8f40f84496d24b064603160deeb20cc",
+  "package_name": "khajanchi2019-stability-analysis-of-a-mathematical-model-forglio"
+}

@@ -1,0 +1,109 @@
+schema_version: '2.0'
+title: Manda2019 - Acute hepatitis B virus infection model within the host incorporating
+  immune cells and cytokine response Lab
+description: This is a within-host hepatitis B viral mathematical model for hepatitis
+  B in the acute phase of infection. The model incorporates hepatocytes, hepatitis
+  B virus, immune system cells and cytokine dyna.
+models:
+- alias: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.state
+  to:
+  - visualisation.immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model_state
+- from: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.summary
+  to:
+  - visualisation.immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model_summary
+- from: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.species_labels
+  to:
+  - visualisation.immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_infection_observable_1
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.initial_unresolved_infection_observable_1
+    label: Initial Unresolved Infection Observable 1
+    default: 9600000.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `H`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.initial_unresolved_infection_observable_2
+    label: Initial Unresolved Infection Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `I_H`.
+  - name: initial_unresolved_infection_observable_3
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.initial_unresolved_infection_observable_3
+    label: Initial Unresolved Infection Observable 3
+    default: 1000.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 3. Sets the initial value
+      of bundled SBML species `T_c`.
+  - name: initial_unresolved_infection_observable_4
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.initial_unresolved_infection_observable_4
+    label: Initial Unresolved Infection Observable 4
+    default: 1000.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 4. Sets the initial value
+      of bundled SBML species `T_1`.
+  - name: initial_unresolved_infection_observable_5
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.initial_unresolved_infection_observable_5
+    label: Initial Unresolved Infection Observable 5
+    default: 1000.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 5. Sets the initial value
+      of bundled SBML species `T_2`.
+  - name: hepatocyte_growth_rate
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.hepatocyte_growth_rate
+    label: Hepatocyte Growth Rate
+    default: 0.00145
+    units: native source value
+    description: Hepatocyte Growth Rate. Sets bundled SBML parameter `r`.
+  - name: hepatocyte_infection_rate
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.hepatocyte_infection_rate
+    label: Hepatocyte Infection Rate
+    default: 9.9e-10
+    units: native source value
+    description: Hepatocyte Infection Rate. Sets bundled SBML parameter `beta`.
+  - name: infected_hepatocytes_death_rate
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.infected_hepatocytes_death_rate
+    label: Infected Hepatocytes Death Rate
+    default: 0.4
+    units: native source value
+    description: Infected Hepatocytes Death Rate. Sets bundled SBML parameter `mu`.
+  - name: th1_death_rate
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.th1_death_rate
+    label: Th1 Death Rate
+    default: 0.5
+    units: native source value
+    description: Th1 Death Rate. Sets bundled SBML parameter `mu_1`.
+  - name: th2_death_rate
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.th2_death_rate
+    label: Th2 Death Rate
+    default: 0.5
+    units: native source value
+    description: Th2 Death Rate. Sets bundled SBML parameter `mu_2`.
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.unresolved_infection_observable_1
+  - name: unresolved_infection_observable_2
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.unresolved_infection_observable_2
+  - name: unresolved_infection_observable_3
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.unresolved_infection_observable_3
+  - name: unresolved_infection_observable_4
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.unresolved_infection_observable_4
+  - name: unresolved_infection_observable_5
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.unresolved_infection_observable_5
+  - name: state
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.state
+  - name: summary
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_manda2019_acute_hepatitis_b_virus_infection_mode_model1911280002_model.species_labels

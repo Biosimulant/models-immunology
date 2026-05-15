@@ -1,0 +1,108 @@
+schema_version: '2.0'
+title: Sigal2019 - Mathematical modelling of cancer stem cell-targeted immunotherapy
+description: This is a mathematical model studies how specific immune system components,
+  namely dendritic cells and cytotoxic T-cells, interact with different cancer cell
+  types, specifically cancer stem cells (CSC. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Daniel Sigal
+- Michelle Przedborski
+- Darshan Sivaloganathan
+- Mohammad Kohandel
+upstream:
+  id: biomodels_ebi:MODEL1911270001
+  source_db: biomodels_ebi
+  source_id: MODEL1911270001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1911270001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911270001?filename=Sigal2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model:Sigal2019MathematicalModellingOfCancerStemModel1911270001Model
+  init_kwargs:
+    model_path: data/MODEL1911270001.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: S
+    label: Initial Unresolved Tumor Observable 1
+    default: 10000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `S`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: P
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `P`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: TS
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `TS`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: TP
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `TP`.
+  - name: initial_unresolved_tumor_observable_5
+    maps_to: DS
+    label: Initial Unresolved Tumor Observable 5
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 5. Sets the initial value of
+      bundled SBML species `DS`.
+  - name: growth_start_time_parameter
+    maps_to: growth_start_time
+    label: Growth Start Time Parameter
+    default: 12.0
+    units: native source value
+    description: Growth Start Time Parameter. Sets bundled SBML parameter `growth_start_time`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: S
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `S`.
+  - name: unresolved_tumor_observable_2
+    maps_to: P
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `P`.
+  - name: unresolved_tumor_observable_3
+    maps_to: TS
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `TS`.
+  - name: unresolved_tumor_observable_4
+    maps_to: TP
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `TP`.
+  - name: unresolved_tumor_observable_5
+    maps_to: DS
+    label: Unresolved Tumor Observable 5
+    description: Unresolved Tumor Observable 5. Maps to bundled source symbol `DS`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

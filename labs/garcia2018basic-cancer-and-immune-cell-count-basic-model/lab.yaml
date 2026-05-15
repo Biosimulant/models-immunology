@@ -1,0 +1,63 @@
+schema_version: '2.0'
+title: Garcia2018basic - cancer and immune cell count basic model Lab
+description: 'The paper describes a basic model of immune-tumor cell interactions.
+  Created by COPASI 4.25 (Build 207) This model is described in the article: Cancer-Induced
+  Immunosuppression can enable Effectivenes.'
+models:
+- alias: immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model.state
+  to:
+  - visualisation.immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model_state
+- from: immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model.summary
+  to:
+  - visualisation.immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model_summary
+- from: immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model.species_labels
+  to:
+  - visualisation.immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 100.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 1000.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `E`.
+  - name: tumor_killing_rate
+    maps_to: immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model.tumor_killing_rate
+    label: Tumor Killing Rate
+    default: 0.0001
+    units: unit_0
+    description: Tumor Killing Rate. Sets bundled SBML parameter `k`.
+  - name: immune_cell_death_rate
+    maps_to: immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model.immune_cell_death_rate
+    label: Immune Cell Death Rate
+    default: 0.02
+    units: unit_0
+    description: Immune Cell Death Rate. Sets bundled SBML parameter `d`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model.unresolved_tumor_observable_2
+  - name: state
+    maps_to: immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model.state
+  - name: summary
+    maps_to: immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_garcia2018basic_cancer_and_immune_cell_count_bas_biomd0000000742_model.species_labels

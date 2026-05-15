@@ -1,0 +1,70 @@
+schema_version: '2.0'
+title: "Gallaher2018 - Tumor\u2013Immune dynamics in multiple myeloma Lab"
+description: "The paper describes a model on the key components for tumor\u2013immune\
+  \ dynamics in multiple myeloma.Created by COPASI 4.25 (Build 207)This model is described\
+  \ in the article:Methods for determining key com. It can be used to explore immune\
+  \ response dynamics and compare pathway-level behavior across conditions."
+models:
+- alias: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.state
+  to:
+  - visualisation.immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model_state
+- from: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.summary
+  to:
+  - visualisation.immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model_summary
+- from: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.species_labels
+  to:
+  - visualisation.immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 4.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `M`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 464.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `Tc`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 227.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `N`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 42.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `Tr`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.unresolved_tumor_observable_4
+  - name: state
+    maps_to: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.state
+  - name: summary
+    maps_to: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model.species_labels

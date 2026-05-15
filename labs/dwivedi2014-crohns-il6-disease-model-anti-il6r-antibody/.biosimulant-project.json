@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "986f82ad-3bcb-41aa-80cf-7091be6ab6da",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "86a94095-f055-40e6-b0a4-1e041333f4e2",
+  "created_at": "2026-05-15T15:53:05.209947871+00:00",
+  "last_synced_at": "2026-05-15T19:28:22.163791+00:00",
+  "hub_manifest_hash": "9f8b1bae85eb75741b3b64f39c5562c3a27ec568044a8505eb39dbf3da23a2c0",
+  "package_name": "dwivedi2014-crohns-il6-disease-model-anti-il6r-antibody-lab"
+}

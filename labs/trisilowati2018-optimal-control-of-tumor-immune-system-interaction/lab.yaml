@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Trisilowati2018 - Optimal control of tumor-immune system interaction with treatment
+  Lab
+description: 'This is a mathematical model of a growing tumor and its interaction
+  with the immune system. The model consists of four populations: tumor cells, dendritic
+  cells (representing the innate immune system).'
+models:
+- alias: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.state
+  to:
+  - visualisation.immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model_state
+- from: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.summary
+  to:
+  - visualisation.immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model_summary
+- from: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.species_labels
+  to:
+  - visualisation.immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 1000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T_Tumor_Cells`.
+  - name: initial_cd8_t_cells
+    maps_to: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.initial_cd8_t_cells
+    label: Initial CD8 T Cells
+    default: 10.0
+    units: native source value
+    description: Initial CD8 T Cells. Sets the initial value of bundled SBML species
+      `L_CD8_T_Cells`.
+  - name: initial_cd4_t_cells
+    maps_to: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.initial_cd4_t_cells
+    label: Initial CD4 T Cells
+    default: 5.0
+    units: native source value
+    description: Initial CD4 T Cells. Sets the initial value of bundled SBML species
+      `H_CD4_T_Cells`.
+  - name: initial_dendritic_cells
+    maps_to: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.initial_dendritic_cells
+    label: Initial Dendritic Cells
+    default: 10.0
+    units: native source value
+    description: Initial Dendritic Cells. Sets the initial value of bundled SBML species
+      `D_Dendritic_Cells`.
+  - name: tumor_death_cd8_rate
+    maps_to: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.tumor_death_cd8_rate
+    label: Tumor Death CD8 Rate
+    default: 4.2e-08
+    units: native source value
+    description: Tumor Death CD8 Rate. Sets bundled SBML parameter `alpha_1`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.unresolved_tumor_observable_1
+  - name: cd8_t_cells
+    maps_to: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.cd8_t_cells
+  - name: cd4_t_cells
+    maps_to: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.cd4_t_cells
+  - name: dendritic_cells
+    maps_to: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.dendritic_cells
+  - name: state
+    maps_to: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.state
+  - name: summary
+    maps_to: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_trisilowati2018_optimal_control_of_tumor_immune_biomd0000000880_model.species_labels

@@ -1,0 +1,52 @@
+schema_version: '2.0'
+title: Waugh2006 - Diabetic Wound Healing - Treated and Untreated Macrophage Dynamics
+  Lab Visualisation
+description: Dedicated presentation model for Waugh2006 - Diabetic Wound Healing -
+  Treated and Untreated Macrophage Dynamics Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Waugh2006 - Diabetic Wound Healing - Treated and Untreated Macrophage
+      Dynamics Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model
+      title: Waugh2006 - Diabetic Wound Healing - Treated and Untreated Macrophage
+        Dynamics
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: K_T
+        label: Unresolved Immune Observable 1
+      - id: phi_I
+        label: Phi I
+      - id: phi_R
+        label: Phi R
+      - id: T
+        label: Unresolved Immune Observable 2
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model_state
+    maps_to: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model.state
+    description: Core state record.
+  - name: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model_summary
+    maps_to: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model_species_labels
+    maps_to: immunology_sbml_waugh2006_diabetic_wound_healing_treated_and_unt_biomd0000000681_model.species_labels
+    description: Core source-label map.
+  outputs: []

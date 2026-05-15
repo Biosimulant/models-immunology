@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "1729dcfc-7b55-4469-b554-b18fa563ccc2",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "fc953a2f-3494-4d26-ad7c-8230946a2b1e",
+  "created_at": "2026-05-15T15:53:04.441700575+00:00",
+  "last_synced_at": "2026-05-15T18:05:51.039104+00:00",
+  "hub_manifest_hash": "fab3c14973a63a5f01f88183cab59f9991731e89144235b75726717270f1fd70",
+  "package_name": "bachmann2011-division-of-labor-by-dual-feedback-regulators-contr"
+}

@@ -1,0 +1,104 @@
+schema_version: '2.0'
+title: Parra_Guillen2013 - Mathematical model approach to describe tumour response
+  in mice after vaccine administration_model1
+description: Mathematical model approach to describe tumour response in mice after
+  vaccine administration and its applicability to immune-stimulatory cytokine-based
+  strategies.Parra-Guillen ZP1, Berraondo P, Greni. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Zinnia P Parra-Guillen
+- Pedro Berraondo
+- Emmanuel Grenier
+- Benjamin Ribba
+- "I\xF1aki F Troconiz"
+upstream:
+  id: biomodels_ebi:BIOMD0000000914
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000914
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000914
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000914?filename=Parra_Guillen2013.xml
+  license: CC0
+biosim:
+  entrypoint: src.parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model:ParraGuillen2013MathematicalModelApproachToBiomd0000000914Model
+  init_kwargs:
+    model_path: data/BIOMD0000000914.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: VAC
+    label: Initial Unresolved Tumor Observable 1
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `VAC`.
+  - name: initial_unresolved_tumor_observable_1_2
+    maps_to: TRAN
+    label: Initial Unresolved Tumor Observable 1 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1 2. Sets the initial value of
+      bundled SBML species `TRAN`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: SVAC
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `SVAC`.
+  - name: initial_unresolved_tumor_observable_2_2
+    maps_to: Ts
+    label: Initial Unresolved Tumor Observable 2 2
+    default: 0.324
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2 2. Sets the initial value of
+      bundled SBML species `Ts`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: REG
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `REG`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: VAC
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `VAC`.
+  - name: unresolved_tumor_observable_1_2
+    maps_to: TRAN
+    label: Unresolved Tumor Observable 1 2
+    description: Unresolved Tumor Observable 1 2. Maps to bundled source symbol `TRAN`.
+  - name: unresolved_tumor_observable_2
+    maps_to: SVAC
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `SVAC`.
+  - name: unresolved_tumor_observable_2_2
+    maps_to: Ts
+    label: Unresolved Tumor Observable 2 2
+    description: Unresolved Tumor Observable 2 2. Maps to bundled source symbol `Ts`.
+  - name: unresolved_tumor_observable_3
+    maps_to: REG
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `REG`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

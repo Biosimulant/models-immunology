@@ -1,0 +1,52 @@
+schema_version: '2.0'
+title: Chrobak2011 - A mathematical model of induced cancer-adaptive immune system
+  competition Lab
+description: This is a mathematical model describing competition between an artificially
+  induced tumor and the adaptive immune system based on the use of an autonomous system
+  of ordinary differential equations. It can be used to explore immune response dynamics
+  and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model.state
+  to:
+  - visualisation.immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model_state
+- from: immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model.summary
+  to:
+  - visualisation.immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model_summary
+- from: immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model.species_labels
+  to:
+  - visualisation.immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_cancer
+    maps_to: immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model.initial_cancer
+    label: Initial Cancer
+    default: 0.0005
+    units: native source value
+    description: Initial Cancer. Sets the initial value of bundled SBML species `x_Cancer`.
+  - name: initial_immune_system
+    maps_to: immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model.initial_immune_system
+    label: Initial Immune System
+    default: 0.01
+    units: native source value
+    description: Initial Immune System. Sets the initial value of bundled SBML species
+      `y_Immune_System`.
+  outputs:
+  - name: cancer
+    maps_to: immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model.cancer
+  - name: immune_system
+    maps_to: immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model.immune_system
+  - name: state
+    maps_to: immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model.state
+  - name: summary
+    maps_to: immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_chrobak2011_a_mathematical_model_of_induced_canc_biomd0000000815_model.species_labels

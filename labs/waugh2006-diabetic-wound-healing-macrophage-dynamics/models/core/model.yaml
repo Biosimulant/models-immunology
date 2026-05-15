@@ -1,0 +1,64 @@
+schema_version: '2.0'
+title: Waugh2006 - Diabetic Wound Healing - Macrophage Dynamics
+description: 'This a model from the article: Macrophage dynamics in diabetic wound
+  dealing. It can be used to explore immune response dynamics and compare pathway-level
+  behavior across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Helen V Waugh
+- Jonathan A Sherratt
+upstream:
+  id: biomodels_ebi:BIOMD0000000679
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000679
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000679
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000679?filename=Waugh2006_1.xml
+  license: CC0
+biosim:
+  entrypoint: src.waugh2006_diabetic_wound_healing_macrophage_dyna_biomd0000000679_model:Waugh2006DiabeticWoundHealingMacrophageDynaBiomd0000000679Model
+  init_kwargs:
+    model_path: data/BIOMD0000000679.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs: []
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: K_T
+    label: Unresolved Immune Observable 1
+    description: Unresolved Immune Observable 1. Maps to bundled source symbol `K_T`.
+  - name: phi_i
+    maps_to: phi_I
+    label: Phi I
+    description: Phi I. Maps to bundled source symbol `phi_I`.
+  - name: phi_r
+    maps_to: phi_R
+    label: Phi R
+    description: Phi R. Maps to bundled source symbol `phi_R`.
+  - name: unresolved_immune_observable_2
+    maps_to: T
+    label: Unresolved Immune Observable 2
+    description: Unresolved Immune Observable 2. Maps to bundled source symbol `T`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.
+caveats: 'No scientifically safe input was exposed in this pass: the bundled SBML
+  did not provide a headline species initial value or meaningfully named constant/intervention
+  parameter that could be surfaced without turning raw source symbols into unsupported
+  biological claims.'

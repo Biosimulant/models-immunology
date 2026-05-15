@@ -1,0 +1,102 @@
+schema_version: '2.0'
+title: Mol2013 - Leishmania macrophage signaling network
+description: Created by The MathWorks, Inc. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Milsee Mol
+- Milind S Patole
+- Shailza Singh
+upstream:
+  id: biomodels_ebi:MODEL1203220000
+  source_db: biomodels_ebi
+  source_id: MODEL1203220000
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1203220000
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1203220000?filename=MODEL1203220000_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.mol2013_leishmania_macrophage_signaling_network_model1203220000_model:Mol2013LeishmaniaMacrophageSignalingNetworkModel1203220000Model
+  init_kwargs:
+    model_path: data/MODEL1203220000.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_infection_observable_1
+    maps_to: mw68f058f9_e632_469e_a51e_b0641d5ac5f1
+    label: Initial Unresolved Infection Observable 1
+    default: 0.9
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `mw68f058f9_e632_469e_a51e_b0641d5ac5f1`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: mw589e86be_36cb_41e1_bccf_93824d618644
+    label: Initial Unresolved Infection Observable 2
+    default: 0.38
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `mw589e86be_36cb_41e1_bccf_93824d618644`.
+  - name: initial_unresolved_infection_observable_3
+    maps_to: mw389efde0_d330_42e0_b68c_cb0cfbf8a3c9
+    label: Initial Unresolved Infection Observable 3
+    default: 0.56
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Unresolved Infection Observable 3. Sets the initial value
+      of bundled SBML species `mw389efde0_d330_42e0_b68c_cb0cfbf8a3c9`.
+  - name: initial_irak4_irak1_complex
+    maps_to: mw86470798_a991_412f_a9bb_574001df871d
+    label: Initial Irak4 Irak1 Complex
+    default: 0.6
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Irak4 Irak1 Complex. Sets the initial value of bundled SBML
+      species `mw86470798_a991_412f_a9bb_574001df871d`.
+  - name: initial_tumor_necrosis_factor
+    maps_to: mw4535fcdd_0cf2_4ee4_8d52_eadd3c4fec92
+    label: Initial Tumor Necrosis Factor
+    default: 0.8
+    units: MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole
+    description: Initial Tumor Necrosis Factor. Sets the initial value of bundled
+      SBML species `mw4535fcdd_0cf2_4ee4_8d52_eadd3c4fec92`.
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: mw68f058f9_e632_469e_a51e_b0641d5ac5f1
+    label: Unresolved Infection Observable 1
+    description: Unresolved Infection Observable 1. Maps to bundled source symbol
+      `mw68f058f9_e632_469e_a51e_b0641d5ac5f1`.
+  - name: unresolved_infection_observable_2
+    maps_to: mw589e86be_36cb_41e1_bccf_93824d618644
+    label: Unresolved Infection Observable 2
+    description: Unresolved Infection Observable 2. Maps to bundled source symbol
+      `mw589e86be_36cb_41e1_bccf_93824d618644`.
+  - name: unresolved_infection_observable_3
+    maps_to: mw389efde0_d330_42e0_b68c_cb0cfbf8a3c9
+    label: Unresolved Infection Observable 3
+    description: Unresolved Infection Observable 3. Maps to bundled source symbol
+      `mw389efde0_d330_42e0_b68c_cb0cfbf8a3c9`.
+  - name: irak4_irak1_complex
+    maps_to: mw86470798_a991_412f_a9bb_574001df871d
+    label: Irak4 Irak1 Complex
+    description: Irak4 Irak1 Complex. Maps to bundled source symbol `mw86470798_a991_412f_a9bb_574001df871d`.
+  - name: tumor_necrosis_factor
+    maps_to: mw4535fcdd_0cf2_4ee4_8d52_eadd3c4fec92
+    label: Tumor Necrosis Factor
+    description: Tumor Necrosis Factor. Maps to bundled source symbol `mw4535fcdd_0cf2_4ee4_8d52_eadd3c4fec92`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

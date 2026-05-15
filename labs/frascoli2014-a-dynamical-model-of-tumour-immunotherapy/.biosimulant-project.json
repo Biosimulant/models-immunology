@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "2ab38654-cef1-47ab-9fe5-b22228a7e09e",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "ff5c786f-6bbe-4b0b-81fc-0843d4021b60",
+  "created_at": "2026-05-15T15:53:05.538946240+00:00",
+  "last_synced_at": "2026-05-15T18:31:33.400850+00:00",
+  "hub_manifest_hash": "271776210cac4765aa234389a603e10229ef7c880196d16a021452eba33c6f9a",
+  "package_name": "frascoli2014-a-dynamical-model-of-tumour-immunotherapy-lab"
+}

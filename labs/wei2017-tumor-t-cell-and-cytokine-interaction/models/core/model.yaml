@@ -1,0 +1,102 @@
+schema_version: '2.0'
+title: Wei2017 - tumor, T cell and cytokine interaction
+description: 'The paper describes a model of tumor-immune interaction. Created by
+  COPASI 4.25 (Build 207) This model is described in the article: Periodically Pulsed
+  Immunotherapy in a Mathematical Model of Tumor,.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Hsiu-Chuan Wei
+- Jui-Ling Yu
+- Chia-Yu Hsu
+upstream:
+  id: biomodels_ebi:BIOMD0000000778
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000778
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000778
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000778?filename=Wei2017.xml
+  license: CC0
+biosim:
+  entrypoint: src.wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model:Wei2017TumorTCellAndCytokineInteractionBiomd0000000778Model
+  init_kwargs:
+    model_path: data/BIOMD0000000778.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: T
+    label: Initial Unresolved Tumor Observable 1
+    default: 0.5
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: I
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.01
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `I`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: C
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `C`.
+  - name: tumor_growth_rate
+    maps_to: r
+    label: Tumor Growth Rate
+    default: 0.01
+    units: unit_0
+    description: Tumor Growth Rate. Sets bundled SBML parameter `r`.
+  - name: tumor_killing_rate
+    maps_to: d
+    label: Tumor Killing Rate
+    default: 0.1
+    units: unit_0
+    description: Tumor Killing Rate. Sets bundled SBML parameter `d`.
+  - name: immune_cell_growth_rate
+    maps_to: beta
+    label: Immune Cell Growth Rate
+    default: 0.1
+    units: unit_0
+    description: Immune Cell Growth Rate. Sets bundled SBML parameter `beta`.
+  - name: immune_cell_growth_rate_2
+    maps_to: k
+    label: Immune Cell Growth Rate 2
+    default: 1000.0
+    units: unit_1
+    description: Immune Cell Growth Rate 2. Sets bundled SBML parameter `k`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: T
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `T`.
+  - name: unresolved_tumor_observable_2
+    maps_to: I
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `I`.
+  - name: unresolved_tumor_observable_3
+    maps_to: C
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `C`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Begitt2014 - STAT1 cooperative DNA binding - double GAS polymer model Lab
+description: Begitt2014 - STAT1 cooperative DNA binding - double GAS polymer model
+  The importance of STAT1-cooperative DNA binding in type 1 and type 2 interferon
+  signalling has been studies using experimental and. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.state
+  to:
+  - visualisation.immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model_state
+- from: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.summary
+  to:
+  - visualisation.immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model_summary
+- from: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.species_labels
+  to:
+  - visualisation.immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_signaling_observable_1
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.initial_unresolved_signaling_observable_1
+    label: Initial Unresolved Signaling Observable 1
+    default: 1.09648e-11
+    units: native source value
+    description: Initial Unresolved Signaling Observable 1. Sets the initial value
+      of bundled SBML species `S1`.
+  - name: initial_unresolved_signaling_observable_2
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.initial_unresolved_signaling_observable_2
+    label: Initial Unresolved Signaling Observable 2
+    default: 1.0e-10
+    units: native source value
+    description: Initial Unresolved Signaling Observable 2. Sets the initial value
+      of bundled SBML species `DNA0000`.
+  - name: initial_unresolved_signaling_observable_3
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.initial_unresolved_signaling_observable_3
+    label: Initial Unresolved Signaling Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Signaling Observable 3. Sets the initial value
+      of bundled SBML species `DNA0001`.
+  - name: initial_unresolved_signaling_observable_4
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.initial_unresolved_signaling_observable_4
+    label: Initial Unresolved Signaling Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Signaling Observable 4. Sets the initial value
+      of bundled SBML species `DNA0010`.
+  - name: initial_unresolved_signaling_observable_5
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.initial_unresolved_signaling_observable_5
+    label: Initial Unresolved Signaling Observable 5
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Signaling Observable 5. Sets the initial value
+      of bundled SBML species `DNA0100`.
+  outputs:
+  - name: unresolved_signaling_observable_1
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.unresolved_signaling_observable_1
+  - name: unresolved_signaling_observable_2
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.unresolved_signaling_observable_2
+  - name: unresolved_signaling_observable_3
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.unresolved_signaling_observable_3
+  - name: unresolved_signaling_observable_4
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.unresolved_signaling_observable_4
+  - name: unresolved_signaling_observable_5
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.unresolved_signaling_observable_5
+  - name: state
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.state
+  - name: summary
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_double_biomd0000000501_model.species_labels

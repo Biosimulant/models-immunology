@@ -1,0 +1,74 @@
+schema_version: '2.0'
+title: Anderson2015 - Qualitative behavior of systems of tumor-CD4+-cytokine interactions
+  with treatments Lab
+description: This is a mathematical model describing tumor-CD4+-cytokine interactions,
+  with specific emphasis on the role that CD4+ T lymphocytes play in tumor regression.
+  It can be used to explore immune response dynamics and compare pathway-level behavior
+  across conditions.
+models:
+- alias: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.state
+  to:
+  - visualisation.immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model_state
+- from: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.summary
+  to:
+  - visualisation.immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model_summary
+- from: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.species_labels
+  to:
+  - visualisation.immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.initial_tumor_cells
+    label: Initial Tumor Cells
+    default: 0.5
+    units: native source value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML species
+      `x_Tumor_Cells`.
+  - name: initial_cd4_t_cells
+    maps_to: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.initial_cd4_t_cells
+    label: Initial CD4 T Cells
+    default: 0.01
+    units: native source value
+    description: Initial CD4 T Cells. Sets the initial value of bundled SBML species
+      `y_CD4_T_Cells`.
+  - name: initial_cytokine
+    maps_to: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.initial_cytokine
+    label: Initial Cytokine
+    default: 0.0
+    units: native source value
+    description: Initial Cytokine. Sets the initial value of bundled SBML species
+      `z_Cytokine`.
+  - name: tumor_growth_rate
+    maps_to: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.tumor_growth_rate
+    label: Tumor Growth Rate
+    default: 0.03
+    units: native source value
+    description: Tumor Growth Rate. Sets bundled SBML parameter `r`.
+  - name: tumor_killing_rate
+    maps_to: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.tumor_killing_rate
+    label: Tumor Killing Rate
+    default: 0.1
+    units: native source value
+    description: Tumor Killing Rate. Sets bundled SBML parameter `delta`.
+  outputs:
+  - name: tumor_cells
+    maps_to: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.tumor_cells
+  - name: cd4_t_cells
+    maps_to: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.cd4_t_cells
+  - name: cytokine
+    maps_to: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.cytokine
+  - name: state
+    maps_to: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.state
+  - name: summary
+    maps_to: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_anderson2015_qualitative_behavior_of_systems_of_biomd0000000813_model.species_labels

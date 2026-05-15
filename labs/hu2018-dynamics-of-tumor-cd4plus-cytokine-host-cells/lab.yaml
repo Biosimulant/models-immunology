@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Hu2018 - Dynamics of tumor-CD4+-cytokine-host cells interactions with treatments
+  Lab
+description: This is a proposed mathematical model describing interactions between
+  tumor cells, CD4+ T cells, cytokines, and host cells within the context of CD4+
+  T cells inducing tumor regression. It can be used to explore immune response dynamics
+  and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.state
+  to:
+  - visualisation.immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model_state
+- from: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.summary
+  to:
+  - visualisation.immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model_summary
+- from: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.species_labels
+  to:
+  - visualisation.immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.initial_tumor_cells
+    label: Initial Tumor Cells
+    default: 67700.0
+    units: native source value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML species
+      `x_Tumor_Cells`.
+  - name: initial_cd4_t_cells
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.initial_cd4_t_cells
+    label: Initial CD4 T Cells
+    default: 1000000.0
+    units: native source value
+    description: Initial CD4 T Cells. Sets the initial value of bundled SBML species
+      `y_CD4_T_Cells`.
+  - name: initial_cytokine
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.initial_cytokine
+    label: Initial Cytokine
+    default: 100000.0
+    units: native source value
+    description: Initial Cytokine. Sets the initial value of bundled SBML species
+      `z_Cytokine`.
+  - name: initial_healthy_tissue
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.initial_healthy_tissue
+    label: Initial Healthy Tissue
+    default: 1000000000.0
+    units: native source value
+    description: Initial Healthy Tissue. Sets the initial value of bundled SBML species
+      `w_Healthy_Tissue`.
+  - name: tumor_growth_rate
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.tumor_growth_rate
+    label: Tumor Growth Rate
+    default: 0.514
+    units: native source value
+    description: Tumor Growth Rate. Sets bundled SBML parameter `r_1`.
+  - name: tumor_killing_cytokine_rate
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.tumor_killing_cytokine_rate
+    label: Tumor Killing Cytokine Rate
+    default: 0.2
+    units: native source value
+    description: Tumor Killing Cytokine Rate. Sets bundled SBML parameter `c_1`.
+  - name: cd4t_natural_death_rate
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.cd4t_natural_death_rate
+    label: Cd4t Natural Death Rate
+    default: 0.1
+    units: native source value
+    description: Cd4t Natural Death Rate. Sets bundled SBML parameter `mu_1`.
+  - name: cytokine_decay_rate
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.cytokine_decay_rate
+    label: Cytokine Decay Rate
+    default: 34.0
+    units: native source value
+    description: Cytokine Decay Rate. Sets bundled SBML parameter `mu_2`.
+  - name: normal_tissue_growth_rate
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.normal_tissue_growth_rate
+    label: Normal Tissue Growth Rate
+    default: 0.2822
+    units: native source value
+    description: Normal Tissue Growth Rate. Sets bundled SBML parameter `r_2`.
+  outputs:
+  - name: tumor_cells
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.tumor_cells
+  - name: cd4_t_cells
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.cd4_t_cells
+  - name: cytokine
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.cytokine
+  - name: healthy_tissue
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.healthy_tissue
+  - name: state
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.state
+  - name: summary
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_hu2018_dynamics_of_tumor_cd4_cytokine_host_cells_biomd0000000797_model.species_labels

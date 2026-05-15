@@ -1,0 +1,3 @@
+# Figueredo2013/2 - immunointeraction model with IL2
+
+The bundled source file in `data/` remains the scientific source of truth. The Python wrapper only adapts it to the Biosimulant BioModule interface.

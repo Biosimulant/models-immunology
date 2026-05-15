@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "53bf9c69-290f-49ab-91dc-95831a9e2618",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "b7bfb609-4e4f-4aa0-959f-a869a27a36e8",
+  "created_at": "2026-05-15T15:53:05.661349412+00:00",
+  "last_synced_at": "2026-05-15T19:41:53.177127+00:00",
+  "hub_manifest_hash": "fe37c511dcd33edf4b84db5be0c174180f1d779d171ea3afc389b50c5d2c9456",
+  "package_name": "ganguli2018-immuno-regulatory-mechanisms-in-tumor-microenvironme"
+}

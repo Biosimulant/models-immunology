@@ -1,0 +1,65 @@
+schema_version: '2.0'
+title: Khandibharad2022 - IL-12 regulation by IL-10 in Leishmaniasis Lab
+description: In this model, TLR2-TLR6 mediates MyD88 pathway gets activated, which
+  activates IL-12 production and induces iNOS expression when the Macrophage is infected
+  with Leishmania parasite. It can be used to explore immune response dynamics and
+  compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.state
+  to:
+  - visualisation.immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model_state
+- from: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.summary
+  to:
+  - visualisation.immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model_summary
+- from: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.species_labels
+  to:
+  - visualisation.immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_uev1a_signaling_component
+    maps_to: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.initial_uev1a_signaling_component
+    label: Initial Uev1a Signaling Component
+    default: 1200.0
+    units: MWBUILTINUNIT_molecule
+    description: Initial Uev1a Signaling Component. Sets the initial value of bundled
+      SBML species `mwf17ae875_af88_4db8_9258_cd8beb914829`.
+  - name: initial_interferon_gamma
+    maps_to: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.initial_interferon_gamma
+    label: Initial Interferon Gamma
+    default: 60.0
+    units: MWBUILTINUNIT_molecule
+    description: Initial Interferon Gamma. Sets the initial value of bundled SBML
+      species `mw71e2a0cf_cc5b_4cd2_93ae_4e19d7cb4ace`.
+  - name: initial_interferon_g
+    maps_to: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.initial_interferon_g
+    label: Initial Interferon G
+    default: 60.0
+    units: MWBUILTINUNIT_molecule
+    description: Initial Interferon G. Sets the initial value of bundled SBML species
+      `mw1a35c486_7d05_4436_9876_766365a69447`.
+  outputs:
+  - name: uev1a_signaling_component
+    maps_to: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.uev1a_signaling_component
+  - name: ikb_p65_p50_complex
+    maps_to: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.ikb_p65_p50_complex
+  - name: interferon_gamma
+    maps_to: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.interferon_gamma
+  - name: interferon_g
+    maps_to: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.interferon_g
+  - name: interferon_gamma_receptor
+    maps_to: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.interferon_gamma_receptor
+  - name: state
+    maps_to: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.state
+  - name: summary
+    maps_to: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_khandibharad2022_il_12_regulation_by_il_10_in_le_model2012040002_model.species_labels

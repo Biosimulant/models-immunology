@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "d216b1b6-3a99-4a93-98b6-ae8d4b95884e",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "0dcb0696-178e-427d-8f76-20aad9613a87",
+  "created_at": "2026-05-15T15:53:05.797171737+00:00",
+  "last_synced_at": "2026-05-15T19:46:23.738568+00:00",
+  "hub_manifest_hash": "4940b25c4c3db1addcf036371d0e37fc5fe394427375b1cac84741fa083964c0",
+  "package_name": "he2017-a-mathematical-model-of-pancreatic-cancer-with-two-kinds"
+}

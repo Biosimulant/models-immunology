@@ -1,0 +1,85 @@
+schema_version: '2.0'
+title: Verma2016 - HIV and HPV co-infection, T-cell response Lab
+description: 'This is a COPASI version of the HIV/HPV coinfection model submitted
+  to PLoS One.Title: Modeling the mechanisms by which HIV-associated immunosuppression
+  influences HPV persistence at the oral mucosaAu. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.'
+models:
+- alias: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.state
+  to:
+  - visualisation.immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model_state
+- from: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.summary
+  to:
+  - visualisation.immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model_summary
+- from: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.species_labels
+  to:
+  - visualisation.immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_infection_observable_1
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.initial_unresolved_infection_observable_1
+    label: Initial Unresolved Infection Observable 1
+    default: 48000.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `s2`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.initial_unresolved_infection_observable_2
+    label: Initial Unresolved Infection Observable 2
+    default: 2364.02569593148
+    units: native source value
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `s3`.
+  - name: initial_unresolved_infection_observable_3
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.initial_unresolved_infection_observable_3
+    label: Initial Unresolved Infection Observable 3
+    default: 250000.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 3. Sets the initial value
+      of bundled SBML species `s4`.
+  - name: initial_unresolved_infection_observable_4
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.initial_unresolved_infection_observable_4
+    label: Initial Unresolved Infection Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 4. Sets the initial value
+      of bundled SBML species `s14`.
+  - name: initial_unresolved_infection_observable_5
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.initial_unresolved_infection_observable_5
+    label: Initial Unresolved Infection Observable 5
+    default: 0.01
+    units: native source value
+    description: Initial Unresolved Infection Observable 5. Sets the initial value
+      of bundled SBML species `s16`.
+  - name: decay_of_t_cells_rate
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.decay_of_t_cells_rate
+    label: Decay Of T Cells Rate
+    default: 0.01
+    units: native source value
+    description: Decay Of T Cells Rate. Sets bundled SBML parameter `d`.
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.unresolved_infection_observable_1
+  - name: unresolved_infection_observable_2
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.unresolved_infection_observable_2
+  - name: unresolved_infection_observable_3
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.unresolved_infection_observable_3
+  - name: unresolved_infection_observable_4
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.unresolved_infection_observable_4
+  - name: unresolved_infection_observable_5
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.unresolved_infection_observable_5
+  - name: state
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.state
+  - name: summary
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_verma2016_hiv_and_hpv_co_infection_t_cell_respon_biomd0000000872_model.species_labels

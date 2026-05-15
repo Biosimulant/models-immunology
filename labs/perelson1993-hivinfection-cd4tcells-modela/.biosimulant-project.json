@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "7d8bfd48-7955-490e-ae2b-acb222b973ae",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "36a450c8-1f9b-4f98-8f99-9416b88bff97",
+  "created_at": "2026-05-15T15:53:06.975019778+00:00",
+  "last_synced_at": "2026-05-15T19:56:46.035358+00:00",
+  "hub_manifest_hash": "be945e897bd459b239a9225ef532834c03a2029d47af72d4a9860461a116849e",
+  "package_name": "perelson1993-hivinfection-cd4tcells-modela-lab"
+}

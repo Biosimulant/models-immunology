@@ -1,0 +1,105 @@
+schema_version: '2.0'
+title: Miao2014 - Dynamics and migratory pathways of virus-specific antibody-secreting
+  cell populations
+description: This model is from the paper available at http://www.ncbi.nlm.nih.gov/pubmed/25171166.
+  The original model contains time-varying parameters which are describedby a smoothing
+  spline.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Hongyu Miao
+- Mark Y Sangster
+- Alexandra M Livingstone
+- Shannon P Hilchey
+- Le Zhang
+upstream:
+  id: biomodels_ebi:MODEL1411130000
+  source_db: biomodels_ebi
+  source_id: MODEL1411130000
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1411130000
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1411130000?filename=MODEL1411130000_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model:Miao2014DynamicsAndMigratoryPathwaysOfViruModel1411130000Model
+  init_kwargs:
+    model_path: data/MODEL1411130000.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_cell_spleen
+    maps_to: s1
+    label: Initial Cell Spleen
+    default: 3400.0
+    units: native source value
+    description: Initial Cell Spleen. Sets the initial value of bundled SBML species
+      `s1`.
+  - name: initial_cell_mln
+    maps_to: s2
+    label: Initial Cell Mln
+    default: 1100.0
+    units: native source value
+    description: Initial Cell Mln. Sets the initial value of bundled SBML species
+      `s2`.
+  - name: initial_cell_lung
+    maps_to: s3
+    label: Initial Cell Lung
+    default: 18.0
+    units: native source value
+    description: Initial Cell Lung. Sets the initial value of bundled SBML species
+      `s3`.
+  - name: initial_unresolved_infection_observable_1
+    maps_to: s4
+    label: Initial Unresolved Infection Observable 1
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `s4`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: s5
+    label: Initial Unresolved Infection Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `s5`.
+  outputs:
+  - name: cell_spleen
+    maps_to: s1
+    label: Cell Spleen
+    description: Cell Spleen. Maps to bundled source symbol `s1`.
+  - name: cell_mln
+    maps_to: s2
+    label: Cell Mln
+    description: Cell Mln. Maps to bundled source symbol `s2`.
+  - name: cell_lung
+    maps_to: s3
+    label: Cell Lung
+    description: Cell Lung. Maps to bundled source symbol `s3`.
+  - name: unresolved_infection_observable_1
+    maps_to: s4
+    label: Unresolved Infection Observable 1
+    description: Unresolved Infection Observable 1. Maps to bundled source symbol
+      `s4`.
+  - name: unresolved_infection_observable_2
+    maps_to: s5
+    label: Unresolved Infection Observable 2
+    description: Unresolved Infection Observable 2. Maps to bundled source symbol
+      `s5`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

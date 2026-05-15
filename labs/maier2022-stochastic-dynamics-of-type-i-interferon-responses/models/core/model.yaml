@@ -1,0 +1,103 @@
+schema_version: '2.0'
+title: Maier2022 - Stochastic Dynamics of Type I Interferon Responses
+description: Maier2022 - Stochastic Dynamics of Type I Interferon ResponsesOur study
+  aims to determine whether and how biochemical noise affects the information transduced
+  in the JAK-STAT signaling pathway and inv. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Maier BD
+- Aguilera LU
+- Sahle S
+- Mutz P
+- Kalra P
+upstream:
+  id: biomodels_ebi:MODEL2210070001
+  source_db: biomodels_ebi
+  source_id: MODEL2210070001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2210070001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2210070001?filename=SBML
+    L2V4 representation of the JAK-STAT signaling pathway.xml
+  license: CC0
+biosim:
+  entrypoint: src.maier2022_stochastic_dynamics_of_type_i_interfer_model2210070001_model:Maier2022StochasticDynamicsOfTypeIInterferModel2210070001Model
+  init_kwargs:
+    model_path: data/MODEL2210070001.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_cytosolic_stat2_irf9_complex
+    maps_to: STAT2_IRF9_c
+    label: Initial Cytosolic Stat2 Irf9 Complex
+    default: 231.21387283237
+    units: native source value
+    description: Initial Cytosolic Stat2 Irf9 Complex. Sets the initial value of bundled
+      SBML species `STAT2_IRF9_c`.
+  - name: initial_nuclear_stat2_irf9_complex
+    maps_to: STAT2_IRF9_n
+    label: Initial Nuclear Stat2 Irf9 Complex
+    default: 2407.40740740741
+    units: native source value
+    description: Initial Nuclear Stat2 Irf9 Complex. Sets the initial value of bundled
+      SBML species `STAT2_IRF9_n`.
+  - name: initial_interferon
+    maps_to: IFN
+    label: Initial Interferon
+    default: 11560.6936416185
+    units: native source value
+    description: Initial Interferon. Sets the initial value of bundled SBML species
+      `IFN`.
+  - name: initial_cytosolic_stat1
+    maps_to: STAT1_c
+    label: Initial Cytosolic Stat1
+    default: 983430.057803468
+    units: native source value
+    description: Initial Cytosolic Stat1. Sets the initial value of bundled SBML species
+      `STAT1_c`.
+  - name: initial_pstat1
+    maps_to: pSTAT1
+    label: Initial Pstat1
+    default: 0.0
+    units: native source value
+    description: Initial Pstat1. Sets the initial value of bundled SBML species `pSTAT1`.
+  outputs:
+  - name: cytosolic_stat2_irf9_complex
+    maps_to: STAT2_IRF9_c
+    label: Cytosolic Stat2 Irf9 Complex
+    description: Cytosolic Stat2 Irf9 Complex. Maps to bundled source symbol `STAT2_IRF9_c`.
+  - name: nuclear_stat2_irf9_complex
+    maps_to: STAT2_IRF9_n
+    label: Nuclear Stat2 Irf9 Complex
+    description: Nuclear Stat2 Irf9 Complex. Maps to bundled source symbol `STAT2_IRF9_n`.
+  - name: interferon
+    maps_to: IFN
+    label: Interferon
+    description: Interferon. Maps to bundled source symbol `IFN`.
+  - name: cytosolic_stat1
+    maps_to: STAT1_c
+    label: Cytosolic Stat1
+    description: Cytosolic Stat1. Maps to bundled source symbol `STAT1_c`.
+  - name: pstat1
+    maps_to: pSTAT1
+    label: Pstat1
+    description: Pstat1. Maps to bundled source symbol `pSTAT1`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

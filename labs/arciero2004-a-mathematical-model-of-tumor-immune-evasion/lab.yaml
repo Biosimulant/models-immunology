@@ -1,0 +1,96 @@
+schema_version: '2.0'
+title: Arciero2004 - A mathematical model of tumor-immune evasion and siRNA treatment
+  Lab
+description: This is a mathematical model consisting of a system of nonlinear ordinary
+  differential equations describing tumor cells and immune effectors, as well as the
+  immuno-stimulatory and suppressive cytokine. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.state
+  to:
+  - visualisation.immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model_state
+- from: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.summary
+  to:
+  - visualisation.immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model_summary
+- from: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.species_labels
+  to:
+  - visualisation.immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 1000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `E`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `T`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 1000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `I`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `S`.
+  - name: effector_cell_death_rate
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.effector_cell_death_rate
+    label: Effector Cell Death Rate
+    default: 0.03
+    units: native source value
+    description: Effector Cell Death Rate. Sets bundled SBML parameter `mu_1`.
+  - name: tumour_growth_rate
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.tumour_growth_rate
+    label: Tumour Growth Rate
+    default: 0.18
+    units: native source value
+    description: Tumour Growth Rate. Sets bundled SBML parameter `r`.
+  - name: interleukin_2_decay_rate
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.interleukin_2_decay_rate
+    label: Interleukin 2 Decay Rate
+    default: 10.0
+    units: native source value
+    description: Interleukin 2 Decay Rate. Sets bundled SBML parameter `mu_2`.
+  - name: transforming_growth_factor_b_decay_rate
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.transforming_growth_factor_b_decay_rate
+    label: Transforming Growth Factor B Decay Rate
+    default: 10.0
+    units: native source value
+    description: Transforming Growth Factor B Decay Rate. Sets bundled SBML parameter
+      `mu_3`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.unresolved_tumor_observable_4
+  - name: state
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.state
+  - name: summary
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_arciero2004_a_mathematical_model_of_tumor_immune_model1907310002_model.species_labels

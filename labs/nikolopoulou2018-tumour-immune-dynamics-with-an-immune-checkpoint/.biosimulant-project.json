@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "18f74b09-3ebd-4967-b531-6feff5d3eda6",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "f5e09293-d827-442a-a702-09e83ba4cf35",
+  "created_at": "2026-05-15T15:53:06.807991434+00:00",
+  "last_synced_at": "2026-05-15T19:16:49.146686+00:00",
+  "hub_manifest_hash": "62978e3a95468dab37ba5020d392a5857f4966c881419f0b74d87223f0b7eb35",
+  "package_name": "nikolopoulou2018-tumour-immune-dynamics-with-an-immune-checkpoin"
+}

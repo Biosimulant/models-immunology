@@ -1,0 +1,43 @@
+schema_version: '2.0'
+title: Nowak1996 HostResponse InfectiousAgents Lab
+description: 'This a model from the article: Population dynamics of immune responses
+  to persistent viruses. It can be used to explore immune response dynamics and compare
+  pathway-level behavior across conditions.'
+models:
+- alias: immunology_sbml_nowak1996_hostresponse_infectiousagents_model1006230050_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_nowak1996_hostresponse_infectiousagents_model1006230050_model.state
+  to:
+  - visualisation.immunology_sbml_nowak1996_hostresponse_infectiousagents_model1006230050_model_state
+- from: immunology_sbml_nowak1996_hostresponse_infectiousagents_model1006230050_model.summary
+  to:
+  - visualisation.immunology_sbml_nowak1996_hostresponse_infectiousagents_model1006230050_model_summary
+- from: immunology_sbml_nowak1996_hostresponse_infectiousagents_model1006230050_model.species_labels
+  to:
+  - visualisation.immunology_sbml_nowak1996_hostresponse_infectiousagents_model1006230050_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_nowak1996_hostresponse_infectiousagents_model1006230050_model.unresolved_infection_observable_1
+  - name: unresolved_infection_observable_2
+    maps_to: immunology_sbml_nowak1996_hostresponse_infectiousagents_model1006230050_model.unresolved_infection_observable_2
+  - name: unresolved_infection_observable_3
+    maps_to: immunology_sbml_nowak1996_hostresponse_infectiousagents_model1006230050_model.unresolved_infection_observable_3
+  - name: state
+    maps_to: immunology_sbml_nowak1996_hostresponse_infectiousagents_model1006230050_model.state
+  - name: summary
+    maps_to: immunology_sbml_nowak1996_hostresponse_infectiousagents_model1006230050_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_nowak1996_hostresponse_infectiousagents_model1006230050_model.species_labels
+caveats: 'No scientifically safe input was exposed in this pass: the bundled SBML
+  did not provide a headline species initial value or meaningfully named constant/intervention
+  parameter that could be surfaced without turning raw source symbols into unsupported
+  biological claims.'

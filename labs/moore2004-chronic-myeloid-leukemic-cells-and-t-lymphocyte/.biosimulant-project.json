@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "8bfb812b-3f03-4a59-ae40-eade152be044",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "06f0163a-f3fe-4771-889c-27b989b1095f",
+  "created_at": "2026-05-15T15:53:06.745177925+00:00",
+  "last_synced_at": "2026-05-15T19:13:19.344938+00:00",
+  "hub_manifest_hash": "d374f283ec8c1746a5808f14dbd97b61c33332c3ffcb6b465ec02ca87cb6172c",
+  "package_name": "moore2004-chronic-myeloid-leukemic-cells-and-t-lymphocyte-intera"
+}

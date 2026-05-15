@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Rhodes2019 - Immune-Mediated theory of Metastasis Lab Visualisation
+description: Dedicated presentation model for Rhodes2019 - Immune-Mediated theory
+  of Metastasis Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Rhodes2019 - Immune-Mediated theory of Metastasis Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model
+      title: Rhodes2019 - Immune-Mediated theory of Metastasis
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: TE_immune_Cell_y_1
+        label: Te Immune Cell Y 1
+      - id: CT_immune_Cell_x_1
+        label: Ct Immune Cell X 1
+      - id: CT_immune_Cell_x_2
+        label: Ct Immune Cell X 2
+      - id: TE_immune_Cell_y_2
+        label: Te Immune Cell Y 2
+      - id: Tumor_Cell_u_1
+        label: Tumor Cell U 1
+      - id: Tumor_Cell_u_2
+        label: Tumor Cell(u_2)
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model_state
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.state
+    description: Core state record.
+  - name: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model_summary
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model_species_labels
+    maps_to: immunology_sbml_rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model.species_labels
+    description: Core source-label map.
+  outputs: []

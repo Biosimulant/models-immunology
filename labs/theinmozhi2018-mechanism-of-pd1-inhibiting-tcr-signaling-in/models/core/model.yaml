@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Theinmozhi2018 - Mechanism of PD1 inhibiting TCR signaling in Tumor immune
+  regulation
+description: Its a Deterministic ODE model showcasing mechanism of PDL1 induced TCR
+  and CD38 signalling inhibition. The model also contains the LCK activation and inactivation
+  phenomenon dependent on the particula.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Theinmozhi Arulraj
+- Debashis Barik
+upstream:
+  id: biomodels_ebi:BIOMD0000000724
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000724
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000724
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000724?filename=Theinmozhi_2018.xml
+  license: CC0
+biosim:
+  entrypoint: src.theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model:Theinmozhi2018MechanismOfPd1InhibitingTcrSBiomd0000000724Model
+  init_kwargs:
+    model_path: data/BIOMD0000000724.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_lcki
+    maps_to: LCKi
+    label: Initial Lcki
+    default: 25.0
+    units: native source value
+    description: Initial Lcki. Sets the initial value of bundled SBML species `LCKi`.
+  - name: initial_lckyi
+    maps_to: LCKyi
+    label: Initial Lckyi
+    default: 25.0
+    units: native source value
+    description: Initial Lckyi. Sets the initial value of bundled SBML species `LCKyi`.
+  - name: initial_lckya
+    maps_to: LCKya
+    label: Initial Lckya
+    default: 25.0
+    units: native source value
+    description: Initial Lckya. Sets the initial value of bundled SBML species `LCKya`.
+  - name: initial_lckyiya
+    maps_to: LCKyiya
+    label: Initial Lckyiya
+    default: 25.0
+    units: native source value
+    description: Initial Lckyiya. Sets the initial value of bundled SBML species `LCKyiya`.
+  - name: initial_lckpi
+    maps_to: LCKpi
+    label: Initial Lckpi
+    default: 0.0
+    units: native source value
+    description: Initial Lckpi. Sets the initial value of bundled SBML species `LCKpi`.
+  outputs:
+  - name: lcki
+    maps_to: LCKi
+    label: Lcki
+    description: Lcki. Maps to bundled source symbol `LCKi`.
+  - name: lckyi
+    maps_to: LCKyi
+    label: Lckyi
+    description: Lckyi. Maps to bundled source symbol `LCKyi`.
+  - name: lckya
+    maps_to: LCKya
+    label: Lckya
+    description: Lckya. Maps to bundled source symbol `LCKya`.
+  - name: lckyiya
+    maps_to: LCKyiya
+    label: Lckyiya
+    description: Lckyiya. Maps to bundled source symbol `LCKyiya`.
+  - name: lckpi
+    maps_to: LCKpi
+    label: Lckpi
+    description: Lckpi. Maps to bundled source symbol `LCKpi`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

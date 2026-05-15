@@ -1,0 +1,66 @@
+schema_version: '2.0'
+title: Wodarz2007 - HIV/CD4 T-cell interaction Lab
+description: 'Wodarz2007 - HIV/CD4 T-cell interaction A deterministic model illustrating
+  howCD4 T-cells can influence HIV infection. This model is described in the article:
+  Infection dynamics in HIV-specific CD4 T.'
+models:
+- alias: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model.state
+  to:
+  - visualisation.immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model_state
+- from: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model.summary
+  to:
+  - visualisation.immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model_summary
+- from: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model.species_labels
+  to:
+  - visualisation.immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_t_cell_infected
+    maps_to: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model.initial_t_cell_infected
+    label: Initial T Cell Infected
+    default: 0.1
+    units: native source value
+    description: Initial T Cell Infected. Sets the initial value of bundled SBML species
+      `x`.
+  - name: initial_t_cell_uninfected
+    maps_to: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model.initial_t_cell_uninfected
+    label: Initial T Cell Uninfected
+    default: 0.0
+    units: native source value
+    description: Initial T Cell Uninfected. Sets the initial value of bundled SBML
+      species `y`.
+  - name: initial_free_virus
+    maps_to: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model.initial_free_virus
+    label: Initial Free Virus
+    default: 1.0
+    units: native source value
+    description: Initial Free Virus. Sets the initial value of bundled SBML species
+      `v`.
+  - name: uninfected_t_cell_death_rate
+    maps_to: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model.uninfected_t_cell_death_rate
+    label: Uninfected T Cell Death Rate
+    default: 0.1
+    units: native source value
+    description: Uninfected T Cell Death Rate. Sets bundled SBML parameter `d`.
+  outputs:
+  - name: t_cell_infected
+    maps_to: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model.t_cell_infected
+  - name: t_cell_uninfected
+    maps_to: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model.t_cell_uninfected
+  - name: free_virus
+    maps_to: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model.free_virus
+  - name: state
+    maps_to: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model.state
+  - name: summary
+    maps_to: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_wodarz2007_hiv_cd4_t_cell_interaction_biomd0000000663_model.species_labels

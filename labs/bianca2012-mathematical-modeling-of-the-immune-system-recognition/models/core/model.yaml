@@ -1,0 +1,134 @@
+schema_version: '2.0'
+title: Bianca2012 - Mathematical modeling of the immune system recognition to mammary
+  carcinoma antigen
+description: This model describes the humoral and cellular response of the immune
+  system to a tumor associate antigen and the recognition process between B cells,
+  T cells and antigen presenting cells. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Carlo Bianca
+- Ferdinando Chiacchio
+- Francesco Pappalardo
+- Marzio Pennisi
+upstream:
+  id: biomodels_ebi:MODEL1907260002
+  source_db: biomodels_ebi
+  source_id: MODEL1907260002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1907260002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1907260002?filename=Bianca2012
+    v7.0.xml
+  license: CC0
+biosim:
+  entrypoint: src.bianca2012_mathematical_modeling_of_the_immune_s_model1907260002_model:Bianca2012MathematicalModelingOfTheImmuneSModel1907260002Model
+  init_kwargs:
+    model_path: data/MODEL1907260002.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: VC
+    label: Initial Unresolved Tumor Observable 1
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `VC`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: TAA
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `TAA`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: B
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `B`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: TH
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `TH`.
+  - name: initial_interleukin_12
+    maps_to: IL12
+    label: Initial Interleukin 12
+    default: 0.0
+    units: native source value
+    description: Initial Interleukin 12. Sets the initial value of bundled SBML species
+      `IL12`.
+  - name: taa_release_vc_rate
+    maps_to: gamma_21
+    label: Taa Release Vc Rate
+    default: 3.0
+    units: native source value
+    description: Taa Release Vc Rate. Sets bundled SBML parameter `gamma_21`.
+  - name: taa_release_cc_rate
+    maps_to: gamma_28
+    label: Taa Release Cc Rate
+    default: 3.0
+    units: native source value
+    description: Taa Release Cc Rate. Sets bundled SBML parameter `gamma_28`.
+  - name: b_death_rate
+    maps_to: mu_3
+    label: B Death Rate
+    default: 0.693147
+    units: native source value
+    description: B Death Rate. Sets bundled SBML parameter `mu_3`.
+  - name: th_death_rate
+    maps_to: mu_4
+    label: Th Death Rate
+    default: 0.693147
+    units: native source value
+    description: Th Death Rate. Sets bundled SBML parameter `mu_4`.
+  - name: interleukin_12_release_vc_rate
+    maps_to: gamma_51
+    label: Interleukin 12 Release Vc Rate
+    default: 10.0
+    units: native source value
+    description: Interleukin 12 Release Vc Rate. Sets bundled SBML parameter `gamma_51`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: VC
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `VC`.
+  - name: unresolved_tumor_observable_2
+    maps_to: TAA
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `TAA`.
+  - name: unresolved_tumor_observable_3
+    maps_to: B
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `B`.
+  - name: unresolved_tumor_observable_4
+    maps_to: TH
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `TH`.
+  - name: interleukin_12
+    maps_to: IL12
+    label: Interleukin 12
+    description: Interleukin 12. Maps to bundled source symbol `IL12`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

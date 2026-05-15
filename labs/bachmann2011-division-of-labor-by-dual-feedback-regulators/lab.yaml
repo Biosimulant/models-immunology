@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Bachmann2011 - Division of labor by dual feedback regulators controls JAK2/STAT5
+  signaling over broad ligand range Lab
+description: This is a dynamic pathway model examining the roles of of the two transcriptional
+  negative feedback regulators of the suppressor of cytokine signaling (SOCS) family,
+  CIS and SOCS3, in JAK/STAT5 signal. It can be used to explore immune response dynamics
+  and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.state
+  to:
+  - visualisation.immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model_state
+- from: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.summary
+  to:
+  - visualisation.immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model_summary
+- from: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.species_labels
+  to:
+  - visualisation.immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_erythropoietin_receptor_jak2_complex
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.initial_erythropoietin_receptor_jak2_complex
+    label: Initial Erythropoietin Receptor Jak2 Complex
+    default: 3.97622
+    units: native source value
+    description: Initial Erythropoietin Receptor Jak2 Complex. Sets the initial value
+      of bundled SBML species `EpoRJAK2`.
+  - name: initial_phosphorylated_erythropoietin_receptor_jak2_complex
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.initial_phosphorylated_erythropoietin_receptor_jak2_complex
+    label: Initial Phosphorylated Erythropoietin Receptor Jak2 Complex
+    default: 0.0
+    units: native source value
+    description: Initial Phosphorylated Erythropoietin Receptor Jak2 Complex. Sets
+      the initial value of bundled SBML species `EpoRpJAK2`.
+  - name: initial_phosphorylated_erythropoietin_receptor_jak2_site_1
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.initial_phosphorylated_erythropoietin_receptor_jak2_site_1
+    label: Initial Phosphorylated Erythropoietin Receptor Jak2 Site 1
+    default: 0.0
+    units: native source value
+    description: Initial Phosphorylated Erythropoietin Receptor Jak2 Site 1. Sets
+      the initial value of bundled SBML species `p1EpoRpJAK2`.
+  - name: initial_phosphorylated_erythropoietin_receptor_jak2_site_2
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.initial_phosphorylated_erythropoietin_receptor_jak2_site_2
+    label: Initial Phosphorylated Erythropoietin Receptor Jak2 Site 2
+    default: 0.0
+    units: native source value
+    description: Initial Phosphorylated Erythropoietin Receptor Jak2 Site 2. Sets
+      the initial value of bundled SBML species `p2EpoRpJAK2`.
+  - name: initial_phosphorylated_erythropoietin_receptor_jak2_sites_1_2
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.initial_phosphorylated_erythropoietin_receptor_jak2_sites_1_2
+    label: Initial Phosphorylated Erythropoietin Receptor Jak2 Sites 1 2
+    default: 0.0
+    units: native source value
+    description: Initial Phosphorylated Erythropoietin Receptor Jak2 Sites 1 2. Sets
+      the initial value of bundled SBML species `p12EpoRpJAK2`.
+  outputs:
+  - name: erythropoietin_receptor_jak2_complex
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.erythropoietin_receptor_jak2_complex
+  - name: phosphorylated_erythropoietin_receptor_jak2_complex
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.phosphorylated_erythropoietin_receptor_jak2_complex
+  - name: phosphorylated_erythropoietin_receptor_jak2_site_1
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.phosphorylated_erythropoietin_receptor_jak2_site_1
+  - name: phosphorylated_erythropoietin_receptor_jak2_site_2
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.phosphorylated_erythropoietin_receptor_jak2_site_2
+  - name: phosphorylated_erythropoietin_receptor_jak2_sites_1_2
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.phosphorylated_erythropoietin_receptor_jak2_sites_1_2
+  - name: state
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.state
+  - name: summary
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model.species_labels

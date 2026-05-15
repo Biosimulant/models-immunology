@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "60b7163a-2c53-452d-b132-1cbad7db2393",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "5a9071cc-c86b-4e2e-b32d-d01196c75d9b",
+  "created_at": "2026-05-15T15:53:05.750673134+00:00",
+  "last_synced_at": "2026-05-15T19:44:54.552843+00:00",
+  "hub_manifest_hash": "366084c53e2531e2c43b0e5fe8746e696a92c6e1e990611252517eb775d4a16b",
+  "package_name": "hanson2016-toxicity-management-in-car-t-cell-therapy-for-b-all-l"
+}

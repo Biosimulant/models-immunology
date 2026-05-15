@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "66192362-0073-46cc-b1f9-76636a7cb250",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "2346a06d-4872-4816-bac8-712ec382c1cb",
+  "created_at": "2026-05-15T15:53:06.111439998+00:00",
+  "last_synced_at": "2026-05-15T18:44:46.084236+00:00",
+  "hub_manifest_hash": "3a7b90b3dc597b381ab2d827131e3ed82cc51bf1e604db9b76c316d2323c6e8e",
+  "package_name": "kirschner1998-immunotherapy-tumour-lab"
+}

@@ -1,0 +1,89 @@
+schema_version: '2.0'
+title: Alharbi2020 - Tumor and immune system competition
+description: Sana Abdulkream Alharbi & Azmin Sham Rambely. A New ODE-Based Model for
+  Tumor Cells and Immune System Competition.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Sana Abdulkream Alharbi
+- Azmin Sham Rambely
+upstream:
+  id: biomodels_ebi:BIOMD0000001052
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001052
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001052
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001052?filename=Tumor_cells_immune_system_competition.xml
+  license: CC0
+biosim:
+  entrypoint: src.alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model:Alharbi2020TumorAndImmuneSystemCompetitionBiomd0000001052Model
+  init_kwargs:
+    model_path: data/BIOMD0000001052.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: I
+    label: Initial Unresolved Tumor Observable 1
+    default: 0.999999999999994
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `I`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: N
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.999999999999993
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `N`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: T
+    label: Initial Unresolved Tumor Observable 3
+    default: 1.22
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `T`.
+  - name: immune_cells_death_rate
+    maps_to: delta
+    label: Immune Cells Death Rate
+    default: 0.57
+    units: native source value
+    description: Immune Cells Death Rate. Sets bundled SBML parameter `delta`.
+  - name: death_of_immune_cells_after_interaction_with_tumor_rate
+    maps_to: mu
+    label: Death Of Immune Cells After Interaction With Tumor Rate
+    default: 0.813
+    units: native source value
+    description: Death Of Immune Cells After Interaction With Tumor Rate. Sets bundled
+      SBML parameter `mu`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: I
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `I`.
+  - name: unresolved_tumor_observable_2
+    maps_to: N
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `N`.
+  - name: unresolved_tumor_observable_3
+    maps_to: T
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `T`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

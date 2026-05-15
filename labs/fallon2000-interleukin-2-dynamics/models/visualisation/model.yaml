@@ -1,0 +1,54 @@
+schema_version: '2.0'
+title: Fallon2000 - Interleukin-2 dynamics Lab Visualisation
+description: Dedicated presentation model for Fallon2000 - Interleukin-2 dynamics
+  Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Fallon2000 - Interleukin-2 dynamics Lab
+    question: Which signaling or cytokine states show the strongest activity during
+      the simulation?
+    answer_focus: cytokine/signaling trajectories, activation states, and largest
+      excursions
+    context: immune_signaling
+    sources:
+    - alias: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model
+      title: Fallon2000 - Interleukin-2 dynamics
+      visual_scope: Immune signaling activity
+      observables:
+      - id: Rs_0
+        label: Rs 0
+      - id: Cs_0
+        label: Cs 0
+      - id: Ri_0
+        label: Ri 0
+      - id: Ci_0
+        label: Ci 0
+      - id: Li_0
+        label: Li 0
+      - id: Ld_0
+        label: Ld
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model_state
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.state
+    description: Core state record.
+  - name: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model_summary
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model_species_labels
+    maps_to: immunology_sbml_fallon2000_interleukin_2_dynamics_biomd0000000665_model.species_labels
+    description: Core source-label map.
+  outputs: []

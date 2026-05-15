@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: 'Sandip2013 - Modeling the dynamics of hepatitis C virus with combined antiviral
+  drug therapy: interferon and ribavirin.'
+description: 'Modeling the dynamics of hepatitis C virus with combined antiviral drug
+  therapy: interferon and ribavirin.Banerjee S1, Keval R, Gakkhar S.Author information1
+  Department of Mathematics, Indian Institut. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Sandip Banerjee
+- Ram Keval
+- Sunita Gakkhar
+upstream:
+  id: biomodels_ebi:MODEL1912120002
+  source_db: biomodels_ebi
+  source_id: MODEL1912120002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1912120002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1912120002?filename=Sandip2013.xml
+  license: CC0
+biosim:
+  entrypoint: src.sandip2013_modeling_the_dynamics_of_hepatitis_c_model1912120002_model:Sandip2013ModelingTheDynamicsOfHepatitisCModel1912120002Model
+  init_kwargs:
+    model_path: data/MODEL1912120002.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_infection_observable_1
+    maps_to: T
+    label: Initial Unresolved Infection Observable 1
+    default: 17000000.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `T`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: I
+    label: Initial Unresolved Infection Observable 2
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `I`.
+  - name: initial_unresolved_infection_observable_3
+    maps_to: VI
+    label: Initial Unresolved Infection Observable 3
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 3. Sets the initial value
+      of bundled SBML species `VI`.
+  - name: initial_unresolved_infection_observable_4
+    maps_to: VNI
+    label: Initial Unresolved Infection Observable 4
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 4. Sets the initial value
+      of bundled SBML species `VNI`.
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: T
+    label: Unresolved Infection Observable 1
+    description: Unresolved Infection Observable 1. Maps to bundled source symbol
+      `T`.
+  - name: unresolved_infection_observable_2
+    maps_to: I
+    label: Unresolved Infection Observable 2
+    description: Unresolved Infection Observable 2. Maps to bundled source symbol
+      `I`.
+  - name: unresolved_infection_observable_3
+    maps_to: VI
+    label: Unresolved Infection Observable 3
+    description: Unresolved Infection Observable 3. Maps to bundled source symbol
+      `VI`.
+  - name: unresolved_infection_observable_4
+    maps_to: VNI
+    label: Unresolved Infection Observable 4
+    description: Unresolved Infection Observable 4. Maps to bundled source symbol
+      `VNI`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

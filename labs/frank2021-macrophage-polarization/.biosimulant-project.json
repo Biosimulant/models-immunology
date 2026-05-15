@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "605e3ad1-86c5-4e22-aceb-f51e6e4ade64",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "5e146693-268e-41e1-abc5-199d25ba5b14",
+  "created_at": "2026-05-15T15:53:05.523336147+00:00",
+  "last_synced_at": "2026-05-15T19:40:12.038545+00:00",
+  "hub_manifest_hash": "785fa765420d3129ad00b10fc02f6b8230b916528c98a204d5433bb3a69d0ff7",
+  "package_name": "frank2021-macrophage-polarization-lab"
+}

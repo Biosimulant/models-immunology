@@ -1,0 +1,61 @@
+schema_version: '2.0'
+title: Wilkie2013r - immune-induced cancer dormancy and immune evasion-resistance
+  Lab
+description: 'The paper describes a model of immune-induced cancer dormancy and immune
+  evasion with resistance. Created by COPASI 4.25 (Build 207) This model is described
+  in the article: Mathematical models of immu.'
+models:
+- alias: immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model.state
+  to:
+  - visualisation.immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model_state
+- from: immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model.summary
+  to:
+  - visualisation.immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model_summary
+- from: immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model.species_labels
+  to:
+  - visualisation.immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 9000.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `C`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 100.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `I`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 1000.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `R`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model.unresolved_tumor_observable_3
+  - name: state
+    maps_to: immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model.state
+  - name: summary
+    maps_to: immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_wilkie2013r_immune_induced_cancer_dormancy_and_i_biomd0000000752_model.species_labels

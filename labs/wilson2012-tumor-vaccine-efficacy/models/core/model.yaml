@@ -1,0 +1,106 @@
+schema_version: '2.0'
+title: Wilson2012 - tumor vaccine efficacy
+description: 'The paper describes a model of antitumor vaccine therapy.Created by
+  COPASI 4.25 (Build 207) This model is described in the article: A Mathematical Model
+  of the Enhancement of Tumor Vaccine Efficacy by. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Shelby Wilson
+- Doron Levy
+upstream:
+  id: biomodels_ebi:BIOMD0000000791
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000791
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000791
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000791?filename=Wilson2012.xml
+  license: CC0
+biosim:
+  entrypoint: src.wilson2012_tumor_vaccine_efficacy_biomd0000000791_model:Wilson2012TumorVaccineEfficacyBiomd0000000791Model
+  init_kwargs:
+    model_path: data/BIOMD0000000791.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: T
+    label: Initial Unresolved Tumor Observable 1
+    default: 3.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: B
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `B`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: E
+    label: Initial Unresolved Tumor Observable 3
+    default: 100.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `E`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: R
+    label: Initial Unresolved Tumor Observable 4
+    default: 1.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `R`.
+  - name: initial_unresolved_tumor_observable_5
+    maps_to: V
+    label: Initial Unresolved Tumor Observable 5
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 5. Sets the initial value of
+      bundled SBML species `V`.
+  - name: tgfb_decay_rate
+    maps_to: d
+    label: Tgfb Decay Rate
+    default: 0.0007
+    units: unit_1
+    description: Tgfb Decay Rate. Sets bundled SBML parameter `d`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: T
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `T`.
+  - name: unresolved_tumor_observable_2
+    maps_to: B
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `B`.
+  - name: unresolved_tumor_observable_3
+    maps_to: E
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `E`.
+  - name: unresolved_tumor_observable_4
+    maps_to: R
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `R`.
+  - name: unresolved_tumor_observable_5
+    maps_to: V
+    label: Unresolved Tumor Observable 5
+    description: Unresolved Tumor Observable 5. Maps to bundled source symbol `V`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

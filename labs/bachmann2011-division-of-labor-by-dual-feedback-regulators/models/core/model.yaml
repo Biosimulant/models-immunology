@@ -1,0 +1,109 @@
+schema_version: '2.0'
+title: Bachmann2011 - Division of labor by dual feedback regulators controls JAK2/STAT5
+  signaling over broad ligand range
+description: This is a dynamic pathway model examining the roles of of the two transcriptional
+  negative feedback regulators of the suppressor of cytokine signaling (SOCS) family,
+  CIS and SOCS3, in JAK/STAT5 signal. It can be used to explore immune response dynamics
+  and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Julie Bachmann
+- Andreas Raue
+- Marcel Schilling
+- "Martin E B\xF6hm"
+- Clemens Kreutz
+upstream:
+  id: biomodels_ebi:BIOMD0000000861
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000861
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000861
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000861?filename=Bachmann2011.xml
+  license: CC0
+biosim:
+  entrypoint: src.bachmann2011_division_of_labor_by_dual_feedback_biomd0000000861_model:Bachmann2011DivisionOfLaborByDualFeedbackBiomd0000000861Model
+  init_kwargs:
+    model_path: data/BIOMD0000000861.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_erythropoietin_receptor_jak2_complex
+    maps_to: EpoRJAK2
+    label: Initial Erythropoietin Receptor Jak2 Complex
+    default: 3.97622
+    units: native source value
+    description: Initial Erythropoietin Receptor Jak2 Complex. Sets the initial value
+      of bundled SBML species `EpoRJAK2`.
+  - name: initial_phosphorylated_erythropoietin_receptor_jak2_complex
+    maps_to: EpoRpJAK2
+    label: Initial Phosphorylated Erythropoietin Receptor Jak2 Complex
+    default: 0.0
+    units: native source value
+    description: Initial Phosphorylated Erythropoietin Receptor Jak2 Complex. Sets
+      the initial value of bundled SBML species `EpoRpJAK2`.
+  - name: initial_phosphorylated_erythropoietin_receptor_jak2_site_1
+    maps_to: p1EpoRpJAK2
+    label: Initial Phosphorylated Erythropoietin Receptor Jak2 Site 1
+    default: 0.0
+    units: native source value
+    description: Initial Phosphorylated Erythropoietin Receptor Jak2 Site 1. Sets
+      the initial value of bundled SBML species `p1EpoRpJAK2`.
+  - name: initial_phosphorylated_erythropoietin_receptor_jak2_site_2
+    maps_to: p2EpoRpJAK2
+    label: Initial Phosphorylated Erythropoietin Receptor Jak2 Site 2
+    default: 0.0
+    units: native source value
+    description: Initial Phosphorylated Erythropoietin Receptor Jak2 Site 2. Sets
+      the initial value of bundled SBML species `p2EpoRpJAK2`.
+  - name: initial_phosphorylated_erythropoietin_receptor_jak2_sites_1_2
+    maps_to: p12EpoRpJAK2
+    label: Initial Phosphorylated Erythropoietin Receptor Jak2 Sites 1 2
+    default: 0.0
+    units: native source value
+    description: Initial Phosphorylated Erythropoietin Receptor Jak2 Sites 1 2. Sets
+      the initial value of bundled SBML species `p12EpoRpJAK2`.
+  outputs:
+  - name: erythropoietin_receptor_jak2_complex
+    maps_to: EpoRJAK2
+    label: Erythropoietin Receptor Jak2 Complex
+    description: Erythropoietin Receptor Jak2 Complex. Maps to bundled source symbol
+      `EpoRJAK2`.
+  - name: phosphorylated_erythropoietin_receptor_jak2_complex
+    maps_to: EpoRpJAK2
+    label: Phosphorylated Erythropoietin Receptor Jak2 Complex
+    description: Phosphorylated Erythropoietin Receptor Jak2 Complex. Maps to bundled
+      source symbol `EpoRpJAK2`.
+  - name: phosphorylated_erythropoietin_receptor_jak2_site_1
+    maps_to: p1EpoRpJAK2
+    label: Phosphorylated Erythropoietin Receptor Jak2 Site 1
+    description: Phosphorylated Erythropoietin Receptor Jak2 Site 1. Maps to bundled
+      source symbol `p1EpoRpJAK2`.
+  - name: phosphorylated_erythropoietin_receptor_jak2_site_2
+    maps_to: p2EpoRpJAK2
+    label: Phosphorylated Erythropoietin Receptor Jak2 Site 2
+    description: Phosphorylated Erythropoietin Receptor Jak2 Site 2. Maps to bundled
+      source symbol `p2EpoRpJAK2`.
+  - name: phosphorylated_erythropoietin_receptor_jak2_sites_1_2
+    maps_to: p12EpoRpJAK2
+    label: Phosphorylated Erythropoietin Receptor Jak2 Sites 1 2
+    description: Phosphorylated Erythropoietin Receptor Jak2 Sites 1 2. Maps to bundled
+      source symbol `p12EpoRpJAK2`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

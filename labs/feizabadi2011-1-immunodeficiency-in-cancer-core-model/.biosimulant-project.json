@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "67e8ee82-8a39-4ee7-b1a9-32f2523f8499",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "7440ffcb-0fe5-4e88-b981-6bcf7430f45b",
+  "created_at": "2026-05-15T15:53:05.446240876+00:00",
+  "last_synced_at": "2026-05-15T20:31:35.540456+00:00",
+  "hub_manifest_hash": "19bd9ae441b4514ec2895ddd788da8e5a0eb5be51c619c2eff985ad5aeadbc52",
+  "package_name": "feizabadi2011-1-immunodeficiency-in-cancer-core-model-lab"
+}

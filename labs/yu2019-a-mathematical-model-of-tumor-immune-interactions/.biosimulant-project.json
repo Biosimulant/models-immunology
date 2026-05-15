@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "4d247244-97a0-450f-9f86-44c2947002f4",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "14ce8d77-7a1d-4fc6-86ef-088f0abe4a9b",
+  "created_at": "2026-05-15T15:53:07.891414268+00:00",
+  "last_synced_at": "2026-05-15T20:28:30.338747+00:00",
+  "hub_manifest_hash": "66fd65e14921ceaac433c3b768a40f4ebcbffdfe32bbb34d169eb484cef97e36",
+  "package_name": "yu2019-a-mathematical-model-of-tumor-immune-interactions-with-an"
+}

@@ -1,0 +1,54 @@
+schema_version: '2.0'
+title: Dubey2007 - A mathematical model for the effect of toxicant on the immune system
+  (with toxicant effect) Model2 Lab Visualisation
+description: Dedicated presentation model for Dubey2007 - A mathematical model for
+  the effect of toxicant on the immune system (with toxicant effect) Model2 Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Dubey2007 - A mathematical model for the effect of toxicant on the
+      immune system (with toxicant effect) Model2 Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model
+      title: Dubey2007 - A mathematical model for the effect of toxicant on the immune
+        system (with toxicant effect) Model2
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: P
+        label: Unresolved Immune Observable 1
+      - id: I
+        label: Unresolved Immune Observable 2
+      - id: M
+        label: Unresolved Immune Observable 3
+      - id: T
+        label: Unresolved Immune Observable 4
+      - id: U
+        label: Unresolved Immune Observable 5
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model_state
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.state
+    description: Core state record.
+  - name: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model_summary
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model_species_labels
+    maps_to: immunology_sbml_dubey2007_a_mathematical_model_for_the_effect_of_biomd0000000905_model.species_labels
+    description: Core source-label map.
+  outputs: []

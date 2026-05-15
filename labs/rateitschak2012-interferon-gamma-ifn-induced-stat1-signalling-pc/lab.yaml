@@ -1,0 +1,49 @@
+schema_version: '2.0'
+title: "Rateitschak2012 - Interferon-gamma (IFN\u03B3) induced STAT1 signalling (PC\
+  \ IFNg100) Lab"
+description: "Rateitschak2012 - Interferon-gamma (IFN\u03B3) induced STAT1 signalling\
+  \ (PC_IFNg100) This model is described in the article: Parameter identifiability\
+  \ and sensitivity analysis predict targets for enhanceme. It can be used to explore\
+  \ immune response dynamics and compare pathway-level behavior across conditions."
+models:
+- alias: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.state
+  to:
+  - visualisation.immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model_state
+- from: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.summary
+  to:
+  - visualisation.immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model_summary
+- from: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.species_labels
+  to:
+  - visualisation.immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: phosphorylated_stat1_dimer
+    maps_to: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.phosphorylated_stat1_dimer
+  - name: nuclear_phosphorylated_stat1_dimer
+    maps_to: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.nuclear_phosphorylated_stat1_dimer
+  - name: unphosphorylated_stat1
+    maps_to: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.unphosphorylated_stat1
+  - name: nuclear_unphosphorylated_stat1
+    maps_to: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.nuclear_unphosphorylated_stat1
+  - name: socs1_mrna
+    maps_to: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.socs1_mrna
+  - name: state
+    maps_to: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.state
+  - name: summary
+    maps_to: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_rateitschak2012_interferon_gamma_ifn_induced_sta_biomd0000000585_model.species_labels
+caveats: 'No scientifically safe input was exposed in this pass: the bundled SBML
+  did not provide a headline species initial value or meaningfully named constant/intervention
+  parameter that could be surfaced without turning raw source symbols into unsupported
+  biological claims.'

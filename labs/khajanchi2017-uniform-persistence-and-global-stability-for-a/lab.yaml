@@ -1,0 +1,103 @@
+schema_version: '2.0'
+title: Khajanchi2017 - Uniform Persistence and Global Stability for a Brain Tumor
+  and Immune System Interaction Lab
+description: "This paper describes the synergistic interaction between the growth\
+  \ of malignant gliomas and the immune system interactions using a system of coupled\
+  \ ordinary di\xAEerential equations (ODEs). It can be used to explore immune response\
+  \ dynamics and compare pathway-level behavior across conditions."
+models:
+- alias: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.state
+  to:
+  - visualisation.immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model_state
+- from: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.summary
+  to:
+  - visualisation.immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model_summary
+- from: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.species_labels
+  to:
+  - visualisation.immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 100000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `G`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 100000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `M`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `C_T`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 5000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `T_beta`.
+  - name: initial_gamma
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.initial_gamma
+    label: Initial Gamma
+    default: 9000.0
+    units: native source value
+    description: Initial Gamma. Sets the initial value of bundled SBML species `I_gamma`.
+  - name: the_proliferative_enhancement_effect_of_macrophagesby_interferon_gama_and_negati
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.the_proliferative_enhancement_effect_of_macrophagesby_interferon_gama_and_negati
+    label: The Proliferative Enhancement Effect Of Macrophagesby Interferon Gama And
+      Negati
+    default: 10500.0
+    units: native source value
+    description: The Proliferative Enhancement Effect Of Macrophagesby Interferon
+      Gama And Negati. Sets bundled SBML parameter `k4`.
+  - name: the_rate_of_change_of_cytotoxic_t_lymphocytes_whose_stimulation_is_followed_by_g
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.the_rate_of_change_of_cytotoxic_t_lymphocytes_whose_stimulation_is_followed_by_g
+    label: The Rate Of Change Of Cytotoxic T Lymphocytes Whose Stimulation Is Followed
+      By G
+    default: 2000.0
+    units: native source value
+    description: The Rate Of Change Of Cytotoxic T Lymphocytes Whose Stimulation Is
+      Followed By G. Sets bundled SBML parameter `k5`.
+  - name: clearance_of_cytotoxic_t_lymphocytes_due_to_their_interaction_with_glioma_cells
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.clearance_of_cytotoxic_t_lymphocytes_due_to_their_interaction_with_glioma_cells
+    label: Clearance Of Cytotoxic T Lymphocytes Due To Their Interaction With Glioma
+      Cells
+    default: 334450.0
+    units: native source value
+    description: Clearance Of Cytotoxic T Lymphocytes Due To Their Interaction With
+      Glioma Cells. Sets bundled SBML parameter `k3`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.unresolved_tumor_observable_4
+  - name: gamma
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.gamma
+  - name: state
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.state
+  - name: summary
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_khajanchi2017_uniform_persistence_and_global_sta_biomd0000000921_model.species_labels

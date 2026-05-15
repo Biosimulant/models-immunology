@@ -1,0 +1,54 @@
+schema_version: '2.0'
+title: Maier2022 - Stochastic Dynamics of Type I Interferon Responses Lab Visualisation
+description: Dedicated presentation model for Maier2022 - Stochastic Dynamics of Type
+  I Interferon Responses Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Maier2022 - Stochastic Dynamics of Type I Interferon Responses Lab
+    question: Which signaling or cytokine states show the strongest activity during
+      the simulation?
+    answer_focus: cytokine/signaling trajectories, activation states, and largest
+      excursions
+    context: immune_signaling
+    sources:
+    - alias: immunology_sbml_maier2022_stochastic_dynamics_of_type_i_interfer_model2210070001_model
+      title: Maier2022 - Stochastic Dynamics of Type I Interferon Responses
+      visual_scope: Immune signaling activity
+      observables:
+      - id: STAT2_IRF9_c
+        label: Cytosolic Stat2 Irf9 Complex
+      - id: STAT2_IRF9_n
+        label: Nuclear Stat2 Irf9 Complex
+      - id: IFN
+        label: Interferon
+      - id: STAT1_c
+        label: Cytosolic Stat1
+      - id: pSTAT1
+        label: Pstat1
+      - id: STAT2_c
+        label: STAT2_c
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_maier2022_stochastic_dynamics_of_type_i_interfer_model2210070001_model_state
+    maps_to: immunology_sbml_maier2022_stochastic_dynamics_of_type_i_interfer_model2210070001_model.state
+    description: Core state record.
+  - name: immunology_sbml_maier2022_stochastic_dynamics_of_type_i_interfer_model2210070001_model_summary
+    maps_to: immunology_sbml_maier2022_stochastic_dynamics_of_type_i_interfer_model2210070001_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_maier2022_stochastic_dynamics_of_type_i_interfer_model2210070001_model_species_labels
+    maps_to: immunology_sbml_maier2022_stochastic_dynamics_of_type_i_interfer_model2210070001_model.species_labels
+    description: Core source-label map.
+  outputs: []

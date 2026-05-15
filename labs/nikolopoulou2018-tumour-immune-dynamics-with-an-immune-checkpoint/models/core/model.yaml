@@ -1,0 +1,81 @@
+schema_version: '2.0'
+title: Nikolopoulou2018 - Tumour-immune dynamics with an immune checkpoint inhibitor
+description: This is a mathematical model investigating the effects of continuous
+  and intermittent PD-L1 and anti-PD-L1 therapy upon tumor-immune dynamics. It can
+  be used to explore immune response dynamics and compare pathway-level behavior across
+  conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Nikolopoulou, E.
+- Johnson, L.R.
+- Harris, D.
+- Nagy, J.D.
+- Stites, E.C.
+upstream:
+  id: biomodels_ebi:MODEL1908270001
+  source_db: biomodels_ebi
+  source_id: MODEL1908270001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1908270001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1908270001?filename=Nikolopoulou2018.xml
+  license: CC0
+biosim:
+  entrypoint: src.nikolopoulou2018_tumour_immune_dynamics_with_an_model1908270001_model:Nikolopoulou2018TumourImmuneDynamicsWithAnModel1908270001Model
+  init_kwargs:
+    model_path: data/MODEL1908270001.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: C
+    label: Initial Unresolved Tumor Observable 1
+    default: 0.3968
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `C`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: T
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.006
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `T`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: A
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `A`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: C
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `C`.
+  - name: unresolved_tumor_observable_2
+    maps_to: T
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `T`.
+  - name: unresolved_tumor_observable_3
+    maps_to: A
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `A`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

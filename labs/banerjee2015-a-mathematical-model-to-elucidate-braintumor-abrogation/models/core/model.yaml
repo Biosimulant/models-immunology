@@ -1,0 +1,109 @@
+schema_version: '2.0'
+title: Banerjee2015 - A Mathematical Model to Elucidate BrainTumor Abrogation by Immunotherapywith
+  T11 Target Structure
+description: T11 Target structure (T11TS), a membrane glycoprotein isolated from sheep
+  erythrocytes, reverses the immune suppressed state of brain tumor induced animals
+  by boosting the functional status of the imm. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Sandip Banerjee
+- Khajanchi S
+- Swapna Chaudhuri
+upstream:
+  id: biomodels_ebi:MODEL1912090003
+  source_db: biomodels_ebi
+  source_id: MODEL1912090003
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1912090003
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1912090003?filename=Banerjee2015.xml
+  license: CC0
+biosim:
+  entrypoint: src.banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model:Banerjee2015AMathematicalModelToElucidateBModel1912090003Model
+  init_kwargs:
+    model_path: data/MODEL1912090003.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: G
+    label: Initial Unresolved Tumor Observable 1
+    default: 857419.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `G`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: M
+    label: Initial Unresolved Tumor Observable 2
+    default: 943092.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `M`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: CT
+    label: Initial Unresolved Tumor Observable 3
+    default: 303.397
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `CT`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: TB
+    label: Initial Unresolved Tumor Observable 4
+    default: 9134.33
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `TB`.
+  - name: initial_unresolved_tumor_observable_5
+    maps_to: IG
+    label: Initial Unresolved Tumor Observable 5
+    default: 0.303397
+    units: native source value
+    description: Initial Unresolved Tumor Observable 5. Sets the initial value of
+      bundled SBML species `IG`.
+  - name: cytokine_transforming_growth_factor_beta_removal_rate
+    maps_to: mu_2
+    label: Cytokine Transforming Growth Factor Beta Removal Rate
+    default: 6.93
+    units: native source value
+    description: Cytokine Transforming Growth Factor Beta Removal Rate. Sets bundled
+      SBML parameter `mu_2`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: G
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `G`.
+  - name: unresolved_tumor_observable_2
+    maps_to: M
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `M`.
+  - name: unresolved_tumor_observable_3
+    maps_to: CT
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `CT`.
+  - name: unresolved_tumor_observable_4
+    maps_to: TB
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `TB`.
+  - name: unresolved_tumor_observable_5
+    maps_to: IG
+    label: Unresolved Tumor Observable 5
+    description: Unresolved Tumor Observable 5. Maps to bundled source symbol `IG`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

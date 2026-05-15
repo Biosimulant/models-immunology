@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "8ef516e3-c324-4146-affc-74b01d4cc691",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "6add02d7-29d7-4752-b5f8-9b537ed5c78e",
+  "created_at": "2026-05-15T15:53:07.400566877+00:00",
+  "last_synced_at": "2026-05-15T20:11:52.794424+00:00",
+  "hub_manifest_hash": "88afe2c891b3dab7c191dee6398ab100ae38cb758cf10ff7c74918a9b38f76e0",
+  "package_name": "sontag2017-dynamic-model-of-immune-responses-to-antigen-presenta"
+}

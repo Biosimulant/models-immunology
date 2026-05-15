@@ -1,0 +1,82 @@
+schema_version: '2.0'
+title: Leon-Triana2020 - CAR T-cell therapy in B-cell acute lymphoblastic leukaemia
+description: "This model is based on the publication:'CAR T cell therapy in B-cell\
+  \ acute lymphoblastic leukaemia: Insights from mathematical models'.Odelaisy Le\xF3\
+  n-Triana, Soukaina Sabir, Gabriel F. It can be used to explore immune response dynamics\
+  \ and compare pathway-level behavior across conditions."
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Odelaisy Leon-Triana
+- Soukaina Sabir
+- Gabriel F. Calvo
+- Juan Belmonte-Beitia
+- Salvador Chulian
+upstream:
+  id: biomodels_ebi:BIOMD0000001011
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001011
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001011
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001011?filename=Leon-Triana2020
+    (eqs 4).xml
+  license: CC0
+biosim:
+  entrypoint: src.leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001011_model:LeonTriana2020CarTCellTherapyInBCellAcuBiomd0000001011Model
+  init_kwargs:
+    model_path: data/BIOMD0000001011.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_car_t_cells
+    maps_to: CAR_T_cells
+    label: Initial Car T Cells
+    default: 10000000.0
+    units: native source value
+    description: Initial Car T Cells. Sets the initial value of bundled SBML species
+      `CAR_T_cells`.
+  - name: initial_leukaemic_b_cells
+    maps_to: Leukaemic_B_cells
+    label: Initial Leukaemic B Cells
+    default: 50000000000.0
+    units: native source value
+    description: Initial Leukaemic B Cells. Sets the initial value of bundled SBML
+      species `Leukaemic_B_cells`.
+  - name: initial_cells_healthy
+    maps_to: B_cells_healthy
+    label: Initial Cells Healthy
+    default: 25000000000.0
+    units: native source value
+    description: Initial Cells Healthy. Sets the initial value of bundled SBML species
+      `B_cells_healthy`.
+  outputs:
+  - name: car_t_cells
+    maps_to: CAR_T_cells
+    label: Car T Cells
+    description: Car T Cells. Maps to bundled source symbol `CAR_T_cells`.
+  - name: leukaemic_b_cells
+    maps_to: Leukaemic_B_cells
+    label: Leukaemic B Cells
+    description: Leukaemic B Cells. Maps to bundled source symbol `Leukaemic_B_cells`.
+  - name: cells_healthy
+    maps_to: B_cells_healthy
+    label: Cells Healthy
+    description: Cells Healthy. Maps to bundled source symbol `B_cells_healthy`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

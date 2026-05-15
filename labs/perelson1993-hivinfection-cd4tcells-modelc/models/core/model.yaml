@@ -1,0 +1,69 @@
+schema_version: '2.0'
+title: Perelson1993_HIVinfection_CD4Tcells_ModelC
+description: 'This a model from the article: Dynamics of HIV infection of CD4+ T cells.
+  It can be used to explore immune response dynamics and compare pathway-level behavior
+  across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- A S Perelson
+- D E Kirschner
+- R De Boer
+upstream:
+  id: biomodels_ebi:MODEL1006230075
+  source_db: biomodels_ebi
+  source_id: MODEL1006230075
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1006230075
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1006230075?filename=MODEL1006230075_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.perelson1993_hivinfection_cd4tcells_modelc_model1006230075_model:Perelson1993HivinfectionCd4tcellsModelcModel1006230075Model
+  init_kwargs:
+    model_path: data/MODEL1006230075.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs: []
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: T
+    label: Unresolved Infection Observable 1
+    description: Unresolved Infection Observable 1. Maps to bundled source symbol
+      `T`.
+  - name: unresolved_infection_observable_2
+    maps_to: T_1
+    label: Unresolved Infection Observable 2
+    description: Unresolved Infection Observable 2. Maps to bundled source symbol
+      `T_1`.
+  - name: unresolved_infection_observable_3
+    maps_to: T_2
+    label: Unresolved Infection Observable 3
+    description: Unresolved Infection Observable 3. Maps to bundled source symbol
+      `T_2`.
+  - name: unresolved_infection_observable_4
+    maps_to: V
+    label: Unresolved Infection Observable 4
+    description: Unresolved Infection Observable 4. Maps to bundled source symbol
+      `V`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.
+caveats: 'No scientifically safe input was exposed in this pass: the bundled SBML
+  did not provide a headline species initial value or meaningfully named constant/intervention
+  parameter that could be surfaced without turning raw source symbols into unsupported
+  biological claims.'

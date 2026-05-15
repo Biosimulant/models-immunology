@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: Almuallem2020 - Virus-macrophage-tumour interactions in oncolytic viral therapies
+  Lab
+description: This mathematical model of the role of the innate immune responses generated
+  by macrophages in the context of anti-tumour oncolytic viral therapies is described
+  in the publication:Nada Almuallem, Dumi. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.state
+  to:
+  - visualisation.immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model_state
+- from: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.summary
+  to:
+  - visualisation.immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model_summary
+- from: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.species_labels
+  to:
+  - visualisation.immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_infected_tumour_cells
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.initial_infected_tumour_cells
+    label: Initial Infected Tumour Cells
+    default: 0.0
+    units: native source value
+    description: Initial Infected Tumour Cells. Sets the initial value of bundled
+      SBML species `Infected_tumour_cells`.
+  - name: initial_uninfected_tumour_cells
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.initial_uninfected_tumour_cells
+    label: Initial Uninfected Tumour Cells
+    default: 0.0005
+    units: native source value
+    description: Initial Uninfected Tumour Cells. Sets the initial value of bundled
+      SBML species `Uninfected_tumour_cells`.
+  - name: initial_oncolytic_viruses
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.initial_oncolytic_viruses
+    label: Initial Oncolytic Viruses
+    default: 1.0e-05
+    units: native source value
+    description: Initial Oncolytic Viruses. Sets the initial value of bundled SBML
+      species `Oncolytic_viruses`.
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 2.5e-06
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `M1_macrophages`.
+  - name: initial_uninfected_m2_macrophages
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.initial_uninfected_m2_macrophages
+    label: Initial Uninfected M2 Macrophages
+    default: 2.5e-07
+    units: native source value
+    description: Initial Uninfected M2 Macrophages. Sets the initial value of bundled
+      SBML species `Uninfected_M2_macrophages`.
+  - name: tumour_growth_production_rate
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.tumour_growth_production_rate
+    label: Tumour Growth Production Rate
+    default: 0.62
+    units: native source value
+    description: Tumour Growth Production Rate. Sets bundled SBML parameter `r`.
+  outputs:
+  - name: infected_tumour_cells
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.infected_tumour_cells
+  - name: uninfected_tumour_cells
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.uninfected_tumour_cells
+  - name: oncolytic_viruses
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.oncolytic_viruses
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.unresolved_tumor_observable_1
+  - name: uninfected_m2_macrophages
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.uninfected_m2_macrophages
+  - name: state
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.state
+  - name: summary
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_almuallem2020_virus_macrophage_tumour_interactio_biomd0000001033_model.species_labels

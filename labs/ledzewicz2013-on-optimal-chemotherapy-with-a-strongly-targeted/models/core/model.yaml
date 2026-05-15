@@ -1,0 +1,83 @@
+schema_version: '2.0'
+title: Ledzewicz2013 - On optimal chemotherapy with a strongly targeted agent for
+  a model of tumor immune system interactions with generalized logistic growth
+description: "On optimal chemotherapy with a strongly targeted agent for a model of\
+  \ tumor-immune system interactions with generalized logistic growth.Ledzewicz U1,\
+  \ Olumoye O, Sch\xE4ttler H.1Dept. It can be used to explore immune response dynamics\
+  \ and compare pathway-level behavior across conditions."
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Urszula Ledzewicz
+- Omeiza Olumoye
+- "Heinz Sch\xE4ttler"
+upstream:
+  id: biomodels_ebi:BIOMD0000000919
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000919
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000919
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000919?filename=Ledzewicz2013.xml
+  license: CC0
+biosim:
+  entrypoint: src.ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model:Ledzewicz2013OnOptimalChemotherapyWithAStrBiomd0000000919Model
+  init_kwargs:
+    model_path: data/BIOMD0000000919.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: y
+    label: Initial Unresolved Tumor Observable 1
+    default: 0.1
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `y`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: x
+    label: Initial Unresolved Tumor Observable 2
+    default: 600.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `x`.
+  - name: a_constant_rate_of_influx_of_t_cells_generated_through_the_primary_organs_rate
+    maps_to: alpha
+    label: A Constant Rate Of Influx Of T Cells Generated Through The Primary Organs
+      Rate
+    default: 0.1181
+    units: native source value
+    description: A Constant Rate Of Influx Of T Cells Generated Through The Primary
+      Organs Rate. Sets bundled SBML parameter `alpha`.
+  - name: natural_death_of_t_cells_rate
+    maps_to: delta
+    label: Natural Death Of T Cells Rate
+    default: 0.37451
+    units: native source value
+    description: Natural Death Of T Cells Rate. Sets bundled SBML parameter `delta`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: y
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `y`.
+  - name: unresolved_tumor_observable_2
+    maps_to: x
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `x`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

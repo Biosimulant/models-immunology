@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "55f58b7a-8509-4bae-b5cd-3e5d99f38414",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "73704814-1427-4420-a520-9cd073f54825",
+  "created_at": "2026-05-15T15:53:06.074203297+00:00",
+  "last_synced_at": "2026-05-15T18:42:26.093972+00:00",
+  "hub_manifest_hash": "4a6205c5be47786382059a39518035f3d54b7b330ce2c6bd3eb109a2f24445bc",
+  "package_name": "khandibharad2022-il-12-regulation-by-il-10-in-leishmaniasis-lab"
+}

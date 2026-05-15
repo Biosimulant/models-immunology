@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Admon2017 - Modelling tumor growth with immune response and drug using ordinary
+  differential equations
+description: Modelling tumor growth with immune response and drug using ordinary differential
+  equationsMohd Rashid Admon, Normah MaanThis is a mathematical study about tumor
+  growth from a different perspective, wi. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Mohd Rashid Admon,  Normah Maan
+upstream:
+  id: biomodels_ebi:BIOMD0000000904
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000904
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000904
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000904?filename=Admon2017.xml
+  license: CC0
+biosim:
+  entrypoint: src.admon2017_modelling_tumor_growth_with_immune_res_biomd0000000904_model:Admon2017ModellingTumorGrowthWithImmuneResBiomd0000000904Model
+  init_kwargs:
+    model_path: data/BIOMD0000000904.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: Ti
+    label: Initial Unresolved Tumor Observable 1
+    default: 1.3
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `Ti`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: Tm
+    label: Initial Unresolved Tumor Observable 2
+    default: 1.2
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `Tm`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: I
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.9
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `I`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: u
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `u`.
+  - name: decrease_in_drug_rate
+    maps_to: gamma
+    label: Decrease In Drug Rate
+    default: 0.0
+    units: native source value
+    description: Decrease In Drug Rate. Sets bundled SBML parameter `gamma`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: Ti
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `Ti`.
+  - name: unresolved_tumor_observable_2
+    maps_to: Tm
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `Tm`.
+  - name: unresolved_tumor_observable_3
+    maps_to: I
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `I`.
+  - name: unresolved_tumor_observable_4
+    maps_to: u
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `u`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

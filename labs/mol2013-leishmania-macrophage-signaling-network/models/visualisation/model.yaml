@@ -1,0 +1,54 @@
+schema_version: '2.0'
+title: Mol2013 - Leishmania macrophage signaling network Lab Visualisation
+description: Dedicated presentation model for Mol2013 - Leishmania macrophage signaling
+  network Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Mol2013 - Leishmania macrophage signaling network Lab
+    question: How do pathogen-associated states and immune response variables shift
+      during the simulated run?
+    answer_focus: pathogen load, infected-cell states, lymphocyte or cytokine response,
+      and dominant excursions
+    context: infection_immunity
+    sources:
+    - alias: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model
+      title: Mol2013 - Leishmania macrophage signaling network
+      visual_scope: Pathogen and immune response
+      observables:
+      - id: mw68f058f9_e632_469e_a51e_b0641d5ac5f1
+        label: Unresolved Infection Observable 1
+      - id: mw589e86be_36cb_41e1_bccf_93824d618644
+        label: Unresolved Infection Observable 2
+      - id: mw389efde0_d330_42e0_b68c_cb0cfbf8a3c9
+        label: Unresolved Infection Observable 3
+      - id: mw86470798_a991_412f_a9bb_574001df871d
+        label: Irak4 Irak1 Complex
+      - id: mw4535fcdd_0cf2_4ee4_8d52_eadd3c4fec92
+        label: Tumor Necrosis Factor
+      - id: mwab7d0cf5_ee7e_4d3f_998c_12cbba7a31e4
+        label: TNFR
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model_state
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.state
+    description: Core state record.
+  - name: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model_summary
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model_species_labels
+    maps_to: immunology_sbml_mol2013_leishmania_macrophage_signaling_network_model1203220000_model.species_labels
+    description: Core source-label map.
+  outputs: []

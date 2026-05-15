@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Yakimchuk2019 - Mathematical modeling of immune modulation by glucocorticoids
+  Lab
+description: Mathematical modeling of immune modulation by glucocorticoidsKonstantin
+  Yakimchukhttps://doi.org/10.1016/j.biosystems.2019.104066AbstractThe cellular and
+  molecular mechanisms of immunomodulatory actio. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.state
+  to:
+  - visualisation.immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model_state
+- from: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.summary
+  to:
+  - visualisation.immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model_summary
+- from: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.species_labels
+  to:
+  - visualisation.immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_immune_observable_1
+    maps_to: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.initial_unresolved_immune_observable_1
+    label: Initial Unresolved Immune Observable 1
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `Te`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.initial_unresolved_immune_observable_2
+    label: Initial Unresolved Immune Observable 2
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `N`.
+  - name: initial_unresolved_immune_observable_3
+    maps_to: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.initial_unresolved_immune_observable_3
+    label: Initial Unresolved Immune Observable 3
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 3. Sets the initial value of
+      bundled SBML species `A`.
+  - name: initial_unresolved_immune_observable_4
+    maps_to: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.initial_unresolved_immune_observable_4
+    label: Initial Unresolved Immune Observable 4
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 4. Sets the initial value of
+      bundled SBML species `Tr`.
+  - name: initial_unresolved_immune_observable_5
+    maps_to: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.initial_unresolved_immune_observable_5
+    label: Initial Unresolved Immune Observable 5
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 5. Sets the initial value of
+      bundled SBML species `T_dc`.
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.unresolved_immune_observable_1
+  - name: unresolved_immune_observable_2
+    maps_to: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.unresolved_immune_observable_2
+  - name: unresolved_immune_observable_3
+    maps_to: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.unresolved_immune_observable_3
+  - name: unresolved_immune_observable_4
+    maps_to: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.unresolved_immune_observable_4
+  - name: unresolved_immune_observable_5
+    maps_to: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.unresolved_immune_observable_5
+  - name: state
+    maps_to: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.state
+  - name: summary
+    maps_to: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_yakimchuk2019_mathematical_modeling_of_immune_mo_model1912170005_model.species_labels

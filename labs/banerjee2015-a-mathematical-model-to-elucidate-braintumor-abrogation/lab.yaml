@@ -1,0 +1,87 @@
+schema_version: '2.0'
+title: Banerjee2015 - A Mathematical Model to Elucidate BrainTumor Abrogation by Immunotherapywith
+  T11 Target Structure Lab
+description: T11 Target structure (T11TS), a membrane glycoprotein isolated from sheep
+  erythrocytes, reverses the immune suppressed state of brain tumor induced animals
+  by boosting the functional status of the imm. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.state
+  to:
+  - visualisation.immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model_state
+- from: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.summary
+  to:
+  - visualisation.immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model_summary
+- from: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.species_labels
+  to:
+  - visualisation.immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 857419.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `G`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 943092.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `M`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 303.397
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `CT`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 9134.33
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `TB`.
+  - name: initial_unresolved_tumor_observable_5
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.initial_unresolved_tumor_observable_5
+    label: Initial Unresolved Tumor Observable 5
+    default: 0.303397
+    units: native source value
+    description: Initial Unresolved Tumor Observable 5. Sets the initial value of
+      bundled SBML species `IG`.
+  - name: cytokine_transforming_growth_factor_beta_removal_rate
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.cytokine_transforming_growth_factor_beta_removal_rate
+    label: Cytokine Transforming Growth Factor Beta Removal Rate
+    default: 6.93
+    units: native source value
+    description: Cytokine Transforming Growth Factor Beta Removal Rate. Sets bundled
+      SBML parameter `mu_2`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.unresolved_tumor_observable_4
+  - name: unresolved_tumor_observable_5
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.unresolved_tumor_observable_5
+  - name: state
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.state
+  - name: summary
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_banerjee2015_a_mathematical_model_to_elucidate_b_model1912090003_model.species_labels

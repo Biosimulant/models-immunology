@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Leung2016 - SIRWS model with immune boosting and cross-immunity between two
+  pathogens Lab Visualisation
+description: Dedicated presentation model for Leung2016 - SIRWS model with immune
+  boosting and cross-immunity between two pathogens Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Leung2016 - SIRWS model with immune boosting and cross-immunity between
+      two pathogens Lab
+    question: Which signaling or cytokine states show the strongest activity during
+      the simulation?
+    answer_focus: cytokine/signaling trajectories, activation states, and largest
+      excursions
+    context: immune_signaling
+    sources:
+    - alias: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model
+      title: Leung2016 - SIRWS model with immune boosting and cross-immunity between
+        two pathogens
+      visual_scope: Immune signaling activity
+      observables:
+      - id: X_SS
+        label: Unresolved Signaling Observable 1
+      - id: X_IS
+        label: Unresolved Signaling Observable 2
+      - id: X_RS
+        label: Unresolved Signaling Observable 3
+      - id: X_WS
+        label: Unresolved Signaling Observable 4
+      - id: X_SI
+        label: Unresolved Signaling Observable 5
+      - id: X_II
+        label: X_II
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model_state
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.state
+    description: Core state record.
+  - name: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model_summary
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model_species_labels
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.species_labels
+    description: Core source-label map.
+  outputs: []

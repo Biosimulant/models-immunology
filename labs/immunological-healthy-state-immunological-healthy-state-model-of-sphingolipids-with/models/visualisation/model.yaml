@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Immunological Healthy State Model of Sphingolipids with IL-6/IL-17/IL-23 immune
+  axis in L.major infection Lab Visualisation
+description: Dedicated presentation model for Immunological Healthy State Model of
+  Sphingolipids with IL-6/IL-17/IL-23 immune axis in L.major infection Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Immunological Healthy State Model of Sphingolipids with IL-6/IL-17/IL-23
+      immune axis in L.major infection Lab
+    question: How do pathogen-associated states and immune response variables shift
+      during the simulated run?
+    answer_focus: pathogen load, infected-cell states, lymphocyte or cytokine response,
+      and dominant excursions
+    context: infection_immunity
+    sources:
+    - alias: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model
+      title: Immunological Healthy State Model of Sphingolipids with IL-6/IL-17/IL-23
+        immune axis in L.major infection
+      visual_scope: Pathogen and immune response
+      observables:
+      - id: mw9d20c481_4a3d_42a5_b526_167ce449298b
+        label: Unresolved Infection Observable 1
+      - id: mwc0182ee7_4ec3_4849_a8d5_601287219f3e
+        label: Toll Like Receptor
+      - id: mw3d4055f8_c490_4463_911f_eed820b1323c
+        label: Lpg Toll Like Receptor Complex
+      - id: mwc4164d07_8269_4b39_b8af_6c1b22eee1ea
+        label: Unresolved Infection Observable 2
+      - id: mw21d5a961_4d66_4509_88cd_c983fa74e314
+        label: Irak1 Irak4 Complex
+      - id: mw4ec18c18_5439_4f8f_85f4_f5ef8b21cbf4
+        label: TRAF6
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model_state
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.state
+    description: Core state record.
+  - name: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model_summary
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model_species_labels
+    maps_to: immunology_sbml_immunological_healthy_state_model_of_sphingolipi_model2301110002_model.species_labels
+    description: Core source-label map.
+  outputs: []

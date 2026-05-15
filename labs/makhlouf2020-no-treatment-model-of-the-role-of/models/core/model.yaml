@@ -1,0 +1,114 @@
+schema_version: '2.0'
+title: Makhlouf2020 - No treatment model of the role of CD4 T cells in tumor-immune
+  interactions
+description: This ordinary differential equation model simulating the interactions
+  between tumor and immune cells is detailed in the publication:Ahmed M. It can be
+  used to explore immune response dynamics and compare pathway-level behavior across
+  conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Ahmed M Makhlouf
+- Lamiaa El-Shennawy
+- Hesham A Elkaranshawy
+upstream:
+  id: biomodels_ebi:BIOMD0000001042
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001042
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001042
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001042?filename=Makhlouf2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.makhlouf2020_no_treatment_model_of_the_role_of_c_biomd0000001042_model:Makhlouf2020NoTreatmentModelOfTheRoleOfCBiomd0000001042Model
+  init_kwargs:
+    model_path: data/BIOMD0000001042.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: Tumor_cells
+    label: Initial Tumor Cells
+    default: 10000000.0
+    units: native source value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML species
+      `Tumor_cells`.
+  - name: initial_cd8_t_cells
+    maps_to: CD8_T_cells
+    label: Initial CD8 T Cells
+    default: 100.0
+    units: native source value
+    description: Initial CD8 T Cells. Sets the initial value of bundled SBML species
+      `CD8_T_cells`.
+  - name: initial_cd4_t_cells
+    maps_to: CD4_T_cells
+    label: Initial CD4 T Cells
+    default: 1000000.0
+    units: native source value
+    description: Initial CD4 T Cells. Sets the initial value of bundled SBML species
+      `CD4_T_cells`.
+  - name: initial_interleukin_2
+    maps_to: IL_2
+    label: Initial Interleukin 2
+    default: 100000.0
+    units: native source value
+    description: Initial Interleukin 2. Sets the initial value of bundled SBML species
+      `IL_2`.
+  - name: initial_natural_killer_cells
+    maps_to: NK_cells
+    label: Initial Natural Killer Cells
+    default: 1000.0
+    units: native source value
+    description: Initial Natural Killer Cells. Sets the initial value of bundled SBML
+      species `NK_cells`.
+  - name: tumour_death_rate
+    maps_to: c
+    label: Tumour Death Rate
+    default: 6.41e-11
+    units: unit_3
+    description: Tumour Death Rate. Sets bundled SBML parameter `c`.
+  - name: tumour_death_rate_2
+    maps_to: c_1
+    label: Tumour Death Rate 2
+    default: 0.2
+    units: unit_4
+    description: Tumour Death Rate 2. Sets bundled SBML parameter `c_1`.
+  outputs:
+  - name: tumor_cells
+    maps_to: Tumor_cells
+    label: Tumor Cells
+    description: Tumor Cells. Maps to bundled source symbol `Tumor_cells`.
+  - name: cd8_t_cells
+    maps_to: CD8_T_cells
+    label: CD8 T Cells
+    description: CD8 T Cells. Maps to bundled source symbol `CD8_T_cells`.
+  - name: cd4_t_cells
+    maps_to: CD4_T_cells
+    label: CD4 T Cells
+    description: CD4 T Cells. Maps to bundled source symbol `CD4_T_cells`.
+  - name: interleukin_2
+    maps_to: IL_2
+    label: Interleukin 2
+    description: Interleukin 2. Maps to bundled source symbol `IL_2`.
+  - name: natural_killer_cells
+    maps_to: NK_cells
+    label: Natural Killer Cells
+    description: Natural Killer Cells. Maps to bundled source symbol `NK_cells`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

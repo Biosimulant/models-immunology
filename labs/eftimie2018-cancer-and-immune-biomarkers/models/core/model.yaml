@@ -1,0 +1,88 @@
+schema_version: '2.0'
+title: Eftimie2018 - Cancer and Immune biomarkers
+description: 'The paper describes a model on the detection of cancer based on cancer
+  and immune biomarkers. Created by COPASI 4.25 (Build 207) This model is described
+  in the article: Improving cancer detection thro.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Raluca Eftimie
+- Esraa Hassanein
+upstream:
+  id: biomodels_ebi:BIOMD0000000741
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000741
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000741
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000741?filename=Eftimie2018.xml
+  license: CC0
+biosim:
+  entrypoint: src.eftimie2018_cancer_and_immune_biomarkers_biomd0000000741_model:Eftimie2018CancerAndImmuneBiomarkersBiomd0000000741Model
+  init_kwargs:
+    model_path: data/BIOMD0000000741.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: NT
+    label: Initial Unresolved Tumor Observable 1
+    default: 1.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `NT`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: NI
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `NI`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: BT
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `BT`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: BI
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `BI`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: NT
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `NT`.
+  - name: unresolved_tumor_observable_2
+    maps_to: NI
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `NI`.
+  - name: unresolved_tumor_observable_3
+    maps_to: BT
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `BT`.
+  - name: unresolved_tumor_observable_4
+    maps_to: BI
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `BI`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

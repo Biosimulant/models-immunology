@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "c700f736-e98c-487f-9422-a1a6833292f6",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "2a78f90b-8e3d-4fa0-8807-351647402101",
+  "created_at": "2026-05-15T15:53:05.836677047+00:00",
+  "last_synced_at": "2026-05-15T19:48:09.810080+00:00",
+  "hub_manifest_hash": "fc2b1f38f8fca9f086010d623223ac346d418729fb482d36823b5c9c6e68b5c2",
+  "package_name": "hoffman2018-adcc-against-cancer-lab"
+}

@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: Leon-Triana2020 - CAR T-cell therapy in B-cell acute lymphoblastic leukaemia
+  with contribution from immature B cells Lab
+description: "This model is based on the publication:'CAR T cell therapy in B-cell\
+  \ acute lymphoblastic leukaemia: Insights from mathematical models'.Odelaisy Le\xF3\
+  n-Triana, Soukaina Sabir, Gabriel F. It can be used to explore immune response dynamics\
+  \ and compare pathway-level behavior across conditions."
+models:
+- alias: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.state
+  to:
+  - visualisation.immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model_state
+- from: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.summary
+  to:
+  - visualisation.immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model_summary
+- from: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.species_labels
+  to:
+  - visualisation.immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_car_t_cells
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.initial_car_t_cells
+    label: Initial Car T Cells
+    default: 10000000.0
+    units: native source value
+    description: Initial Car T Cells. Sets the initial value of bundled SBML species
+      `CAR_T_cells`.
+  - name: initial_leukaemic_b_cells
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.initial_leukaemic_b_cells
+    label: Initial Leukaemic B Cells
+    default: 50000000000.0
+    units: native source value
+    description: Initial Leukaemic B Cells. Sets the initial value of bundled SBML
+      species `Leukaemic_B_cells`.
+  - name: initial_cells_healthy
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.initial_cells_healthy
+    label: Initial Cells Healthy
+    default: 25000000000.0
+    units: native source value
+    description: Initial Cells Healthy. Sets the initial value of bundled SBML species
+      `B_cells_healthy`.
+  - name: initial_cell_progenitors
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.initial_cell_progenitors
+    label: Initial Cell Progenitors
+    default: 10000000.0
+    units: native source value
+    description: Initial Cell Progenitors. Sets the initial value of bundled SBML
+      species `B_cell_progenitors`.
+  - name: cartcell_proliferation_rate
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.cartcell_proliferation_rate
+    label: Cartcell Proliferation Rate
+    default: 0.1
+    units: native source value
+    description: Cartcell Proliferation Rate. Sets bundled SBML parameter `beta`.
+  outputs:
+  - name: car_t_cells
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.car_t_cells
+  - name: leukaemic_b_cells
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.leukaemic_b_cells
+  - name: cells_healthy
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.cells_healthy
+  - name: cell_progenitors
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.cell_progenitors
+  - name: state
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.state
+  - name: summary
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_leon_triana2020_car_t_cell_therapy_in_b_cell_acu_biomd0000001012_model.species_labels

@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Cappuccio2007 - Tumor-immune system interactions and determination of the optimal
+  therapeutic protocol in immunotherapy
+description: This ordinary differential equation model is the Panetta-Kirschner model
+  of tumor-immune interactions is described in the publication:Cappuccio A, Castiglione
+  F, Piccoli B.' Determination of the optim. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Antonio Cappuccio
+- Castiglione F
+- Benedetto Piccoli
+upstream:
+  id: biomodels_ebi:BIOMD0000001036
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001036
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001036
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001036?filename=Cappuccio2007.xml
+  license: CC0
+biosim:
+  entrypoint: src.cappuccio2007_tumor_immune_system_interactions_a_biomd0000001036_model:Cappuccio2007TumorImmuneSystemInteractionsABiomd0000001036Model
+  init_kwargs:
+    model_path: data/BIOMD0000001036.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_effector_cells
+    maps_to: Effector_cells
+    label: Initial Effector Cells
+    default: 1.0e-05
+    units: native source value
+    description: Initial Effector Cells. Sets the initial value of bundled SBML species
+      `Effector_cells`.
+  - name: initial_tumor_cells
+    maps_to: Tumor_cells
+    label: Initial Tumor Cells
+    default: 1.0e-05
+    units: native source value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML species
+      `Tumor_cells`.
+  - name: initial_interleukin_2
+    maps_to: IL_2
+    label: Initial Interleukin 2
+    default: 1.0e-05
+    units: native source value
+    description: Initial Interleukin 2. Sets the initial value of bundled SBML species
+      `IL_2`.
+  outputs:
+  - name: effector_cells
+    maps_to: Effector_cells
+    label: Effector Cells
+    description: Effector Cells. Maps to bundled source symbol `Effector_cells`.
+  - name: tumor_cells
+    maps_to: Tumor_cells
+    label: Tumor Cells
+    description: Tumor Cells. Maps to bundled source symbol `Tumor_cells`.
+  - name: interleukin_2
+    maps_to: IL_2
+    label: Interleukin 2
+    description: Interleukin 2. Maps to bundled source symbol `IL_2`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

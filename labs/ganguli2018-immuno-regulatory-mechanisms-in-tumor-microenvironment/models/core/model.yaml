@@ -1,0 +1,129 @@
+schema_version: '2.0'
+title: Ganguli2018-immuno regulatory mechanisms in tumor microenvironment
+description: This model describes the concept of Cancer Stem Cells(CSC) differentiation
+  and tumor-immune interaction into a generic model that has been validated with known
+  experimental data. It can be used to explore immune response dynamics and compare
+  pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Piyali Ganguli
+- Ram Rup Sarkar
+upstream:
+  id: biomodels_ebi:BIOMD0000000810
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000810
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000810
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000810?filename=Ganguli2018-immuno
+    regulatory mechanisms in tumor microenvironment.xml
+  license: CC0
+biosim:
+  entrypoint: src.ganguli2018_immuno_regulatory_mechanisms_in_tumo_biomd0000000810_model:Ganguli2018ImmunoRegulatoryMechanismsInTumoBiomd0000000810Model
+  init_kwargs:
+    model_path: data/BIOMD0000000810.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_cancer_stem_cells_s
+    maps_to: Cancer_Stem_Cells_S
+    label: Initial Cancer Stem Cells S
+    default: 1.0
+    units: native source value
+    description: Initial Cancer Stem Cells S. Sets the initial value of bundled SBML
+      species `Cancer_Stem_Cells_S`.
+  - name: initial_cancer_cells_c
+    maps_to: Cancer_Cells_C
+    label: Initial Cancer Cells C
+    default: 0.0
+    units: native source value
+    description: Initial Cancer Cells C. Sets the initial value of bundled SBML species
+      `Cancer_Cells_C`.
+  - name: initial_resistant_cancer_cells_c_r
+    maps_to: Resistant_Cancer_Cells_C_R
+    label: Initial Resistant Cancer Cells C R
+    default: 0.0
+    units: native source value
+    description: Initial Resistant Cancer Cells C R. Sets the initial value of bundled
+      SBML species `Resistant_Cancer_Cells_C_R`.
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: M1_Tumor_Associated_Macrophages
+    label: Initial Unresolved Tumor Observable 1
+    default: 85000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `M1_Tumor_Associated_Macrophages`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: M2_Tumor_Associated_Macrophages
+    label: Initial Unresolved Tumor Observable 2
+    default: 15000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `M2_Tumor_Associated_Macrophages`.
+  - name: gompertzian_growth_of_cancer_cells_c_rate
+    maps_to: r_1
+    label: Gompertzian Growth Of Cancer Cells C Rate
+    default: 0.0001
+    units: native source value
+    description: Gompertzian Growth Of Cancer Cells C Rate. Sets bundled SBML parameter
+      `r_1`.
+  - name: gompertzian_growth_of_resistant_cancer_cells_cr_rate
+    maps_to: r_2
+    label: Gompertzian Growth Of Resistant Cancer Cells Cr Rate
+    default: 1.0e-05
+    units: native source value
+    description: Gompertzian Growth Of Resistant Cancer Cells Cr Rate. Sets bundled
+      SBML parameter `r_2`.
+  - name: proliferation_on_cancer_cells_c_interleukin_10_rate
+    maps_to: k3
+    label: Proliferation On Cancer Cells C Interleukin 10 Rate
+    default: 2.0531
+    units: unit_2
+    description: Proliferation On Cancer Cells C Interleukin 10 Rate. Sets bundled
+      SBML parameter `k3`.
+  - name: proliferation_on_resistant_cancer_cells_cr_interleukin_10_rate
+    maps_to: k5
+    label: Proliferation On Resistant Cancer Cells Cr Interleukin 10 Rate
+    default: 6.7979
+    units: unit_2
+    description: Proliferation On Resistant Cancer Cells Cr Interleukin 10 Rate. Sets
+      bundled SBML parameter `k5`.
+  outputs:
+  - name: cancer_stem_cells_s
+    maps_to: Cancer_Stem_Cells_S
+    label: Cancer Stem Cells S
+    description: Cancer Stem Cells S. Maps to bundled source symbol `Cancer_Stem_Cells_S`.
+  - name: cancer_cells_c
+    maps_to: Cancer_Cells_C
+    label: Cancer Cells C
+    description: Cancer Cells C. Maps to bundled source symbol `Cancer_Cells_C`.
+  - name: resistant_cancer_cells_c_r
+    maps_to: Resistant_Cancer_Cells_C_R
+    label: Resistant Cancer Cells C R
+    description: Resistant Cancer Cells C R. Maps to bundled source symbol `Resistant_Cancer_Cells_C_R`.
+  - name: unresolved_tumor_observable_1
+    maps_to: M1_Tumor_Associated_Macrophages
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `M1_Tumor_Associated_Macrophages`.
+  - name: unresolved_tumor_observable_2
+    maps_to: M2_Tumor_Associated_Macrophages
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `M2_Tumor_Associated_Macrophages`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Parra Guillen2013 - Mathematical model approach to describe tumour response
+  in mice after vaccine administration model1 Lab
+description: Mathematical model approach to describe tumour response in mice after
+  vaccine administration and its applicability to immune-stimulatory cytokine-based
+  strategies.Parra-Guillen ZP1, Berraondo P, Greni. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.state
+  to:
+  - visualisation.immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model_state
+- from: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.summary
+  to:
+  - visualisation.immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model_summary
+- from: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.species_labels
+  to:
+  - visualisation.immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `VAC`.
+  - name: initial_unresolved_tumor_observable_1_2
+    maps_to: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.initial_unresolved_tumor_observable_1_2
+    label: Initial Unresolved Tumor Observable 1 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1 2. Sets the initial value of
+      bundled SBML species `TRAN`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `SVAC`.
+  - name: initial_unresolved_tumor_observable_2_2
+    maps_to: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.initial_unresolved_tumor_observable_2_2
+    label: Initial Unresolved Tumor Observable 2 2
+    default: 0.324
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2 2. Sets the initial value of
+      bundled SBML species `Ts`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `REG`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_1_2
+    maps_to: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.unresolved_tumor_observable_1_2
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_2_2
+    maps_to: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.unresolved_tumor_observable_2_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.unresolved_tumor_observable_3
+  - name: state
+    maps_to: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.state
+  - name: summary
+    maps_to: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_parra_guillen2013_mathematical_model_approach_to_biomd0000000914_model.species_labels

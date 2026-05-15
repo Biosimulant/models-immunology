@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Ledzewicz2013 - On optimal chemotherapy with a strongly targeted agent for
+  a model of tumor immune system interactions with generalized logistic growth Lab
+  Visualisation
+description: Dedicated presentation model for Ledzewicz2013 - On optimal chemotherapy
+  with a strongly targeted agent for a model of tumor immune system interactions with
+  generalized logistic growth Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Ledzewicz2013 - On optimal chemotherapy with a strongly targeted agent
+      for a model of tumor immune system interactions with generalized logistic growth
+      Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model
+      title: Ledzewicz2013 - On optimal chemotherapy with a strongly targeted agent
+        for a model of tumor immune system interactions with generalized logistic
+        growth
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: y
+        label: Unresolved Tumor Observable 1
+      - id: x
+        label: Unresolved Tumor Observable 2
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model_state
+    maps_to: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.state
+    description: Core state record.
+  - name: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model_summary
+    maps_to: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model_species_labels
+    maps_to: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.species_labels
+    description: Core source-label map.
+  outputs: []

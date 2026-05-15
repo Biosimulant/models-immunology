@@ -1,0 +1,100 @@
+schema_version: '2.0'
+title: Hernandez-Vargas2012 - Innate immune system dynamics to Influenza virus
+description: A. It can be used to explore immune response dynamics and compare pathway-level
+  behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- A. Esteban Hernandez-Vargas
+- Michael Meyer-Hermann
+upstream:
+  id: biomodels_ebi:BIOMD0000000710
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000710
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000710
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000710?filename=Hernandez-Vargas2012
+    - Innate immune system dynamics to Influenza virus.xml
+  license: CC0
+biosim:
+  entrypoint: src.hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model:HernandezVargas2012InnateImmuneSystemDynamiBiomd0000000710Model
+  init_kwargs:
+    model_path: data/BIOMD0000000710.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_partially_infected_epithelial_cells_u_e
+    maps_to: U_E
+    label: Initial Partially Infected Epithelial Cells U E
+    default: 0.0
+    units: native source value
+    description: Initial Partially Infected Epithelial Cells U E. Sets the initial
+      value of bundled SBML species `U_E`.
+  - name: initial_infected_epithelial_cells_u_i
+    maps_to: U_I
+    label: Initial Infected Epithelial Cells U I
+    default: 0.0
+    units: native source value
+    description: Initial Infected Epithelial Cells U I. Sets the initial value of
+      bundled SBML species `U_I`.
+  - name: initial_viral_load_v
+    maps_to: V
+    label: Initial Viral Load V
+    default: 0.001
+    units: native source value
+    description: Initial Viral Load V. Sets the initial value of bundled SBML species
+      `V`.
+  - name: initial_interferon_interferon
+    maps_to: IFN
+    label: Initial Interferon Interferon
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Interferon. Sets the initial value of bundled
+      SBML species `IFN`.
+  - name: initial_healthy_epithelial_cells_u_h
+    maps_to: U_H
+    label: Initial Healthy Epithelial Cells U H
+    default: 500000000.0
+    units: native source value
+    description: Initial Healthy Epithelial Cells U H. Sets the initial value of bundled
+      SBML species `U_H`.
+  outputs:
+  - name: partially_infected_epithelial_cells_u_e
+    maps_to: U_E
+    label: Partially Infected Epithelial Cells U E
+    description: Partially Infected Epithelial Cells U E. Maps to bundled source symbol
+      `U_E`.
+  - name: infected_epithelial_cells_u_i
+    maps_to: U_I
+    label: Infected Epithelial Cells U I
+    description: Infected Epithelial Cells U I. Maps to bundled source symbol `U_I`.
+  - name: viral_load_v
+    maps_to: V
+    label: Viral Load V
+    description: Viral Load V. Maps to bundled source symbol `V`.
+  - name: interferon_interferon
+    maps_to: IFN
+    label: Interferon Interferon
+    description: Interferon Interferon. Maps to bundled source symbol `IFN`.
+  - name: healthy_epithelial_cells_u_h
+    maps_to: U_H
+    label: Healthy Epithelial Cells U H
+    description: Healthy Epithelial Cells U H. Maps to bundled source symbol `U_H`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,69 @@
+schema_version: '2.0'
+title: Manchanda2014 - Effect on Immune System by 4 different Influenza A virus strains
+  Lab
+description: 'Himanshu Manchanda, Nora Seidel, Andi Krumbholz, Andreas Sauerbrei,
+  Michaela Schmidtke & Reinhard Guthke. Within-host influenza dynamics: a small-scale
+  mathematical modeling approach.'
+models:
+- alias: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.state
+  to:
+  - visualisation.immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model_state
+- from: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.summary
+  to:
+  - visualisation.immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model_summary
+- from: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.species_labels
+  to:
+  - visualisation.immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_virus_pathogenicity_p
+    maps_to: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.initial_virus_pathogenicity_p
+    label: Initial Virus Pathogenicity P
+    default: 0.01
+    units: native source value
+    description: Initial Virus Pathogenicity P. Sets the initial value of bundled
+      SBML species `P`.
+  - name: initial_antiviral_immune_defense_d
+    maps_to: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.initial_antiviral_immune_defense_d
+    label: Initial Antiviral Immune Defense D
+    default: 0.0
+    units: native source value
+    description: Initial Antiviral Immune Defense D. Sets the initial value of bundled
+      SBML species `D`.
+  - name: initial_inflammation_i
+    maps_to: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.initial_inflammation_i
+    label: Initial Inflammation I
+    default: 0.0
+    units: native source value
+    description: Initial Inflammation I. Sets the initial value of bundled SBML species
+      `I`.
+  - name: infection_of_virus_rate
+    maps_to: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.infection_of_virus_rate
+    label: Infection Of Virus Rate
+    default: 3.63
+    units: native source value
+    description: Infection Of Virus Rate. Sets bundled SBML parameter `alpha`.
+  outputs:
+  - name: virus_pathogenicity_p
+    maps_to: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.virus_pathogenicity_p
+  - name: antiviral_immune_defense_d
+    maps_to: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.antiviral_immune_defense_d
+  - name: inflammation_i
+    maps_to: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.inflammation_i
+  - name: clinical_score_s
+    maps_to: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.clinical_score_s
+  - name: state
+    maps_to: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.state
+  - name: summary
+    maps_to: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_manchanda2014_effect_on_immune_system_by_4_diffe_biomd0000000712_model.species_labels

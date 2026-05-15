@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: Bidot2008 - Mathematical modelling of T cell activation kinetics Lab
+description: Mathematical modeling representing Tcell actiavtion regualtion by TCR,
+  IL2 and other players. It can be used to explore immune response dynamics and compare
+  pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.state
+  to:
+  - visualisation.immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model_state
+- from: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.summary
+  to:
+  - visualisation.immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model_summary
+- from: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.species_labels
+  to:
+  - visualisation.immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_cd4_cd8_binding_state
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.initial_cd4_cd8_binding_state
+    label: Initial CD4 CD8 Binding State
+    default: 40000.0
+    units: native source value
+    description: Initial CD4 CD8 Binding State. Sets the initial value of bundled
+      SBML species `CD4_8`.
+  - name: initial_cd28_cd80_costimulation_complex
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.initial_cd28_cd80_costimulation_complex
+    label: Initial Cd28 Cd80 Costimulation Complex
+    default: 1.0
+    units: native source value
+    description: Initial Cd28 Cd80 Costimulation Complex. Sets the initial value of
+      bundled SBML species `CD28_CD80`.
+  - name: initial_tl_0
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.initial_tl_0
+    label: Initial Tl 0
+    default: 1.0
+    units: native source value
+    description: Initial Tl 0. Sets the initial value of bundled SBML species `TL_0`.
+  - name: initial_unresolved_immune_observable_1
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.initial_unresolved_immune_observable_1
+    label: Initial Unresolved Immune Observable 1
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `T_0`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.initial_unresolved_immune_observable_2
+    label: Initial Unresolved Immune Observable 2
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `T_i`.
+  outputs:
+  - name: cd4_cd8_binding_state
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.cd4_cd8_binding_state
+  - name: cd28_cd80_costimulation_complex
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.cd28_cd80_costimulation_complex
+  - name: tl_0
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.tl_0
+  - name: unresolved_immune_observable_1
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.unresolved_immune_observable_1
+  - name: unresolved_immune_observable_2
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.unresolved_immune_observable_2
+  - name: state
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.state
+  - name: summary
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.species_labels

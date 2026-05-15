@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "bd571c46-3919-42ab-9b9d-39339b63c115",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "3de85584-d6a7-4dcb-8cea-11b148d95552",
+  "created_at": "2026-05-15T15:53:06.603067870+00:00",
+  "last_synced_at": "2026-05-15T19:08:07.664782+00:00",
+  "hub_manifest_hash": "c7ccf83422903d762cf19f98e6fd3869da89f4ff90473ff6a1a92cb9c794348d",
+  "package_name": "maree2006-duca-type1diabetesmodel-lab"
+}

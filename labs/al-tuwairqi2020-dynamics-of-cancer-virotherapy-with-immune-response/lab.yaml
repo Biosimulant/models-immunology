@@ -1,0 +1,102 @@
+schema_version: '2.0'
+title: Al-Tuwairqi2020 - Dynamics of cancer virotherapy with immune response Lab
+description: This ordinary differential equation model of the role of the immune response
+  in cancer virotherapy dynamics is described in the publication:Al-Tuwairqi, S.M.,
+  Al-Johani, N.O., Simbawa, E.A. It can be used to explore immune response dynamics
+  and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.state
+  to:
+  - visualisation.immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model_state
+- from: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.summary
+  to:
+  - visualisation.immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model_summary
+- from: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.species_labels
+  to:
+  - visualisation.immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_uninfected_cancer_cells
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.initial_uninfected_cancer_cells
+    label: Initial Uninfected Cancer Cells
+    default: 0.5
+    units: native source value
+    description: Initial Uninfected Cancer Cells. Sets the initial value of bundled
+      SBML species `uninfected_cancer_cells`.
+  - name: initial_infected_cancer_cells
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.initial_infected_cancer_cells
+    label: Initial Infected Cancer Cells
+    default: 0.0
+    units: native source value
+    description: Initial Infected Cancer Cells. Sets the initial value of bundled
+      SBML species `infected_cancer_cells`.
+  - name: initial_free_virus
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.initial_free_virus
+    label: Initial Free Virus
+    default: 0.01
+    units: native source value
+    description: Initial Free Virus. Sets the initial value of bundled SBML species
+      `free_virus`.
+  - name: initial_immune_cells
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.initial_immune_cells
+    label: Initial Immune Cells
+    default: 0.01
+    units: native source value
+    description: Initial Immune Cells. Sets the initial value of bundled SBML species
+      `immune_cells`.
+  - name: tumor_growth_rate
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.tumor_growth_rate
+    label: Tumor Growth Rate
+    default: 0.36
+    units: native source value
+    description: Tumor Growth Rate. Sets bundled SBML parameter `r_1`.
+  - name: cancer_cell_infection_rate
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.cancer_cell_infection_rate
+    label: Cancer Cell Infection Rate
+    default: 0.5
+    units: native source value
+    description: Cancer Cell Infection Rate. Sets bundled SBML parameter `a`.
+  - name: uninfected_cancer_cell_killing_death_rate
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.uninfected_cancer_cell_killing_death_rate
+    label: Uninfected Cancer Cell Killing Death Rate
+    default: 0.1278
+    units: native source value
+    description: Uninfected Cancer Cell Killing Death Rate. Sets bundled SBML parameter
+      `d_1`.
+  - name: infected_cancer_cell_killing_death_rate
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.infected_cancer_cell_killing_death_rate
+    label: Infected Cancer Cell Killing Death Rate
+    default: 0.48
+    units: native source value
+    description: Infected Cancer Cell Killing Death Rate. Sets bundled SBML parameter
+      `c`.
+  - name: virus_release_rate
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.virus_release_rate
+    label: Virus Release Rate
+    default: 2.0
+    units: native source value
+    description: Virus Release Rate. Sets bundled SBML parameter `b`.
+  outputs:
+  - name: uninfected_cancer_cells
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.uninfected_cancer_cells
+  - name: infected_cancer_cells
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.infected_cancer_cells
+  - name: free_virus
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.free_virus
+  - name: immune_cells
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.immune_cells
+  - name: state
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.state
+  - name: summary
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_w_biomd0000001035_model.species_labels

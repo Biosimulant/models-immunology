@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Webb2002 - Fas/FasL mediated tumor T-cell interaction Lab
+description: "Webb2002 - Fas/FasL mediated tumor T-cell interaction This deterministic\
+  \ model ofimmunological surveillance involving tumour cell\u2013T-lymphocyteinteraction,\
+  \ cell surface expression of Fas/FasL, and thei. It can be used to explore immune\
+  \ response dynamics and compare pathway-level behavior across conditions."
+models:
+- alias: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.state
+  to:
+  - visualisation.immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model_state
+- from: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.summary
+  to:
+  - visualisation.immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model_summary
+- from: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.species_labels
+  to:
+  - visualisation.immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_t_cells_t
+    maps_to: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.initial_t_cells_t
+    label: Initial T Cells T
+    default: 500.000000000001
+    units: native source value
+    description: Initial T Cells T. Sets the initial value of bundled SBML species
+      `T`.
+  - name: initial_tumour_cells_m
+    maps_to: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.initial_tumour_cells_m
+    label: Initial Tumour Cells M
+    default: 500.000000000001
+    units: native source value
+    description: Initial Tumour Cells M. Sets the initial value of bundled SBML species
+      `m`.
+  - name: initial_mfasl_lt
+    maps_to: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.initial_mfasl_lt
+    label: Initial Mfasl Lt
+    default: 0.0
+    units: native source value
+    description: Initial Mfasl Lt. Sets the initial value of bundled SBML species
+      `LT`.
+  - name: initial_fasr_rt
+    maps_to: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.initial_fasr_rt
+    label: Initial Fasr Rt
+    default: 10000.0000000001
+    units: native source value
+    description: Initial Fasr Rt. Sets the initial value of bundled SBML species `RT`.
+  - name: initial_mfasl_lm
+    maps_to: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.initial_mfasl_lm
+    label: Initial Mfasl Lm
+    default: 1000.0
+    units: native source value
+    description: Initial Mfasl Lm. Sets the initial value of bundled SBML species
+      `Lm`.
+  outputs:
+  - name: t_cells_t
+    maps_to: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.t_cells_t
+  - name: tumour_cells_m
+    maps_to: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.tumour_cells_m
+  - name: mfasl_lt
+    maps_to: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.mfasl_lt
+  - name: fasr_rt
+    maps_to: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.fasr_rt
+  - name: mfasl_lm
+    maps_to: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.mfasl_lm
+  - name: state
+    maps_to: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.state
+  - name: summary
+    maps_to: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_webb2002_fas_fasl_mediated_tumor_t_cell_interact_biomd0000000661_model.species_labels

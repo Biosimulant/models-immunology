@@ -1,0 +1,104 @@
+schema_version: '2.0'
+title: Fribourg2014 - Model of influenza A virus infection dynamics of viral antagonism
+  and innate immune response.
+description: This is an ordinary differential equation mathematical model investigating
+  the early responses of human monocyte-derived dendritic cells to infection by two
+  H1N1 influenza A viruses of different clini. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- M Fribourg
+- B Hartmann
+- M Schmolke
+- N Marjanovic
+- R A Albrecht
+upstream:
+  id: biomodels_ebi:BIOMD0000000889
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000889
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000889
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000889?filename=Fribourg2014.xml
+  license: CC0
+biosim:
+  entrypoint: src.fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model:Fribourg2014ModelOfInfluenzaAVirusInfectioBiomd0000000889Model
+  init_kwargs:
+    model_path: data/BIOMD0000000889.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_interferon_beta_mrna
+    maps_to: IFNBm
+    label: Initial Interferon Beta mRNA
+    default: 1.0
+    units: native source value
+    description: Initial Interferon Beta mRNA. Sets the initial value of bundled SBML
+      species `IFNBm`.
+  - name: initial_extracellular_interferon_beta
+    maps_to: IFNBenv
+    label: Initial Extracellular Interferon Beta
+    default: 1.0
+    units: native source value
+    description: Initial Extracellular Interferon Beta. Sets the initial value of
+      bundled SBML species `IFNBenv`.
+  - name: initial_interferon_alpha_mrna
+    maps_to: IFNam
+    label: Initial Interferon Alpha mRNA
+    default: 1.0
+    units: native source value
+    description: Initial Interferon Alpha mRNA. Sets the initial value of bundled
+      SBML species `IFNam`.
+  - name: initial_extracellular_interferon_alpha
+    maps_to: IFNaenv
+    label: Initial Extracellular Interferon Alpha
+    default: 1.0
+    units: native source value
+    description: Initial Extracellular Interferon Alpha. Sets the initial value of
+      bundled SBML species `IFNaenv`.
+  - name: initial_nuclear_phosphorylated_stat2
+    maps_to: STATP2n
+    label: Initial Nuclear Phosphorylated Stat2
+    default: 1.0
+    units: native source value
+    description: Initial Nuclear Phosphorylated Stat2. Sets the initial value of bundled
+      SBML species `STATP2n`.
+  outputs:
+  - name: interferon_beta_mrna
+    maps_to: IFNBm
+    label: Interferon Beta mRNA
+    description: Interferon Beta mRNA. Maps to bundled source symbol `IFNBm`.
+  - name: extracellular_interferon_beta
+    maps_to: IFNBenv
+    label: Extracellular Interferon Beta
+    description: Extracellular Interferon Beta. Maps to bundled source symbol `IFNBenv`.
+  - name: interferon_alpha_mrna
+    maps_to: IFNam
+    label: Interferon Alpha mRNA
+    description: Interferon Alpha mRNA. Maps to bundled source symbol `IFNam`.
+  - name: extracellular_interferon_alpha
+    maps_to: IFNaenv
+    label: Extracellular Interferon Alpha
+    description: Extracellular Interferon Alpha. Maps to bundled source symbol `IFNaenv`.
+  - name: nuclear_phosphorylated_stat2
+    maps_to: STATP2n
+    label: Nuclear Phosphorylated Stat2
+    description: Nuclear Phosphorylated Stat2. Maps to bundled source symbol `STATP2n`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

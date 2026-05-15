@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Soni2018 - IL6 induced M2 Phenotype in Leishmania major infected macrophage
+  Lab
+description: IL-6 has been proposed to favor the development of Th2 responses and
+  play an important role in the communication between cells of multicellular organisms.
+  They are involved in the regulation of comple.
+models:
+- alias: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.state
+  to:
+  - visualisation.immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model_state
+- from: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.summary
+  to:
+  - visualisation.immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model_summary
+- from: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.species_labels
+  to:
+  - visualisation.immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_interferon_gamma_interferon_gamma_receptor
+    maps_to: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.initial_interferon_gamma_interferon_gamma_receptor
+    label: Initial Interferon Gamma Interferon Gamma Receptor
+    default: 800.0
+    units: native source value
+    description: Initial Interferon Gamma Interferon Gamma Receptor. Sets the initial
+      value of bundled SBML species `mwd7270399_0429_4c85_920a_de2e0ae74440`.
+  outputs:
+  - name: interferon_g
+    maps_to: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.interferon_g
+  - name: interferon_gr
+    maps_to: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.interferon_gr
+  - name: interferon_gamma_interferon_gamma_receptor
+    maps_to: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.interferon_gamma_interferon_gamma_receptor
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.unresolved_infection_observable_1
+  - name: toll_like_receptor_6_complex
+    maps_to: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.toll_like_receptor_6_complex
+  - name: state
+    maps_to: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.state
+  - name: summary
+    maps_to: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.species_labels

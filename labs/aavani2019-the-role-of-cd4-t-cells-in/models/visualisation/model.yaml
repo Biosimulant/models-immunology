@@ -1,0 +1,54 @@
+schema_version: '2.0'
+title: Aavani2019 - The role of CD4 T cells in immune system activation and viral
+  reproduction in a simple model for HIV infection Lab Visualisation
+description: Dedicated presentation model for Aavani2019 - The role of CD4 T cells
+  in immune system activation and viral reproduction in a simple model for HIV infection
+  Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Aavani2019 - The role of CD4 T cells in immune system activation and
+      viral reproduction in a simple model for HIV infection Lab
+    question: How do pathogen-associated states and immune response variables shift
+      during the simulated run?
+    answer_focus: pathogen load, infected-cell states, lymphocyte or cytokine response,
+      and dominant excursions
+    context: infection_immunity
+    sources:
+    - alias: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model
+      title: Aavani2019 - The role of CD4 T cells in immune system activation and
+        viral reproduction in a simple model for HIV infection
+      visual_scope: Pathogen and immune response
+      observables:
+      - id: C_Uninfected_CD4
+        label: Uninfected CD4 T Cells
+      - id: I_Infected_CD4
+        label: Infected CD4 T Cells
+      - id: V_Virus
+        label: Virus
+      - id: F_CTL
+        label: Cytotoxic T Lymphocytes
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model_state
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.state
+    description: Core state record.
+  - name: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model_summary
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model_species_labels
+    maps_to: immunology_sbml_aavani2019_the_role_of_cd4_t_cells_in_immune_sys_biomd0000000876_model.species_labels
+    description: Core source-label map.
+  outputs: []

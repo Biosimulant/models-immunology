@@ -1,0 +1,73 @@
+schema_version: '2.0'
+title: Fribourg2014 - Dynamics of viral antagonism and innate immune response (H1N1
+  influenza A virus - NC/99) Lab
+description: Fribourg2014 - Dynamics of viral antagonism and innate immune response
+  (H1N1 influenza A virus - NC/99) The dynamics of the interplay between the viral
+  antagonism and the innate immune response has be. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.state
+  to:
+  - visualisation.immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model_state
+- from: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.summary
+  to:
+  - visualisation.immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model_summary
+- from: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.species_labels
+  to:
+  - visualisation.immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_interferon_beta_mrna
+    maps_to: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.initial_interferon_beta_mrna
+    label: Initial Interferon Beta mRNA
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Beta mRNA. Sets the initial value of bundled SBML
+      species `IFNb_mRNA`.
+  - name: initial_interferon_beta_env
+    maps_to: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.initial_interferon_beta_env
+    label: Initial Interferon Beta Env
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Beta Env. Sets the initial value of bundled SBML
+      species `IFNb_env`.
+  - name: initial_interferon_alpha_mrna
+    maps_to: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.initial_interferon_alpha_mrna
+    label: Initial Interferon Alpha mRNA
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Alpha mRNA. Sets the initial value of bundled
+      SBML species `IFNa_mRNA`.
+  - name: initial_interferon_alpha_env
+    maps_to: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.initial_interferon_alpha_env
+    label: Initial Interferon Alpha Env
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Alpha Env. Sets the initial value of bundled SBML
+      species `IFNa_env`.
+  outputs:
+  - name: interferon_beta_mrna
+    maps_to: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.interferon_beta_mrna
+  - name: interferon_beta_env
+    maps_to: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.interferon_beta_env
+  - name: interferon_alpha_mrna
+    maps_to: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.interferon_alpha_mrna
+  - name: interferon_alpha_env
+    maps_to: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.interferon_alpha_env
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.unresolved_infection_observable_1
+  - name: state
+    maps_to: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.state
+  - name: summary
+    maps_to: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000529_model.species_labels

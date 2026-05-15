@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f8106df8-d22e-445b-a662-a83b0fc25948",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "0cccfb95-66b0-4263-9f75-35dbdeaae5ae",
+  "created_at": "2026-05-15T15:53:05.281620980+00:00",
+  "last_synced_at": "2026-05-15T19:30:03.813333+00:00",
+  "hub_manifest_hash": "d4931f6ef7ed7883b9f939cbc49c241a102958056c93a38aad1e0e61ca9e9c35",
+  "package_name": "dwivedi2014-healthy-volunteer-il6-model-lab"
+}

@@ -1,0 +1,55 @@
+schema_version: '2.0'
+title: Rodrigues2014-Vaccination models and optimal control strategies to dengue Lab
+  Visualisation
+description: Dedicated presentation model for Rodrigues2014-Vaccination models and
+  optimal control strategies to dengue Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Rodrigues2014-Vaccination models and optimal control strategies to
+      dengue Lab
+    question: Which validated source observables change most during the simulated
+      run?
+    answer_focus: conservative state labels and largest validated excursions
+    context: needs_scientific_review
+    sources:
+    - alias: immunology_sbml_rodrigues2014_vaccination_models_and_optimal_con_model2003190001_model
+      title: Rodrigues2014-Vaccination models and optimal control strategies to dengue
+      visual_scope: Model-state audit
+      observables:
+      - id: S_h
+        label: Unresolved Model Observable 1
+      - id: V_h
+        label: Unresolved Model Observable 2
+      - id: I_h
+        label: Unresolved Model Observable 3
+      - id: R_h
+        label: Unresolved Model Observable 4
+      - id: A_m
+        label: Unresolved Model Observable 5
+      - id: S_m
+        label: S_m
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_rodrigues2014_vaccination_models_and_optimal_con_model2003190001_model_state
+    maps_to: immunology_sbml_rodrigues2014_vaccination_models_and_optimal_con_model2003190001_model.state
+    description: Core state record.
+  - name: immunology_sbml_rodrigues2014_vaccination_models_and_optimal_con_model2003190001_model_summary
+    maps_to: immunology_sbml_rodrigues2014_vaccination_models_and_optimal_con_model2003190001_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_rodrigues2014_vaccination_models_and_optimal_con_model2003190001_model_species_labels
+    maps_to: immunology_sbml_rodrigues2014_vaccination_models_and_optimal_con_model2003190001_model.species_labels
+    description: Core source-label map.
+  outputs: []

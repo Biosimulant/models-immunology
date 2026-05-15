@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: dePillis2009 - Mathematical model creation for cancer chemo-immunotherapy Lab
+  Visualisation
+description: Dedicated presentation model for dePillis2009 - Mathematical model creation
+  for cancer chemo-immunotherapy Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: dePillis2009 - Mathematical model creation for cancer chemo-immunotherapy
+      Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model
+      title: dePillis2009 - Mathematical model creation for cancer chemo-immunotherapy
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: M_Chemotherapy_Drug
+        label: Chemotherapy Drug
+      - id: T_Tumour_Cells
+        label: Unresolved Tumor Observable 1
+      - id: L_CD8_T_Cells
+        label: CD8 T Cells
+      - id: I_IL_2
+        label: Interleukin 2
+      - id: N_Natural_Killer_Cells
+        label: Natural Killer Cells
+      - id: C_Lymphocytes
+        label: C_Lymphocytes
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model_state
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.state
+    description: Core state record.
+  - name: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model_summary
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model_species_labels
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.species_labels
+    description: Core source-label map.
+  outputs: []

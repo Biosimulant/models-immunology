@@ -1,0 +1,100 @@
+schema_version: '2.0'
+title: Phan2017 - innate immune in oncolytic virotherapy
+description: "The paper describes a model on the key components for tumor\u2013immune\
+  \ dynamics in multiple myeloma. Created by COPASI 4.25 (Build 207) This model is\
+  \ described in the article: The Role of the Innate Immun."
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Tuan Anh Phan
+- Jianjun Paul Tian
+upstream:
+  id: biomodels_ebi:BIOMD0000000748
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000748
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000748
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000748?filename=Phan2017.xml
+  license: CC0
+biosim:
+  entrypoint: src.phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model:Phan2017InnateImmuneInOncolyticVirotherapyBiomd0000000748Model
+  init_kwargs:
+    model_path: data/BIOMD0000000748.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: x
+    label: Initial Unresolved Tumor Observable 1
+    default: 0.99
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `x`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: y
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.01
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `y`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: v
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.01
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `v`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: z
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.01
+    units: substance
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `z`.
+  - name: infected_tumor_killing_rate
+    maps_to: c
+    label: Infected Tumor Killing Rate
+    default: 0.48
+    units: unit_0
+    description: Infected Tumor Killing Rate. Sets bundled SBML parameter `c`.
+  - name: virus_killing_by_immune_rate
+    maps_to: d
+    label: Virus Killing By Immune Rate
+    default: 0.16
+    units: unit_0
+    description: Virus Killing By Immune Rate. Sets bundled SBML parameter `d`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: x
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `x`.
+  - name: unresolved_tumor_observable_2
+    maps_to: y
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `y`.
+  - name: unresolved_tumor_observable_3
+    maps_to: v
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `v`.
+  - name: unresolved_tumor_observable_4
+    maps_to: z
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `z`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

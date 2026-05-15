@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Palsson2013 - Fully-integrated immune response model (FIRM) Lab
+description: Palsson2013 - Fully-integration immune response model (FIRM) FIRM (The
+  Fully-integrated Immune Response Modeling) is a hybrid construct incorporating multiple
+  existing models of the immune system [ De. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.state
+  to:
+  - visualisation.immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model_state
+- from: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.summary
+  to:
+  - visualisation.immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model_summary
+- from: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.species_labels
+  to:
+  - visualisation.immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_immune_observable_1
+    maps_to: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.initial_unresolved_immune_observable_1
+    label: Initial Unresolved Immune Observable 1
+    default: 100000000.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `x_1`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.initial_unresolved_immune_observable_2
+    label: Initial Unresolved Immune Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `x_2`.
+  - name: initial_unresolved_immune_observable_3
+    maps_to: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.initial_unresolved_immune_observable_3
+    label: Initial Unresolved Immune Observable 3
+    default: 1.0e-07
+    units: native source value
+    description: Initial Unresolved Immune Observable 3. Sets the initial value of
+      bundled SBML species `x_3`.
+  - name: initial_unresolved_immune_observable_4
+    maps_to: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.initial_unresolved_immune_observable_4
+    label: Initial Unresolved Immune Observable 4
+    default: 100000.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 4. Sets the initial value of
+      bundled SBML species `x_4`.
+  - name: initial_unresolved_immune_observable_5
+    maps_to: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.initial_unresolved_immune_observable_5
+    label: Initial Unresolved Immune Observable 5
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 5. Sets the initial value of
+      bundled SBML species `x_5`.
+  outputs:
+  - name: unresolved_immune_observable_1
+    maps_to: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.unresolved_immune_observable_1
+  - name: unresolved_immune_observable_2
+    maps_to: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.unresolved_immune_observable_2
+  - name: unresolved_immune_observable_3
+    maps_to: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.unresolved_immune_observable_3
+  - name: unresolved_immune_observable_4
+    maps_to: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.unresolved_immune_observable_4
+  - name: unresolved_immune_observable_5
+    maps_to: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.unresolved_immune_observable_5
+  - name: state
+    maps_to: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.state
+  - name: summary
+    maps_to: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_palsson2013_fully_integrated_immune_response_mod_biomd0000000608_model.species_labels

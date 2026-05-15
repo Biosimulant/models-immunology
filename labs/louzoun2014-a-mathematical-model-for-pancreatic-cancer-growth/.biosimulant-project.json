@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "d7f99523-bc9c-4c16-a9b0-6b9be8d093e0",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "9275e459-31ef-4fcc-8023-3ad5128ba67d",
+  "created_at": "2026-05-15T15:53:06.405110515+00:00",
+  "last_synced_at": "2026-05-15T19:53:42.008497+00:00",
+  "hub_manifest_hash": "6ba00baf32b27e8172e4a510420d7686939f61e4445b689a847054ded56c2ec5",
+  "package_name": "louzoun2014-a-mathematical-model-for-pancreatic-cancer-growth-an"
+}

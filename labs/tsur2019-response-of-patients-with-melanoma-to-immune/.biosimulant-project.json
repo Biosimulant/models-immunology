@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "89534bef-9943-44bd-9707-8974cb587742",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "ea04113b-9cae-4839-a9bc-4e10d6879498",
+  "created_at": "2026-05-15T15:53:07.508111770+00:00",
+  "last_synced_at": "2026-05-15T20:15:27.926557+00:00",
+  "hub_manifest_hash": "848a92c7018be0502ff3712dfd9fe2b7141c990eb259ee018fd9b6ae52fde77f",
+  "package_name": "tsur2019-response-of-patients-with-melanoma-to-immune-checkpoint"
+}

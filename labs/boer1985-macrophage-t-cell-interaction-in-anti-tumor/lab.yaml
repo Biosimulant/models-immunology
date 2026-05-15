@@ -1,0 +1,83 @@
+schema_version: '2.0'
+title: Boer1985 - Macrophage T cell interaction in anti-tumor response Lab
+description: In this paper we present a model of the macrophageT lymphocyte interactions
+  that generate ananti-tumor immune response. The modseple cifies i)induction of cytotoxic
+  T lymphocytes, ii) antigenpresentat.
+models:
+- alias: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.state
+  to:
+  - visualisation.immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model_state
+- from: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.summary
+  to:
+  - visualisation.immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model_summary
+- from: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.species_labels
+  to:
+  - visualisation.immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_tumor
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.initial_tumor
+    label: Initial Tumor
+    default: 0.0
+    units: native source value
+    description: Initial Tumor. Sets the initial value of bundled SBML species `Tumor`.
+  - name: initial_cytotoxic_t_lymphocyte_precursors
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.initial_cytotoxic_t_lymphocyte_precursors
+    label: Initial Cytotoxic T Lymphocyte Precursors
+    default: 25.0
+    units: native source value
+    description: Initial Cytotoxic T Lymphocyte Precursors. Sets the initial value
+      of bundled SBML species `CTLP`.
+  - name: initial_cytotoxic_t_lymphocytes
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.initial_cytotoxic_t_lymphocytes
+    label: Initial Cytotoxic T Lymphocytes
+    default: 0.0
+    units: native source value
+    description: Initial Cytotoxic T Lymphocytes. Sets the initial value of bundled
+      SBML species `CTL`.
+  - name: initial_helper_t_lymphocyte_precursors
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.initial_helper_t_lymphocyte_precursors
+    label: Initial Helper T Lymphocyte Precursors
+    default: 15.0
+    units: native source value
+    description: Initial Helper T Lymphocyte Precursors. Sets the initial value of
+      bundled SBML species `HTLP`.
+  - name: initial_helper_t_lymphocytes
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.initial_helper_t_lymphocytes
+    label: Initial Helper T Lymphocytes
+    default: 0.0
+    units: native source value
+    description: Initial Helper T Lymphocytes. Sets the initial value of bundled SBML
+      species `HTL`.
+  - name: kill_parameter
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.kill_parameter
+    label: Kill Parameter
+    default: 10.0
+    units: native source value
+    description: Kill Parameter. Sets bundled SBML parameter `Kill`.
+  outputs:
+  - name: tumor
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.tumor
+  - name: cytotoxic_t_lymphocyte_precursors
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.cytotoxic_t_lymphocyte_precursors
+  - name: cytotoxic_t_lymphocytes
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.cytotoxic_t_lymphocytes
+  - name: helper_t_lymphocyte_precursors
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.helper_t_lymphocyte_precursors
+  - name: helper_t_lymphocytes
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.helper_t_lymphocytes
+  - name: state
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.state
+  - name: summary
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.species_labels

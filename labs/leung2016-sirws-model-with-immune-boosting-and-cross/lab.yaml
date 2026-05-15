@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Leung2016 - SIRWS model with immune boosting and cross-immunity between two
+  pathogens Lab
+description: Immunology Leung2016Sirws Model With Immune Boosting And CModel1808280006Model
+  represents core biological mechanisms from biomodels_ebi reference biomodels_ebi:MODEL1808280006.
+  When you run it, you can inspect state and compare temporal behavior between baseline
+  and adjusted inputs.
+models:
+- alias: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.state
+  to:
+  - visualisation.immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model_state
+- from: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.summary
+  to:
+  - visualisation.immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model_summary
+- from: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.species_labels
+  to:
+  - visualisation.immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_signaling_observable_1
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.initial_unresolved_signaling_observable_1
+    label: Initial Unresolved Signaling Observable 1
+    default: 0.058
+    units: native source value
+    description: Initial Unresolved Signaling Observable 1. Sets the initial value
+      of bundled SBML species `X_SS`.
+  - name: initial_unresolved_signaling_observable_2
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.initial_unresolved_signaling_observable_2
+    label: Initial Unresolved Signaling Observable 2
+    default: 0.001
+    units: native source value
+    description: Initial Unresolved Signaling Observable 2. Sets the initial value
+      of bundled SBML species `X_IS`.
+  - name: initial_unresolved_signaling_observable_3
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.initial_unresolved_signaling_observable_3
+    label: Initial Unresolved Signaling Observable 3
+    default: 0.41
+    units: native source value
+    description: Initial Unresolved Signaling Observable 3. Sets the initial value
+      of bundled SBML species `X_RS`.
+  - name: initial_unresolved_signaling_observable_4
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.initial_unresolved_signaling_observable_4
+    label: Initial Unresolved Signaling Observable 4
+    default: 0.1
+    units: native source value
+    description: Initial Unresolved Signaling Observable 4. Sets the initial value
+      of bundled SBML species `X_WS`.
+  - name: initial_unresolved_signaling_observable_5
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.initial_unresolved_signaling_observable_5
+    label: Initial Unresolved Signaling Observable 5
+    default: 0.001
+    units: native source value
+    description: Initial Unresolved Signaling Observable 5. Sets the initial value
+      of bundled SBML species `X_SI`.
+  outputs:
+  - name: unresolved_signaling_observable_1
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.unresolved_signaling_observable_1
+  - name: unresolved_signaling_observable_2
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.unresolved_signaling_observable_2
+  - name: unresolved_signaling_observable_3
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.unresolved_signaling_observable_3
+  - name: unresolved_signaling_observable_4
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.unresolved_signaling_observable_4
+  - name: unresolved_signaling_observable_5
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.unresolved_signaling_observable_5
+  - name: state
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.state
+  - name: summary
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_leung2016_sirws_model_with_immune_boosting_and_c_model1808280006_model.species_labels

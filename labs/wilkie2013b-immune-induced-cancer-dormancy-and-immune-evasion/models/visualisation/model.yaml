@@ -1,0 +1,47 @@
+schema_version: '2.0'
+title: Wilkie2013b - immune-induced cancer dormancy and immune evasion-basic Lab Visualisation
+description: Dedicated presentation model for Wilkie2013b - immune-induced cancer
+  dormancy and immune evasion-basic Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Wilkie2013b - immune-induced cancer dormancy and immune evasion-basic
+      Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_wilkie2013b_immune_induced_cancer_dormancy_and_i_biomd0000000751_model
+      title: Wilkie2013b - immune-induced cancer dormancy and immune evasion-basic
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: C
+        label: Unresolved Tumor Observable 1
+      - id: I
+        label: Unresolved Tumor Observable 2
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_wilkie2013b_immune_induced_cancer_dormancy_and_i_biomd0000000751_model_state
+    maps_to: immunology_sbml_wilkie2013b_immune_induced_cancer_dormancy_and_i_biomd0000000751_model.state
+    description: Core state record.
+  - name: immunology_sbml_wilkie2013b_immune_induced_cancer_dormancy_and_i_biomd0000000751_model_summary
+    maps_to: immunology_sbml_wilkie2013b_immune_induced_cancer_dormancy_and_i_biomd0000000751_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_wilkie2013b_immune_induced_cancer_dormancy_and_i_biomd0000000751_model_species_labels
+    maps_to: immunology_sbml_wilkie2013b_immune_induced_cancer_dormancy_and_i_biomd0000000751_model.species_labels
+    description: Core source-label map.
+  outputs: []

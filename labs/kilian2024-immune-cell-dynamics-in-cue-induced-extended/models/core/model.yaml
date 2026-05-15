@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Kilian2024 - Immune cell dynamics in Cue-Induced Extended Human Colitis Model
+description: Kilian2024 - Immune cell dynamics in Cue-Induced Extended Human Colitis
+  ModelSingle-cell technologies such as scRNA-seq and flow cytometry provide critical
+  insights into immune cell behavior in inflam. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Christoph Kilian
+- Hanna Ulrich
+- Viktor A Zouboulis
+- Paulina Sprezyna
+- Jasmin Schreiber
+upstream:
+  id: biomodels_ebi:MODEL2502180001
+  source_db: biomodels_ebi
+  source_id: MODEL2502180001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2502180001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2502180001?filename=model3_extendedhumancolitis.xml
+  license: CC0
+biosim:
+  entrypoint: src.kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model:Kilian2024ImmuneCellDynamicsInCueInducedEModel2502180001Model
+  init_kwargs:
+    model_path: data/MODEL2502180001.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_cell
+    maps_to: Bcell
+    label: Initial Cell
+    default: 0.0468867574754616
+    units: native source value
+    description: Initial Cell. Sets the initial value of bundled SBML species `Bcell`.
+  - name: initial_unresolved_immune_observable_1
+    maps_to: Tcell
+    label: Initial Unresolved Immune Observable 1
+    default: 0.0215256076306623
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `Tcell`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: Mac
+    label: Initial Unresolved Immune Observable 2
+    default: 0.0608414487144472
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `Mac`.
+  - name: initial_neutr
+    maps_to: Neutr
+    label: Initial Neutr
+    default: 0.0481656099063014
+    units: native source value
+    description: Initial Neutr. Sets the initial value of bundled SBML species `Neutr`.
+  - name: initial_unresolved_immune_observable_3
+    maps_to: Epi
+    label: Initial Unresolved Immune Observable 3
+    default: 0.300977731108012
+    units: native source value
+    description: Initial Unresolved Immune Observable 3. Sets the initial value of
+      bundled SBML species `Epi`.
+  outputs:
+  - name: cell
+    maps_to: Bcell
+    label: Cell
+    description: Cell. Maps to bundled source symbol `Bcell`.
+  - name: unresolved_immune_observable_1
+    maps_to: Tcell
+    label: Unresolved Immune Observable 1
+    description: Unresolved Immune Observable 1. Maps to bundled source symbol `Tcell`.
+  - name: unresolved_immune_observable_2
+    maps_to: Mac
+    label: Unresolved Immune Observable 2
+    description: Unresolved Immune Observable 2. Maps to bundled source symbol `Mac`.
+  - name: neutr
+    maps_to: Neutr
+    label: Neutr
+    description: Neutr. Maps to bundled source symbol `Neutr`.
+  - name: unresolved_immune_observable_3
+    maps_to: Epi
+    label: Unresolved Immune Observable 3
+    description: Unresolved Immune Observable 3. Maps to bundled source symbol `Epi`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

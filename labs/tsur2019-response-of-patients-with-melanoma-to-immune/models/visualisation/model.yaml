@@ -1,0 +1,49 @@
+schema_version: '2.0'
+title: Tsur2019 - Response of patients with melanoma to immune checkpoint blockade
+  Lab Visualisation
+description: Dedicated presentation model for Tsur2019 - Response of patients with
+  melanoma to immune checkpoint blockade Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Tsur2019 - Response of patients with melanoma to immune checkpoint
+      blockade Lab
+    question: What response class does the bundled predictive source assign to the
+      supplied feature vector?
+    answer_focus: feature-vector inputs, predicted class, and class-probability evidence
+    context: predictive_ml_or_design
+    sources:
+    - alias: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model
+      title: Tsur2019 - Response of patients with melanoma to immune checkpoint blockade
+      visual_scope: Predictive immunology model
+      observables:
+      - id: A
+        label: Unresolved Prediction Observable 1
+      - id: T
+        label: Unresolved Prediction Observable 2
+      - id: M
+        label: Unresolved Prediction Observable 3
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model_state
+    maps_to: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.state
+    description: Core state record.
+  - name: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model_summary
+    maps_to: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model_species_labels
+    maps_to: immunology_sbml_tsur2019_response_of_patients_with_melanoma_to_i_biomd0000000838_model.species_labels
+    description: Core source-label map.
+  outputs: []

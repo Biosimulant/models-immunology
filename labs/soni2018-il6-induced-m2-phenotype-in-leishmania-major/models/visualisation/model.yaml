@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Soni2018 - IL6 induced M2 Phenotype in Leishmania major infected macrophage
+  Lab Visualisation
+description: Dedicated presentation model for Soni2018 - IL6 induced M2 Phenotype
+  in Leishmania major infected macrophage Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Soni2018 - IL6 induced M2 Phenotype in Leishmania major infected macrophage
+      Lab
+    question: How do pathogen-associated states and immune response variables shift
+      during the simulated run?
+    answer_focus: pathogen load, infected-cell states, lymphocyte or cytokine response,
+      and dominant excursions
+    context: infection_immunity
+    sources:
+    - alias: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model
+      title: Soni2018 - IL6 induced M2 Phenotype in Leishmania major infected macrophage
+      visual_scope: Pathogen and immune response
+      observables:
+      - id: mw85ae78ed_34f7_460c_b906_1f512a83810c
+        label: Interferon G
+      - id: mw49322d55_ad63_4e7c_b1eb_42835c9b577a
+        label: Interferon Gr
+      - id: mwd7270399_0429_4c85_920a_de2e0ae74440
+        label: Interferon Gamma Interferon Gamma Receptor
+      - id: mwfaacd7f7_6aa9_4e6c_a7d8_281f2022ba2f
+        label: Unresolved Infection Observable 1
+      - id: mwa244ea2a_3e41_473b_9ae7_d0db512fc366
+        label: Toll Like Receptor 6 Complex
+      - id: mwb167e768_b778_4072_8798_3cf19e96d1d7
+        label: IL6-IL6R
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model_state
+    maps_to: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.state
+    description: Core state record.
+  - name: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model_summary
+    maps_to: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model_species_labels
+    maps_to: immunology_sbml_soni2018_il6_induced_m2_phenotype_in_leishmania_biomd0000000873_model.species_labels
+    description: Core source-label map.
+  outputs: []

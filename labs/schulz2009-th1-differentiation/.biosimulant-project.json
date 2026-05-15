@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f6334c25-9f39-4072-a303-c401d8ecad23",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "118e809e-0b66-467a-b4b8-bd31e3672ea9",
+  "created_at": "2026-05-15T15:53:07.306495472+00:00",
+  "last_synced_at": "2026-05-15T20:08:50.295986+00:00",
+  "hub_manifest_hash": "1f2af56662552b13b272205f41cd4aebf2f2bd1106a0891a8398a1fb9204200f",
+  "package_name": "schulz2009-th1-differentiation-lab"
+}

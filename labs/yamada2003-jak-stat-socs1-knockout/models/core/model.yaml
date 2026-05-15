@@ -1,0 +1,103 @@
+schema_version: '2.0'
+title: Yamada2003_JAK_STAT_SOCS1_knockout
+description: 'NCBS Curation Comments: This model shows the control mechanism of Jak-Stat
+  pathway, here SOCS1 (Suppressor of cytokine signaling-I) was identified as the negative
+  regulator of Jak and STAT signal tran. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Satoshi Yamada
+- Satoru Shiono
+- Akiko Joo
+- Akihiko Yoshimura
+upstream:
+  id: biomodels_ebi:BIOMD0000000094
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000094
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000094
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000094?filename=BIOMD0000000094_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.yamada2003_jak_stat_socs1_knockout_biomd0000000094_model:Yamada2003JakStatSocs1KnockoutBiomd0000000094Model
+  init_kwargs:
+    model_path: data/BIOMD0000000094.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_interferon_receptor_jak_complex
+    maps_to: IFNRJ
+    label: Initial Interferon Receptor JAK Complex
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Receptor JAK Complex. Sets the initial value of
+      bundled SBML species `IFNRJ`.
+  - name: initial_receptor_jak_complex
+    maps_to: RJ
+    label: Initial Receptor JAK Complex
+    default: 0.0
+    units: native source value
+    description: Initial Receptor JAK Complex. Sets the initial value of bundled SBML
+      species `RJ`.
+  - name: initial_ifnrj_dimer
+    maps_to: IFNRJ2
+    label: Initial Ifnrj Dimer
+    default: 0.0
+    units: native source value
+    description: Initial Ifnrj Dimer. Sets the initial value of bundled SBML species
+      `IFNRJ2`.
+  - name: initial_activated_ifnrj_complex
+    maps_to: IFNRJ2_star
+    label: Initial Activated Ifnrj Complex
+    default: 0.0
+    units: native source value
+    description: Initial Activated Ifnrj Complex. Sets the initial value of bundled
+      SBML species `IFNRJ2_star`.
+  - name: initial_interferon_receptor_jak2_stat1_complex
+    maps_to: IFNRJ2_star_STAT1c
+    label: Initial Interferon Receptor Jak2 Stat1 Complex
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Receptor Jak2 Stat1 Complex. Sets the initial
+      value of bundled SBML species `IFNRJ2_star_STAT1c`.
+  outputs:
+  - name: interferon_receptor_jak_complex
+    maps_to: IFNRJ
+    label: Interferon Receptor JAK Complex
+    description: Interferon Receptor JAK Complex. Maps to bundled source symbol `IFNRJ`.
+  - name: receptor_jak_complex
+    maps_to: RJ
+    label: Receptor JAK Complex
+    description: Receptor JAK Complex. Maps to bundled source symbol `RJ`.
+  - name: ifnrj_dimer
+    maps_to: IFNRJ2
+    label: Ifnrj Dimer
+    description: Ifnrj Dimer. Maps to bundled source symbol `IFNRJ2`.
+  - name: activated_ifnrj_complex
+    maps_to: IFNRJ2_star
+    label: Activated Ifnrj Complex
+    description: Activated Ifnrj Complex. Maps to bundled source symbol `IFNRJ2_star`.
+  - name: interferon_receptor_jak2_stat1_complex
+    maps_to: IFNRJ2_star_STAT1c
+    label: Interferon Receptor Jak2 Stat1 Complex
+    description: Interferon Receptor Jak2 Stat1 Complex. Maps to bundled source symbol
+      `IFNRJ2_star_STAT1c`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

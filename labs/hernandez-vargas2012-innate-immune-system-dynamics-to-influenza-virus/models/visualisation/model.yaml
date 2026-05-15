@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Hernandez-Vargas2012 - Innate immune system dynamics to Influenza virus Lab
+  Visualisation
+description: Dedicated presentation model for Hernandez-Vargas2012 - Innate immune
+  system dynamics to Influenza virus Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Hernandez-Vargas2012 - Innate immune system dynamics to Influenza virus
+      Lab
+    question: How do pathogen-associated states and immune response variables shift
+      during the simulated run?
+    answer_focus: pathogen load, infected-cell states, lymphocyte or cytokine response,
+      and dominant excursions
+    context: infection_immunity
+    sources:
+    - alias: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model
+      title: Hernandez-Vargas2012 - Innate immune system dynamics to Influenza virus
+      visual_scope: Pathogen and immune response
+      observables:
+      - id: U_E
+        label: Partially Infected Epithelial Cells U E
+      - id: U_I
+        label: Infected Epithelial Cells U I
+      - id: V
+        label: Viral Load V
+      - id: IFN
+        label: Interferon Interferon
+      - id: U_H
+        label: Healthy Epithelial Cells U H
+      - id: U_R
+        label: Resistant Epithelial cells (U_R)
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model_state
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.state
+    description: Core state record.
+  - name: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model_summary
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model_species_labels
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.species_labels
+    description: Core source-label map.
+  outputs: []

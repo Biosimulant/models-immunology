@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Wu2017 - Murine Bevacizumab PK model Lab
+description: This is the first report evaluating the use of fluorescent imaging to
+  determine the pharmacokinetics, lymphatic uptake, and bioavailability of a near-infrared
+  dye-labeled antibody conjugate. It can be used to explore immune response dynamics
+  and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model.state
+  to:
+  - visualisation.immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model_state
+- from: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model.summary
+  to:
+  - visualisation.immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model_summary
+- from: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model.species_labels
+  to:
+  - visualisation.immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: dose_iv_parameter
+    maps_to: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model.dose_iv_parameter
+    label: Dose Iv Parameter
+    default: 0.45
+    units: native source value
+    description: Dose Iv Parameter. Sets bundled SBML parameter `dose_iv`.
+  - name: dose_sc_parameter
+    maps_to: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model.dose_sc_parameter
+    label: Dose Sc Parameter
+    default: 0.45
+    units: native source value
+    description: Dose Sc Parameter. Sets bundled SBML parameter `dose_sc`.
+  outputs:
+  - name: cs_iv
+    maps_to: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model.cs_iv
+  - name: at_iv
+    maps_to: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model.at_iv
+  - name: cs_sc
+    maps_to: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model.cs_sc
+  - name: at_sc
+    maps_to: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model.at_sc
+  - name: cln_sc
+    maps_to: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model.cln_sc
+  - name: state
+    maps_to: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model.state
+  - name: summary
+    maps_to: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_wu2017_murine_bevacizumab_pk_model_model2003030003_model.species_labels

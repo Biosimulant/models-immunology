@@ -1,0 +1,55 @@
+schema_version: '2.0'
+title: Hardiansyah2019 - QSP model of chimeric antigen receptor T-Cell therapy Lab
+  Visualisation
+description: Dedicated presentation model for Hardiansyah2019 - QSP model of chimeric
+  antigen receptor T-Cell therapy Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Hardiansyah2019 - QSP model of chimeric antigen receptor T-Cell therapy
+      Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_hardiansyah2019_qsp_model_of_chimeric_antigen_re_model2009230001_model
+      title: Hardiansyah2019 - QSP model of chimeric antigen receptor T-Cell therapy
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: B_pb
+        label: Unresolved Immune Observable 1
+      - id: CARTE_pb
+        label: Carte Pb
+      - id: IL6
+        label: Interleukin 6
+      - id: IL10
+        label: Interleukin 10
+      - id: IFNg
+        label: Interferon Gamma
+      - id: CARTE_t
+        label: CARTE_t
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_hardiansyah2019_qsp_model_of_chimeric_antigen_re_model2009230001_model_state
+    maps_to: immunology_sbml_hardiansyah2019_qsp_model_of_chimeric_antigen_re_model2009230001_model.state
+    description: Core state record.
+  - name: immunology_sbml_hardiansyah2019_qsp_model_of_chimeric_antigen_re_model2009230001_model_summary
+    maps_to: immunology_sbml_hardiansyah2019_qsp_model_of_chimeric_antigen_re_model2009230001_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_hardiansyah2019_qsp_model_of_chimeric_antigen_re_model2009230001_model_species_labels
+    maps_to: immunology_sbml_hardiansyah2019_qsp_model_of_chimeric_antigen_re_model2009230001_model.species_labels
+    description: Core source-label map.
+  outputs: []

@@ -1,0 +1,84 @@
+schema_version: '2.0'
+title: Kirschner1998_Immunotherapy_Tumour
+description: 'This a model from the article: Modeling immunotherapy of the tumor-immune
+  interaction. It can be used to explore immune response dynamics and compare pathway-level
+  behavior across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- D Kirschner
+- J C Panetta
+upstream:
+  id: biomodels_ebi:BIOMD0000000732
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000732
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000732
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000732?filename=Kirschner_1998.xml
+  license: CC0
+biosim:
+  entrypoint: src.kirschner1998_immunotherapy_tumour_biomd0000000732_model:Kirschner1998ImmunotherapyTumourBiomd0000000732Model
+  init_kwargs:
+    model_path: data/BIOMD0000000732.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_tumor
+    maps_to: Tumor
+    label: Initial Tumor
+    default: 1.0
+    units: native source value
+    description: Initial Tumor. Sets the initial value of bundled SBML species `Tumor`.
+  - name: initial_immune_cells
+    maps_to: Immune_cells
+    label: Initial Immune Cells
+    default: 0.0
+    units: native source value
+    description: Initial Immune Cells. Sets the initial value of bundled SBML species
+      `Immune_cells`.
+  - name: initial_interleukin_2
+    maps_to: IL2
+    label: Initial Interleukin 2
+    default: 0.0
+    units: native source value
+    description: Initial Interleukin 2. Sets the initial value of bundled SBML species
+      `IL2`.
+  outputs:
+  - name: tumor
+    maps_to: Tumor
+    label: Tumor
+    description: Tumor. Maps to bundled source symbol `Tumor`.
+  - name: immune_cells
+    maps_to: Immune_cells
+    label: Immune Cells
+    description: Immune Cells. Maps to bundled source symbol `Immune_cells`.
+  - name: source
+    maps_to: Source
+    label: Source
+    description: Source. Maps to bundled source symbol `Source`.
+  - name: sink
+    maps_to: Sink
+    label: Sink
+    description: Sink. Maps to bundled source symbol `Sink`.
+  - name: interleukin_2
+    maps_to: IL2
+    label: Interleukin 2
+    description: Interleukin 2. Maps to bundled source symbol `IL2`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Dong2014 - Mathematical modeling on helper t cells in a tumor immune system
+  Lab Visualisation
+description: Dedicated presentation model for Dong2014 - Mathematical modeling on
+  helper t cells in a tumor immune system Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Dong2014 - Mathematical modeling on helper t cells in a tumor immune
+      system Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model
+      title: Dong2014 - Mathematical modeling on helper t cells in a tumor immune
+        system
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: x_Tumor_Cells
+        label: Tumor Cells
+      - id: y_Effector_Cells
+        label: Effector Cells
+      - id: z_Helper_T_Cells
+        label: Helper T Cells
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model_state
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.state
+    description: Core state record.
+  - name: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model_summary
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model_species_labels
+    maps_to: immunology_sbml_dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model.species_labels
+    description: Core source-label map.
+  outputs: []

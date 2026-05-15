@@ -1,0 +1,97 @@
+schema_version: '2.0'
+title: He2017 - A mathematical model of pancreatic cancer with two kinds of treatments
+description: This is a mathematical model of pancreatic cancer which includes descriptions
+  of regulatory T cell activity and inhibition therapy. Descriptions of cytokine induced
+  killer immunotherapy are also inclu.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- He, D.-H.
+- Xu, J.-X.
+upstream:
+  id: biomodels_ebi:BIOMD0000000811
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000811
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000811
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000811?filename=He2017.xml
+  license: CC0
+biosim:
+  entrypoint: src.he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model:He2017AMathematicalModelOfPancreaticCancerBiomd0000000811Model
+  init_kwargs:
+    model_path: data/BIOMD0000000811.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: C_PCC
+    label: Initial Unresolved Tumor Observable 1
+    default: 1000000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `C_PCC`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: P_PSC
+    label: Initial Unresolved Tumor Observable 2
+    default: 5600000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `P_PSC`.
+  - name: initial_cd8
+    maps_to: E_CD8
+    label: Initial CD8
+    default: 873600000.0
+    units: native source value
+    description: Initial CD8. Sets the initial value of bundled SBML species `E_CD8`.
+  - name: initial_killer
+    maps_to: N_Killer
+    label: Initial Killer
+    default: 481600000.0
+    units: native source value
+    description: Initial Killer. Sets the initial value of bundled SBML species `N_Killer`.
+  - name: initial_t_helper
+    maps_to: H_T_Helper
+    label: Initial T Helper
+    default: 2116800000.0
+    units: native source value
+    description: Initial T Helper. Sets the initial value of bundled SBML species
+      `H_T_Helper`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: C_PCC
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `C_PCC`.
+  - name: unresolved_tumor_observable_2
+    maps_to: P_PSC
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `P_PSC`.
+  - name: cd8
+    maps_to: E_CD8
+    label: CD8
+    description: CD8. Maps to bundled source symbol `E_CD8`.
+  - name: killer
+    maps_to: N_Killer
+    label: Killer
+    description: Killer. Maps to bundled source symbol `N_Killer`.
+  - name: t_helper
+    maps_to: H_T_Helper
+    label: T Helper
+    description: T Helper. Maps to bundled source symbol `H_T_Helper`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

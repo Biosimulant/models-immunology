@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "ca41dfcc-3206-4ae9-bc8f-80990b25fed2",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "823b4425-6b2d-471f-b3cf-df2596ba77f0",
+  "created_at": "2026-05-15T15:53:05.947960468+00:00",
+  "last_synced_at": "2026-05-15T18:38:36.128415+00:00",
+  "hub_manifest_hash": "a60fbd646d4861cb293bed5cf8ac9ade4b05e7f0db2850c21ae9a85ec589ea97",
+  "package_name": "jarrah2014-mathematical-model-of-the-immune-response-in-muscle-d"
+}

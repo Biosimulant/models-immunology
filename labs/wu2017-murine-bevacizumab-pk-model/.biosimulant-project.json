@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "714e3f80-3539-454f-98fe-461017b04d05",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "eb3ec091-7838-4eaf-be81-b34a1eca7780",
+  "created_at": "2026-05-15T15:53:07.783883918+00:00",
+  "last_synced_at": "2026-05-15T20:25:02.690054+00:00",
+  "hub_manifest_hash": "11f5eaa2d2fff4dc7bfefd308fdc902efea5bba82821ca7cba42481ebddf69b1",
+  "package_name": "wu2017-murine-bevacizumab-pk-model-lab"
+}

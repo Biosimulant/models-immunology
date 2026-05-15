@@ -1,0 +1,52 @@
+schema_version: '2.0'
+title: Restif2007 - Vaccination invasion Lab Visualisation
+description: Dedicated presentation model for Restif2007 - Vaccination invasion Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Restif2007 - Vaccination invasion Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_restif2007_vaccination_invasion_biomd0000000294_model
+      title: Restif2007 - Vaccination invasion
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: N
+        label: Unresolved Immune Observable 1
+      - id: S
+        label: Unresolved Immune Observable 2
+      - id: I1
+        label: Unresolved Immune Observable 3
+      - id: I2
+        label: Unresolved Immune Observable 4
+      - id: R1
+        label: Unresolved Immune Observable 5
+      - id: R2
+        label: R2
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_restif2007_vaccination_invasion_biomd0000000294_model_state
+    maps_to: immunology_sbml_restif2007_vaccination_invasion_biomd0000000294_model.state
+    description: Core state record.
+  - name: immunology_sbml_restif2007_vaccination_invasion_biomd0000000294_model_summary
+    maps_to: immunology_sbml_restif2007_vaccination_invasion_biomd0000000294_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_restif2007_vaccination_invasion_biomd0000000294_model_species_labels
+    maps_to: immunology_sbml_restif2007_vaccination_invasion_biomd0000000294_model.species_labels
+    description: Core source-label map.
+  outputs: []

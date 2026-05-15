@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: dePillis2009 - Mathematical model creation for cancer chemo-immunotherapy Lab
+description: This is an updated version of a previous model that described the dynamics
+  of cancer treatment, with descriptions of tumour cell numbers, specific and non-specific
+  immune cells (NK, CD8+ T cells and o. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.state
+  to:
+  - visualisation.immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model_state
+- from: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.summary
+  to:
+  - visualisation.immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model_summary
+- from: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.species_labels
+  to:
+  - visualisation.immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_chemotherapy_drug
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.initial_chemotherapy_drug
+    label: Initial Chemotherapy Drug
+    default: 0.0
+    units: native source value
+    description: Initial Chemotherapy Drug. Sets the initial value of bundled SBML
+      species `M_Chemotherapy_Drug`.
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 10000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T_Tumour_Cells`.
+  - name: initial_cd8_t_cells
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.initial_cd8_t_cells
+    label: Initial CD8 T Cells
+    default: 526800.0
+    units: native source value
+    description: Initial CD8 T Cells. Sets the initial value of bundled SBML species
+      `L_CD8_T_Cells`.
+  - name: initial_interleukin_2
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.initial_interleukin_2
+    label: Initial Interleukin 2
+    default: 1073.0
+    units: native source value
+    description: Initial Interleukin 2. Sets the initial value of bundled SBML species
+      `I_IL_2`.
+  - name: initial_natural_killer_cells
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.initial_natural_killer_cells
+    label: Initial Natural Killer Cells
+    default: 250000000.0
+    units: native source value
+    description: Initial Natural Killer Cells. Sets the initial value of bundled SBML
+      species `N_Natural_Killer_Cells`.
+  - name: natural_killer_induced_tumour_death_rate
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.natural_killer_induced_tumour_death_rate
+    label: Natural Killer Induced Tumour Death Rate
+    default: 2.9077e-13
+    units: native source value
+    description: Natural Killer Induced Tumour Death Rate. Sets bundled SBML parameter
+      `c`.
+  outputs:
+  - name: chemotherapy_drug
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.chemotherapy_drug
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.unresolved_tumor_observable_1
+  - name: cd8_t_cells
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.cd8_t_cells
+  - name: interleukin_2
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.interleukin_2
+  - name: natural_killer_cells
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.natural_killer_cells
+  - name: state
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.state
+  - name: summary
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_depillis2009_mathematical_model_creation_for_can_biomd0000000779_model.species_labels

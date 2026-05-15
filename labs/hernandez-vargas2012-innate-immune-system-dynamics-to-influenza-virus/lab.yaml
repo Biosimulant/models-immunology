@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: Hernandez-Vargas2012 - Innate immune system dynamics to Influenza virus Lab
+description: A. It can be used to explore immune response dynamics and compare pathway-level
+  behavior across conditions.
+models:
+- alias: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.state
+  to:
+  - visualisation.immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model_state
+- from: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.summary
+  to:
+  - visualisation.immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model_summary
+- from: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.species_labels
+  to:
+  - visualisation.immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_partially_infected_epithelial_cells_u_e
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.initial_partially_infected_epithelial_cells_u_e
+    label: Initial Partially Infected Epithelial Cells U E
+    default: 0.0
+    units: native source value
+    description: Initial Partially Infected Epithelial Cells U E. Sets the initial
+      value of bundled SBML species `U_E`.
+  - name: initial_infected_epithelial_cells_u_i
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.initial_infected_epithelial_cells_u_i
+    label: Initial Infected Epithelial Cells U I
+    default: 0.0
+    units: native source value
+    description: Initial Infected Epithelial Cells U I. Sets the initial value of
+      bundled SBML species `U_I`.
+  - name: initial_viral_load_v
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.initial_viral_load_v
+    label: Initial Viral Load V
+    default: 0.001
+    units: native source value
+    description: Initial Viral Load V. Sets the initial value of bundled SBML species
+      `V`.
+  - name: initial_interferon_interferon
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.initial_interferon_interferon
+    label: Initial Interferon Interferon
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Interferon. Sets the initial value of bundled
+      SBML species `IFN`.
+  - name: initial_healthy_epithelial_cells_u_h
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.initial_healthy_epithelial_cells_u_h
+    label: Initial Healthy Epithelial Cells U H
+    default: 500000000.0
+    units: native source value
+    description: Initial Healthy Epithelial Cells U H. Sets the initial value of bundled
+      SBML species `U_H`.
+  outputs:
+  - name: partially_infected_epithelial_cells_u_e
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.partially_infected_epithelial_cells_u_e
+  - name: infected_epithelial_cells_u_i
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.infected_epithelial_cells_u_i
+  - name: viral_load_v
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.viral_load_v
+  - name: interferon_interferon
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.interferon_interferon
+  - name: healthy_epithelial_cells_u_h
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.healthy_epithelial_cells_u_h
+  - name: state
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.state
+  - name: summary
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_hernandez_vargas2012_innate_immune_system_dynami_biomd0000000710_model.species_labels

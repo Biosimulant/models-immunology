@@ -1,0 +1,81 @@
+schema_version: '2.0'
+title: 'Banerjee2008 - Immunotherapy with interleukin-2: A study based on mathematical
+  modeling'
+description: 'IMMUNOTHERAPY WITH INTERLEUKIN-2: A STUDY BASED ONMATHEMATICAL MODELINGS
+  ANDIP B ANERJEEIndian Institute of Technology and Science Rooorkee (IITR)Roorkee
+  247667, Uttarakhand, Indiae-mail: sandofma@iit. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- SANDIP B ANERJEE
+upstream:
+  id: biomodels_ebi:MODEL2001130001
+  source_db: biomodels_ebi
+  source_id: MODEL2001130001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2001130001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2001130001?filename=Banerjee2008.xml
+  license: CC0
+biosim:
+  entrypoint: src.banerjee2008_immunotherapy_with_interleukin_2_a_model2001130001_model:Banerjee2008ImmunotherapyWithInterleukin2AModel2001130001Model
+  init_kwargs:
+    model_path: data/MODEL2001130001.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_signaling_observable_1
+    maps_to: x
+    label: Initial Unresolved Signaling Observable 1
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Signaling Observable 1. Sets the initial value
+      of bundled SBML species `x`.
+  - name: initial_unresolved_signaling_observable_2
+    maps_to: y
+    label: Initial Unresolved Signaling Observable 2
+    default: 0.05
+    units: native source value
+    description: Initial Unresolved Signaling Observable 2. Sets the initial value
+      of bundled SBML species `y`.
+  - name: initial_unresolved_signaling_observable_3
+    maps_to: z
+    label: Initial Unresolved Signaling Observable 3
+    default: 0.005
+    units: native source value
+    description: Initial Unresolved Signaling Observable 3. Sets the initial value
+      of bundled SBML species `z`.
+  outputs:
+  - name: unresolved_signaling_observable_1
+    maps_to: x
+    label: Unresolved Signaling Observable 1
+    description: Unresolved Signaling Observable 1. Maps to bundled source symbol
+      `x`.
+  - name: unresolved_signaling_observable_2
+    maps_to: y
+    label: Unresolved Signaling Observable 2
+    description: Unresolved Signaling Observable 2. Maps to bundled source symbol
+      `y`.
+  - name: unresolved_signaling_observable_3
+    maps_to: z
+    label: Unresolved Signaling Observable 3
+    description: Unresolved Signaling Observable 3. Maps to bundled source symbol
+      `z`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

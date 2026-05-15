@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Jarrah2014 - mathematical model of the immune response in muscle degeneration
+  and subsequent regeneration in Duchenne muscular dystrophy in mdx mice Lab
+description: Duchenne muscular dystrophy (DMD) is a genetic disease that results in
+  the death of affected boys by early adulthood.The genetic defect responsible for
+  DMD has been known for over 25 years, yet at pre. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.state
+  to:
+  - visualisation.immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model_state
+- from: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.summary
+  to:
+  - visualisation.immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model_summary
+- from: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.species_labels
+  to:
+  - visualisation.immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_cd4_t_helper_cells_h
+    maps_to: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.initial_cd4_t_helper_cells_h
+    label: Initial CD4 T Helper Cells H
+    default: 0.0
+    units: substance
+    description: Initial CD4 T Helper Cells H. Sets the initial value of bundled SBML
+      species `H`.
+  - name: initial_macrophages_m
+    maps_to: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.initial_macrophages_m
+    label: Initial Macrophages M
+    default: 400.0
+    units: substance
+    description: Initial Macrophages M. Sets the initial value of bundled SBML species
+      `M`.
+  - name: initial_cd8_cytotoxic_t_lymphocytes_c
+    maps_to: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.initial_cd8_cytotoxic_t_lymphocytes_c
+    label: Initial CD8 Cytotoxic T Lymphocytes C
+    default: 4.0
+    units: substance
+    description: Initial CD8 Cytotoxic T Lymphocytes C. Sets the initial value of
+      bundled SBML species `C`.
+  - name: initial_damaged_fibres_d
+    maps_to: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.initial_damaged_fibres_d
+    label: Initial Damaged Fibres D
+    default: 0.0
+    units: substance
+    description: Initial Damaged Fibres D. Sets the initial value of bundled SBML
+      species `D`.
+  - name: initial_normal_fibres_n
+    maps_to: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.initial_normal_fibres_n
+    label: Initial Normal Fibres N
+    default: 100.0
+    units: substance
+    description: Initial Normal Fibres N. Sets the initial value of bundled SBML species
+      `N`.
+  outputs:
+  - name: cd4_t_helper_cells_h
+    maps_to: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.cd4_t_helper_cells_h
+  - name: macrophages_m
+    maps_to: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.macrophages_m
+  - name: cd8_cytotoxic_t_lymphocytes_c
+    maps_to: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.cd8_cytotoxic_t_lymphocytes_c
+  - name: damaged_fibres_d
+    maps_to: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.damaged_fibres_d
+  - name: normal_fibres_n
+    maps_to: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.normal_fibres_n
+  - name: state
+    maps_to: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.state
+  - name: summary
+    maps_to: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_jarrah2014_mathematical_model_of_the_immune_resp_biomd0000001015_model.species_labels

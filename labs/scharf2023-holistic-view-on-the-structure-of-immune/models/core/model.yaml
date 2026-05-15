@@ -1,0 +1,104 @@
+schema_version: '2.0'
+title: 'Scharf2023 - Holistic View on the Structure of Immune Response: Petri Net
+  Model'
+description: Immunology Scharf2023Holistic View On The Structure Of Imm Model2304260001Model
+  models core biological dynamics as a OTHER simulation curated from biomodels_ebi
+  (biomodels_ebi:MODEL2304260001), focused on immun. When you run it, you can track
+  state over time and compare response patterns across parameter settings.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Sonja Scharf
+- "J\xF6rg Ackermann"
+- Leonie Bender
+- Patrick Wurzel
+- "Hendrik Sch\xE4fer"
+upstream:
+  id: biomodels_ebi:MODEL2304260001
+  source_db: biomodels_ebi
+  source_id: MODEL2304260001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2304260001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2304260001?filename=230426_LN.xml
+  license: CC0
+biosim:
+  entrypoint: src.scharf2023_holistic_view_on_the_structure_of_imm_model2304260001_model:Scharf2023HolisticViewOnTheStructureOfImmModel2304260001Model
+  init_kwargs:
+    model_path: data/MODEL2304260001.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_t_bl
+    maps_to: P3
+    label: Initial T Bl
+    default: 0.0
+    units: native source value
+    description: Initial T Bl. Sets the initial value of bundled SBML species `P3`.
+  - name: initial_unresolved_signaling_observable_1
+    maps_to: P4
+    label: Initial Unresolved Signaling Observable 1
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Signaling Observable 1. Sets the initial value
+      of bundled SBML species `P4`.
+  - name: initial_unresolved_signaling_observable_2
+    maps_to: P7
+    label: Initial Unresolved Signaling Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Signaling Observable 2. Sets the initial value
+      of bundled SBML species `P7`.
+  - name: initial_t_tz
+    maps_to: P8
+    label: Initial T Tz
+    default: 0.0
+    units: native source value
+    description: Initial T Tz. Sets the initial value of bundled SBML species `P8`.
+  - name: initial_unresolved_immune_observable_1
+    maps_to: P137
+    label: Initial Unresolved Immune Observable 1
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `P137`.
+  outputs:
+  - name: t_bl
+    maps_to: P3
+    label: T Bl
+    description: T Bl. Maps to bundled source symbol `P3`.
+  - name: unresolved_signaling_observable_1
+    maps_to: P4
+    label: Unresolved Signaling Observable 1
+    description: Unresolved Signaling Observable 1. Maps to bundled source symbol
+      `P4`.
+  - name: unresolved_signaling_observable_2
+    maps_to: P7
+    label: Unresolved Signaling Observable 2
+    description: Unresolved Signaling Observable 2. Maps to bundled source symbol
+      `P7`.
+  - name: t_tz
+    maps_to: P8
+    label: T Tz
+    description: T Tz. Maps to bundled source symbol `P8`.
+  - name: unresolved_immune_observable_1
+    maps_to: P137
+    label: Unresolved Immune Observable 1
+    description: Unresolved Immune Observable 1. Maps to bundled source symbol `P137`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: 'Adrianne2018 - Modelling combined virotherapy and immunotherapy: strengthening
+  the antitumour immune response mediated by IL-12 and GM-CSF expression Lab'
+description: Modelling combined virotherapy and immunotherapy:strengthening the antitumour
+  immune response mediated byIL-12 and GM-CSF expressionAdrianne L. It can be used
+  to explore immune response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.state
+  to:
+  - visualisation.immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model_state
+- from: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.summary
+  to:
+  - visualisation.immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model_summary
+- from: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.species_labels
+  to:
+  - visualisation.immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 85.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `U`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `I`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `V`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `A`.
+  - name: initial_unresolved_tumor_observable_5
+    maps_to: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.initial_unresolved_tumor_observable_5
+    label: Initial Unresolved Tumor Observable 5
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 5. Sets the initial value of
+      bundled SBML species `H`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.unresolved_tumor_observable_4
+  - name: unresolved_tumor_observable_5
+    maps_to: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.unresolved_tumor_observable_5
+  - name: state
+    maps_to: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.state
+  - name: summary
+    maps_to: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_adrianne2018_modelling_combined_virotherapy_and_model1912120003_model.species_labels

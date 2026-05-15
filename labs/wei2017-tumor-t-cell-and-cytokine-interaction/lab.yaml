@@ -1,0 +1,84 @@
+schema_version: '2.0'
+title: Wei2017 - tumor, T cell and cytokine interaction Lab
+description: 'The paper describes a model of tumor-immune interaction. Created by
+  COPASI 4.25 (Build 207) This model is described in the article: Periodically Pulsed
+  Immunotherapy in a Mathematical Model of Tumor,.'
+models:
+- alias: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.state
+  to:
+  - visualisation.immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model_state
+- from: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.summary
+  to:
+  - visualisation.immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model_summary
+- from: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.species_labels
+  to:
+  - visualisation.immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 0.5
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.01
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `I`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `C`.
+  - name: tumor_growth_rate
+    maps_to: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.tumor_growth_rate
+    label: Tumor Growth Rate
+    default: 0.01
+    units: unit_0
+    description: Tumor Growth Rate. Sets bundled SBML parameter `r`.
+  - name: tumor_killing_rate
+    maps_to: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.tumor_killing_rate
+    label: Tumor Killing Rate
+    default: 0.1
+    units: unit_0
+    description: Tumor Killing Rate. Sets bundled SBML parameter `d`.
+  - name: immune_cell_growth_rate
+    maps_to: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.immune_cell_growth_rate
+    label: Immune Cell Growth Rate
+    default: 0.1
+    units: unit_0
+    description: Immune Cell Growth Rate. Sets bundled SBML parameter `beta`.
+  - name: immune_cell_growth_rate_2
+    maps_to: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.immune_cell_growth_rate_2
+    label: Immune Cell Growth Rate 2
+    default: 1000.0
+    units: unit_1
+    description: Immune Cell Growth Rate 2. Sets bundled SBML parameter `k`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.unresolved_tumor_observable_3
+  - name: state
+    maps_to: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.state
+  - name: summary
+    maps_to: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_wei2017_tumor_t_cell_and_cytokine_interaction_biomd0000000778_model.species_labels

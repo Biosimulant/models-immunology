@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "e046ca22-ed85-4b88-b4bb-f26060b67db8",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "bfe9e5b8-7c81-43d4-97cf-4370458f6899",
+  "created_at": "2026-05-15T15:53:06.476425196+00:00",
+  "last_synced_at": "2026-05-15T19:03:06.122095+00:00",
+  "hub_manifest_hash": "b10d1703c562789011392b913e43fc016e803745bc78d84900e9018230641bf8",
+  "package_name": "mahasa2016-tumor-immune-surveillance-lab"
+}

@@ -1,0 +1,55 @@
+schema_version: '2.0'
+title: Begitt2014 - STAT1 cooperative DNA binding - single GAS polymer model Lab Visualisation
+description: Dedicated presentation model for Begitt2014 - STAT1 cooperative DNA binding
+  - single GAS polymer model Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Begitt2014 - STAT1 cooperative DNA binding - single GAS polymer model
+      Lab
+    question: Which signaling or cytokine states show the strongest activity during
+      the simulation?
+    answer_focus: cytokine/signaling trajectories, activation states, and largest
+      excursions
+    context: immune_signaling
+    sources:
+    - alias: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model
+      title: Begitt2014 - STAT1 cooperative DNA binding - single GAS polymer model
+      visual_scope: Immune signaling activity
+      observables:
+      - id: S1
+        label: Unresolved Signaling Observable 1
+      - id: DNA_000
+        label: DNA 000
+      - id: DNA_100
+        label: DNA 100
+      - id: DNA_010
+        label: DNA 010
+      - id: DNA_001
+        label: DNA 001
+      - id: DNA_110
+        label: DNA_110
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model_state
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.state
+    description: Core state record.
+  - name: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model_summary
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model_species_labels
+    maps_to: immunology_sbml_begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model.species_labels
+    description: Core source-label map.
+  outputs: []

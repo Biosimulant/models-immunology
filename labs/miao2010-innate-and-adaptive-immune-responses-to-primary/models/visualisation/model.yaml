@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Miao2010 - Innate and adaptive immune responses to primary Influenza A Virus
+  infection_1_1 Lab Visualisation
+description: Dedicated presentation model for Miao2010 - Innate and adaptive immune
+  responses to primary Influenza A Virus infection_1_1 Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Miao2010 - Innate and adaptive immune responses to primary Influenza
+      A Virus infection_1_1 Lab
+    question: How do pathogen-associated states and immune response variables shift
+      during the simulated run?
+    answer_focus: pathogen load, infected-cell states, lymphocyte or cytokine response,
+      and dominant excursions
+    context: infection_immunity
+    sources:
+    - alias: immunology_sbml_miao2010_innate_and_adaptive_immune_responses_to_biomd0000000546_model
+      title: Miao2010 - Innate and adaptive immune responses to primary Influenza
+        A Virus infection_1_1
+      visual_scope: Pathogen and immune response
+      observables:
+      - id: s1
+        label: Unresolved Infection Observable 1
+      - id: s2
+        label: Unresolved Infection Observable 2
+      - id: s3
+        label: Unresolved Infection Observable 3
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_miao2010_innate_and_adaptive_immune_responses_to_biomd0000000546_model_state
+    maps_to: immunology_sbml_miao2010_innate_and_adaptive_immune_responses_to_biomd0000000546_model.state
+    description: Core state record.
+  - name: immunology_sbml_miao2010_innate_and_adaptive_immune_responses_to_biomd0000000546_model_summary
+    maps_to: immunology_sbml_miao2010_innate_and_adaptive_immune_responses_to_biomd0000000546_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_miao2010_innate_and_adaptive_immune_responses_to_biomd0000000546_model_species_labels
+    maps_to: immunology_sbml_miao2010_innate_and_adaptive_immune_responses_to_biomd0000000546_model.species_labels
+    description: Core source-label map.
+  outputs: []

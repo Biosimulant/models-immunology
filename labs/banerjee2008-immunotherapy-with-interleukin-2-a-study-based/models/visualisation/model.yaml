@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: 'Banerjee2008 - Immunotherapy with interleukin-2: A study based on mathematical
+  modeling Lab Visualisation'
+description: 'Dedicated presentation model for Banerjee2008 - Immunotherapy with interleukin-2:
+  A study based on mathematical modeling Lab.'
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: 'Banerjee2008 - Immunotherapy with interleukin-2: A study based on
+      mathematical modeling Lab'
+    question: Which signaling or cytokine states show the strongest activity during
+      the simulation?
+    answer_focus: cytokine/signaling trajectories, activation states, and largest
+      excursions
+    context: immune_signaling
+    sources:
+    - alias: immunology_sbml_banerjee2008_immunotherapy_with_interleukin_2_a_model2001130001_model
+      title: 'Banerjee2008 - Immunotherapy with interleukin-2: A study based on mathematical
+        modeling'
+      visual_scope: Immune signaling activity
+      observables:
+      - id: x
+        label: Unresolved Signaling Observable 1
+      - id: y
+        label: Unresolved Signaling Observable 2
+      - id: z
+        label: Unresolved Signaling Observable 3
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_banerjee2008_immunotherapy_with_interleukin_2_a_model2001130001_model_state
+    maps_to: immunology_sbml_banerjee2008_immunotherapy_with_interleukin_2_a_model2001130001_model.state
+    description: Core state record.
+  - name: immunology_sbml_banerjee2008_immunotherapy_with_interleukin_2_a_model2001130001_model_summary
+    maps_to: immunology_sbml_banerjee2008_immunotherapy_with_interleukin_2_a_model2001130001_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_banerjee2008_immunotherapy_with_interleukin_2_a_model2001130001_model_species_labels
+    maps_to: immunology_sbml_banerjee2008_immunotherapy_with_interleukin_2_a_model2001130001_model.species_labels
+    description: Core source-label map.
+  outputs: []

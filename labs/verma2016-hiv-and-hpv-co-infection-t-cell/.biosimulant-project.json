@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "060c86bf-1821-4c01-ac76-26aacb36a077",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "ddf5b3a6-0ae2-439a-8b76-313cd8f2e661",
+  "created_at": "2026-05-15T15:53:07.541052341+00:00",
+  "last_synced_at": "2026-05-15T20:16:15.825069+00:00",
+  "hub_manifest_hash": "1713bdeb346e33f70308279de0ff10464ecf992014f4821e699476f79bf6c65b",
+  "package_name": "verma2016-hiv-and-hpv-co-infection-t-cell-response-lab"
+}

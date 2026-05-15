@@ -1,0 +1,90 @@
+schema_version: '2.0'
+title: Kareva2010 - Myeloid cells in tumour-immune interactions.
+description: Myeloid cells in tumour-immune interactions.Kareva I1, Berezovskaya F,
+  Castillo-Chavez C.Author informationAbstractDespite highly developed specific immune
+  responses, tumour cells often manage to esca. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Irina Kareva
+- Faina Berezovskaya
+- Carlos Castillo-Chavez
+upstream:
+  id: biomodels_ebi:MODEL2001310001
+  source_db: biomodels_ebi
+  source_id: MODEL2001310001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2001310001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2001310001?filename=Kareva2010.xml
+  license: CC0
+biosim:
+  entrypoint: src.kareva2010_myeloid_cells_in_tumour_immune_intera_model2001310001_model:Kareva2010MyeloidCellsInTumourImmuneInteraModel2001310001Model
+  init_kwargs:
+    model_path: data/MODEL2001310001.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: L
+    label: Initial Unresolved Tumor Observable 1
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `L`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: T
+    label: Initial Unresolved Tumor Observable 2
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `T`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: M1
+    label: Initial Unresolved Tumor Observable 3
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `M1`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: M2
+    label: Initial Unresolved Tumor Observable 4
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `M2`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: L
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `L`.
+  - name: unresolved_tumor_observable_2
+    maps_to: T
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `T`.
+  - name: unresolved_tumor_observable_3
+    maps_to: M1
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `M1`.
+  - name: unresolved_tumor_observable_4
+    maps_to: M2
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `M2`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

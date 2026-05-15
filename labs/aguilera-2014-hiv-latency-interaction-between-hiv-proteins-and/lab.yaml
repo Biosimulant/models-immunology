@@ -1,0 +1,52 @@
+schema_version: '2.0'
+title: Aguilera 2014 - HIV latency. Interaction between HIV proteins and immune response
+  Lab
+description: 'Aguilera 2014 - HIV latency. Interactionbetween HIV proteins and immune
+  response This model is described in the article: Studying HIV latency by modeling
+  the interaction between HIV proteins and the i.'
+models:
+- alias: immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model.state
+  to:
+  - visualisation.immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model_state
+- from: immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model.summary
+  to:
+  - visualisation.immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model_summary
+- from: immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model.species_labels
+  to:
+  - visualisation.immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_infection_observable_1
+    maps_to: immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model.initial_unresolved_infection_observable_1
+    label: Initial Unresolved Infection Observable 1
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `V`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model.initial_unresolved_infection_observable_2
+    label: Initial Unresolved Infection Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `C`.
+  outputs:
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model.unresolved_infection_observable_1
+  - name: unresolved_infection_observable_2
+    maps_to: immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model.unresolved_infection_observable_2
+  - name: state
+    maps_to: immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model.state
+  - name: summary
+    maps_to: immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_aguilera_2014_hiv_latency_interaction_between_hi_biomd0000000573_model.species_labels

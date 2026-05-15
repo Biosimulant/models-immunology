@@ -1,0 +1,100 @@
+schema_version: '2.0'
+title: Begitt2014 - STAT1 cooperative DNA binding - single GAS polymer model
+description: Begitt2014 - STAT1 cooperative DNA binding - single GAS polymer model
+  The importance of STAT1-cooperative DNA binding in type 1 and type 2 interferon
+  signalling has been studies using experimental and. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Andreas Begitt
+- Mathias Droescher
+- Thomas Meyer
+- Christoph D Schmid
+- Michelle Baker
+upstream:
+  id: biomodels_ebi:BIOMD0000000500
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000500
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000500
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000500?filename=BIOMD0000000500_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.begitt2014_stat1_cooperative_dna_binding_single_biomd0000000500_model:Begitt2014Stat1CooperativeDnaBindingSingleBiomd0000000500Model
+  init_kwargs:
+    model_path: data/BIOMD0000000500.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_signaling_observable_1
+    maps_to: S1
+    label: Initial Unresolved Signaling Observable 1
+    default: 1.0e-10
+    units: native source value
+    description: Initial Unresolved Signaling Observable 1. Sets the initial value
+      of bundled SBML species `S1`.
+  - name: initial_dna_000
+    maps_to: DNA_000
+    label: Initial DNA 000
+    default: 1.0e-10
+    units: native source value
+    description: Initial DNA 000. Sets the initial value of bundled SBML species `DNA_000`.
+  - name: initial_dna_100
+    maps_to: DNA_100
+    label: Initial DNA 100
+    default: 0.0
+    units: native source value
+    description: Initial DNA 100. Sets the initial value of bundled SBML species `DNA_100`.
+  - name: initial_dna_010
+    maps_to: DNA_010
+    label: Initial DNA 010
+    default: 0.0
+    units: native source value
+    description: Initial DNA 010. Sets the initial value of bundled SBML species `DNA_010`.
+  - name: initial_dna_001
+    maps_to: DNA_001
+    label: Initial DNA 001
+    default: 0.0
+    units: native source value
+    description: Initial DNA 001. Sets the initial value of bundled SBML species `DNA_001`.
+  outputs:
+  - name: unresolved_signaling_observable_1
+    maps_to: S1
+    label: Unresolved Signaling Observable 1
+    description: Unresolved Signaling Observable 1. Maps to bundled source symbol
+      `S1`.
+  - name: dna_000
+    maps_to: DNA_000
+    label: DNA 000
+    description: DNA 000. Maps to bundled source symbol `DNA_000`.
+  - name: dna_100
+    maps_to: DNA_100
+    label: DNA 100
+    description: DNA 100. Maps to bundled source symbol `DNA_100`.
+  - name: dna_010
+    maps_to: DNA_010
+    label: DNA 010
+    description: DNA 010. Maps to bundled source symbol `DNA_010`.
+  - name: dna_001
+    maps_to: DNA_001
+    label: DNA 001
+    description: DNA 001. Maps to bundled source symbol `DNA_001`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

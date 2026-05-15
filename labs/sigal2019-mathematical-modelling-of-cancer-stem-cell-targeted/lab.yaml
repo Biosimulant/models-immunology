@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: Sigal2019 - Mathematical modelling of cancer stem cell-targeted immunotherapy
+  Lab
+description: This is a mathematical model studies how specific immune system components,
+  namely dendritic cells and cytotoxic T-cells, interact with different cancer cell
+  types, specifically cancer stem cells (CSC. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.state
+  to:
+  - visualisation.immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model_state
+- from: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.summary
+  to:
+  - visualisation.immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model_summary
+- from: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.species_labels
+  to:
+  - visualisation.immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 10000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `S`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `P`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `TS`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `TP`.
+  - name: initial_unresolved_tumor_observable_5
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.initial_unresolved_tumor_observable_5
+    label: Initial Unresolved Tumor Observable 5
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 5. Sets the initial value of
+      bundled SBML species `DS`.
+  - name: growth_start_time_parameter
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.growth_start_time_parameter
+    label: Growth Start Time Parameter
+    default: 12.0
+    units: native source value
+    description: Growth Start Time Parameter. Sets bundled SBML parameter `growth_start_time`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.unresolved_tumor_observable_4
+  - name: unresolved_tumor_observable_5
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.unresolved_tumor_observable_5
+  - name: state
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.state
+  - name: summary
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_sigal2019_mathematical_modelling_of_cancer_stem_model1911270001_model.species_labels

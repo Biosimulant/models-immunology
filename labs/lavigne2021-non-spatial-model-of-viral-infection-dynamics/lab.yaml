@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Lavigne2021 - Non-spatial model of viral infection dynamics and interferon
+  response of well-mixed viral infection Lab
+description: "This ordinary differential equation model is described in the following\
+  \ article:'Autocrine and paracrine interferon signalling as \u2018ring vaccination\u2019\
+  \ and \u2018contact tracing\u2019 strategies to suppress virus. It can be used to\
+  \ explore immune response dynamics and compare pathway-level behavior across conditions."
+models:
+- alias: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.state
+  to:
+  - visualisation.immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model_state
+- from: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.summary
+  to:
+  - visualisation.immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model_summary
+- from: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.species_labels
+  to:
+  - visualisation.immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_infected_cells_antiviral
+    maps_to: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.initial_infected_cells_antiviral
+    label: Initial Infected Cells Antiviral
+    default: 0.0
+    units: native source value
+    description: Initial Infected Cells Antiviral. Sets the initial value of bundled
+      SBML species `Infected_cells_antiviral`.
+  - name: initial_infected_cells
+    maps_to: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.initial_infected_cells
+    label: Initial Infected Cells
+    default: 0.0
+    units: native source value
+    description: Initial Infected Cells. Sets the initial value of bundled SBML species
+      `Infected_cells`.
+  - name: initial_interferon
+    maps_to: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.initial_interferon
+    label: Initial Interferon
+    default: 0.0
+    units: native source value
+    description: Initial Interferon. Sets the initial value of bundled SBML species
+      `IFN`.
+  - name: initial_target_cells
+    maps_to: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.initial_target_cells
+    label: Initial Target Cells
+    default: 400000000.0
+    units: native source value
+    description: Initial Target Cells. Sets the initial value of bundled SBML species
+      `Target_cells`.
+  - name: initial_refractory_cells
+    maps_to: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.initial_refractory_cells
+    label: Initial Refractory Cells
+    default: 0.0
+    units: native source value
+    description: Initial Refractory Cells. Sets the initial value of bundled SBML
+      species `Refractory_cells`.
+  outputs:
+  - name: infected_cells_antiviral
+    maps_to: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.infected_cells_antiviral
+  - name: infected_cells
+    maps_to: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.infected_cells
+  - name: interferon
+    maps_to: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.interferon
+  - name: target_cells
+    maps_to: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.target_cells
+  - name: refractory_cells
+    maps_to: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.refractory_cells
+  - name: state
+    maps_to: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.state
+  - name: summary
+    maps_to: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_lavigne2021_non_spatial_model_of_viral_infection_biomd0000001021_model.species_labels

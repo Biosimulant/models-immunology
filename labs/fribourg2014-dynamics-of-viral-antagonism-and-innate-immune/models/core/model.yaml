@@ -1,0 +1,98 @@
+schema_version: '2.0'
+title: Fribourg2014 - Dynamics of viral antagonism and innate immune response (H1N1
+  influenza A virus - Cal/09)
+description: Fribourg2014 - Dynamics of viral antagonism and innate immune response
+  (H1N1 influenza A virus - Cal/09) The dynamics of the interplay between the viral
+  antagonism and the innate immune response has b. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- M Fribourg
+- B Hartmann
+- M Schmolke
+- N Marjanovic
+- R A Albrecht
+upstream:
+  id: biomodels_ebi:BIOMD0000000528
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000528
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000528
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000528?filename=BIOMD0000000528_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.fribourg2014_dynamics_of_viral_antagonism_and_in_biomd0000000528_model:Fribourg2014DynamicsOfViralAntagonismAndInBiomd0000000528Model
+  init_kwargs:
+    model_path: data/BIOMD0000000528.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_interferon_beta_mrna
+    maps_to: IFNb_mRNA
+    label: Initial Interferon Beta mRNA
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Beta mRNA. Sets the initial value of bundled SBML
+      species `IFNb_mRNA`.
+  - name: initial_interferon_beta_env
+    maps_to: IFNb_env
+    label: Initial Interferon Beta Env
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Beta Env. Sets the initial value of bundled SBML
+      species `IFNb_env`.
+  - name: initial_interferon_alpha_mrna
+    maps_to: IFNa_mRNA
+    label: Initial Interferon Alpha mRNA
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Alpha mRNA. Sets the initial value of bundled
+      SBML species `IFNa_mRNA`.
+  - name: initial_interferon_alpha_env
+    maps_to: IFNa_env
+    label: Initial Interferon Alpha Env
+    default: 0.0
+    units: native source value
+    description: Initial Interferon Alpha Env. Sets the initial value of bundled SBML
+      species `IFNa_env`.
+  outputs:
+  - name: interferon_beta_mrna
+    maps_to: IFNb_mRNA
+    label: Interferon Beta mRNA
+    description: Interferon Beta mRNA. Maps to bundled source symbol `IFNb_mRNA`.
+  - name: interferon_beta_env
+    maps_to: IFNb_env
+    label: Interferon Beta Env
+    description: Interferon Beta Env. Maps to bundled source symbol `IFNb_env`.
+  - name: interferon_alpha_mrna
+    maps_to: IFNa_mRNA
+    label: Interferon Alpha mRNA
+    description: Interferon Alpha mRNA. Maps to bundled source symbol `IFNa_mRNA`.
+  - name: interferon_alpha_env
+    maps_to: IFNa_env
+    label: Interferon Alpha Env
+    description: Interferon Alpha Env. Maps to bundled source symbol `IFNa_env`.
+  - name: unresolved_infection_observable_1
+    maps_to: w
+    label: Unresolved Infection Observable 1
+    description: Unresolved Infection Observable 1. Maps to bundled source symbol
+      `w`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "3e061004-57de-47ce-affe-3322b9e59add",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "ca5995b0-7252-4a60-a510-b6ca845de40d",
+  "created_at": "2026-05-15T15:53:05.773384148+00:00",
+  "last_synced_at": "2026-05-15T19:45:40.943630+00:00",
+  "hub_manifest_hash": "4fdbd174586faba5cd4bc76e654801957f5ab83e9ee141e2d28b466b091ee74c",
+  "package_name": "hardiansyah2019-qsp-model-of-chimeric-antigen-receptor-t-cell-th"
+}

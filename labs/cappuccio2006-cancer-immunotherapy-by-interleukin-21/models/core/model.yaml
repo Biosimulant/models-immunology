@@ -1,0 +1,120 @@
+schema_version: '2.0'
+title: Cappuccio2006 - Cancer immunotherapy by interleukin-21
+description: This model describes the effects of Il-21 on tumor eradication via natural
+  killer cell-mediated and CD8+ T-cell-mediated lysis of tumor cells. The model demonstrates
+  changes in growth dynamics in noni.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Cappuccio A
+- Moran Elishmereni
+- Zvia Agur
+upstream:
+  id: biomodels_ebi:BIOMD0000000761
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000761
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000761
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000761?filename=Cappuccio2006
+    v2.0.xml
+  license: CC0
+biosim:
+  entrypoint: src.cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model:Cappuccio2006CancerImmunotherapyByInterleukiBiomd0000000761Model
+  init_kwargs:
+    model_path: data/BIOMD0000000761.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_natural_killer_t_cells
+    maps_to: X
+    label: Initial Natural Killer T Cells
+    default: 1.95185
+    units: native source value
+    description: Initial Natural Killer T Cells. Sets the initial value of bundled
+      SBML species `X`.
+  - name: initial_cd8_t_cells
+    maps_to: Y
+    label: Initial CD8 T Cells
+    default: 0.066
+    units: native source value
+    description: Initial CD8 T Cells. Sets the initial value of bundled SBML species
+      `Y`.
+  - name: initial_tumor_sa
+    maps_to: Z
+    label: Initial Tumor Sa
+    default: 2.0
+    units: native source value
+    description: Initial Tumor Sa. Sets the initial value of bundled SBML species
+      `Z`.
+  - name: initial_interleukin_21
+    maps_to: U
+    label: Initial Interleukin 21
+    default: 0.0
+    units: native source value
+    description: Initial Interleukin 21. Sets the initial value of bundled SBML species
+      `U`.
+  - name: initial_cd8_memory_factor
+    maps_to: M
+    label: Initial CD8 Memory Factor
+    default: 0.0
+    units: native source value
+    description: Initial CD8 Memory Factor. Sets the initial value of bundled SBML
+      species `M`.
+  - name: tumor_growth_rate
+    maps_to: c
+    label: Tumor Growth Rate
+    default: 5.1
+    units: unit_6
+    description: Tumor Growth Rate. Sets bundled SBML parameter `c`.
+  - name: tumor_killing_by_natural_killer_cells_rate
+    maps_to: k1
+    label: Tumor Killing By Natural Killer Cells Rate
+    default: 0.05
+    units: unit_7
+    description: Tumor Killing By Natural Killer Cells Rate. Sets bundled SBML parameter
+      `k1`.
+  - name: tumor_killing_by_cd8_t_cells_rate
+    maps_to: k2
+    label: Tumor Killing By CD8 T Cells Rate
+    default: 0.0485
+    units: unit_7
+    description: Tumor Killing By CD8 T Cells Rate. Sets bundled SBML parameter `k2`.
+  outputs:
+  - name: natural_killer_t_cells
+    maps_to: X
+    label: Natural Killer T Cells
+    description: Natural Killer T Cells. Maps to bundled source symbol `X`.
+  - name: cd8_t_cells
+    maps_to: Y
+    label: CD8 T Cells
+    description: CD8 T Cells. Maps to bundled source symbol `Y`.
+  - name: tumor_sa
+    maps_to: Z
+    label: Tumor Sa
+    description: Tumor Sa. Maps to bundled source symbol `Z`.
+  - name: interleukin_21
+    maps_to: U
+    label: Interleukin 21
+    description: Interleukin 21. Maps to bundled source symbol `U`.
+  - name: cd8_memory_factor
+    maps_to: M
+    label: CD8 Memory Factor
+    description: CD8 Memory Factor. Maps to bundled source symbol `M`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

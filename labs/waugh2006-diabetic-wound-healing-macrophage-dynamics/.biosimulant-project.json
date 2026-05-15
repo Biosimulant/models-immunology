@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "53237570-ab6b-40e3-a51d-9b1138b47b19",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "927835ce-ab57-4e13-8d39-72bb778b65fa",
+  "created_at": "2026-05-15T15:53:07.601934918+00:00",
+  "last_synced_at": "2026-05-15T20:17:46.620147+00:00",
+  "hub_manifest_hash": "01a0e6148741c5cc8042a4ef85d90934338ae781b22f31a4cb24fe0232d4ed6a",
+  "package_name": "waugh2006-diabetic-wound-healing-macrophage-dynamics-lab"
+}

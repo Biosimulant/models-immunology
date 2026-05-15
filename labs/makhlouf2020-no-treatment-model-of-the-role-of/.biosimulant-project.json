@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "6bf3bdfa-0736-47f7-b585-7fedf8e4f0f4",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "1cf460ca-5296-451b-ab34-3fcf4a2f5db1",
+  "created_at": "2026-05-15T15:53:06.525625964+00:00",
+  "last_synced_at": "2026-05-15T19:04:56.043768+00:00",
+  "hub_manifest_hash": "d2af0c71d08161156031ee866bb6fb0bd59c9bffd7c2c585f658b8bcf9fac33f",
+  "package_name": "makhlouf2020-no-treatment-model-of-the-role-of-cd4-t-cells-in-tu"
+}

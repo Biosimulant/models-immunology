@@ -1,0 +1,50 @@
+schema_version: '2.0'
+title: Liu2017 - chemotherapy targeted model of tumor immune system Lab Visualisation
+description: Dedicated presentation model for Liu2017 - chemotherapy targeted model
+  of tumor immune system Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Liu2017 - chemotherapy targeted model of tumor immune system Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model
+      title: Liu2017 - chemotherapy targeted model of tumor immune system
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: Effector_immune_cell_population__N
+        label: Effector Immune Cell Population N
+      - id: Tumor_Cell_Population__T
+        label: Tumor Cell Population T
+      - id: Chemotherapeutic_drug_concentration__M
+        label: Chemotherapeutic Drug Concentration M
+      - id: Circulating_lymphocyte_population__C
+        label: Circulating Lymphocyte Population C
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model_state
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.state
+    description: Core state record.
+  - name: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model_summary
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model_species_labels
+    maps_to: immunology_sbml_liu2017_chemotherapy_targeted_model_of_tumor_imm_biomd0000000930_model.species_labels
+    description: Core source-label map.
+  outputs: []

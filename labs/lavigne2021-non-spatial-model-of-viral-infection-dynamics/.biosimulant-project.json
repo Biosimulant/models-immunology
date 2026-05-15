@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "df775afb-02cd-442e-8632-d3153a530130",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "ab7c7848-fcde-4882-8617-349f79160cc4",
+  "created_at": "2026-05-15T15:53:06.161610378+00:00",
+  "last_synced_at": "2026-05-15T19:52:01.674497+00:00",
+  "hub_manifest_hash": "e572cd75c5d9d607fc17b8ee7b87a0b85382fd4646915b5923dcd2ca63b369a3",
+  "package_name": "lavigne2021-non-spatial-model-of-viral-infection-dynamics-and-in"
+}

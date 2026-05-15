@@ -1,0 +1,108 @@
+schema_version: '2.0'
+title: Boer1985 - Macrophage T cell interaction in anti-tumor response
+description: In this paper we present a model of the macrophageT lymphocyte interactions
+  that generate ananti-tumor immune response. The modseple cifies i)induction of cytotoxic
+  T lymphocytes, ii) antigenpresentat.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- R J De Boer
+- P Hogeweg
+- H F Dullens
+- R A De Weger
+- W Den Otter
+upstream:
+  id: biomodels_ebi:MODEL1911130003
+  source_db: biomodels_ebi
+  source_id: MODEL1911130003
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1911130003
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911130003?filename=Boer1985.xml
+  license: CC0
+biosim:
+  entrypoint: src.boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model:Boer1985MacrophageTCellInteractionInAntiTModel1911130003Model
+  init_kwargs:
+    model_path: data/MODEL1911130003.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_tumor
+    maps_to: Tumor
+    label: Initial Tumor
+    default: 0.0
+    units: native source value
+    description: Initial Tumor. Sets the initial value of bundled SBML species `Tumor`.
+  - name: initial_cytotoxic_t_lymphocyte_precursors
+    maps_to: CTLP
+    label: Initial Cytotoxic T Lymphocyte Precursors
+    default: 25.0
+    units: native source value
+    description: Initial Cytotoxic T Lymphocyte Precursors. Sets the initial value
+      of bundled SBML species `CTLP`.
+  - name: initial_cytotoxic_t_lymphocytes
+    maps_to: CTL
+    label: Initial Cytotoxic T Lymphocytes
+    default: 0.0
+    units: native source value
+    description: Initial Cytotoxic T Lymphocytes. Sets the initial value of bundled
+      SBML species `CTL`.
+  - name: initial_helper_t_lymphocyte_precursors
+    maps_to: HTLP
+    label: Initial Helper T Lymphocyte Precursors
+    default: 15.0
+    units: native source value
+    description: Initial Helper T Lymphocyte Precursors. Sets the initial value of
+      bundled SBML species `HTLP`.
+  - name: initial_helper_t_lymphocytes
+    maps_to: HTL
+    label: Initial Helper T Lymphocytes
+    default: 0.0
+    units: native source value
+    description: Initial Helper T Lymphocytes. Sets the initial value of bundled SBML
+      species `HTL`.
+  - name: kill_parameter
+    maps_to: Kill
+    label: Kill Parameter
+    default: 10.0
+    units: native source value
+    description: Kill Parameter. Sets bundled SBML parameter `Kill`.
+  outputs:
+  - name: tumor
+    maps_to: Tumor
+    label: Tumor
+    description: Tumor. Maps to bundled source symbol `Tumor`.
+  - name: cytotoxic_t_lymphocyte_precursors
+    maps_to: CTLP
+    label: Cytotoxic T Lymphocyte Precursors
+    description: Cytotoxic T Lymphocyte Precursors. Maps to bundled source symbol
+      `CTLP`.
+  - name: cytotoxic_t_lymphocytes
+    maps_to: CTL
+    label: Cytotoxic T Lymphocytes
+    description: Cytotoxic T Lymphocytes. Maps to bundled source symbol `CTL`.
+  - name: helper_t_lymphocyte_precursors
+    maps_to: HTLP
+    label: Helper T Lymphocyte Precursors
+    description: Helper T Lymphocyte Precursors. Maps to bundled source symbol `HTLP`.
+  - name: helper_t_lymphocytes
+    maps_to: HTL
+    label: Helper T Lymphocytes
+    description: Helper T Lymphocytes. Maps to bundled source symbol `HTL`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

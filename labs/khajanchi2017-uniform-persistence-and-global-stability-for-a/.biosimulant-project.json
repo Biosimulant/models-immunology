@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "41a169fb-9fbf-494f-973f-cdc7b6fea5be",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "02f69457-b7f0-4acd-8629-e5d23f0c0666",
+  "created_at": "2026-05-15T15:53:06.037369859+00:00",
+  "last_synced_at": "2026-05-15T18:41:11.102109+00:00",
+  "hub_manifest_hash": "c7936f71512b7aa664e75a2e024fdfd17405756b34b067c8f3c95096c6306b40",
+  "package_name": "khajanchi2017-uniform-persistence-and-global-stability-for-a-bra"
+}

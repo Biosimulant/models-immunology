@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Rhodes2019 - Immune-Mediated theory of Metastasis
+description: '&lt;notes xmlns=&quot;http://www.sbml.org/sbml/level2/version4&quot;&gt;
+  &lt;body xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt; &lt;p&gt;Abstract:Accumulating
+  experimental and clinical evidence s. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Adam Rhodes
+- Thomas Hillen
+upstream:
+  id: biomodels_ebi:BIOMD0000000926
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000926
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000926
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000926?filename=Rhodes2019-Immune-Mediated
+    theory of Metastasis_V1.xml
+  license: CC0
+biosim:
+  entrypoint: src.rhodes2019_immune_mediated_theory_of_metastasis_biomd0000000926_model:Rhodes2019ImmuneMediatedTheoryOfMetastasisBiomd0000000926Model
+  init_kwargs:
+    model_path: data/BIOMD0000000926.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_te_immune_cell_y_1
+    maps_to: TE_immune_Cell_y_1
+    label: Initial Te Immune Cell Y 1
+    default: 0.001
+    units: native source value
+    description: Initial Te Immune Cell Y 1. Sets the initial value of bundled SBML
+      species `TE_immune_Cell_y_1`.
+  - name: initial_ct_immune_cell_x_1
+    maps_to: CT_immune_Cell_x_1
+    label: Initial Ct Immune Cell X 1
+    default: 1694915.25423729
+    units: native source value
+    description: Initial Ct Immune Cell X 1. Sets the initial value of bundled SBML
+      species `CT_immune_Cell_x_1`.
+  - name: initial_ct_immune_cell_x_2
+    maps_to: CT_immune_Cell_x_2
+    label: Initial Ct Immune Cell X 2
+    default: 1694915.25423729
+    units: native source value
+    description: Initial Ct Immune Cell X 2. Sets the initial value of bundled SBML
+      species `CT_immune_Cell_x_2`.
+  - name: initial_te_immune_cell_y_2
+    maps_to: TE_immune_Cell_y_2
+    label: Initial Te Immune Cell Y 2
+    default: 1.0e-10
+    units: native source value
+    description: Initial Te Immune Cell Y 2. Sets the initial value of bundled SBML
+      species `TE_immune_Cell_y_2`.
+  - name: initial_tumor_cell_u_1
+    maps_to: Tumor_Cell_u_1
+    label: Initial Tumor Cell U 1
+    default: 1.0
+    units: native source value
+    description: Initial Tumor Cell U 1. Sets the initial value of bundled SBML species
+      `Tumor_Cell_u_1`.
+  outputs:
+  - name: te_immune_cell_y_1
+    maps_to: TE_immune_Cell_y_1
+    label: Te Immune Cell Y 1
+    description: Te Immune Cell Y 1. Maps to bundled source symbol `TE_immune_Cell_y_1`.
+  - name: ct_immune_cell_x_1
+    maps_to: CT_immune_Cell_x_1
+    label: Ct Immune Cell X 1
+    description: Ct Immune Cell X 1. Maps to bundled source symbol `CT_immune_Cell_x_1`.
+  - name: ct_immune_cell_x_2
+    maps_to: CT_immune_Cell_x_2
+    label: Ct Immune Cell X 2
+    description: Ct Immune Cell X 2. Maps to bundled source symbol `CT_immune_Cell_x_2`.
+  - name: te_immune_cell_y_2
+    maps_to: TE_immune_Cell_y_2
+    label: Te Immune Cell Y 2
+    description: Te Immune Cell Y 2. Maps to bundled source symbol `TE_immune_Cell_y_2`.
+  - name: tumor_cell_u_1
+    maps_to: Tumor_Cell_u_1
+    label: Tumor Cell U 1
+    description: Tumor Cell U 1. Maps to bundled source symbol `Tumor_Cell_u_1`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

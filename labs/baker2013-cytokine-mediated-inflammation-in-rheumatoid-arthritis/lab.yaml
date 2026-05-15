@@ -1,0 +1,41 @@
+schema_version: '2.0'
+title: Baker2013 - Cytokine Mediated Inflammation in Rheumatoid Arthritis Lab
+description: Baker2013 - Cytokine Mediated Inflammation inRheumatoid Arthritis This
+  model by Baker M. 2013, describesthe interaction between pro and anti-inflammatory
+  cytokinesignalling in rheumatoid arthritis.
+models:
+- alias: immunology_sbml_baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model.state
+  to:
+  - visualisation.immunology_sbml_baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model_state
+- from: immunology_sbml_baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model.summary
+  to:
+  - visualisation.immunology_sbml_baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model_summary
+- from: immunology_sbml_baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model.species_labels
+  to:
+  - visualisation.immunology_sbml_baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: unresolved_signaling_observable_1
+    maps_to: immunology_sbml_baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model.unresolved_signaling_observable_1
+  - name: unresolved_source_observable_2
+    maps_to: immunology_sbml_baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model.unresolved_source_observable_2
+  - name: state
+    maps_to: immunology_sbml_baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model.state
+  - name: summary
+    maps_to: immunology_sbml_baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_baker2013_cytokine_mediated_inflammation_in_rheu_biomd0000000550_model.species_labels
+caveats: 'No scientifically safe input was exposed in this pass: the bundled SBML
+  did not provide a headline species initial value or meaningfully named constant/intervention
+  parameter that could be surfaced without turning raw source symbols into unsupported
+  biological claims.'

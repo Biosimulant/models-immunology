@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Palmer2008 - Negative Feedback in IL-7 mediated Jak-Stat signaling Lab
+description: Interleukin-7 (IL-7) is an essential cytokine for the development and
+  homeostatic maintenance of T and B lymphocytes. Binding of IL-7 to its cognate receptor,
+  the IL-7 receptor (IL-7R), activates mult.
+models:
+- alias: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.state
+  to:
+  - visualisation.immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model_state
+- from: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.summary
+  to:
+  - visualisation.immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model_summary
+- from: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.species_labels
+  to:
+  - visualisation.immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_interleukin_7_receptor_jak1_stat5_complex
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.initial_interleukin_7_receptor_jak1_stat5_complex
+    label: Initial Interleukin 7 Receptor Jak1 Stat5 Complex
+    default: 0.0
+    units: substance
+    description: Initial Interleukin 7 Receptor Jak1 Stat5 Complex. Sets the initial
+      value of bundled SBML species `IL7IL7RpJAK1STAT5`.
+  - name: initial_interleukin_7_receptor_jak1_complex
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.initial_interleukin_7_receptor_jak1_complex
+    label: Initial Interleukin 7 Receptor Jak1 Complex
+    default: 0.0
+    units: substance
+    description: Initial Interleukin 7 Receptor Jak1 Complex. Sets the initial value
+      of bundled SBML species `IL7IL7RJAK1`.
+  - name: initial_interleukin_7_receptor_jak1
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.initial_interleukin_7_receptor_jak1
+    label: Initial Interleukin 7 Receptor Jak1
+    default: 1.66053904042716
+    units: substance
+    description: Initial Interleukin 7 Receptor Jak1. Sets the initial value of bundled
+      SBML species `IL7RJAK1`.
+  - name: initial_phosphorylated_interleukin_7_receptor_jak1_complex
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.initial_phosphorylated_interleukin_7_receptor_jak1_complex
+    label: Initial Phosphorylated Interleukin 7 Receptor Jak1 Complex
+    default: 0.0
+    units: substance
+    description: Initial Phosphorylated Interleukin 7 Receptor Jak1 Complex. Sets
+      the initial value of bundled SBML species `IL7IL7RpJAK1`.
+  - name: initial_interleukin_7_receptor_jak1_socs1_complex
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.initial_interleukin_7_receptor_jak1_socs1_complex
+    label: Initial Interleukin 7 Receptor Jak1 Socs1 Complex
+    default: 0.0
+    units: substance
+    description: Initial Interleukin 7 Receptor Jak1 Socs1 Complex. Sets the initial
+      value of bundled SBML species `IL7IL7RpJAK1SOCS1`.
+  outputs:
+  - name: interleukin_7_receptor_jak1_stat5_complex
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.interleukin_7_receptor_jak1_stat5_complex
+  - name: interleukin_7_receptor_jak1_complex
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.interleukin_7_receptor_jak1_complex
+  - name: interleukin_7_receptor_jak1
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.interleukin_7_receptor_jak1
+  - name: phosphorylated_interleukin_7_receptor_jak1_complex
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.phosphorylated_interleukin_7_receptor_jak1_complex
+  - name: interleukin_7_receptor_jak1_socs1_complex
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.interleukin_7_receptor_jak1_socs1_complex
+  - name: state
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.state
+  - name: summary
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.species_labels

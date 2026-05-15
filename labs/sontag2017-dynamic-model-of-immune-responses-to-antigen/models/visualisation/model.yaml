@@ -1,0 +1,50 @@
+schema_version: '2.0'
+title: Sontag2017 - Dynamic model of immune responses to antigen presentation by tumor
+  or pathogen Lab Visualisation
+description: Dedicated presentation model for Sontag2017 - Dynamic model of immune
+  responses to antigen presentation by tumor or pathogen Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Sontag2017 - Dynamic model of immune responses to antigen presentation
+      by tumor or pathogen Lab
+    question: What response class does the bundled predictive source assign to the
+      supplied feature vector?
+    answer_focus: feature-vector inputs, predicted class, and class-probability evidence
+    context: predictive_ml_or_design
+    sources:
+    - alias: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model
+      title: Sontag2017 - Dynamic model of immune responses to antigen presentation
+        by tumor or pathogen
+      visual_scope: Predictive immunology model
+      observables:
+      - id: Antigen_expressing_cells
+        label: Antigen Expressing Cells
+      - id: Regulatory_cells
+        label: Regulatory Cells
+      - id: Effector_cells
+        label: Effector Cells
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model_state
+    maps_to: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.state
+    description: Core state record.
+  - name: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model_summary
+    maps_to: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model_species_labels
+    maps_to: immunology_sbml_sontag2017_dynamic_model_of_immune_responses_to_biomd0000001030_model.species_labels
+    description: Core source-label map.
+  outputs: []

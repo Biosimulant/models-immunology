@@ -1,0 +1,81 @@
+schema_version: '2.0'
+title: Phan2017 - innate immune in oncolytic virotherapy Lab
+description: "The paper describes a model on the key components for tumor\u2013immune\
+  \ dynamics in multiple myeloma. Created by COPASI 4.25 (Build 207) This model is\
+  \ described in the article: The Role of the Innate Immun."
+models:
+- alias: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.state
+  to:
+  - visualisation.immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model_state
+- from: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.summary
+  to:
+  - visualisation.immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model_summary
+- from: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.species_labels
+  to:
+  - visualisation.immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 0.99
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `x`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.01
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `y`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 0.01
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `v`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.initial_unresolved_tumor_observable_4
+    label: Initial Unresolved Tumor Observable 4
+    default: 0.01
+    units: substance
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `z`.
+  - name: infected_tumor_killing_rate
+    maps_to: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.infected_tumor_killing_rate
+    label: Infected Tumor Killing Rate
+    default: 0.48
+    units: unit_0
+    description: Infected Tumor Killing Rate. Sets bundled SBML parameter `c`.
+  - name: virus_killing_by_immune_rate
+    maps_to: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.virus_killing_by_immune_rate
+    label: Virus Killing By Immune Rate
+    default: 0.16
+    units: unit_0
+    description: Virus Killing By Immune Rate. Sets bundled SBML parameter `d`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.unresolved_tumor_observable_3
+  - name: unresolved_tumor_observable_4
+    maps_to: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.unresolved_tumor_observable_4
+  - name: state
+    maps_to: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.state
+  - name: summary
+    maps_to: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_phan2017_innate_immune_in_oncolytic_virotherapy_biomd0000000748_model.species_labels

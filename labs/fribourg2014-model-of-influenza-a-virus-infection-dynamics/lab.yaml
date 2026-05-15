@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Fribourg2014 - Model of influenza A virus infection dynamics of viral antagonism
+  and innate immune response. Lab
+description: This is an ordinary differential equation mathematical model investigating
+  the early responses of human monocyte-derived dendritic cells to infection by two
+  H1N1 influenza A viruses of different clini. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.state
+  to:
+  - visualisation.immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model_state
+- from: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.summary
+  to:
+  - visualisation.immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model_summary
+- from: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.species_labels
+  to:
+  - visualisation.immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_interferon_beta_mrna
+    maps_to: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.initial_interferon_beta_mrna
+    label: Initial Interferon Beta mRNA
+    default: 1.0
+    units: native source value
+    description: Initial Interferon Beta mRNA. Sets the initial value of bundled SBML
+      species `IFNBm`.
+  - name: initial_extracellular_interferon_beta
+    maps_to: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.initial_extracellular_interferon_beta
+    label: Initial Extracellular Interferon Beta
+    default: 1.0
+    units: native source value
+    description: Initial Extracellular Interferon Beta. Sets the initial value of
+      bundled SBML species `IFNBenv`.
+  - name: initial_interferon_alpha_mrna
+    maps_to: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.initial_interferon_alpha_mrna
+    label: Initial Interferon Alpha mRNA
+    default: 1.0
+    units: native source value
+    description: Initial Interferon Alpha mRNA. Sets the initial value of bundled
+      SBML species `IFNam`.
+  - name: initial_extracellular_interferon_alpha
+    maps_to: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.initial_extracellular_interferon_alpha
+    label: Initial Extracellular Interferon Alpha
+    default: 1.0
+    units: native source value
+    description: Initial Extracellular Interferon Alpha. Sets the initial value of
+      bundled SBML species `IFNaenv`.
+  - name: initial_nuclear_phosphorylated_stat2
+    maps_to: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.initial_nuclear_phosphorylated_stat2
+    label: Initial Nuclear Phosphorylated Stat2
+    default: 1.0
+    units: native source value
+    description: Initial Nuclear Phosphorylated Stat2. Sets the initial value of bundled
+      SBML species `STATP2n`.
+  outputs:
+  - name: interferon_beta_mrna
+    maps_to: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.interferon_beta_mrna
+  - name: extracellular_interferon_beta
+    maps_to: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.extracellular_interferon_beta
+  - name: interferon_alpha_mrna
+    maps_to: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.interferon_alpha_mrna
+  - name: extracellular_interferon_alpha
+    maps_to: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.extracellular_interferon_alpha
+  - name: nuclear_phosphorylated_stat2
+    maps_to: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.nuclear_phosphorylated_stat2
+  - name: state
+    maps_to: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.state
+  - name: summary
+    maps_to: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_fribourg2014_model_of_influenza_a_virus_infectio_biomd0000000889_model.species_labels

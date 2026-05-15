@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "974e2b32-a5ef-4330-b147-7e2a457685c6",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "290dc4f9-cc52-41e0-82bc-7a7655ddfc55",
+  "created_at": "2026-05-15T15:53:07.156403053+00:00",
+  "last_synced_at": "2026-05-15T20:04:05.482958+00:00",
+  "hub_manifest_hash": "26a585384b996c6772143f96a0ac9c83334c539818eea44259c144e2e6bfef4c",
+  "package_name": "rodrigues2014-vaccination-models-and-optimal-control-strategies"
+}

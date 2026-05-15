@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Yamada2003_JAK_STAT_SOCS1_knockout Lab Visualisation
+description: Dedicated presentation model for Yamada2003_JAK_STAT_SOCS1_knockout Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Yamada2003_JAK_STAT_SOCS1_knockout Lab
+    question: Which signaling or cytokine states show the strongest activity during
+      the simulation?
+    answer_focus: cytokine/signaling trajectories, activation states, and largest
+      excursions
+    context: immune_signaling
+    sources:
+    - alias: immunology_sbml_yamada2003_jak_stat_socs1_knockout_biomd0000000094_model
+      title: Yamada2003_JAK_STAT_SOCS1_knockout
+      visual_scope: Immune signaling activity
+      observables:
+      - id: IFNRJ
+        label: Interferon Receptor JAK Complex
+      - id: RJ
+        label: Receptor JAK Complex
+      - id: IFNRJ2
+        label: Ifnrj Dimer
+      - id: IFNRJ2_star
+        label: Activated Ifnrj Complex
+      - id: IFNRJ2_star_STAT1c
+        label: Interferon Receptor Jak2 Stat1 Complex
+      - id: IFNRJ2_star_STAT1c_star
+        label: IFNRJ2_star_STAT1c_star
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_yamada2003_jak_stat_socs1_knockout_biomd0000000094_model_state
+    maps_to: immunology_sbml_yamada2003_jak_stat_socs1_knockout_biomd0000000094_model.state
+    description: Core state record.
+  - name: immunology_sbml_yamada2003_jak_stat_socs1_knockout_biomd0000000094_model_summary
+    maps_to: immunology_sbml_yamada2003_jak_stat_socs1_knockout_biomd0000000094_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_yamada2003_jak_stat_socs1_knockout_biomd0000000094_model_species_labels
+    maps_to: immunology_sbml_yamada2003_jak_stat_socs1_knockout_biomd0000000094_model.species_labels
+    description: Core source-label map.
+  outputs: []

@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: He2017 - A mathematical model of pancreatic cancer with two kinds of treatments
+  Lab
+description: This is a mathematical model of pancreatic cancer which includes descriptions
+  of regulatory T cell activity and inhibition therapy. Descriptions of cytokine induced
+  killer immunotherapy are also inclu.
+models:
+- alias: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.state
+  to:
+  - visualisation.immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model_state
+- from: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.summary
+  to:
+  - visualisation.immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model_summary
+- from: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.species_labels
+  to:
+  - visualisation.immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 1000000000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `C_PCC`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 5600000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `P_PSC`.
+  - name: initial_cd8
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.initial_cd8
+    label: Initial CD8
+    default: 873600000.0
+    units: native source value
+    description: Initial CD8. Sets the initial value of bundled SBML species `E_CD8`.
+  - name: initial_killer
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.initial_killer
+    label: Initial Killer
+    default: 481600000.0
+    units: native source value
+    description: Initial Killer. Sets the initial value of bundled SBML species `N_Killer`.
+  - name: initial_t_helper
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.initial_t_helper
+    label: Initial T Helper
+    default: 2116800000.0
+    units: native source value
+    description: Initial T Helper. Sets the initial value of bundled SBML species
+      `H_T_Helper`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.unresolved_tumor_observable_2
+  - name: cd8
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.cd8
+  - name: killer
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.killer
+  - name: t_helper
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.t_helper
+  - name: state
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.state
+  - name: summary
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.species_labels

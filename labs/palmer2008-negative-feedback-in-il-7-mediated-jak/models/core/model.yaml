@@ -1,0 +1,106 @@
+schema_version: '2.0'
+title: Palmer2008 - Negative Feedback in IL-7 mediated Jak-Stat signaling
+description: Interleukin-7 (IL-7) is an essential cytokine for the development and
+  homeostatic maintenance of T and B lymphocytes. Binding of IL-7 to its cognate receptor,
+  the IL-7 receptor (IL-7R), activates mult.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Megan J Palmer
+- Vinay S Mahajan
+- Lily C Trajman
+- Darrell J Irvine
+- Douglas A Lauffenburger
+upstream:
+  id: biomodels_ebi:BIOMD0000000968
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000968
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000968
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000968?filename=Palmer2008.xml
+  license: CC0
+biosim:
+  entrypoint: src.palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model:Palmer2008NegativeFeedbackInIl7MediatedJaBiomd0000000968Model
+  init_kwargs:
+    model_path: data/BIOMD0000000968.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_interleukin_7_receptor_jak1_stat5_complex
+    maps_to: IL7IL7RpJAK1STAT5
+    label: Initial Interleukin 7 Receptor Jak1 Stat5 Complex
+    default: 0.0
+    units: substance
+    description: Initial Interleukin 7 Receptor Jak1 Stat5 Complex. Sets the initial
+      value of bundled SBML species `IL7IL7RpJAK1STAT5`.
+  - name: initial_interleukin_7_receptor_jak1_complex
+    maps_to: IL7IL7RJAK1
+    label: Initial Interleukin 7 Receptor Jak1 Complex
+    default: 0.0
+    units: substance
+    description: Initial Interleukin 7 Receptor Jak1 Complex. Sets the initial value
+      of bundled SBML species `IL7IL7RJAK1`.
+  - name: initial_interleukin_7_receptor_jak1
+    maps_to: IL7RJAK1
+    label: Initial Interleukin 7 Receptor Jak1
+    default: 1.66053904042716
+    units: substance
+    description: Initial Interleukin 7 Receptor Jak1. Sets the initial value of bundled
+      SBML species `IL7RJAK1`.
+  - name: initial_phosphorylated_interleukin_7_receptor_jak1_complex
+    maps_to: IL7IL7RpJAK1
+    label: Initial Phosphorylated Interleukin 7 Receptor Jak1 Complex
+    default: 0.0
+    units: substance
+    description: Initial Phosphorylated Interleukin 7 Receptor Jak1 Complex. Sets
+      the initial value of bundled SBML species `IL7IL7RpJAK1`.
+  - name: initial_interleukin_7_receptor_jak1_socs1_complex
+    maps_to: IL7IL7RpJAK1SOCS1
+    label: Initial Interleukin 7 Receptor Jak1 Socs1 Complex
+    default: 0.0
+    units: substance
+    description: Initial Interleukin 7 Receptor Jak1 Socs1 Complex. Sets the initial
+      value of bundled SBML species `IL7IL7RpJAK1SOCS1`.
+  outputs:
+  - name: interleukin_7_receptor_jak1_stat5_complex
+    maps_to: IL7IL7RpJAK1STAT5
+    label: Interleukin 7 Receptor Jak1 Stat5 Complex
+    description: Interleukin 7 Receptor Jak1 Stat5 Complex. Maps to bundled source
+      symbol `IL7IL7RpJAK1STAT5`.
+  - name: interleukin_7_receptor_jak1_complex
+    maps_to: IL7IL7RJAK1
+    label: Interleukin 7 Receptor Jak1 Complex
+    description: Interleukin 7 Receptor Jak1 Complex. Maps to bundled source symbol
+      `IL7IL7RJAK1`.
+  - name: interleukin_7_receptor_jak1
+    maps_to: IL7RJAK1
+    label: Interleukin 7 Receptor Jak1
+    description: Interleukin 7 Receptor Jak1. Maps to bundled source symbol `IL7RJAK1`.
+  - name: phosphorylated_interleukin_7_receptor_jak1_complex
+    maps_to: IL7IL7RpJAK1
+    label: Phosphorylated Interleukin 7 Receptor Jak1 Complex
+    description: Phosphorylated Interleukin 7 Receptor Jak1 Complex. Maps to bundled
+      source symbol `IL7IL7RpJAK1`.
+  - name: interleukin_7_receptor_jak1_socs1_complex
+    maps_to: IL7IL7RpJAK1SOCS1
+    label: Interleukin 7 Receptor Jak1 Socs1 Complex
+    description: Interleukin 7 Receptor Jak1 Socs1 Complex. Maps to bundled source
+      symbol `IL7IL7RpJAK1SOCS1`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

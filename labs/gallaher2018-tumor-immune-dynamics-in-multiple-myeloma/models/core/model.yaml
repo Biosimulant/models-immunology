@@ -1,0 +1,92 @@
+schema_version: '2.0'
+title: "Gallaher2018 - Tumor\u2013Immune dynamics in multiple myeloma"
+description: "The paper describes a model on the key components for tumor\u2013immune\
+  \ dynamics in multiple myeloma.Created by COPASI 4.25 (Build 207)This model is described\
+  \ in the article:Methods for determining key com. It can be used to explore immune\
+  \ response dynamics and compare pathway-level behavior across conditions."
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Jill Gallaher
+- Kamila Larripa
+- Marissa Renardy
+- Blerta Shtylla
+- Nessy Tania
+upstream:
+  id: biomodels_ebi:BIOMD0000000743
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000743
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000743
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000743?filename=Gallaher2018.xml
+  license: CC0
+biosim:
+  entrypoint: src.gallaher2018_tumor_immune_dynamics_in_multiple_m_biomd0000000743_model:Gallaher2018TumorImmuneDynamicsInMultipleMBiomd0000000743Model
+  init_kwargs:
+    model_path: data/BIOMD0000000743.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: M
+    label: Initial Unresolved Tumor Observable 1
+    default: 4.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `M`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: Tc
+    label: Initial Unresolved Tumor Observable 2
+    default: 464.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `Tc`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: N
+    label: Initial Unresolved Tumor Observable 3
+    default: 227.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `N`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: Tr
+    label: Initial Unresolved Tumor Observable 4
+    default: 42.0
+    units: substance
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `Tr`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: M
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `M`.
+  - name: unresolved_tumor_observable_2
+    maps_to: Tc
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `Tc`.
+  - name: unresolved_tumor_observable_3
+    maps_to: N
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `N`.
+  - name: unresolved_tumor_observable_4
+    maps_to: Tr
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `Tr`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

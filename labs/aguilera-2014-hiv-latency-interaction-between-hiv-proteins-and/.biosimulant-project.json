@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "47ec3b19-4af2-4d34-9827-ee8a1fa2f307",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "e748ca47-d0c6-4b8a-90a8-19dfcdadd613",
+  "created_at": "2026-05-15T15:53:04.201562914+00:00",
+  "last_synced_at": "2026-05-15T17:58:04.948679+00:00",
+  "hub_manifest_hash": "83ffd84e17553c91da6c65668236e747446c1b6f71465e9af42cda92db24e471",
+  "package_name": "aguilera-2014-hiv-latency-interaction-between-hiv-proteins-and-i"
+}

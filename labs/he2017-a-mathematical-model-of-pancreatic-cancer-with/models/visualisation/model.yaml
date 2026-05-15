@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: He2017 - A mathematical model of pancreatic cancer with two kinds of treatments
+  Lab Visualisation
+description: Dedicated presentation model for He2017 - A mathematical model of pancreatic
+  cancer with two kinds of treatments Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: He2017 - A mathematical model of pancreatic cancer with two kinds of
+      treatments Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model
+      title: He2017 - A mathematical model of pancreatic cancer with two kinds of
+        treatments
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: C_PCC
+        label: Unresolved Tumor Observable 1
+      - id: P_PSC
+        label: Unresolved Tumor Observable 2
+      - id: E_CD8
+        label: CD8
+      - id: N_Killer
+        label: Killer
+      - id: H_T_Helper
+        label: T Helper
+      - id: R_T_Regulatory
+        label: R_T_Regulatory
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model_state
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.state
+    description: Core state record.
+  - name: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model_summary
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model_species_labels
+    maps_to: immunology_sbml_he2017_a_mathematical_model_of_pancreatic_cancer_biomd0000000811_model.species_labels
+    description: Core source-label map.
+  outputs: []

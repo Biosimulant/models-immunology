@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "c39f07d1-7a9d-4022-b613-60d88745960a",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "16c35236-952a-4b29-b772-bb15ed2f6787",
+  "created_at": "2026-05-15T15:53:07.142555888+00:00",
+  "last_synced_at": "2026-05-15T20:03:17.040083+00:00",
+  "hub_manifest_hash": "663ab432079e180e073700c3859f5b9d0746996010e912bb13f57cd6b8976981",
+  "package_name": "robertson-tessi-m-2012-a-model-of-tumor-immune-interaction-lab"
+}

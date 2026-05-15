@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "632f0422-7c12-4c9e-b3b1-fd66f8005c78",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "f5cdad7c-d1e8-4f38-84bf-088c99e3b69f",
+  "created_at": "2026-05-15T15:53:05.089130247+00:00",
+  "last_synced_at": "2026-05-15T18:25:31.020073+00:00",
+  "hub_manifest_hash": "a525747bbb6c8a370329d19ffb1d4b138a3205278070a8da06194fd8399fabb1",
+  "package_name": "dubey2007-a-mathematical-model-for-the-effect-of-toxicant-on-the"
+}

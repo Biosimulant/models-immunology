@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Smith2011 - Three Stage Innate Immune Response to a Pneumococcal Lung Infection
+  Lab Visualisation
+description: Dedicated presentation model for Smith2011 - Three Stage Innate Immune
+  Response to a Pneumococcal Lung Infection Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Smith2011 - Three Stage Innate Immune Response to a Pneumococcal Lung
+      Infection Lab
+    question: How do pathogen-associated states and immune response variables shift
+      during the simulated run?
+    answer_focus: pathogen load, infected-cell states, lymphocyte or cytokine response,
+      and dominant excursions
+    context: infection_immunity
+    sources:
+    - alias: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model
+      title: Smith2011 - Three Stage Innate Immune Response to a Pneumococcal Lung
+        Infection
+      visual_scope: Pathogen and immune response
+      observables:
+      - id: Epithelial_cells_with_bacteria_attached__Ea
+        label: Epithelial Cells With Bacteria Attached Ea
+      - id: Pneumococci___P
+        label: Pneumococci P
+      - id: Susceptible_epithelial_cells__EU
+        label: Susceptible Epithelial Cells Eu
+      - id: proinflammatory_cytokine__C
+        label: Proinflammatory Cytokine C
+      - id: Neutrophils__N
+        label: Neutrophils N
+      - id: Debris__D
+        label: Debris (D)
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model_state
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.state
+    description: Core state record.
+  - name: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model_summary
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model_species_labels
+    maps_to: immunology_sbml_smith2011_three_stage_innate_immune_response_to_biomd0000000924_model.species_labels
+    description: Core source-label map.
+  outputs: []

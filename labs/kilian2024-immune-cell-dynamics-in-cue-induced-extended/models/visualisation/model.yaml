@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Kilian2024 - Immune cell dynamics in Cue-Induced Extended Human Colitis Model
+  Lab Visualisation
+description: Dedicated presentation model for Kilian2024 - Immune cell dynamics in
+  Cue-Induced Extended Human Colitis Model Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Kilian2024 - Immune cell dynamics in Cue-Induced Extended Human Colitis
+      Model Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model
+      title: Kilian2024 - Immune cell dynamics in Cue-Induced Extended Human Colitis
+        Model
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: Bcell
+        label: Cell
+      - id: Tcell
+        label: Unresolved Immune Observable 1
+      - id: Mac
+        label: Unresolved Immune Observable 2
+      - id: Neutr
+        label: Neutr
+      - id: Epi
+        label: Unresolved Immune Observable 3
+      - id: Cue
+        label: Cue
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model_state
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.state
+    description: Core state record.
+  - name: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model_summary
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model_species_labels
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.species_labels
+    description: Core source-label map.
+  outputs: []

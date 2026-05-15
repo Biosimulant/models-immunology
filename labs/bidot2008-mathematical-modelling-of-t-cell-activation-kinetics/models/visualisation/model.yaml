@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Bidot2008 - Mathematical modelling of T cell activation kinetics Lab Visualisation
+description: Dedicated presentation model for Bidot2008 - Mathematical modelling of
+  T cell activation kinetics Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Bidot2008 - Mathematical modelling of T cell activation kinetics Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model
+      title: Bidot2008 - Mathematical modelling of T cell activation kinetics
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: CD4_8
+        label: CD4 CD8 Binding State
+      - id: CD28_CD80
+        label: Cd28 Cd80 Costimulation Complex
+      - id: TL_0
+        label: Tl 0
+      - id: T_0
+        label: Unresolved Immune Observable 1
+      - id: T_i
+        label: Unresolved Immune Observable 2
+      - id: CD80
+        label: CD80
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model_state
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.state
+    description: Core state record.
+  - name: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model_summary
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model_species_labels
+    maps_to: immunology_sbml_bidot2008_mathematical_modelling_of_t_cell_activ_model1910290003_model.species_labels
+    description: Core source-label map.
+  outputs: []

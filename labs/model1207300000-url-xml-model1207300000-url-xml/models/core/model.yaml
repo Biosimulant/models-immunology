@@ -1,0 +1,104 @@
+schema_version: '2.0'
+title: MODEL1207300000_url.xml
+description: 'This model is from the article: A model of flux regulation in the cholesterol
+  biosynthesis pathway: Immune mediated graduated flux reduction versus statin-like
+  led stepped flux reduction. It can be used to explore immune response dynamics and
+  compare pathway-level behavior across conditions.'
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Steven Watterson
+- Maria Luisa Guerriero
+- Mathieu Blanc
+- Alexander Mazein
+- Laurence Loewe
+upstream:
+  id: biomodels_ebi:MODEL1207300000
+  source_db: biomodels_ebi
+  source_id: MODEL1207300000
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1207300000
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1207300000?filename=MODEL1207300000_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.model1207300000_url_xml_model1207300000_model:Model1207300000UrlXmlModel1207300000Model
+  init_kwargs:
+    model_path: data/MODEL1207300000.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_acoa
+    maps_to: s1
+    label: Initial Acoa
+    default: 0.0
+    units: native source value
+    description: Initial Acoa. Sets the initial value of bundled SBML species `s1`.
+  - name: initial_hmg_coa
+    maps_to: s2
+    label: Initial Hmg Coa
+    default: 0.0
+    units: native source value
+    description: Initial Hmg Coa. Sets the initial value of bundled SBML species `s2`.
+  - name: initial_unresolved_signaling_observable_1
+    maps_to: s3
+    label: Initial Unresolved Signaling Observable 1
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Signaling Observable 1. Sets the initial value
+      of bundled SBML species `s3`.
+  - name: initial_unresolved_signaling_observable_1_2
+    maps_to: s4
+    label: Initial Unresolved Signaling Observable 1 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Signaling Observable 1 2. Sets the initial value
+      of bundled SBML species `s4`.
+  - name: initial_unresolved_signaling_observable_2
+    maps_to: s5
+    label: Initial Unresolved Signaling Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Signaling Observable 2. Sets the initial value
+      of bundled SBML species `s5`.
+  outputs:
+  - name: acoa
+    maps_to: s1
+    label: Acoa
+    description: Acoa. Maps to bundled source symbol `s1`.
+  - name: hmg_coa
+    maps_to: s2
+    label: Hmg Coa
+    description: Hmg Coa. Maps to bundled source symbol `s2`.
+  - name: unresolved_signaling_observable_1
+    maps_to: s3
+    label: Unresolved Signaling Observable 1
+    description: Unresolved Signaling Observable 1. Maps to bundled source symbol
+      `s3`.
+  - name: unresolved_signaling_observable_1_2
+    maps_to: s4
+    label: Unresolved Signaling Observable 1 2
+    description: Unresolved Signaling Observable 1 2. Maps to bundled source symbol
+      `s4`.
+  - name: unresolved_signaling_observable_2
+    maps_to: s5
+    label: Unresolved Signaling Observable 2
+    description: Unresolved Signaling Observable 2. Maps to bundled source symbol
+      `s5`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,65 @@
+schema_version: '2.0'
+title: Moore2004 - Chronic Myeloid Leukemic cells and T-lymphocyte interaction Lab
+description: Moore2004 - Chronic Myeloid Leukemic cellsand T-lymphocytes interaction
+  A mathematical model for theinteraction of between cancer cells and immune system,
+  involvingCML cancer cells, naive and effector. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.state
+  to:
+  - visualisation.immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model_state
+- from: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.summary
+  to:
+  - visualisation.immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model_summary
+- from: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.species_labels
+  to:
+  - visualisation.immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 20.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T_cell_effector`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 1510.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `T_cell_naive`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 10000.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `CML`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.unresolved_tumor_observable_3
+  - name: source
+    maps_to: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.source
+  - name: sink
+    maps_to: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.sink
+  - name: state
+    maps_to: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.state
+  - name: summary
+    maps_to: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_moore2004_chronic_myeloid_leukemic_cells_and_t_l_biomd0000000662_model.species_labels

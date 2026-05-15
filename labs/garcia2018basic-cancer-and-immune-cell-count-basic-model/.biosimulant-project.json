@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "8823b9f2-bb08-443b-9c32-cd495b343840",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "7a729a73-b3fa-4fcc-8628-cb8bce750e8e",
+  "created_at": "2026-05-15T15:53:05.684576526+00:00",
+  "last_synced_at": "2026-05-15T19:42:40.921862+00:00",
+  "hub_manifest_hash": "d685194957f7ccdb47fa07249505039b3449da06445e2a0fce0ce41b2ebc07dc",
+  "package_name": "garcia2018basic-cancer-and-immune-cell-count-basic-model-lab"
+}

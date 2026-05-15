@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Kilian2024 - Immune cell dynamics in Cue-Induced Extended Human Colitis Model
+  Lab
+description: Kilian2024 - Immune cell dynamics in Cue-Induced Extended Human Colitis
+  ModelSingle-cell technologies such as scRNA-seq and flow cytometry provide critical
+  insights into immune cell behavior in inflam. It can be used to explore immune response
+  dynamics and compare pathway-level behavior across conditions.
+models:
+- alias: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.state
+  to:
+  - visualisation.immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model_state
+- from: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.summary
+  to:
+  - visualisation.immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model_summary
+- from: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.species_labels
+  to:
+  - visualisation.immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_cell
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.initial_cell
+    label: Initial Cell
+    default: 0.0468867574754616
+    units: native source value
+    description: Initial Cell. Sets the initial value of bundled SBML species `Bcell`.
+  - name: initial_unresolved_immune_observable_1
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.initial_unresolved_immune_observable_1
+    label: Initial Unresolved Immune Observable 1
+    default: 0.0215256076306623
+    units: native source value
+    description: Initial Unresolved Immune Observable 1. Sets the initial value of
+      bundled SBML species `Tcell`.
+  - name: initial_unresolved_immune_observable_2
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.initial_unresolved_immune_observable_2
+    label: Initial Unresolved Immune Observable 2
+    default: 0.0608414487144472
+    units: native source value
+    description: Initial Unresolved Immune Observable 2. Sets the initial value of
+      bundled SBML species `Mac`.
+  - name: initial_neutr
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.initial_neutr
+    label: Initial Neutr
+    default: 0.0481656099063014
+    units: native source value
+    description: Initial Neutr. Sets the initial value of bundled SBML species `Neutr`.
+  - name: initial_unresolved_immune_observable_3
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.initial_unresolved_immune_observable_3
+    label: Initial Unresolved Immune Observable 3
+    default: 0.300977731108012
+    units: native source value
+    description: Initial Unresolved Immune Observable 3. Sets the initial value of
+      bundled SBML species `Epi`.
+  outputs:
+  - name: cell
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.cell
+  - name: unresolved_immune_observable_1
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.unresolved_immune_observable_1
+  - name: unresolved_immune_observable_2
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.unresolved_immune_observable_2
+  - name: neutr
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.neutr
+  - name: unresolved_immune_observable_3
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.unresolved_immune_observable_3
+  - name: state
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.state
+  - name: summary
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_kilian2024_immune_cell_dynamics_in_cue_induced_e_model2502180001_model.species_labels

@@ -1,0 +1,45 @@
+schema_version: '2.0'
+title: Mufudza2012 - Estrogen effect on the dynamics of breast cancer Lab
+description: Mufudza2012 - Estrogen effect on the dynamicsof breast cancer This deterministic
+  model shows thedynamics of breast cancer with immune response. The effects ofestrogen
+  are incorporated to study its eff.
+models:
+- alias: immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model.state
+  to:
+  - visualisation.immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model_state
+- from: immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model.summary
+  to:
+  - visualisation.immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model_summary
+- from: immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model.species_labels
+  to:
+  - visualisation.immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: tumour_cells
+    maps_to: immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model.tumour_cells
+  - name: immune_cells
+    maps_to: immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model.immune_cells
+  - name: normal_cells
+    maps_to: immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model.normal_cells
+  - name: estrogen
+    maps_to: immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model.estrogen
+  - name: state
+    maps_to: immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model.state
+  - name: summary
+    maps_to: immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_mufudza2012_estrogen_effect_on_the_dynamics_of_b_biomd0000000642_model.species_labels
+caveats: 'No scientifically safe input was exposed in this pass: the bundled SBML
+  did not provide a headline species initial value or meaningfully named constant/intervention
+  parameter that could be surfaced without turning raw source symbols into unsupported
+  biological claims.'

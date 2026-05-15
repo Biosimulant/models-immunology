@@ -1,0 +1,55 @@
+schema_version: '2.0'
+title: Palmer2008 - Negative Feedback in IL-7 mediated Jak-Stat signaling Lab Visualisation
+description: Dedicated presentation model for Palmer2008 - Negative Feedback in IL-7
+  mediated Jak-Stat signaling Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Palmer2008 - Negative Feedback in IL-7 mediated Jak-Stat signaling
+      Lab
+    question: Which signaling or cytokine states show the strongest activity during
+      the simulation?
+    answer_focus: cytokine/signaling trajectories, activation states, and largest
+      excursions
+    context: immune_signaling
+    sources:
+    - alias: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model
+      title: Palmer2008 - Negative Feedback in IL-7 mediated Jak-Stat signaling
+      visual_scope: Immune signaling activity
+      observables:
+      - id: IL7IL7RpJAK1STAT5
+        label: Interleukin 7 Receptor Jak1 Stat5 Complex
+      - id: IL7IL7RJAK1
+        label: Interleukin 7 Receptor Jak1 Complex
+      - id: IL7RJAK1
+        label: Interleukin 7 Receptor Jak1
+      - id: IL7IL7RpJAK1
+        label: Phosphorylated Interleukin 7 Receptor Jak1 Complex
+      - id: IL7IL7RpJAK1SOCS1
+        label: Interleukin 7 Receptor Jak1 Socs1 Complex
+      - id: IL7
+        label: IL7
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model_state
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.state
+    description: Core state record.
+  - name: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model_summary
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model_species_labels
+    maps_to: immunology_sbml_palmer2008_negative_feedback_in_il_7_mediated_ja_biomd0000000968_model.species_labels
+    description: Core source-label map.
+  outputs: []

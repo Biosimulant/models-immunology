@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Ewald2021 - Innate immune response during invasive aspergillosis by dynamic
+  optimization Lab Visualisation
+description: Dedicated presentation model for Ewald2021 - Innate immune response during
+  invasive aspergillosis by dynamic optimization Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Ewald2021 - Innate immune response during invasive aspergillosis by
+      dynamic optimization Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_ewald2021_innate_immune_response_during_invasive_model2105110001_model
+      title: Ewald2021 - Innate immune response during invasive aspergillosis by dynamic
+        optimization
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: NEU
+        label: Unresolved Immune Observable 1
+      - id: AEC
+        label: Unresolved Immune Observable 2
+      - id: AM
+        label: Unresolved Immune Observable 3
+      - id: SWO
+        label: Unresolved Immune Observable 4
+      - id: CYT
+        label: Unresolved Immune Observable 5
+      - id: HYP
+        label: HYP
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_ewald2021_innate_immune_response_during_invasive_model2105110001_model_state
+    maps_to: immunology_sbml_ewald2021_innate_immune_response_during_invasive_model2105110001_model.state
+    description: Core state record.
+  - name: immunology_sbml_ewald2021_innate_immune_response_during_invasive_model2105110001_model_summary
+    maps_to: immunology_sbml_ewald2021_innate_immune_response_during_invasive_model2105110001_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_ewald2021_innate_immune_response_during_invasive_model2105110001_model_species_labels
+    maps_to: immunology_sbml_ewald2021_innate_immune_response_during_invasive_model2105110001_model.species_labels
+    description: Core source-label map.
+  outputs: []

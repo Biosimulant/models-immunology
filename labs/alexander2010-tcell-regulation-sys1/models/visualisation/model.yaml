@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Alexander2010_Tcell_Regulation_Sys1 Lab Visualisation
+description: Dedicated presentation model for Alexander2010_Tcell_Regulation_Sys1
+  Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Alexander2010_Tcell_Regulation_Sys1 Lab
+    question: Which immune-cell compartments or regulatory states dominate the modeled
+      response?
+    answer_focus: T-cell, B-cell, macrophage, regulatory, and model-state trajectories
+    context: immune_cell_dynamics
+    sources:
+    - alias: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model
+      title: Alexander2010_Tcell_Regulation_Sys1
+      visual_scope: Immune-cell dynamics
+      observables:
+      - id: A
+        label: Unresolved Immune Observable 1
+      - id: R
+        label: Unresolved Immune Observable 2
+      - id: E
+        label: Unresolved Immune Observable 3
+      - id: G
+        label: Unresolved Immune Observable 4
+      - id: A_im
+        label: Unresolved Immune Observable 5
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model_state
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.state
+    description: Core state record.
+  - name: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model_summary
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model_species_labels
+    maps_to: immunology_sbml_alexander2010_tcell_regulation_sys1_biomd0000000289_model.species_labels
+    description: Core source-label map.
+  outputs: []

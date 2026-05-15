@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Ledzewicz2013 - On optimal chemotherapy with a strongly targeted agent for
+  a model of tumor immune system interactions with generalized logistic growth Lab
+description: "On optimal chemotherapy with a strongly targeted agent for a model of\
+  \ tumor-immune system interactions with generalized logistic growth.Ledzewicz U1,\
+  \ Olumoye O, Sch\xE4ttler H.1Dept. It can be used to explore immune response dynamics\
+  \ and compare pathway-level behavior across conditions."
+models:
+- alias: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.state
+  to:
+  - visualisation.immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model_state
+- from: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.summary
+  to:
+  - visualisation.immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model_summary
+- from: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.species_labels
+  to:
+  - visualisation.immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 0.1
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `y`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 600.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `x`.
+  - name: a_constant_rate_of_influx_of_t_cells_generated_through_the_primary_organs_rate
+    maps_to: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.a_constant_rate_of_influx_of_t_cells_generated_through_the_primary_organs_rate
+    label: A Constant Rate Of Influx Of T Cells Generated Through The Primary Organs
+      Rate
+    default: 0.1181
+    units: native source value
+    description: A Constant Rate Of Influx Of T Cells Generated Through The Primary
+      Organs Rate. Sets bundled SBML parameter `alpha`.
+  - name: natural_death_of_t_cells_rate
+    maps_to: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.natural_death_of_t_cells_rate
+    label: Natural Death Of T Cells Rate
+    default: 0.37451
+    units: native source value
+    description: Natural Death Of T Cells Rate. Sets bundled SBML parameter `delta`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.unresolved_tumor_observable_2
+  - name: state
+    maps_to: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.state
+  - name: summary
+    maps_to: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_ledzewicz2013_on_optimal_chemotherapy_with_a_str_biomd0000000919_model.species_labels

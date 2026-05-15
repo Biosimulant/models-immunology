@@ -1,0 +1,122 @@
+schema_version: '2.0'
+title: Dubey2008 - Modeling the interaction between avascular cancerous cells and
+  acquired immune response
+description: MODELING THE INTERACTION BETWEEN AVASCULAR CANCEROUS CELLS AND ACQUIRED
+  IMMUNE RESPONSEB. It can be used to explore immune response dynamics and compare
+  pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- B. DUBEY
+- UMA S. DUBEY
+- SANDIP BANERJEE
+upstream:
+  id: biomodels_ebi:BIOMD0000000886
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000886
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000886
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000886?filename=Dubey2008.xml
+  license: CC0
+biosim:
+  entrypoint: src.dubey2008_modeling_the_interaction_between_avasc_biomd0000000886_model:Dubey2008ModelingTheInteractionBetweenAvascBiomd0000000886Model
+  init_kwargs:
+    model_path: data/BIOMD0000000886.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: T
+    label: Initial Unresolved Tumor Observable 1
+    default: 9.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `T`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: Th
+    label: Initial Unresolved Tumor Observable 2
+    default: 7.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `Th`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: Tc
+    label: Initial Unresolved Tumor Observable 3
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `Tc`.
+  - name: initial_unresolved_tumor_observable_4
+    maps_to: B
+    label: Initial Unresolved Tumor Observable 4
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 4. Sets the initial value of
+      bundled SBML species `B`.
+  - name: initial_unresolved_tumor_observable_5
+    maps_to: A
+    label: Initial Unresolved Tumor Observable 5
+    default: 1.0
+    units: native source value
+    description: Initial Unresolved Tumor Observable 5. Sets the initial value of
+      bundled SBML species `A`.
+  - name: introduction_of_antibody_against_cancer_rate
+    maps_to: mu_4
+    label: Introduction Of Antibody Against Cancer Rate
+    default: 0.35
+    units: native source value
+    description: Introduction Of Antibody Against Cancer Rate. Sets bundled SBML parameter
+      `mu_4`.
+  - name: removal_of_antibody_from_the_system_rate
+    maps_to: mu_40
+    label: Removal Of Antibody From The System Rate
+    default: 0.3
+    units: native source value
+    description: Removal Of Antibody From The System Rate. Sets bundled SBML parameter
+      `mu_40`.
+  - name: removal_of_antibody_from_the_system_rate_2
+    maps_to: delta_1
+    label: Removal Of Antibody From The System Rate 2
+    default: 0.5
+    units: native source value
+    description: Removal Of Antibody From The System Rate 2. Sets bundled SBML parameter
+      `delta_1`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: T
+    label: Unresolved Tumor Observable 1
+    description: Unresolved Tumor Observable 1. Maps to bundled source symbol `T`.
+  - name: unresolved_tumor_observable_2
+    maps_to: Th
+    label: Unresolved Tumor Observable 2
+    description: Unresolved Tumor Observable 2. Maps to bundled source symbol `Th`.
+  - name: unresolved_tumor_observable_3
+    maps_to: Tc
+    label: Unresolved Tumor Observable 3
+    description: Unresolved Tumor Observable 3. Maps to bundled source symbol `Tc`.
+  - name: unresolved_tumor_observable_4
+    maps_to: B
+    label: Unresolved Tumor Observable 4
+    description: Unresolved Tumor Observable 4. Maps to bundled source symbol `B`.
+  - name: unresolved_tumor_observable_5
+    maps_to: A
+    label: Unresolved Tumor Observable 5
+    description: Unresolved Tumor Observable 5. Maps to bundled source symbol `A`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: Lopez2014 - A Validated Mathematical Model of Tumor Growth Including Tumor-Host
+  Interaction and Cell-Mediated Immune Response
+description: This is a dynamical model of cancer growth that includes three interacting
+  cell populations of tumor cells, healthy host cells and immune effector cells. It
+  can be used to explore immune response dynamics and compare pathway-level behavior
+  across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- "Alvaro G L\xF3pez"
+- "Jes\xFAs M Seoane"
+- "Miguel A F Sanju\xE1n"
+upstream:
+  id: biomodels_ebi:BIOMD0000000784
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000784
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000784
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000784?filename=Lopez2014.xml
+  license: CC0
+biosim:
+  entrypoint: src.lopez2014_a_validated_mathematical_model_of_tumo_biomd0000000784_model:Lopez2014AValidatedMathematicalModelOfTumoBiomd0000000784Model
+  init_kwargs:
+    model_path: data/BIOMD0000000784.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: x_Tumor_Cells
+    label: Initial Tumor Cells
+    default: 0.1
+    units: native source value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML species
+      `x_Tumor_Cells`.
+  - name: initial_effector_cells
+    maps_to: z_Effector_Cells
+    label: Initial Effector Cells
+    default: 0.2
+    units: native source value
+    description: Initial Effector Cells. Sets the initial value of bundled SBML species
+      `z_Effector_Cells`.
+  - name: initial_healthy_cells
+    maps_to: y_Healthy_Cells
+    label: Initial Healthy Cells
+    default: 0.9
+    units: native source value
+    description: Initial Healthy Cells. Sets the initial value of bundled SBML species
+      `y_Healthy_Cells`.
+  - name: effector_death_rate
+    maps_to: d_3
+    label: Effector Death Rate
+    default: 0.112
+    units: native source value
+    description: Effector Death Rate. Sets bundled SBML parameter `d_3`.
+  outputs:
+  - name: tumor_cells
+    maps_to: x_Tumor_Cells
+    label: Tumor Cells
+    description: Tumor Cells. Maps to bundled source symbol `x_Tumor_Cells`.
+  - name: effector_cells
+    maps_to: z_Effector_Cells
+    label: Effector Cells
+    description: Effector Cells. Maps to bundled source symbol `z_Effector_Cells`.
+  - name: healthy_cells
+    maps_to: y_Healthy_Cells
+    label: Healthy Cells
+    description: Healthy Cells. Maps to bundled source symbol `y_Healthy_Cells`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

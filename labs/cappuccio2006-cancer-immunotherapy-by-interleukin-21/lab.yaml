@@ -1,0 +1,97 @@
+schema_version: '2.0'
+title: Cappuccio2006 - Cancer immunotherapy by interleukin-21 Lab
+description: This model describes the effects of Il-21 on tumor eradication via natural
+  killer cell-mediated and CD8+ T-cell-mediated lysis of tumor cells. The model demonstrates
+  changes in growth dynamics in noni.
+models:
+- alias: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.state
+  to:
+  - visualisation.immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model_state
+- from: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.summary
+  to:
+  - visualisation.immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model_summary
+- from: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.species_labels
+  to:
+  - visualisation.immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_natural_killer_t_cells
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.initial_natural_killer_t_cells
+    label: Initial Natural Killer T Cells
+    default: 1.95185
+    units: native source value
+    description: Initial Natural Killer T Cells. Sets the initial value of bundled
+      SBML species `X`.
+  - name: initial_cd8_t_cells
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.initial_cd8_t_cells
+    label: Initial CD8 T Cells
+    default: 0.066
+    units: native source value
+    description: Initial CD8 T Cells. Sets the initial value of bundled SBML species
+      `Y`.
+  - name: initial_tumor_sa
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.initial_tumor_sa
+    label: Initial Tumor Sa
+    default: 2.0
+    units: native source value
+    description: Initial Tumor Sa. Sets the initial value of bundled SBML species
+      `Z`.
+  - name: initial_interleukin_21
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.initial_interleukin_21
+    label: Initial Interleukin 21
+    default: 0.0
+    units: native source value
+    description: Initial Interleukin 21. Sets the initial value of bundled SBML species
+      `U`.
+  - name: initial_cd8_memory_factor
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.initial_cd8_memory_factor
+    label: Initial CD8 Memory Factor
+    default: 0.0
+    units: native source value
+    description: Initial CD8 Memory Factor. Sets the initial value of bundled SBML
+      species `M`.
+  - name: tumor_growth_rate
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.tumor_growth_rate
+    label: Tumor Growth Rate
+    default: 5.1
+    units: unit_6
+    description: Tumor Growth Rate. Sets bundled SBML parameter `c`.
+  - name: tumor_killing_by_natural_killer_cells_rate
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.tumor_killing_by_natural_killer_cells_rate
+    label: Tumor Killing By Natural Killer Cells Rate
+    default: 0.05
+    units: unit_7
+    description: Tumor Killing By Natural Killer Cells Rate. Sets bundled SBML parameter
+      `k1`.
+  - name: tumor_killing_by_cd8_t_cells_rate
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.tumor_killing_by_cd8_t_cells_rate
+    label: Tumor Killing By CD8 T Cells Rate
+    default: 0.0485
+    units: unit_7
+    description: Tumor Killing By CD8 T Cells Rate. Sets bundled SBML parameter `k2`.
+  outputs:
+  - name: natural_killer_t_cells
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.natural_killer_t_cells
+  - name: cd8_t_cells
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.cd8_t_cells
+  - name: tumor_sa
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.tumor_sa
+  - name: interleukin_21
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.interleukin_21
+  - name: cd8_memory_factor
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.cd8_memory_factor
+  - name: state
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.state
+  - name: summary
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_cappuccio2006_cancer_immunotherapy_by_interleuki_biomd0000000761_model.species_labels

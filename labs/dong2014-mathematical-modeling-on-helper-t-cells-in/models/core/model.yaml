@@ -1,0 +1,103 @@
+schema_version: '2.0'
+title: Dong2014 - Mathematical modeling on helper t cells in a tumor immune system
+description: This model gives a mathematical description of the interactions between
+  tumor cells, cytotoxic T lymphocytes and helper T cells (HTCs) within the tumor
+  microenvironment, with emphasis on the role play. It can be used to explore immune
+  response dynamics and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Dong, Y.
+- Miyazaki, R.
+- Takeuchi, Y.
+upstream:
+  id: biomodels_ebi:BIOMD0000000783
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000783
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000783
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000783?filename=Dong2014.xml
+  license: CC0
+biosim:
+  entrypoint: src.dong2014_mathematical_modeling_on_helper_t_cells_biomd0000000783_model:Dong2014MathematicalModelingOnHelperTCellsBiomd0000000783Model
+  init_kwargs:
+    model_path: data/BIOMD0000000783.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: x_Tumor_Cells
+    label: Initial Tumor Cells
+    default: 1.0
+    units: native source value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML species
+      `x_Tumor_Cells`.
+  - name: initial_effector_cells
+    maps_to: y_Effector_Cells
+    label: Initial Effector Cells
+    default: 1.0
+    units: native source value
+    description: Initial Effector Cells. Sets the initial value of bundled SBML species
+      `y_Effector_Cells`.
+  - name: initial_helper_t_cells
+    maps_to: z_Helper_T_Cells
+    label: Initial Helper T Cells
+    default: 1.0
+    units: native source value
+    description: Initial Helper T Cells. Sets the initial value of bundled SBML species
+      `z_Helper_T_Cells`.
+  - name: tumor_growth_rate
+    maps_to: alpha
+    label: Tumor Growth Rate
+    default: 1.636
+    units: native source value
+    description: Tumor Growth Rate. Sets bundled SBML parameter `alpha`.
+  - name: tumor_growth_rate_2
+    maps_to: beta
+    label: Tumor Growth Rate 2
+    default: 0.002
+    units: native source value
+    description: Tumor Growth Rate 2. Sets bundled SBML parameter `beta`.
+  - name: ec_natural_death_rate
+    maps_to: delta_1
+    label: Ec Natural Death Rate
+    default: 0.3743
+    units: native source value
+    description: Ec Natural Death Rate. Sets bundled SBML parameter `delta_1`.
+  - name: htc_natural_death_rate
+    maps_to: delta_2
+    label: Htc Natural Death Rate
+    default: 0.055
+    units: native source value
+    description: Htc Natural Death Rate. Sets bundled SBML parameter `delta_2`.
+  outputs:
+  - name: tumor_cells
+    maps_to: x_Tumor_Cells
+    label: Tumor Cells
+    description: Tumor Cells. Maps to bundled source symbol `x_Tumor_Cells`.
+  - name: effector_cells
+    maps_to: y_Effector_Cells
+    label: Effector Cells
+    description: Effector Cells. Maps to bundled source symbol `y_Effector_Cells`.
+  - name: helper_t_cells
+    maps_to: z_Helper_T_Cells
+    label: Helper T Cells
+    description: Helper T Cells. Maps to bundled source symbol `z_Helper_T_Cells`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

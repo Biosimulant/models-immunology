@@ -1,0 +1,74 @@
+schema_version: '2.0'
+title: Theinmozhi2018 - Mechanism of PD1 inhibiting TCR signaling in Tumor immune
+  regulation Lab
+description: Its a Deterministic ODE model showcasing mechanism of PDL1 induced TCR
+  and CD38 signalling inhibition. The model also contains the LCK activation and inactivation
+  phenomenon dependent on the particula.
+models:
+- alias: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.state
+  to:
+  - visualisation.immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model_state
+- from: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.summary
+  to:
+  - visualisation.immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model_summary
+- from: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.species_labels
+  to:
+  - visualisation.immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_lcki
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.initial_lcki
+    label: Initial Lcki
+    default: 25.0
+    units: native source value
+    description: Initial Lcki. Sets the initial value of bundled SBML species `LCKi`.
+  - name: initial_lckyi
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.initial_lckyi
+    label: Initial Lckyi
+    default: 25.0
+    units: native source value
+    description: Initial Lckyi. Sets the initial value of bundled SBML species `LCKyi`.
+  - name: initial_lckya
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.initial_lckya
+    label: Initial Lckya
+    default: 25.0
+    units: native source value
+    description: Initial Lckya. Sets the initial value of bundled SBML species `LCKya`.
+  - name: initial_lckyiya
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.initial_lckyiya
+    label: Initial Lckyiya
+    default: 25.0
+    units: native source value
+    description: Initial Lckyiya. Sets the initial value of bundled SBML species `LCKyiya`.
+  - name: initial_lckpi
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.initial_lckpi
+    label: Initial Lckpi
+    default: 0.0
+    units: native source value
+    description: Initial Lckpi. Sets the initial value of bundled SBML species `LCKpi`.
+  outputs:
+  - name: lcki
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.lcki
+  - name: lckyi
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.lckyi
+  - name: lckya
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.lckya
+  - name: lckyiya
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.lckyiya
+  - name: lckpi
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.lckpi
+  - name: state
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.state
+  - name: summary
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_theinmozhi2018_mechanism_of_pd1_inhibiting_tcr_s_biomd0000000724_model.species_labels

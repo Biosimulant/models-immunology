@@ -1,0 +1,72 @@
+schema_version: '2.0'
+title: Alharbi2020 - Tumor and immune system competition Lab
+description: Sana Abdulkream Alharbi & Azmin Sham Rambely. A New ODE-Based Model for
+  Tumor Cells and Immune System Competition.
+models:
+- alias: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.state
+  to:
+  - visualisation.immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model_state
+- from: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.summary
+  to:
+  - visualisation.immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model_summary
+- from: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.species_labels
+  to:
+  - visualisation.immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_unresolved_tumor_observable_1
+    maps_to: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.initial_unresolved_tumor_observable_1
+    label: Initial Unresolved Tumor Observable 1
+    default: 0.999999999999994
+    units: native source value
+    description: Initial Unresolved Tumor Observable 1. Sets the initial value of
+      bundled SBML species `I`.
+  - name: initial_unresolved_tumor_observable_2
+    maps_to: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.initial_unresolved_tumor_observable_2
+    label: Initial Unresolved Tumor Observable 2
+    default: 0.999999999999993
+    units: native source value
+    description: Initial Unresolved Tumor Observable 2. Sets the initial value of
+      bundled SBML species `N`.
+  - name: initial_unresolved_tumor_observable_3
+    maps_to: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.initial_unresolved_tumor_observable_3
+    label: Initial Unresolved Tumor Observable 3
+    default: 1.22
+    units: native source value
+    description: Initial Unresolved Tumor Observable 3. Sets the initial value of
+      bundled SBML species `T`.
+  - name: immune_cells_death_rate
+    maps_to: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.immune_cells_death_rate
+    label: Immune Cells Death Rate
+    default: 0.57
+    units: native source value
+    description: Immune Cells Death Rate. Sets bundled SBML parameter `delta`.
+  - name: death_of_immune_cells_after_interaction_with_tumor_rate
+    maps_to: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.death_of_immune_cells_after_interaction_with_tumor_rate
+    label: Death Of Immune Cells After Interaction With Tumor Rate
+    default: 0.813
+    units: native source value
+    description: Death Of Immune Cells After Interaction With Tumor Rate. Sets bundled
+      SBML parameter `mu`.
+  outputs:
+  - name: unresolved_tumor_observable_1
+    maps_to: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.unresolved_tumor_observable_1
+  - name: unresolved_tumor_observable_2
+    maps_to: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.unresolved_tumor_observable_2
+  - name: unresolved_tumor_observable_3
+    maps_to: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.unresolved_tumor_observable_3
+  - name: state
+    maps_to: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.state
+  - name: summary
+    maps_to: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_alharbi2020_tumor_and_immune_system_competition_biomd0000001052_model.species_labels

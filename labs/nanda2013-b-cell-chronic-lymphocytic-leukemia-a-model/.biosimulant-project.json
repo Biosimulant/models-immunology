@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "6d837005-8ee7-4ff7-b1ab-71febd7b042f",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "41f2d9e1-e5f5-49bc-b4a2-e66be50b6371",
+  "created_at": "2026-05-15T15:53:06.791903368+00:00",
+  "last_synced_at": "2026-05-15T19:15:55.232356+00:00",
+  "hub_manifest_hash": "1be82c6d67f483ff7b457f5466d734192af05049ad392e746970665619b3ecfa",
+  "package_name": "nanda2013-b-cell-chronic-lymphocytic-leukemia-a-model-with-immun"
+}

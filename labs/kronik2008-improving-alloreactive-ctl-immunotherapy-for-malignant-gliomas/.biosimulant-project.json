@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "c2e4a910-127a-4e62-baa7-9732a3c57fe5",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "a31fab7c-566e-421f-a014-6480e3bf0c0c",
+  "created_at": "2026-05-15T15:53:06.137989086+00:00",
+  "last_synced_at": "2026-05-15T18:45:49.461785+00:00",
+  "hub_manifest_hash": "131cbc2fb2a0d56da2d81b5facf9d03f03bde08cda95b2c751155024c8e4d1ac",
+  "package_name": "kronik2008-improving-alloreactive-ctl-immunotherapy-for-malignan"
+}

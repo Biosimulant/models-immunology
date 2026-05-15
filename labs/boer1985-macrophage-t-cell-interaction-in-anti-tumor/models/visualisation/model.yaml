@@ -1,0 +1,54 @@
+schema_version: '2.0'
+title: Boer1985 - Macrophage T cell interaction in anti-tumor response Lab Visualisation
+description: Dedicated presentation model for Boer1985 - Macrophage T cell interaction
+  in anti-tumor response Lab.
+standard: other
+tags:
+- immunology
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.immunology_visualisation:ImmunologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Boer1985 - Macrophage T cell interaction in anti-tumor response Lab
+    question: Does the modeled immune module restrain tumor burden or amplify treatment-relevant
+      activity?
+    answer_focus: tumor burden, immune effector activity, treatment terms, and largest
+      state excursions
+    context: tumor_immunology
+    sources:
+    - alias: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model
+      title: Boer1985 - Macrophage T cell interaction in anti-tumor response
+      visual_scope: Tumor-immune burden
+      observables:
+      - id: Tumor
+        label: Tumor
+      - id: CTLP
+        label: Cytotoxic T Lymphocyte Precursors
+      - id: CTL
+        label: Cytotoxic T Lymphocytes
+      - id: HTLP
+        label: Helper T Lymphocyte Precursors
+      - id: HTL
+        label: Helper T Lymphocytes
+      - id: MPH
+        label: MPH
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model_state
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.state
+    description: Core state record.
+  - name: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model_summary
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.summary
+    description: Core summary record.
+  - name: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model_species_labels
+    maps_to: immunology_sbml_boer1985_macrophage_t_cell_interaction_in_anti_t_model1911130003_model.species_labels
+    description: Core source-label map.
+  outputs: []

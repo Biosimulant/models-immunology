@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "a10221fc-a401-4b3b-a272-f056ee81c0d4",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "56b11de5-12e6-41e7-848e-dd59557a26c7",
+  "created_at": "2026-05-15T15:53:07.750477957+00:00",
+  "last_synced_at": "2026-05-15T20:23:45.910929+00:00",
+  "hub_manifest_hash": "90f30a7cf8ada9ece5d78891923796c977c6562ba2ce1259364f8672dfba04d9",
+  "package_name": "wodarz2007-hiv-cd4-t-cell-interaction-lab"
+}

@@ -1,0 +1,69 @@
+schema_version: '2.0'
+title: Rodrigues2014-Vaccination models and optimal control strategies to dengue
+description: As the development of a dengue vaccine is ongoing, we simulate an hypothetical
+  vaccine as an extra protection to the population. In a first phase, the vaccination
+  process is studied as a new compartme.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Helena Sofia Rodrigues
+- M Teresa T Monteiro
+- Delfim F M Torres
+upstream:
+  id: biomodels_ebi:MODEL2003190001
+  source_db: biomodels_ebi
+  source_id: MODEL2003190001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2003190001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003190001?filename=Rodrigues2014.xml
+  license: CC0
+biosim:
+  entrypoint: src.rodrigues2014_vaccination_models_and_optimal_con_model2003190001_model:Rodrigues2014VaccinationModelsAndOptimalConModel2003190001Model
+  init_kwargs:
+    model_path: data/MODEL2003190001.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs: []
+  outputs:
+  - name: unresolved_model_observable_1
+    maps_to: S_h
+    label: Unresolved Model Observable 1
+    description: Unresolved Model Observable 1. Maps to bundled source symbol `S_h`.
+  - name: unresolved_model_observable_2
+    maps_to: V_h
+    label: Unresolved Model Observable 2
+    description: Unresolved Model Observable 2. Maps to bundled source symbol `V_h`.
+  - name: unresolved_model_observable_3
+    maps_to: I_h
+    label: Unresolved Model Observable 3
+    description: Unresolved Model Observable 3. Maps to bundled source symbol `I_h`.
+  - name: unresolved_model_observable_4
+    maps_to: R_h
+    label: Unresolved Model Observable 4
+    description: Unresolved Model Observable 4. Maps to bundled source symbol `R_h`.
+  - name: unresolved_model_observable_5
+    maps_to: A_m
+    label: Unresolved Model Observable 5
+    description: Unresolved Model Observable 5. Maps to bundled source symbol `A_m`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.
+caveats: 'No scientifically safe input was exposed in this pass: the bundled SBML
+  did not provide a headline species initial value or meaningfully named constant/intervention
+  parameter that could be surfaced without turning raw source symbols into unsupported
+  biological claims.'

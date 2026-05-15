@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Miao2014 - Dynamics and migratory pathways of virus-specific antibody-secreting
+  cell populations Lab
+description: This model is from the paper available at http://www.ncbi.nlm.nih.gov/pubmed/25171166.
+  The original model contains time-varying parameters which are describedby a smoothing
+  spline.
+models:
+- alias: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.state
+  to:
+  - visualisation.immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model_state
+- from: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.summary
+  to:
+  - visualisation.immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model_summary
+- from: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.species_labels
+  to:
+  - visualisation.immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_cell_spleen
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.initial_cell_spleen
+    label: Initial Cell Spleen
+    default: 3400.0
+    units: native source value
+    description: Initial Cell Spleen. Sets the initial value of bundled SBML species
+      `s1`.
+  - name: initial_cell_mln
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.initial_cell_mln
+    label: Initial Cell Mln
+    default: 1100.0
+    units: native source value
+    description: Initial Cell Mln. Sets the initial value of bundled SBML species
+      `s2`.
+  - name: initial_cell_lung
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.initial_cell_lung
+    label: Initial Cell Lung
+    default: 18.0
+    units: native source value
+    description: Initial Cell Lung. Sets the initial value of bundled SBML species
+      `s3`.
+  - name: initial_unresolved_infection_observable_1
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.initial_unresolved_infection_observable_1
+    label: Initial Unresolved Infection Observable 1
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 1. Sets the initial value
+      of bundled SBML species `s4`.
+  - name: initial_unresolved_infection_observable_2
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.initial_unresolved_infection_observable_2
+    label: Initial Unresolved Infection Observable 2
+    default: 0.0
+    units: native source value
+    description: Initial Unresolved Infection Observable 2. Sets the initial value
+      of bundled SBML species `s5`.
+  outputs:
+  - name: cell_spleen
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.cell_spleen
+  - name: cell_mln
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.cell_mln
+  - name: cell_lung
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.cell_lung
+  - name: unresolved_infection_observable_1
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.unresolved_infection_observable_1
+  - name: unresolved_infection_observable_2
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.unresolved_infection_observable_2
+  - name: state
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.state
+  - name: summary
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_miao2014_dynamics_and_migratory_pathways_of_viru_model1411130000_model.species_labels

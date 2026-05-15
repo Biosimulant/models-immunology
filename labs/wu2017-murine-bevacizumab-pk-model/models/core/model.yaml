@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Wu2017 - Murine Bevacizumab PK model
+description: This is the first report evaluating the use of fluorescent imaging to
+  determine the pharmacokinetics, lymphatic uptake, and bioavailability of a near-infrared
+  dye-labeled antibody conjugate. It can be used to explore immune response dynamics
+  and compare pathway-level behavior across conditions.
+standard: other
+tags:
+- immunology
+- sbml
+- biomodels_ebi
+- faithful
+- curated
+authors:
+- Biosimulant Team
+- Fang Wu
+- Mitalee Tamhane
+- Marilyn E Morris
+upstream:
+  id: biomodels_ebi:MODEL2003030003
+  source_db: biomodels_ebi
+  source_id: MODEL2003030003
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2003030003
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003030003?filename=Wu2017_v1.xml
+  license: CC0
+biosim:
+  entrypoint: src.wu2017_murine_bevacizumab_pk_model_model2003030003_model:Wu2017MurineBevacizumabPkModelModel2003030003Model
+  init_kwargs:
+    model_path: data/MODEL2003030003.xml
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: dose_iv_parameter
+    maps_to: dose_iv
+    label: Dose Iv Parameter
+    default: 0.45
+    units: native source value
+    description: Dose Iv Parameter. Sets bundled SBML parameter `dose_iv`.
+  - name: dose_sc_parameter
+    maps_to: dose_sc
+    label: Dose Sc Parameter
+    default: 0.45
+    units: native source value
+    description: Dose Sc Parameter. Sets bundled SBML parameter `dose_sc`.
+  outputs:
+  - name: cs_iv
+    maps_to: Cs_iv
+    label: Cs Iv
+    description: Cs Iv. Maps to bundled source symbol `Cs_iv`.
+  - name: at_iv
+    maps_to: At_iv
+    label: At Iv
+    description: At Iv. Maps to bundled source symbol `At_iv`.
+  - name: cs_sc
+    maps_to: Cs_sc
+    label: Cs Sc
+    description: Cs Sc. Maps to bundled source symbol `Cs_sc`.
+  - name: at_sc
+    maps_to: At_sc
+    label: At Sc
+    description: At Sc. Maps to bundled source symbol `At_sc`.
+  - name: cln_sc
+    maps_to: CLN_sc
+    label: Cln Sc
+    description: Cln Sc. Maps to bundled source symbol `CLN_sc`.
+  - name: state
+    description: Full source state record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Run summary computed from the source model state.
+  - name: species_labels
+    description: Mapping from source state identifiers to display labels.

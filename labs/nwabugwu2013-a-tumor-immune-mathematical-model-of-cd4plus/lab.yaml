@@ -1,0 +1,89 @@
+schema_version: '2.0'
+title: Nwabugwu2013 - A Tumor-Immune Mathematical Model of CD4+ T Helper Cell Lab
+description: Its a mathematical model presenting the interaction between a growing
+  tumor and immune system. Model involves tumor cells, dendritic cell, helper Tcells,
+  regulatory Tcells, effector cells and certain.
+models:
+- alias: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.state
+  to:
+  - visualisation.immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model_state
+- from: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.summary
+  to:
+  - visualisation.immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model_summary
+- from: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.species_labels
+  to:
+  - visualisation.immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: initial_memtcell
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.initial_memtcell
+    label: Initial Memtcell
+    default: 10000000.0
+    units: native source value
+    description: Initial Memtcell. Sets the initial value of bundled SBML species
+      `M`.
+  - name: initial_memhelpertcells
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.initial_memhelpertcells
+    label: Initial Memhelpertcells
+    default: 6000000.0
+    units: native source value
+    description: Initial Memhelpertcells. Sets the initial value of bundled SBML species
+      `Mh`.
+  - name: initial_memeffectorcells
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.initial_memeffectorcells
+    label: Initial Memeffectorcells
+    default: 3000000.0
+    units: native source value
+    description: Initial Memeffectorcells. Sets the initial value of bundled SBML
+      species `Me`.
+  - name: initial_regmemtcell
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.initial_regmemtcell
+    label: Initial Regmemtcell
+    default: 1000000.0
+    units: native source value
+    description: Initial Regmemtcell. Sets the initial value of bundled SBML species
+      `Mr`.
+  - name: tumor_growth_rate
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.tumor_growth_rate
+    label: Tumor Growth Rate
+    default: 333.0
+    units: unit_0
+    description: Tumor Growth Rate. Sets bundled SBML parameter `gamma`.
+  - name: tumor_cell_killing_rate
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.tumor_cell_killing_rate
+    label: Tumor Cell Killing Rate
+    default: 1.2
+    units: unit_1
+    description: Tumor Cell Killing Rate. Sets bundled SBML parameter `k2`.
+  - name: tumor_cell_killing_rate_2
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.tumor_cell_killing_rate_2
+    label: Tumor Cell Killing Rate 2
+    default: 11.0
+    units: unit_1
+    description: Tumor Cell Killing Rate 2. Sets bundled SBML parameter `k3`.
+  outputs:
+  - name: memtcell
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.memtcell
+  - name: memhelpertcells
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.memhelpertcells
+  - name: memeffectorcells
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.memeffectorcells
+  - name: regmemtcell
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.regmemtcell
+  - name: source
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.source
+  - name: state
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.state
+  - name: summary
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.summary
+  - name: species_labels
+    maps_to: immunology_sbml_nwabugwu2013_a_tumor_immune_mathematical_model_o_model2007090001_model.species_labels
